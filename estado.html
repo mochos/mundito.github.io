@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileColor" content="#e2947b ">
+    <meta name="theme-color" content="#e2947b ">
+    <link rel=”manifest” href=”manifest.json”>
+    <title>Mundito 3</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/icono.png"/>
+    </head>
+<body>
+    <div class="contenedor">
+        <img src="img/Mundito-logo-300.png" style="margin-top: 32px;">
+        <br><br>
+        <div class="botones">
+            <a href="minecraft://?addExternalServer=Mundito|mundito.mochos.xyz:19132" class="boton boton-verde">
+                <span>Jugar en Bedrock</span></a>
+
+            <a href="#" class="boton boton-blanco clipboard">
+                <span>Copiar IP (Java y Bedrock)</span> </a>
+
+    </div>
+
+    <div class="info">
+
+        <input type="checkbox" class="read-more-state" id="post-1" />
+        <div class="read-more-wrap">
+            <h2><span id="jugadores"></span><span id="estado">Cargando estado...</span></h2>
+        <span class="read-more-target">
+            <p><span id="lista"></span></p><br>
+            <h2>IP:&nbsp;<span class="estado">mundito.mochos.xyz</span></h2>
+            <h2><span class="estado"><a href="https://discord.mochos.xyz" class="enlace" title="Discord de Team Mochos">Discord</a>&nbsp;-&nbsp;<a href="#" title="Ayuda acerca de Mundito" class="enlace">Ayuda</a>
+</span></h2>
+
+        </span></div>
+        <label for="post-1" class="read-more-trigger enlace"></label></a>
+
+    </div>
+      
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    var $temp = $("<input>");
+    var $url = "mundito.mochos.xyz";
+
+$('.clipboard').on('click', function() {
+  $("body").append($temp);
+  $temp.val($url).select();
+  document.execCommand("copy");
+  $temp.remove();
+  $(".clipboard").text("👍 ¡IP copiada!");
+  
+  setTimeout(function() {
+      $(".clipboard").text("Copiar IP");
+  }, 20000); // 5000 milisegundos = 5 segundos
+})
+
+</script>
+
+<script>
+    function checkServerStatus() {
+        var url = "https://api.mcsrvstat.us/3/opseeker.minecra.fr";
+
+        $.getJSON(url, function(r) {
+            if (r.online == false) {
+                $('#estado').html('⛔ Desconectado');
+                $('#jugadores').css("display","none");
+                $('#btnestado').addClass("alert-danger");
+            } else {
+                var cantidad = r.players.online;
+                var es = 'es';
+                var os = 's';
+                if (r.players.online == 1) {
+                    es = '';
+                    os = '';
+                }
+                if (r.icon == null) {
+                    $('#estado').text('⛔ Desconectado');
+                    $('#jugadores').css("display","none");
+                    $('#btnestado').addClass("alert-danger");
+                } else {
+                    $('#estado').text('jugador' + es + ' conectado' + os);
+                    $('#jugadores').html('🟢' + r.players.online + '&nbsp;');
+                    $('#btnestado').addClass("alert-success");
+                    $('#btnestado').addClass("button-glow");
+
+                    // Construimos la lista de nombres de los jugadores
+                    var nombres = '';
+                    if (r.players.list && Array.isArray(r.players.list)) {
+                        r.players.list.forEach(function(jugador) {
+                            nombres += jugador.name + ', ';
+                        });
+                        // Elimina la última coma y espacio
+                        nombres = nombres.slice(0, -2);
+                    }
+                    $('#lista').html(nombres);
+                }
+            }
+        });
+    }
+
+    // Ejecutar la función una vez al inicio
+    checkServerStatus();
+    // Ejecutar la función cada 30 segundos
+    setInterval(checkServerStatus, 30000);
+</script>
+</body>
+</html>

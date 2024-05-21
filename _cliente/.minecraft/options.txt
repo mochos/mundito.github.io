@@ -1,0 +1,3 @@
+guiScale:2
+resourcePacks:["vanilla","mod_resources","file/Visible_powder_snow_1.20.x.zip","file/MandalasGUI+Modded_Dakmode_v4.6.zip","file/FreshAnimations_v1.8.1.zip","file/Readable Enchanting Tables.zip","file/Mundito"]
+incompatibleResourcePacks:["file/MandalasGUI+Modded_Dakmode_v4.6.zip","file/FreshAnimations_v1.8.1.zip","file/Readable Enchanting Tables.zip","file/Mundito"]

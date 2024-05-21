@@ -1,0 +1,22 @@
+{
+  "version": "3.20",
+  "useCookies": true,
+  "enableFreeFlight": true,
+  "defaultToFlatView": false,
+  "resolutionDefault": 1.0,
+  "minZoomDistance": 5,
+  "maxZoomDistance": 20000,
+  "hiresSliderMax": 500,
+  "hiresSliderDefault": 100,
+  "hiresSliderMin": 0,
+  "lowresSliderMax": 7000,
+  "lowresSliderDefault": 2000,
+  "lowresSliderMin": 500,
+  "maps": [
+    "world",
+    "world_the_end",
+    "world_nether"
+  ],
+  "scripts": [],
+  "styles": []
+}

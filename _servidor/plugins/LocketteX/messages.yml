@@ -1,0 +1,56 @@
+no-permission: '&7[&4✕&7] &cYou don''t have the required permission!'
+no-permission-protection: '&7[&4✕&7] &cYou don''t have the permission to protect Blocks!'
+none: N/A
+prefix: '&a&lProtect &f➤ '
+prefix-debug: '&7[Protect] &e<DEBUG> '
+prefix-error: '&7[Protect] &c<ERROR> '
+cmd-main-header: '&f«&m---------------&f»  &6&lProtect&f  «&m---------------&f»'
+cmd-main-footer: ' '
+cmd-reload-desc: '&7Reloads Config and Messages'
+cmd-reload-success: '&7[&a✔&7] &aConfig Reloaded!'
+cmd-whitelist-desc: '&7Add or revoke with a protected block to a player. &c[!] &eYou
+  have to execute this command while looking at the protection sign attached to the
+  block. &7You can list multiple players by separating their names with a comma, like
+  this: player1,player2 etc.'
+cmd-whitelist-add-success: '&7[&a✔&7] &aSuccessfully given access to this protected
+  block to %player%!'
+cmd-whitelist-remove-success: '&7[&a✔&7] &aSuccessfully revoked access to this protected
+  block to %player%!'
+cmd-whitelist-add-fail: '&7[&4✕&7] &cAll of the players specified already belong to
+  this block''s whitelist!'
+cmd-whitelist-remove-fail: '&7[&4✕&7] &cNone of the players specified are in this
+  block''s whitelist!'
+cmd-whitelist-nosign: '&7[&4✕&7] &cYou must be directly looking at a protection sign
+  (created by you) while performing this command.'
+cmd-usage: '&7[&4✕&7] &cSomething''s wrong! Do /protect for a command list.'
+not-enough-money: '&7[&4✕&7] &cYou must have &e%price%&c in order to protect a block.'
+cant-protect-in-unclaimed-land: '&7[&4✕&7] &cYou can''t protect blocks in unclaimed
+  land!'
+cant-protect-this: '&7[&4✕&7] &cYou can''t protect &e<item>&c!'
+cant-protect-no-build-permissions: '&7[&4✕&7] &cYou can''t protect where you do not
+  have build permissions!'
+block-already-protected: '&7[&4✕&7] &cThis Block was already protected by &e%owner%
+  &che must break the sign first!'
+protected-break-denied: '&7[&4✕&7] &cThis &e<item>&c is protected! Only &e%owner%
+  &ccan break it!'
+protected-interact-denied: '&7[&4✕&7] &cThis &e<item>&c is protected! Only &e%owner%
+  &ccan decide who can interact with it!'
+sign-break-denied: '&7[&4✕&7] &cOnly &e%owner% &ccan break this sign!'
+container-open-denied: '&7[&4✕&7] &cThis &e<item>&c is protected! Only &e%owner% &ccan
+  decide who can open it!'
+hopper-place-denied: '&7[&4✕&7] &cYou can''t place Hoppers near a protected Block!'
+block-protect-success-econ: '&7[&a✔&7] &aBlock successfully protected! You payed &e%price%&a!'
+block-protect-success: '&7[&a✔&7] &aBlock successfully protected!'
+Error:
+  could-not-load-data: '&7[&4✕&7] &cCould not load block ownership data!'
+  could-not-save-data: '&7[&4✕&7] &cCould not save block ownership data!'
+Hooks:
+  griefprevention:
+    cant-protect: '&7[&4✕&7] &cYou can''t protect here, as you do not have permissions
+      to build here!'
+  claim-plugin-hooked: '&7[&a✔&7] &aUsing %plugin% as Claim Provider.'
+  claim-plugin-not-found: '&7[&4✘&7] &cNo valid Claim Provider found!'
+  generic-hook-failed: '&7[&4✕&7] &cCould not hook to %plugin%. %plugin% support is
+    disabled'
+  economy-hook-failed: '&7[&4✕&7] &cEconomy support has been disabled! Error while
+    hooking to Vault, or no Economy Service was found!'

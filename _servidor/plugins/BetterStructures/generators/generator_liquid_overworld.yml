@@ -1,0 +1,8 @@
+isEnabled: true
+structureType:
+- LIQUID_SURFACE
+validWorldEnvironments:
+- NORMAL
+- CUSTOM
+validBiomes: []
+treasureFilename: treasure_overworld_underground.yml

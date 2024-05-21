@@ -1,0 +1,7 @@
+isEnabled: true
+structureType:
+- UNDERGROUND_SHALLOW
+validWorldEnvironments:
+- THE_END
+validBiomes: []
+treasureFilename: treasure_end.yml

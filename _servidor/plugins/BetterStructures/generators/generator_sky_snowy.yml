@@ -1,0 +1,11 @@
+isEnabled: true
+structureType:
+- SKY
+validBiomes:
+- SNOWY_TAIGA
+- SNOWY_BEACH
+- SNOWY_PLAINS
+- SNOWY_SLOPES
+- ICE_SPIKES
+- CUSTOM
+treasureFilename: treasure_overworld_surface.yml

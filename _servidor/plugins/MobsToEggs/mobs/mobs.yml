@@ -1,0 +1,3463 @@
+# Settings for catching an allay.
+allay:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Allay
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: ALLAY_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        duplicationcooldown: true
+# Settings for catching an armadillo.
+armadillo:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Armadillo
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: ARMADILLO_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+# Settings for catching an axolotl.
+axolotl:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Axolotl
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: AXOLOTL_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        age: true
+        variant: true
+        isplayingdead: true
+# Settings for catching a bat.
+bat:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Bat
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: BAT_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        isawake: true
+# Settings for catching a bee.
+bee:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Bee
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: BEE_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        age: true
+        anger: true
+        cannotenterhiveticks: true
+        flower: true
+        hive: true
+        hasnectar: true
+        hasstung: true
+# Settings for catching a blaze.
+blaze:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Blaze
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: BLAZE_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+# Settings for catching a camel.
+camel:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Camel
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: CAMEL_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        isdashing: true
+        owner: true
+# Settings for catching a cat.
+cat:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Cat
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: CAT_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        age: true
+        owner: true
+        type: true
+        collarcolor: true
+# Settings for catching a cave spider.
+cave_spider:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Cave Spider
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: CAVE_SPIDER_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+# Settings for catching a chicken.
+chicken:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Chicken
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: CHICKEN_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        age: true
+# Settings for catching a cod.
+cod:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Cod
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: COD_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+# Settings for catching a cow.
+cow:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Cow
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: COW_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        age: true
+# Settings for catching a creeper.
+creeper:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Creeper
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: CREEPER_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        explosionradius: true
+        fuseticks: true
+        maxfuseticks: true
+        ispowered: true
+# Settings for catching a dolphin.
+dolphin:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Dolphin
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: DOLPHIN_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+# Settings for catching a donkey.
+donkey:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Donkey
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: DONKEY_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        age: true
+        owner: true
+        inventory: true
+        saddle: true
+# Settings for catching a drowned.
+drowned:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Drowned
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: DROWNED_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        age: true
+# Settings for catching an elder guardian.
+elder_guardian:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Elder Guardian
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: ELDER_GUARDIAN_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+# Settings for catching an ender dragon.
+ender_dragon:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Ender Dragon
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: ENDER_DRAGON_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: '&5Ender Dragon Spawn egg'
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        phase: true
+# Settings for catching a enderman.
+enderman:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Enderman
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: ENDERMAN_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        carriedblock: true
+# Settings for catching an endermite.
+endermite:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Endermite
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: ENDERMITE_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+# Settings for catching a evoker.
+evoker:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Evoker
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: EVOKER_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+# Settings for catching a fox.
+fox:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Fox
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: FOX_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        age: true
+        type: true
+        firsttrustedplayer: true
+        secondtrustedplayer: true
+        iscrouching: true
+# Settings for catching a frog.
+frog:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Frog
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: FROG_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        age: true
+        variant: true
+# Settings for catching a ghast.
+ghast:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Ghast
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: GHAST_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        ischarging: true
+# Settings for catching a giant.
+giant:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Giant
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: ZOMBIE_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: '&fGiant Spawn egg'
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+# Settings for catching a glow_squid.
+glow_squid:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Glow Squid
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: GLOW_SQUID_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        darkticksremaining: true
+# Settings for catching a goat.
+goat:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Goat
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: GOAT_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        age: true
+        isscreaming: true
+        haslefthorn: true
+        hasrighthorn: true
+# Settings for catching a guardian.
+guardian:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Guardian
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: GUARDIAN_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+# Settings for catching a hoglin.
+hoglin:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Hoglin
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: HOGLIN_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        age: true
+        conversiontime: true
+        isabletobehunted: true
+        isconverting: true
+        isimmunetozombification: true
+# Settings for catching a horse.
+horse:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Horse
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: HORSE_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        age: true
+        owner: true
+        color: true
+        armor: true
+        saddle: true
+        style: true
+# Settings for catching a husk.
+husk:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Husk
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: HUSK_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        age: true
+        isconverting: true
+        conversiontime: true
+# Settings for catching an illusioner.
+illusioner:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Illusioner
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: PURPLE_DYE
+      # You can specify a name the mob's spawn egg has.
+      name: '&fIllusioner Spawn egg'
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+# Settings for catching an iron golem.
+iron_golem:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Iron Golem
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: IRON_GOLEM_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        isplayercreated: true
+# Settings for catching a llama.
+llama:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Llama
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: LLAMA_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        age: true
+        owner: true
+        color: true
+        strength: true
+        decor: true
+        inventory: true
+# Settings for catching a magma cube.
+magma_cube:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Magma Cube
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: MAGMA_CUBE_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        size: true
+# Settings for catching a mule.
+mule:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Mule
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: MULE_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        age: true
+        owner: true
+        saddle: true
+        inventory: true
+# Settings for catching a mushroom cow.
+mushroom_cow:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Mooshroom
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: MOOSHROOM_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        age: true
+        variant: true
+# Settings for catching an ocelot.
+ocelot:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Ocelot
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: OCELOT_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        age: true
+        istrusting: true
+# Settings for catching a panda.
+panda:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Panda
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: PANDA_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        age: true
+        hiddengene: true
+        maingene: true
+# Settings for catching a parrot.
+parrot:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Parrot
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: PARROT_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        age: true
+        owner: true
+        variant: true
+# Settings for catching a phantom.
+phantom:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Phantom
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: PHANTOM_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        size: true
+# Settings for catching a pig.
+pig:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Pig
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: PIG_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        age: true
+        saddle: true
+# Settings for catching a piglin.
+piglin:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Piglin
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: PIGLIN_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        age: true
+        isabletohunt: true
+# Settings for catching a piglin brute.
+piglin_brute:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Piglin Brute
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: PIGLIN_BRUTE_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        age: true
+# Settings for catching a pillager.
+pillager:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Pillager
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: PILLAGER_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+# Settings for catching a polar bear.
+polar_bear:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Polar Bear
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: POLAR_BEAR_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        age: true
+# Settings for catching a pufferfish.
+pufferfish:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Pufferfish
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: PUFFERFISH_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        puffstate: true
+# Settings for catching a rabbit.
+rabbit:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Rabbit
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: RABBIT_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        age: true
+        type: true
+# Settings for catching a ravager.
+ravager:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Ravager
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: RAVAGER_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+# Settings for catching a salmon.
+salmon:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Salmon
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: SALMON_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+# Settings for catching a sheep.
+sheep:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Sheep
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: SHEEP_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        age: true
+        issheared: true
+        color: true
+# Settings for catching a shulker.
+shulker:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Shulker
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: SHULKER_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        peek: true
+        color: true
+# Settings for catching a silverfish.
+silverfish:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Silverfish
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: SILVERFISH_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+# Settings for catching a skeleton.
+skeleton:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Skeleton
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: SKELETON_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        isconverting: true
+        conversiontime: true
+# Settings for catching a skeleton horse.
+skeleton_horse:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Skeleton Horse
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: SKELETON_HORSE_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        age: true
+        owner: true
+        istrapped: true
+        traptime: true
+# Settings for catching a slime.
+slime:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Slime
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: SLIME_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        size: true
+# Settings for catching a sniffer.
+sniffer:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Sniffer
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: SNIFFER_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        state: true
+        exploredlocations: true
+# Settings for catching a snow golem.
+snowman:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Snow Golem
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: SNOW_GOLEM_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        isderp: true
+# Settings for catching a spider.
+spider:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Spider
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: SPIDER_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+# Settings for catching a squid.
+squid:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: squid
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: SQUID_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+# Settings for catching a stray.
+stray:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Stray
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: STRAY_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+# Settings for catching a strider.
+strider:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Strider
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: STRIDER_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        age: true
+        isshivering: true
+        saddle: true
+# Settings for catching a tadpole.
+tadpole:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Tadpole
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: TADPOLE_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        tadpoleage: true
+# Settings for catching a trader llama.
+trader_llama:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Trader Llama
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: TRADER_LLAMA_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        age: true
+        owner: true
+        color: true
+        strength: true
+        decor: true
+        inventory: true
+# Settings for catching a tropical fish.
+tropical_fish:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Tropical Fish
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: TROPICAL_FISH_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        pattern: true
+        bodycolor: true
+        patterncolor: true
+# Settings for catching a Turtle.
+turtle:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Turtle
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: TURTLE_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        age: true
+# Settings for catching a vex.
+vex:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Vex
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: VEX_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        ischarging: true
+        lifeticks: true
+# Settings for catching a Villager.
+villager:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Villager
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: VILLAGER_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        age: true
+        villagerexperience: true
+        villageroffers: true
+        villagerdata: true
+        villagergossip: true
+        villagerbrain: true
+# Settings for catching a vindicator.
+vindicator:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Vindicator
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: VINDICATOR_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        isjohnny: true
+# Settings for catching a wandering trader.
+wandering_trader:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Wandering Trader
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: WANDERING_TRADER_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        age: true
+        despawndelay: true
+        wanderingtraderoffers: true
+# Settings for catching a warden.
+warden:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Warden
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: WARDEN_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        anger: true
+# Settings for catching a witch.
+witch:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Witch
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: WITCH_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+# Settings for catching a wither.
+wither:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Wither
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: WITHER_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        invulnerabilityticks: true
+# Settings for catching a wither skeleton.
+wither_skeleton:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Wither Skeleton
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: WITHER_SKELETON_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+# Settings for catching a wolf.
+wolf:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Wolf
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: WOLF_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        age: true
+        owner: true
+        collarcolor: true
+        isangry: true
+        isinterested: true
+        variant: true
+# Settings for catching a zoglin.
+zoglin:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Zoglin
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: ZOGLIN_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        age: true
+# Settings for catching a zombie.
+zombie:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Zombie
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: ZOMBIE_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        age: true
+        isconverting: true
+        conversiontime: true
+        canbreakdoors: true
+# Settings for catching a zombie horse.
+zombie_horse:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Zombie Horse
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: ZOMBIE_HORSE_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        lovemodeticks: true
+        age: true
+        owner: true
+# Settings for catching a zombie villager.
+zombie_villager:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Zombie Villager
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: ZOMBIE_VILLAGER_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        age: true
+        zombievillagerprofession: true
+        zombievillagertype: true
+        isconverting: true
+        conversiontime: true
+# Settings for catching a zombified piglin.
+zombified_piglin:
+  entity:
+    # Is catching this mob enabled?
+    enabled: true
+    # Customize the name of the entity being caught. This is shown in various messages of the plugin.
+    entity-name: Zombified Piglin
+    # If you have 'enable-item-cost: true' in the config.yml, what should the item cost be? (itemname-amount)
+    # Example: 'Diamond-1' would make catching mobs cost 1 diamond.
+    item-cost: Diamond-1
+    # If you have 'enable-money-cost: true' in the config.yml, how much money does it cost to catch the mob? (don't add your currency symbol, only write a number)
+    money-cost: 10
+    # The chance in percentage (%) to catch the mob.
+    # Example: 100 = 100% success rate for catching, 0 = can never catch.
+    catch-chance: 100
+  egg:
+    # egg-data allows you to edit the mob data and look of the egg that is dropped.
+    egg-data:
+      # The material (item) the mob's spawn egg should be. This can be any item.
+      material: ZOMBIFIED_PIGLIN_SPAWN_EGG
+      # You can specify a name the mob's spawn egg has.
+      name: ''
+      lore: []
+      # Set custom model data for a resourcepack on this mob's spawn egg.
+      custom-model-data: -1
+      # Apply certain data-tags to this mob type when caught.
+      data-tags:
+        customname: true
+        iscustomnamevisible: true
+        health: true
+        isfrozen: true
+        freezeticks: true
+        isglowing: true
+        issilent: true
+        isvisualfire: true
+        isinvisible: true
+        hasgravity: true
+        hasai: true
+        isinvulnerable: true
+        potioneffects: true
+        iteminmainhand: true
+        age: true
+# Do not touch this value, the plugin will update it automatically!
+# Note: any manual changes to this value can result in deleted configs!
+config-version: 2

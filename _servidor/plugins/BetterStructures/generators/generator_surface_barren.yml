@@ -1,0 +1,11 @@
+isEnabled: true
+structureType:
+- SURFACE
+validBiomes:
+- BADLANDS
+- SAVANNA
+- SAVANNA_PLATEAU
+- WINDSWEPT_SAVANNA
+- MUSHROOM_FIELDS
+- CUSTOM
+treasureFilename: treasure_overworld_surface.yml

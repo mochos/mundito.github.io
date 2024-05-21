@@ -1,0 +1,20 @@
+isEnabled: true
+structureType:
+- SKY
+validBiomes:
+- PLAINS
+- FOREST
+- BIRCH_FOREST
+- DARK_FOREST
+- FLOWER_FOREST
+- JUNGLE
+- SWAMP
+- TAIGA
+- OLD_GROWTH_PINE_TAIGA
+- OLD_GROWTH_SPRUCE_TAIGA
+- OLD_GROWTH_BIRCH_FOREST
+- SUNFLOWER_PLAINS
+- WINDSWEPT_FOREST
+- WINDSWEPT_HILLS
+- CUSTOM
+treasureFilename: treasure_overworld_surface.yml

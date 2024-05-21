@@ -1,0 +1,8 @@
+isEnabled: true
+structureType:
+- UNDERGROUND_SHALLOW
+- UNDERGROUND_DEEP
+validBiomes:
+- DRIPSTONE_CAVES
+- CUSTOM
+treasureFilename: treasure_overworld_underground.yml

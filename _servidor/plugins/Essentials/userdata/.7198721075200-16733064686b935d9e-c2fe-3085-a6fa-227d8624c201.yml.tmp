@@ -1,0 +1,55 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 0:0:0:0:0:0:0:1
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1716150168792
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1716302749831
+  login: 1716299919001
+money: '0'
+last-account-name: lorspi
+logoutlocation:
+  world: b339dda7-0e12-48e2-99c8-d31b6a44bf65
+  world-name: world
+  x: 736.6607748271725
+  y: 145.36933250861674
+  z: 1416.0579921946646
+  yaw: -90.1478042602539
+  pitch: 18.29935646057129
+lastlocation:
+  world: b339dda7-0e12-48e2-99c8-d31b6a44bf65
+  world-name: world
+  x: 263.92392811736784
+  y: 169.96933336107577
+  z: 1406.1878554286823
+  yaw: 90.45233917236328
+  pitch: 20.99959945678711
+homes:
+  home:
+    world: b339dda7-0e12-48e2-99c8-d31b6a44bf65
+    world-name: world
+    x: 3.080023183128905
+    y: 77.5
+    z: 53.24607801256308
+    yaw: -130.04946899414062
+    pitch: 17.850425720214844
+  otro:
+    world: b339dda7-0e12-48e2-99c8-d31b6a44bf65
+    world-name: world
+    x: -2.614642266315352
+    y: 73.0
+    z: 38.652725347889344
+    yaw: 129.60498046875
+    pitch: 13.2003812789917

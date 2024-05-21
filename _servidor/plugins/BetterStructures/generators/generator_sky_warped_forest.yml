@@ -1,0 +1,7 @@
+isEnabled: true
+structureType:
+- SKY
+validBiomes:
+- WARPED_FOREST
+- CUSTOM
+treasureFilename: treasure_nether.yml

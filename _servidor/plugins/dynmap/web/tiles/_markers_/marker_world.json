@@ -1,0 +1,17 @@
+{"sets": {"me.angeschossen.lands": {"hide": false,"circles": {}
+,"areas": {"01HYBDZYW9CZEEGQQDWBY120VC_world_0": {"fillcolor": "#00FF00","ytop": 64.00,"color": "#009933","markup": false,"x": [0.00,16.00,16.00,32.00,32.00,16.00,16.00,0.00]
+,"weight": 2,"z": [-16.00,-16.00,0.00,0.00,32.00,32.00,16.00,16.00]
+,"ybottom": 64.00,"label": "01HYBDZYW9CZEEGQQDWBY120VC_world","opacity": 1.00,"fillopacity": 0.35,"desc": "<div><span style=\"font-size:200%\">Sirpol<br \/><\/span>Alg\u00FAn mensaje bonito<\/div> <ul><li>Level: <\/li><li>Balance: $0.00<\/li><li>Chunks: 4<\/li><li>Players (1): sirpol<\/li><\/ul>"}
+}
+,"label": "Lands","markers": {"01HYBDZYW9CZEEGQQDWBY120VC_spawn": {"markup": false,"x": 4.43,"icon": "greenflag","y": 78.50,"dim": "16x16","z": 10.00,"label": "Sirpol","minzoom": 0,"desc": "<div><span style=\"font-size:200%\">Spawnpoint<\/span><\/div> <div><br \/>Open to untrusted: No<\/div> <ul><li>If this spawn is open to untrusted, anyone can teleport to it by executing \/lands spawn Sirpol.<\/li><\/ul>"}
+}
+,"lines": {}
+,"layerprio": 10,"showlabels": true}
+,"markers": {"hide": false,"circles": {}
+,"areas": {}
+,"label": "Markers","markers": {"_spawn_world": {"markup": false,"x": 17.00,"icon": "world","y": 71.00,"dim": "16x16","z": 49.00,"label": "Spawn"}
+}
+,"lines": {}
+,"layerprio": 0}
+}
+,"timestamp": 1716321263399}

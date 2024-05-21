@@ -1,0 +1,48 @@
+Debug: false
+GeneralSettings:
+  enabled-worlds:
+  - world
+  - world_nether
+  - world_the_end
+  make-enabled-worlds-a-blacklist: false
+  use-economy: false
+  price-creation: 500
+  shift-click-with-sign-to-protect: false
+  only-owner-can-break-sign: true
+  whitelisted-players-access-only-while-owner-online: false
+  protect-from-hoppers:
+    enabled: true
+    desc:
+    - |-
+      Enables a basic protection from hoppers stealing items from protected containers,
+      this can have some impact on performance and only works if inventory move event caused by hoppers is enabled in the spigot configuration.
+  protect-from-explosions: true
+  check-if-canbuild-before-protect: false
+Expiration:
+  enabled: false
+  disable-protection-after-x-days: 90
+Permissions:
+  ignore-creation-permission: true
+  permission-admin: lockettex.admin
+  permission-creation: lockettex.create
+Hooks:
+  griefprevention:
+    deny-if-no-build-perm: true
+  protectionstones:
+    protect-only-in-region: false
+  worldguard:
+    enabled: false
+    protect-region-from-non-members: false
+    protect-region-from-non-owners: false
+  disable-hooking-to-claim-plugins: false
+  leader-bypasses-break-protection: false
+  leader-bypasses-open-protection: false
+  disable-protection-on-unclaimed-land: false
+SignSettings:
+  sign-id-line: '[Protect]'
+  sign-owner-line-number: 3
+  sign-formatted-lines:
+  - '&1[Protect]'
+  - ''
+  - '%owner%'
+  - ''

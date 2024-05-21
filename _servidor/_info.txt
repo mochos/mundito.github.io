@@ -1,0 +1,132 @@
+Semilla: 4189766944005904899
+
+SPECS Y TAREAS
+	- Servidor survival casual sin lore.
+	- Compatible con java 1.20.1 y bedrock ultimas versiones
+	- Estado del servidor y mapa (mochos.xyz/mundito --- mochos.xyz/mundito/mapa)
+	- Chat de voz para java (Tengo entendido que es crossplay el mod y plugin)
+	- Invitados: Team Mochos, Dankest Dungeons, ¿Tula?, ¿Gente de petit? (snowi, kaiser, etc)
+	- IP bonita y que sirva para ambas plataformas: mundito.mochos.xyz
+
+PLUGINS:
+	
+	Lootr (parecido)
+	https://www.spigotmc.org/resources/lootin-1-16-1-20-no-more-already-looted-chests.90453/
+	[LISTO]
+
+	Cortar árboles
+	https://www.spigotmc.org/resources/treecapitator.103172/
+	[LISTO]
+
+	Tumbas
+	https://www.spigotmc.org/resources/graves.74208/
+	[LISTO]
+
+	Seguridad login
+	https://www.spigotmc.org/resources/loginsecurity.19362/
+	[LISTO]
+
+	Mochilas
+	https://www.spigotmc.org/resources/minepacks-backpack-plugin-mc-1-7-1-20.19286/
+	[LISTO]
+
+	Revivir:
+	https://www.spigotmc.org/resources/revive-plugin.105340/
+	[LISTO]
+
+	Guardar XP
+	https://www.spigotmc.org/resources/bottledexp.2815/
+	https://www.spigotmc.org/resources/cmilib.87610/
+	[LISTO]
+
+	Bloqueo de cofres
+	https://www.spigotmc.org/resources/lockettex-optimized-simple-chest-protection-plugin.73184/
+	[LISTO]
+
+	Luckperms
+	https://www.spigotmc.org/resources/luckperms.28140/
+	[LISTO]
+
+	Una persona duerme para amanecer
+	https://www.spigotmc.org/resources/one-player-sleep.31585/
+	[LISTO]
+
+	Generación de estructuras
+	https://www.spigotmc.org/resources/betterstructures.103241/
+	[LISTO]
+
+	Elevadores
+	https://www.spigotmc.org/resources/simple-elevators-1-8-1-20.44462/
+	[LISTO]
+
+	Warps, homes, tpa
+	https://www.spigotmc.org/resources/essentialsx.9089/
+	[LISTO]
+
+	WorldEdit
+	https://dev.bukkit.org/projects/worldedit
+	[LISTO]
+
+	WorldGuard
+	https://dev.bukkit.org/projects/worldguard
+	[LISTO]
+
+	Shopkeepers
+	https://www.spigotmc.org/resources/shopkeepers.80756/
+	[LISTO]
+
+	Anti grifeo (Pirata)
+	https://www.spigotmc.org/resources/lands-%E2%AD%95-land-claim-plugin-%E2%9C%85-grief-prevention-protection-gui-management-nations-wars-1-20-support.53313/
+	[LISTO]
+
+	Clear lag
+	https://www.spigotmc.org/resources/clearlagg.68271/
+	[LISTO]
+
+	Capturar mobs
+	https://modrinth.com/plugin/mobstoeggs
+	[LISTO]
+
+	Vault (No encuentro para 1.20)
+	https://www.spigotmc.org/resources/vault.34315/
+	[LISTO]
+
+	Chat
+	https://www.spigotmc.org/resources/lpc-chat-formatter-1-7-10-1-20.68965/
+	[LISTO]
+
+	Mapa Web
+	https://www.spigotmc.org/resources/dynmap%C2%AE.274/
+	[LISTO]
+
+	----
+
+ 
+	----
+
+	Pendientes:
+	[Jobs] ?
+	[Armored elytra] (No encontré compatible con bedrock)
+
+	----
+
+	Descartados:
+	Protecciones
+	https://www.spigotmc.org/resources/protectionstones-updated-for-1-17.61797/
+	https://www.spigotmc.org/resources/placeholderapi.6245/
+	[Perri: pls configura las mismas protes. Esta vez con menas de minerales: Carbón, hierro, oro, diamante. Comandos que teníamos en el infection (No se si este pl tenga)]
+
+	Mapa web
+	https://www.spigotmc.org/resources/bluemap.83557/
+	Ejemplo: https://bluecolored.de/bluemap/#overworld:-807:0:417:667:0.36:0.67:0:0:perspective
+
+	---
+	IP bedrock y java
+	¿Se pueden ambas a una ip? Que cada cliente vaya a su puerto predeterminado
+		mundito.mochos.xyz
+	Web
+		mundito.mochos.xyz
+	Web del mapa
+	Por defecto es la ip del juego mas el puerto
+	Para que salga en un subdirectorio lo resolvería poniendo un iframe o un redirect.
+		mundito.mochos.xyz/mapa

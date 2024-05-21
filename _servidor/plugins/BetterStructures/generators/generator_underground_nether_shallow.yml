@@ -1,0 +1,7 @@
+isEnabled: true
+structureType:
+- UNDERGROUND_SHALLOW
+validWorldEnvironments:
+- NETHER
+validBiomes: []
+treasureFilename: treasure_nether.yml

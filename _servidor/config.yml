@@ -1,0 +1,19 @@
+lowestYNormalCustom: -60
+highestYNormalCustom: 320
+lowestYNether: 4
+highestYNether: 120
+lowestYEnd: 0
+highestYEnd: 320
+normalCustomAirBuildingMinAltitude: 80
+normalCustomAirBuildingMaxAltitude: 120
+endAirBuildMinAltitude: 80
+endAirBuildMaxAltitude: 120
+airStructuresPerThousandChunks: 0.5
+oceanStructuresPerThousandChunks: 0.5
+landStructuresPerThousandChunks: 2.0
+shallowUndergroundStructuresPerThousandChunks: 2.0
+deepUndergroundStructuresPerThousandChunks: 2.0
+warnAdminsAboutNewBuildings: true
+regionProtectedMessage: '&8[BetterStructures] &cDefeat the zone''s bosses to edit
+  blocks!'
+protectEliteMobsRegions: true

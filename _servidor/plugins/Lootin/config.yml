@@ -1,0 +1,71 @@
+# Thank you for downloading Lootin :)
+# If you find any bug/issue let me know on discord https://discord.com/invite/tTHs4jKu6f
+
+# Titles for chest interfaces
+gui-titles:
+  chest: '&6Cofre'
+  double-chest: '&6Cofre grande'
+  minecart: '&6Minecart con cofre'
+  barrel: '&6Barril'
+
+
+debug-mode: false
+
+ 
+# Its bstats 
+metrics: true
+
+messages:
+  prefix: '&e[&6Lootin&e] '
+  no-permission: '&cYou dont have permission to execute command'
+  chestbreak-with-permission: '&aBreaking the chest will delete your unique loot and items! In order to break, &2you must sneak while doing so..&a As loot is &2per player per chest&a, only break if really needed.'
+  chestbreak-without-permission: '&cYou dont have permission to break loot chests'
+  chest-edited: '&cChest is being edited, cant break it'
+  reloaded: '&aConfig file reloaded'
+  cant-place-double-chest: '&cCant place normal chest near loot chest'
+  elytra-itemframe-break-with-permission: '&cLeft click with stick in main hand to break the special elytra item frame.'
+  elytra-itemframe-break-without-permission: '&cCan''t break elytra item frame!'
+  elytra-item-frame-removed: '&aElytra ItemFrame removed.'
+
+# weather or not to delete items when player breaks loot chest successfully
+delete-items-on-break: true
+
+# weather or not to prevent lootin chest from being exploded by tnt or creeper
+prevent-explosions: true
+
+# list of worlds where lootin will not modify loot chests
+black-list-worlds: []
+
+# list of loottables lootin will ignore, in other words containers with these loottables will not turn into lootin chests
+# list of vanilla loottables can be found here https://github.com/sachingorkar102/Lootin-plugin/blob/main/vanilla-loottables.txt
+# Pro tip:
+  # use NAME$ to take those loottables into account which end with "NAME" eg. "_treasure$"
+  # use ^NAME to take those loottables into acccount which start with "NAME" eg. "^minecraft:chests/" (this will black list all chest loottables from minecraft namespace)
+black-list-structures: []
+
+# Note: does not work with already looted end ships
+# if set to true, the elytra present in item frame in end city ships will be per player
+# these item frames are special and cant be broken, players with lootin.breakelytraitemframe.bypass permission and a stick in main hand can only break them
+per-player-elytra-item-frame: true
+
+
+# list of CustomStructures where lootin will not modify loot chests.
+# only applicable if CustomStructures is installed.
+black-list-customstructures: []
+
+# list of OhTheDungeon structure names where lootin will not modify loot chests.
+# only applicable if OhTheDungeon is installed.
+black-list-otd-structures: []
+
+# if set to false, if the loot chest block is claimed, player will not able to open lootin chest 
+bypass-grief-plugins: true
+
+# REQUIRES WorldGuard Plugin installed
+# determines the default world guard flag value for "lootin-container-access" flag
+default-worldguard-flag-value: true
+
+# when set to true, lostoot will be unique for each player opening the same chest
+reset-seed-on-fill: true
+
+# option to keep using new structure generate listener
+use-new-structure-generate-listener: true

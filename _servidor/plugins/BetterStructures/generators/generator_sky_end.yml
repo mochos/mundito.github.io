@@ -1,0 +1,7 @@
+isEnabled: true
+structureType:
+- SKY
+validWorldEnvironments:
+- THE_END
+validBiomes: []
+treasureFilename: treasure_end.yml

@@ -1,0 +1,5 @@
++ Improved: Role menu - description of roles
+- Fixed: Parsing cache.json in rare cases
++ Added: API: PlayerDataLoadedEvent
+
+# 6292GAQY6
