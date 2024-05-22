@@ -12,6 +12,7 @@
       "minecraft:sunflower_plains": "2024-05-19 12:25:54 -0500",
       "minecraft:birch_forest": "2024-05-21 10:01:47 -0500",
       "minecraft:bamboo_jungle": "2024-05-19 15:20:01 -0500",
+      "minecraft:savanna_plateau": "2024-05-22 08:15:59 -0500",
       "minecraft:beach": "2024-05-19 12:30:38 -0500",
       "minecraft:dark_forest": "2024-05-19 15:17:38 -0500",
       "minecraft:stony_peaks": "2024-05-21 09:10:09 -0500",
@@ -21,13 +22,17 @@
       "minecraft:stony_shore": "2024-05-19 12:25:19 -0500",
       "minecraft:grove": "2024-05-21 09:02:09 -0500",
       "minecraft:jagged_peaks": "2024-05-20 17:38:14 -0500",
+      "minecraft:cold_ocean": "2024-05-22 08:00:27 -0500",
       "minecraft:forest": "2024-05-19 12:33:18 -0500",
       "minecraft:lush_caves": "2024-05-19 15:17:59 -0500",
+      "minecraft:deep_cold_ocean": "2024-05-22 08:03:39 -0500",
       "minecraft:jungle": "2024-05-19 12:35:52 -0500",
       "minecraft:ocean": "2024-05-19 12:26:03 -0500",
+      "minecraft:deep_lukewarm_ocean": "2024-05-22 07:59:31 -0500",
       "minecraft:flower_forest": "2024-05-19 12:25:57 -0500",
       "minecraft:old_growth_birch_forest": "2024-05-19 15:17:32 -0500",
       "minecraft:deep_dark": "2024-05-19 12:34:24 -0500",
+      "minecraft:savanna": "2024-05-22 07:58:49 -0500",
       "minecraft:plains": "2024-05-19 12:23:32 -0500"
     },
     "done": false
@@ -486,6 +491,72 @@
   "minecraft:recipes/decorations/white_carpet": {
     "criteria": {
       "has_white_wool": "2024-05-20 17:57:21 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/glow_item_frame": {
+    "criteria": {
+      "has_item_frame": "2024-05-22 09:01:46 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2024-05-22 09:03:53 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/book": {
+    "criteria": {
+      "has_paper": "2024-05-22 09:05:18 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/cartography_table": {
+    "criteria": {
+      "has_paper": "2024-05-22 09:05:18 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/tools/flint_and_steel": {
+    "criteria": {
+      "has_obsidian": "2024-05-22 09:14:42 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/end_crystal": {
+    "criteria": {
+      "has_ender_eye": "2024-05-22 09:14:46 -0500"
+    },
+    "done": true
+  },
+  "minecraft:story/form_obsidian": {
+    "criteria": {
+      "obsidian": "2024-05-22 09:14:42 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/map": {
+    "criteria": {
+      "has_compass": "2024-05-22 09:15:02 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/enchanting_table": {
+    "criteria": {
+      "has_obsidian": "2024-05-22 09:14:42 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/ender_chest": {
+    "criteria": {
+      "has_ender_eye": "2024-05-22 09:14:46 -0500"
+    },
+    "done": true
+  },
+  "minecraft:story/root": {
+    "criteria": {
+      "crafting_table": "2024-05-22 09:14:28 -0500"
     },
     "done": true
   },

@@ -99,9 +99,21 @@ PLUGINS:
 	https://www.spigotmc.org/resources/dynmap%C2%AE.274/
 	[LISTO]
 
+	Imagenes en mapas
+	https://www.spigotmc.org/resources/imageframe-load-images-on-maps-item-frames-support-gifs-map-markers-survival-friendly.106031/
+	[LISTO]
+
+	Sentarse
+	https://www.spigotmc.org/resources/gsit-modern-sit-seat-and-chair-lay-and-crawl-plugin-1-16-1-20-6.62325/
+	/crawl /lay /sit
+	[LISTO]
+
 	----
 
- 
+	Waystones
+	
+	[Por probar]
+
 	----
 
 	Pendientes:
@@ -119,6 +131,15 @@ PLUGINS:
 	Mapa web
 	https://www.spigotmc.org/resources/bluemap.83557/
 	Ejemplo: https://bluecolored.de/bluemap/#overworld:-807:0:417:667:0.36:0.67:0:0:perspective
+
+	Waystones
+	https://www.spigotmc.org/resources/fancywaystones-waystones-waypoints-warpstones-a-teleporter-location-marker-and-fast-travel.94376/
+	https://www.youtube.com/watch?v=RVr3Eyn65L8
+	[Muy complicado y muy caro]
+	
+	https://modrinth.com/plugin/teawaystones
+	https://www.spigotmc.org/resources/teawaystones.109905/
+	[No funciona bien]
 
 	---
 	IP bedrock y java
