@@ -194,6 +194,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/redstone/redstone": {
+    "criteria": {
+      "has_redstone_block": "2024-05-22 11:14:18 -0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/combat/iron_sword": {
     "criteria": {
       "has_iron_ingot": "2024-05-22 11:14:25 -0500"
@@ -284,27 +290,9 @@
     },
     "done": true
   },
-  "waystones:secret_tunnel": {
-    "criteria": {
-      "command": "2024-05-22 11:15:06 -0500"
-    },
-    "done": true
-  },
-  "waystones:waystones": {
-    "criteria": {
-      "command": "2024-05-22 11:14:44 -0500"
-    },
-    "done": true
-  },
   "minecraft:story/smelt_iron": {
     "criteria": {
       "iron": "2024-05-22 11:14:25 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/misc/map": {
-    "criteria": {
-      "has_compass": "2024-05-22 11:14:39 -0500"
     },
     "done": true
   },
@@ -350,12 +338,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/redstone/redstone": {
-    "criteria": {
-      "has_redstone_block": "2024-05-22 11:14:18 -0500"
-    },
-    "done": true
-  },
   "minecraft:recipes/redstone/iron_door": {
     "criteria": {
       "has_iron_ingot": "2024-05-22 11:14:25 -0500"
@@ -365,6 +347,30 @@
   "minecraft:recipes/redstone/heavy_weighted_pressure_plate": {
     "criteria": {
       "has_iron_ingot": "2024-05-22 11:14:25 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/map": {
+    "criteria": {
+      "has_compass": "2024-05-22 11:14:39 -0500"
+    },
+    "done": true
+  },
+  "waystones:waystones": {
+    "criteria": {
+      "command": "2024-05-22 11:14:44 -0500"
+    },
+    "done": true
+  },
+  "waystones:secret_tunnel": {
+    "criteria": {
+      "command": "2024-05-22 11:15:06 -0500"
+    },
+    "done": true
+  },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_by_something": "2024-05-22 15:39:06 -0500"
     },
     "done": true
   },
