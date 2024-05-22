@@ -1,0 +1,80 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.morph.iron_golem.attack": {
+			"loop": true,
+			"bones": {
+				"arm0": {
+					"rotation": ["math.sin(variable.attack_time * 180) * -114", 0, 0]
+				},
+				"arm1": {
+					"rotation": ["math.sin(variable.attack_time * 180) * -114", 0, 0]
+				}
+			}
+		},
+		"animation.morph.iron_golem.flower" : {
+			"loop" : true,
+			"bones" : {
+				"arm0" : {
+					"rotation" : [ "-45.8 + ((0.25 * math.abs(math.mod(1, 70) - 35) - 17.5) / 35)", 0.0, 0.0 ]
+				}
+			}
+		},
+		"animation.morph.iron_golem.move": {
+			"loop": true,
+			"bones": {
+				"arm0" : {
+					"rotation": [ "-((Math.cos(query.modified_distance_moved * 27.0) * Math.min(query.modified_move_speed, 0.6) / variable.gliding_speed_value) * 12.5) * 2.0", 0.0, 0.0 ]
+				},
+				"arm1" : {
+					"rotation": [ "((Math.cos(query.modified_distance_moved * 27.0) * Math.min(query.modified_move_speed, 0.6) / variable.gliding_speed_value) * 12.5) * 2.0", 0.0, 0.0 ]
+				}
+			}
+		},
+		"animation.morph.iron_golem.move_to_target" : {
+			"loop" : true,
+			"bones" : {
+				"arm0" : {
+					"rotation" : [ "((math.abs(math.mod(query.modified_distance_moved, 13) - 6.5) - 3.25) / 2.25) * 30.0", 0.0, 0.0 ]
+				},
+				"arm1" : {
+					"rotation" : [ "((math.abs(math.mod(query.modified_distance_moved, 13) - 6.5) - 3.25) / 2.25) * -30.0", 0.0, 0.0 ]
+				}
+			}
+		},
+		"animation.morph.iron_golem.walk": {
+			"loop": true,
+			"bones": {
+				"body" : {
+					"rotation": [ 0.0, 0.0, "((Math.cos(query.modified_distance_moved * 27.0) * Math.min(query.modified_move_speed, 0.6) / variable.gliding_speed_value) * 12.5) / 1.5" ]
+				},
+				"head" : {
+					"rotation": [ 0.0, 0.0, "((Math.cos(query.modified_distance_moved * 27.0) * Math.min(query.modified_move_speed, 0.6) / variable.gliding_speed_value) * 12.5) / 1.5" ]
+				},
+				"leg0" : {
+					"rotation": [ "((Math.cos(query.modified_distance_moved * 27.0) * Math.min(query.modified_move_speed, 0.6) / variable.gliding_speed_value) * 12.5) * 6.0", 0.0, 0.0 ]
+				},
+				"leg1" : {
+					"rotation": [ "-((Math.cos(query.modified_distance_moved * 27.0) * Math.min(query.modified_move_speed, 0.6) / variable.gliding_speed_value) * 12.5) * 6.0", 0.0, 0.0 ]
+				}
+			}
+		},
+		"animation.morph.iron_golem.walk_to_target" : {
+			"loop" : true,
+			"bones" : {
+				"body" : {
+					"rotation" : [ 0.0, 0.0, "2.0 * (math.abs(math.mod(query.modified_distance_moved + 6, 13.0) - 6.5) - 3.25)" ]
+				},
+				"head" : {
+					"rotation" : [ 0.0, 0.0, "2.0 * (math.abs(math.mod(query.modified_distance_moved + 6, 13.0) - 6.5) - 3.25)" ]
+				},
+				"leg0" : {
+					"rotation" : [ "(math.cos(query.modified_distance_moved * 38.17) * 40.0)", 0.0, 0.0 ]
+				},
+				"leg1" : {
+					"rotation" : [ "(math.cos(query.modified_distance_moved * 38.17 + 180) * 40.0)", 0.0, 0.0 ]
+				}
+			}
+		}
+	}
+}

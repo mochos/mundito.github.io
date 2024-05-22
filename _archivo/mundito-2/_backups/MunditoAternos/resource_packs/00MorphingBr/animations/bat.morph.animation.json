@@ -1,0 +1,32 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.bat.resting.upside_down": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"position": [0, -0.035, 0],
+					"rotation": [0, 0, 0]
+				},
+				"head": {
+					"position": [0, -0.035, 0],
+					"rotation": ["query.target_x_rotation", "query.target_y_rotation", 0]
+				},
+				"leftwing": {
+					"position": [3, 0, 3],
+					"rotation": [-9, 72, 0]
+				},
+				"leftwingtip": {
+					"rotation": [0, 99, 0]
+				},
+				"rightwing": {
+					"position": [-3, 0, 3],
+					"rotation": [-9, -72, 0]
+				},
+				"rightwingtip": {
+					"rotation": [0, -99, 0]
+				}
+			}
+		}
+	}
+}

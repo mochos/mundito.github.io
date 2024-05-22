@@ -1,0 +1,33 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.disenchanter_slot.item": {
+			"loop": true,
+			"animation_length": 3.36,
+			"bones": {
+				"slot": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"3.36": [0, 360, 0]
+					},
+					"position": {
+						"0.0": {
+							"post": [-0.75, 1, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"1.76": {
+							"post": [-0.75, -1, 0],
+							"lerp_mode": "catmullrom"
+						},
+						"3.32": [-0.75, 1, 0]
+					}
+				},
+				"rightItem": {
+					"rotation": [0, -90, 280],
+					"position": [0, 0, 0],
+					"scale": [0.2, 0.2, 0.2]
+				}
+			}
+		}
+	}
+}

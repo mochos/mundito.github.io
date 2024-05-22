@@ -1,0 +1,20 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.morph.axolotl": {
+      "arrays": {
+        "textures": {
+          "Array.skins": [ "Texture.axolotl_lucy", "Texture.axolotl_cyan", "Texture.axolotl_gold", "Texture.axolotl_wild", "Texture.axolotl_blue" ]
+        }
+      },
+      "geometry": "Geometry.axolotl",
+      "materials": [
+        { "*": "Material.axolotl" },
+        { "*arm": "Material.axolotl_limbs" },
+        { "*leg": "Material.axolotl_limbs" }
+
+      ],
+      "textures": [ "Array.skins[query.mark_variant]" ]
+    }
+  }
+}

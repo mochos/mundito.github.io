@@ -1,0 +1,17 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "This addon gives players an ability to morph into different mobs using the morphing bracelet. More mobs coming soon!\nMade by CookieDookie145\n\nGame Version: 1.20.0 (Resource Pack)",
+        "name": "Morphing Bracelet [ALPHA]",
+        "uuid": "f601f51f-e87c-45a6-ad47-7c156825de21",
+        "version": [ 0, 1, 3 ],
+        "min_engine_version": [ 1, 20, 0 ]
+    },
+    "modules": [
+        {
+            "type": "resources",
+            "uuid": "580cac88-8ee1-4e79-b1e8-5dbfa7248630",
+            "version": [0, 0, 1]
+        }
+    ]
+}

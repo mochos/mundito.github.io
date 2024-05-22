@@ -1,0 +1,22 @@
+{
+	"format_version" : "1.8.0",
+	"animations" : {
+		"animation.morph.slime.general" : {
+			"loop" : true,
+			"bones" : {
+				"cube" : {
+					"position" : [ 0.0, "(query.mark_variant - 1) * 24", 0.0 ],
+					"scale" : [ "variable.horizontal_scale_amount", "variable.vertical_scale_amount", "variable.horizontal_scale_amount" ]
+				}
+			}
+		},
+		"animation.morph.slime.look_at_target" : {
+			"loop" : true,
+			"bones" : {
+				"cube" : {
+					"rotation" : [ 0.0, "query.target_y_rotation", 0.0 ]
+				}
+			}
+		}
+	}
+}

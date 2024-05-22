@@ -1,0 +1,21 @@
+{
+	"format_version" : "1.8.0",
+	"animations" : {
+		"animation.morph.magma_cube.general" : {
+			"loop" : true,
+			"bones" : {
+				"insideCube" : {
+					"scale" : [ "variable.horizontal_scale_amount", "variable.vertical_scale_amount", "variable.horizontal_scale_amount" ]
+				}
+			}
+		},
+		"animation.morph.magma_cube.look_at_target" : {
+			"loop" : true,
+			"bones" : {
+				"insideCube" : {
+					"rotation" : [ 0.0, "query.target_y_rotation", 0.0 ]
+				}
+			}
+		}
+	}
+}

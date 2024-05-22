@@ -1,0 +1,24 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.morph.allay.general": {
+			"initial_state": "idling",
+			"states": {
+				"idling": {
+					"animations": [	"allay_idle" ],
+					"transitions": [
+						{ "flying": "query.modified_move_speed > 0.2"}
+					],
+					"blend_transition": 0.2
+				},
+				"flying": {
+					"animations": [ "allay_fly" ],
+					"transitions": [
+						{ "idling": "query.modified_move_speed < 0.2"}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "morph:souls_in_a_glass",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/items/souls_in_a_glass"
+      },
+      "geometry": {
+        "default": "geometry.item_sprite"
+      },
+      "scripts": {
+        "animate": [
+          "flying"
+        ]
+      },
+      "animations": {
+        "flying": "animation.actor.billboard"
+      },
+      "render_controllers": [ "controller.render.item_sprite" ]
+    }
+  }
+} 

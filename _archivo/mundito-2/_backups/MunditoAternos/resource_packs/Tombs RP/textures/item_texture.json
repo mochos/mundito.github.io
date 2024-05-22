@@ -1,0 +1,12 @@
+{
+    "texture_name": "atlas.items",
+    "resource_pack_name": "vanilla",
+    "texture_data": {
+        "tomb_key": {
+            "textures": "textures/items/key/tomb_key"
+        },
+        "key_config": {
+            "textures": "textures/items/key/key_config"
+        }
+    }
+}

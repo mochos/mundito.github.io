@@ -1,0 +1,13 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.armor": {
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "variable.is_enchanted ? Material.enchanted : Material.default" } ],
+      "textures": [ "variable.has_trim ? variable.trim_path : Texture.default", "Texture.enchanted" ],
+      "part_visibility": [
+        { "*": "query.variant == 0 || query.variant == 1 || query.variant == 3 || query.variant == 11 || query.variant == 13 || query.variant == 15 || query.variant == 19 || query.variant == 21 || query.variant == 25 || query.variant == 31" }
+      ]
+    }
+  }
+}

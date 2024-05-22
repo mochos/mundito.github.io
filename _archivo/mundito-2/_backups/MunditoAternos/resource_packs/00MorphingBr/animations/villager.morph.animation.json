@@ -1,0 +1,66 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.morph.villager.get_in_bed" : {
+			"loop" : true,
+			"bones" : {
+				"body" : {
+					"position" : [ "24.0 * math.cos(query.body_y_rotation) * math.cos(query.sleep_rotation) - 24.0 * math.sin(query.body_y_rotation) * math.sin(query.sleep_rotation)", 0.0, "24.0 * math.cos(query.body_y_rotation) * math.sin(query.sleep_rotation) + 24.0 * math.sin(query.body_y_rotation) * math.cos(query.sleep_rotation)" ],
+					"rotation" : [ -90.0, "270.0 - query.sleep_rotation - query.body_y_rotation", 0.0 ]
+				}
+			}
+		},
+		"animation.morph.villager.move": {
+			"loop": true,
+			"bones": {
+				"leg0": {
+					"rotation": ["((math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 40.0) - this", "-this", 0]
+				},
+				"leg1": {
+					"rotation": ["((math.cos(query.modified_distance_moved * 38.17 + 180) * query.modified_move_speed / variable.gliding_speed_value) * 40.0) - this", "-this", 0]
+				}
+			}
+		},
+		"animation.morph.villager.attack_rotations" : {
+			"loop" : true,
+			"bones" : {
+				"arms" : {
+					"rotation" : [ "-((math.sin(variable.attack_time * 180.0) * 57.3) * 1.2 - (math.sin((1.0 - (1.0 - variable.attack_time) * (1.0 - variable.attack_time)) * 180.0) * 57.3) * 0.4)", 0, 0 ]
+				}
+			}
+		},
+		"animation.morph.villager.sneaking": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"position": [0, "(query.variant == 27 || query.variant == 57) ? -1.5 : 1.5", "(query.variant == 27 || query.variant == 57) ? 0 : 11.25"],
+					"rotation": ["28.0 - this", 0, 0]
+				},
+				"head": {
+					"position": [0, -1, 0]
+				},
+				"arms": {
+					"rotation": [-5.7, 0, 0]
+				},
+				"leftArm": {
+					"rotation": [-5.7, 0, 0]
+				},
+				"leg1": {
+					"rotation": [-28, 0, 0]
+				},
+				"leftLeg": {
+					"rotation": [-28, 0, 0]
+				},
+				"rightArm": {
+					"rotation": [-5.7, 0, 0]
+				},
+				"leg0": {
+					"rotation": [-28, 0, 0]
+				},
+				"rightLeg": {
+					"rotation": [-28, 0, 0]
+				}
+			}
+		}
+	}
+}

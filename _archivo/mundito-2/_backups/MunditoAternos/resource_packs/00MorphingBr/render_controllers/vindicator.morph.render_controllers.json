@@ -1,0 +1,26 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.morph.vindicator.first_person": {
+      "geometry": "Geometry.vindicator",
+      "part_visibility": [
+        { "*": false },
+        { "rightArm": "query.get_equipped_item_name(0, 1) == '' || query.get_equipped_item_name(0, 1) == 'filled_map' || query.get_equipped_item_name(0) == 'morphing_bracelet'" },
+        { "leftArm": "(query.get_equipped_item_name(0, 1) == 'filled_map' && query.get_equipped_item_name('off_hand') != 'shield') || (query.get_equipped_item_name('off_hand') == 'filled_map' && !query.item_is_charged) || (!query.item_is_charged && (variable.item_use_normalized > 0 && variable.item_use_normalized < 1.0))" }
+      ],
+      "materials": [ { "*": "Material.vindicator" } ],
+      "textures": [ "Texture.vindicator" ]
+    },
+    "controller.render.morph.vindicator.third_person": {
+      "geometry": "Geometry.vindicator",
+      "part_visibility": [
+        { "rightArm": "query.is_angry || query.is_celebrating || query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_axe', 'minecraft:is_sword')" },
+        { "leftArm": "query.is_angry || query.is_celebrating || query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_axe', 'minecraft:is_sword')" },
+        { "rightItem": "query.is_angry || query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_axe', 'minecraft:is_sword')" },
+        { "arms": "!(query.is_angry || query.is_celebrating || query.equipped_item_any_tag('slot.weapon.mainhand', 'minecraft:is_axe', 'minecraft:is_sword'))" }
+      ],
+      "materials": [ { "*": "Material.vindicator" } ],
+      "textures": [ "Texture.vindicator" ]
+    }
+  }
+}

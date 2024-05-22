@@ -1,0 +1,998 @@
+{
+  "tiers": [
+    {
+      "total_exp_required": 0,
+      "groups": [
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "venezuela:un_millon",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 2,
+              "max_uses": 99999999,
+              "reward_exp": false
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "appleplus:bolsa_moneda",
+                  "quantity": 3,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "elytra",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 2,
+              "max_uses": 10,
+              "reward_exp": false
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "appleplus:bolsa_moneda",
+                  "quantity": 3,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "shulker_shell",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 2,
+              "max_uses": 10,
+              "reward_exp": false
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "appleplus:bolsa_moneda",
+                  "quantity": 3,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "ancient_debris",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 2,
+              "max_uses": 10,
+              "reward_exp": false
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "appleplus:bolsa_moneda",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "diamond",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 2,
+              "max_uses": 10,
+              "reward_exp": false
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "appleplus:masa_de_experiencia",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 5
+                }
+              ],
+              "trader_exp": 2,
+              "max_uses": 99999999,
+              "reward_exp": false
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 5,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "experience_bottle",
+                  "quantity": 25
+                }
+              ],
+              "trader_exp": 2,
+              "max_uses": 99999999,
+              "reward_exp": false
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "appleplus:pila_moneda",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "npc:lucky_block",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 2,
+              "max_uses": 99999999,
+              "reward_exp": false
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "cobblestone",
+                  "quantity": 64,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 8,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "dirt",
+                  "quantity": 64,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 8,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "gravel",
+                  "quantity": 32,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 8,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "netherrack",
+                  "quantity": 64,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 8,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "cobbled_deepslate",
+                  "quantity": 16,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 8,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "dripstone_block",
+                  "quantity": 16,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 8,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "emerald",
+                  "quantity": 3,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:pila_moneda",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 20,
+              "max_uses": 8,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "appleplus:alma",
+                  "quantity": 6,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:pila_moneda",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 20,
+              "max_uses": 8,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "diamond",
+                  "quantity": 12,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:pila_moneda",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 20,
+              "max_uses": 8,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "iron_ingot",
+                  "quantity": 30,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:pila_moneda",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 20,
+              "max_uses": 8,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "gold_ingot",
+                  "quantity": 35,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:pila_moneda",
+                  "quantity": 1
+                }
+              ],
+              "trader_exp": 20,
+              "max_uses": 8,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "melon_block",
+                  "quantity": 10,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 5
+                }
+              ],
+              "trader_exp": 10,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "pumpkin",
+                  "quantity": 16,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 5
+                }
+              ],
+              "trader_exp": 10,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "potato",
+                  "quantity": 48,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 5
+                }
+              ],
+              "trader_exp": 10,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "wheat",
+                  "quantity": 48,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 5
+                }
+              ],
+              "trader_exp": 10,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "carrot",
+                  "quantity": 64,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 5
+                }
+              ],
+              "trader_exp": 10,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "beetroot",
+                  "quantity": 32,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 5
+                }
+              ],
+              "trader_exp": 10,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "bamboo",
+                  "quantity": 64,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 5
+                }
+              ],
+              "trader_exp": 10,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "reeds",
+                  "quantity": 64,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 5
+                }
+              ],
+              "trader_exp": 10,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "brown_mushroom",
+                  "quantity": 10,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 5
+                }
+              ],
+              "trader_exp": 10,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "red_mushroom",
+                  "quantity": 10,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 5
+                }
+              ],
+              "trader_exp": 10,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "nether_wart",
+                  "quantity": 32,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 5
+                }
+              ],
+              "trader_exp": 10,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "porkchop",
+                  "quantity": 32,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 15
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "beef",
+                  "quantity": 32,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 15
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "chicken",
+                  "quantity": 32,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 15
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "mutton",
+                  "quantity": 32,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 15
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "rabbit",
+                  "quantity": 20,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 15
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "fish",
+                  "quantity": 64,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 15
+                }
+              ],
+              "trader_exp": 15,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "stick",
+                  "quantity": 64,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 4
+                }
+              ],
+              "trader_exp": 20,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "arrow:0",
+                  "quantity": 24,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 4
+                }
+              ],
+              "trader_exp": 20,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "gunpowder",
+                  "quantity": 16,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 4
+                }
+              ],
+              "trader_exp": 20,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "rotten_flesh",
+                  "quantity": 48,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 4
+                }
+              ],
+              "trader_exp": 20,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "egg",
+                  "quantity": 16,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 4
+                }
+              ],
+              "trader_exp": 20,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "leather",
+                  "quantity": 4,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 4
+                }
+              ],
+              "trader_exp": 20,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "string",
+                  "quantity": 16,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "appleplus:moneda",
+                  "quantity": 4
+                }
+              ],
+              "trader_exp": 20,
+              "max_uses": 10,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

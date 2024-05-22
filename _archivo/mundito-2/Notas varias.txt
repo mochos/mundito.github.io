@@ -1,0 +1,85 @@
+IP: lorspi.aternos.me
+Puerto: 62335
+https://add.aternos.org/lorspi
+
+https://www.chunkbase.com/apps/seed-map#-1508930587764538147
+
+Lugares:
+Cherry 1113 545
+
+Areas sin mobs:
+353 70 -894 / 260 50 -1000
+D 93 20 106
+x=260,dx=93,y=50,dy=20,z=-1000,dz=106
+
+Aventura en tienda:
+323 65 -940 / 336 83 -921
+
+gamemode a @a[x=323,dx=13,y=65,dy=18,z=-940,dz=19,m=s]
+
+
+Aventura en granjas:
+311 1 -964 / 351 15 -928
+gamemode a @a[x=311,dx=40,y=1,dy=14,z=-964,dz=36,m=s]
+
+-----
+Gamemode:
+gamemode a @a[r=80,m=s]
+Inc / Se nec / 10
+
+gamemode s @a[rm=79,m=a]
+gamemode s @a[m=a]
+Inco / Se nec / 40
+
+
+-----
+
+
+§e§lExperiencia
+
+§e↓ Guarda | §eCarga ↓
+
+
+----
+
+§dInvoca criaturas con clústers de almas ←←
+
+           
+   =   
+           
+
+----
+
+§dEncanta item en la mano a cambio de experiencia →→
+
+§4§lADVERTENCIA!
+§r§4Un jugador a la vez en la zona
+
+----
+
+/tellraw @a {"rawtext":[{"text":"\n    §l§aComerciantes \n§r  ¡Inventarios actualizados!\n  Nuevas ofertas de compra y venta disponibles.\n "}]}
+
+/tellraw @a {"rawtext":[{"text":"\n     §l§a¡Hemos abierto nuestras tiendas!\n "}]}
+
+/tellraw @a {"rawtext":[{"text":"\n     §l§4Tiendas cerradas \n\n§r  Nos veremos cuando salga el sol.\n "}]}
+
+
+----
+
+/execute if block -34 32 -4 stone_button [ "button_pressed_bit" : true , "facing_direction" : 2 ]
+/camera @p fade time 1 1 1 color 1 1 1
+/camera @p set example:example_free pos -34 36 -23 rot 20 0
+/camera @p set example:example_free ease 5 linear pos -55 35 -1 rot 20 -90
+/camera @p set example:example_free ease 5 linear pos -34 35 22 rot 20 -180
+/camera @p set example:example_free ease 5 linear pos -21 35 -2 rot 20 90
+/camera @p set example:example_free ease 5 linear pos -34 50 -23 rot 60 0
+/camera @p fade time 0.5 0 0.5 color 0 0 0
+
+/camera @p clear
+
+/camera @p set example:example_free ease 1 linear pos ~0 ~10 ~0 rot 90 0
+/camera @p set example:example_free ease 1 out_expo pos ~0 ~7 ~0 rot 90 0
+
+----------
+
+/execute positioned as lorspi run particle minecraft:heart_particle ~ ~2 ~

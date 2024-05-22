@@ -1,0 +1,42 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.morph.salmon.flop": {
+			"loop": true,
+			"bones": {
+				"body_back": {
+					"rotation": [0, "math.cos((query.time_stamp + query.frame_alpha) * 45.0) * -21.75", 0]
+				},
+				"body_front": {
+					"position": [-6, 0, 0],
+					"rotation": [0, "math.cos((query.time_stamp + query.frame_alpha) * 45.0) * 4.0", 90]
+				},
+				"tailfin": {
+					"rotation": [0, "math.cos((query.time_stamp + query.frame_alpha) * 45.0) * -40.0", 0]
+				}
+			}
+		},
+		"animation.morph.salmon.swim": {
+			"loop": true,
+			"bones": {
+				"body_back": {
+					"rotation": [0, "math.cos((query.time_stamp + query.frame_alpha) * 30.0) * -21.75", 0]
+				},
+				"body_front": {
+					"rotation": [0, "math.cos((query.time_stamp + query.frame_alpha) * 30.0) * 4.0", 0]
+				},
+				"tailfin": {
+					"rotation": [0, "math.cos((query.time_stamp + query.frame_alpha) * 30.0) * -40.0", 0]
+				}
+			}
+		},
+		"animation.morph.salmon.look_at_target": {
+			"loop": true,
+			"bones": {
+				"body_front": {
+					"rotation": [ 0.0, "query.target_y_rotation", 0.0 ]
+				}
+			}
+		}
+	}
+}

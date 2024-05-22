@@ -1,0 +1,16 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "tomb:tomb_container",
+            "materials": { "default": "entity_alphatest" },
+            "textures": {
+                "default": "textures/blocks/transparent"
+            },
+            "geometry": {
+                "default": "geometry.dummy"
+            },
+            "render_controllers": ["controller.render.default"]
+        }
+    }
+}

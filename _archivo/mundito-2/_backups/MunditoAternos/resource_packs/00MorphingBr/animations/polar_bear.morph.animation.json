@@ -1,0 +1,28 @@
+{
+	"format_version" : "1.8.0",
+	"animations" : {
+		"animation.morph.polarbear.move" : {
+			"loop" : true,
+			"bones" : {
+				"body" : {
+					"position" : [ 0.0, "-9 - 2 * math.sin(variable.attack_time * 180) - this", 0.0 ],
+					"rotation" : [ "(-(math.sin(variable.attack_time * 180)) * 63) - this", 0.0, 0.0 ]
+				},
+				"leg0" : {
+					"position" : [ 0.0, "-1 * math.sin(variable.attack_time * 180)", "6 * math.sin(variable.attack_time * 180)" ],
+					"rotation" : [ "math.sin(variable.attack_time * 180) * 63", 0.0, 0.0 ]
+				},
+				"leg1" : {
+					"position" : [ 0.0, "-1 * math.sin(variable.attack_time * 180)", "6 * math.sin(variable.attack_time * 180)" ],
+					"rotation" : [ "math.sin(variable.attack_time * 180) * 63", 0.0, 0.0 ]
+				},
+				"leg2" : {
+					"rotation" : [ "(math.sin(variable.attack_time * 180) > 1) ? (math.sin(variable.attack_time * 180) * 81) - this : 0", 0.0, 0.0 ]
+				},
+				"leg3" : {
+					"rotation" : [ "(math.sin(variable.attack_time * 180) > 1) ? (math.sin(variable.attack_time * 180) * 81) - this : 0", 0.0, 0.0 ]
+				}
+			}
+		}
+	}
+}

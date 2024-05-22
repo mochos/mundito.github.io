@@ -1,0 +1,13 @@
+{
+	"format_version": "1.14.0",
+	"sound_definitions": {
+		"block.teleport": {
+			"category": "neutral",
+			"sounds": ["sounds/teleport"]
+		},
+		"block.camouflage":{
+			"category": "block",
+			"sounds": ["sounds/mob/endermen/portal2"]
+		}
+	}
+}

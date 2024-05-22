@@ -1,0 +1,40 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.morph.piglin.move": {
+			"loop": true,
+			"bones": {
+				"leftear": {
+					"rotation": [0, 0, "variable.tcos0 * 0.5"]
+				},
+				"rightear": {
+					"rotation": [0, 0, "-variable.tcos0 * 0.5"]
+				},
+				"leftarm": {
+					"rotation": ["!variable.swim_amount > 0.0 ? variable.tcos0", 0, 0]
+				},
+				"leftleg": {
+					"rotation": ["-variable.tcos0 * 1.4", 0, 0]
+				},
+				"rightarm": {
+					"rotation": ["!variable.swim_amount > 0.0 ? -variable.tcos0", 0, 0]
+				},
+				"rightleg": {
+					"rotation": ["variable.tcos0 * 1.4", 0, 0]
+				}
+			}
+		},
+		"animation.morph.piglin.crossbow.charge": {
+			"bones": {
+				"leftarm" : {
+					"position" : [ 0.0, 0.0, 0.5 ],
+					"rotation" : [ "-this - 65.0 - (1.0 - variable.item_use_normalized) * 5.0", "-this + (1.0 - variable.item_use_normalized) * 30.0", "-this + 20.0 + (1.0 - variable.item_use_normalized) * 10.0" ]
+				},
+				"rightarm" : {
+					"rotation" : [ "- 60.0 - this", "- 45.0 - this", "- 2.5 - this" ]
+				}
+			},
+			"loop": true
+		}
+	}
+}

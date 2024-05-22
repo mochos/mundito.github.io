@@ -1,0 +1,22 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.morph.enderman.move": {
+			"loop": true,
+			"bones": {
+				"leftarm": {
+					"rotation": ["variable.enderman.tcos0", 0, 0]
+				},
+				"leftleg": {
+					"rotation": ["variable.enderman.tcos0 * -1.4", 0, 0]
+				},
+				"rightarm": {
+					"rotation": ["-variable.enderman.tcos0", 0, 0]
+				},
+				"rightleg": {
+					"rotation": ["variable.enderman.tcos0 * 1.4", 0, 0]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "disenchanter:slot",
+      "materials": { "default": "skeleton" },
+      "textures": {
+        "default": "textures/disenchanter_slot"
+      },
+      "geometry": {
+        "default": "geometry.disenchanter_slot"
+      },
+      "scripts": {
+        "scale": "1",
+		"animate":[
+			"item"
+		]
+      },
+	  "animations":{
+		  "item": "animation.disenchanter_slot.item"
+	  },
+      "render_controllers": [ "controller.render.default" ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 18
+      },
+	  "held_item_ignores_lighting": true,
+	  "enable_attachables": true
+    }
+  }
+}

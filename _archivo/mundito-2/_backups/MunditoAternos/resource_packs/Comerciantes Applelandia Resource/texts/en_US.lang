@@ -1,0 +1,28 @@
+item.spawn_egg.entity.npc:boy1.name=Comerciante comida
+item.spawn_egg.entity.npc:boy2.name=Comerciante cosas
+item.spawn_egg.entity.npc:boy3.name=Comerciante cosas chetas
+item.spawn_egg.entity.npc:maduro.name=Maduro
+
+entity.npc:maduro.name=Maburro
+
+item.spawn_egg.entity.npc:aurora.name=Aurora
+entity.npc:aurora.name=Aurora
+
+entity.trader_apple.nombre=Martina
+entity.trader_lorspi.nombre=Jack
+entity.trader_lorspi2.nombre=Noé
+
+entity.hovertext:hovertext.name=Hovertext
+
+item.spawn_egg.entity.npc:girl1.name=Viajar a casa
+item.spawn_egg.entity.npc:girl2.name=§eTalismán del regreso
+
+
+item.npc:adalita.name=Adalita
+tile.npc:adalita_block.name=Bloque de adalita
+
+item.npc:talismandes.name=§7Talismán del regreso desactivado
+item.npc:talisman.name=§l§eTalismán del regreso
+item.npc:talismancap.name=§l§5Replicador de criaturas
+
+tile.npc:lucky_block.name=§l§gBloque de la suerte

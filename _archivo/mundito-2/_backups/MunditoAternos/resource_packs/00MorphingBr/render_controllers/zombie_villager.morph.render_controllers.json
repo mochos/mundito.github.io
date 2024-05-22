@@ -1,0 +1,77 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.morph.zombie_villager.first_person": {
+      "geometry": "Geometry.zombie_villager",
+      "materials": [
+        { "*": "Material.zombie_villager" }
+      ],
+      "textures": [
+        "Texture.zombie_villager"
+      ],
+      "part_visibility": [
+        { "*": false },
+        { "rightArm": "query.get_equipped_item_name(0, 1) == '' || query.get_equipped_item_name(0, 1) == 'map' || query.get_equipped_item_name(0) == 'morphing_bracelet'" },
+        { "leftArm": "query.get_equipped_item_name(1, 1) == '' || query.get_equipped_item_name(1, 1) == 'map'" }
+      ]
+    },
+    "controller.render.morph.zombie_villager.third_person": {
+      "geometry": "Geometry.zombie_villager",
+      "materials": [
+        { "*": "Material.zombie_villager" }
+      ],
+      "textures": [
+        "Texture.zombie_villager"
+      ]
+    },
+    "controller.render.morph.zombie_villager_masked.first_person": {
+      "arrays": {
+        "textures": {
+          "Array.biomes": [
+            "Texture.zombie_villager_plains",
+            "Texture.zombie_villager_desert",
+            "Texture.zombie_villager_jungle",
+            "Texture.zombie_villager_savanna",
+            "Texture.zombie_villager_snow",
+            "Texture.zombie_villager_swamp",
+            "Texture.zombie_villager_taiga"
+          ]
+        }
+      },
+      "geometry": "Geometry.zombie_villager",
+      "materials": [
+        { "*": "Material.zombie_villager" }
+      ],
+      "textures": [
+        "Array.biomes[query.mark_variant]"
+      ],
+      "part_visibility": [
+        { "*": false },
+        { "rightArm": "query.get_equipped_item_name(0, 1) == '' || query.get_equipped_item_name(0, 1) == 'map' || query.get_equipped_item_name(0) == 'morphing_bracelet'" },
+        { "leftArm": "query.get_equipped_item_name(1, 1) == '' || query.get_equipped_item_name(1, 1) == 'map'" }
+      ]
+    },
+    "controller.render.morph.zombie_villager_masked.third_person": {
+      "arrays": {
+        "textures": {
+          "Array.biomes": [
+            "Texture.zombie_villager_plains",
+            "Texture.zombie_villager_desert",
+            "Texture.zombie_villager_jungle",
+            "Texture.zombie_villager_savanna",
+            "Texture.zombie_villager_snow",
+            "Texture.zombie_villager_swamp",
+            "Texture.zombie_villager_taiga"
+          ]
+        }
+      },
+      "geometry": "Geometry.zombie_villager",
+      "materials": [
+        { "*": "Material.zombie_villager" }
+      ],
+      "textures": [
+        "Array.biomes[query.mark_variant]"
+      ]
+    }
+  }
+}

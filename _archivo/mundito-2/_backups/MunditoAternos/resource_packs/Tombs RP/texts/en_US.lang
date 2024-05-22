@@ -1,0 +1,10 @@
+item.tomb:tomb_key=Key
+item.tomb:key_config=Configuration key
+
+tile.tomb:tomb_1.name=Tomb
+tile.tomb:tomb_2.name=Tomb
+tile.tomb:tomb_3.name=Tomb
+tile.tomb:tomb_4.name=Tomb
+tile.tomb:tomb_5.name=Tomb
+
+entity.tomb:tomb_container.name=Tomb

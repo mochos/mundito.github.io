@@ -1,0 +1,10 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.morph.turtle": {
+      "geometry": "Geometry.turtle",
+      "materials": [ { "*": "Material.turtle" } ],
+      "textures": [ "Texture.turtle" ]
+    }
+  }
+}

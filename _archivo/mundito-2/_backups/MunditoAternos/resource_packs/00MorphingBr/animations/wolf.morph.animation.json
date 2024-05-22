@@ -1,0 +1,13 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.morph.wolf.tail_default": {
+			"loop": true,
+			"bones": {
+				"tail": {
+					"rotation": ["query.is_tamed ? query.health * 3.75 + 25.0 : 30.0 - this", 0, "-this"]
+				}
+			}
+		}
+	}
+}

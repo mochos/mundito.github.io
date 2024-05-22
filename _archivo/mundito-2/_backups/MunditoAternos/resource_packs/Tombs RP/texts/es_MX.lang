@@ -1,0 +1,10 @@
+item.tomb:tomb_key=Llave
+item.tomb:key_config=Llave de configuración
+
+tile.tomb:tomb_1.name=Tumba
+tile.tomb:tomb_2.name=Tumba
+tile.tomb:tomb_3.name=Tumba
+tile.tomb:tomb_4.name=Tumba
+tile.tomb:tomb_5.name=Tumba
+
+entity.tomb:tomb_container.name=Tumba

@@ -1,0 +1,30 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.morph.rabbit.first_person": {
+      "arrays": {
+        "textures": {
+          "Array.skins": [ "Texture.rabbit_brown", "Texture.rabbit_white", "Texture.rabbit_black", "Texture.rabbit_white_splotched", "Texture.rabbit_gold", "Texture.rabbit_salt", "Texture.rabbit_toast" ]
+        }
+      },
+      "geometry": "Geometry.rabbit",
+      "materials": [ { "*": "Material.rabbit" } ],
+      "textures": [ "Array.skins[query.mark_variant]" ],
+      "part_visibility": [
+        { "*": false },
+        { "frontLegRight": "query.get_equipped_item_name(0, 1) == '' || query.get_equipped_item_name(0, 1) == 'filled_map' || query.get_equipped_item_name(0) == 'morphing_bracelet'" },
+        { "frontLegLeft": "(query.get_equipped_item_name(0, 1) == 'filled_map' && query.get_equipped_item_name('off_hand') != 'shield') || (query.get_equipped_item_name('off_hand') == 'filled_map' && !query.item_is_charged) || (!query.item_is_charged && (variable.item_use_normalized > 0 && variable.item_use_normalized < 1.0))" }
+      ]
+    },
+    "controller.render.morph.rabbit.third_person": {
+      "arrays": {
+        "textures": {
+          "Array.skins": [ "Texture.rabbit_brown", "Texture.rabbit_white", "Texture.rabbit_black", "Texture.rabbit_white_splotched", "Texture.rabbit_gold", "Texture.rabbit_salt", "Texture.rabbit_toast" ]
+        }
+      },
+      "geometry": "Geometry.rabbit",
+      "materials": [ { "*": "Material.rabbit" } ],
+      "textures": [ "Array.skins[query.mark_variant]" ]
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+   "format_version" : "1.14.0",
+   "sound_definitions" : {
+      "entity.skeleton.converted_to_wither" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "hostile",
+         "sounds" : [
+            "sounds/mob/wither_skeleton/convert1",
+            "sounds/mob/wither_skeleton/convert2",
+            "sounds/mob/wither_skeleton/convert3",
+            "sounds/mob/wither_skeleton/convert4"
+         ]
+      }
+   }
+}
