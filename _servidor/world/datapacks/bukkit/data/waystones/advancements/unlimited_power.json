@@ -1,0 +1,24 @@
+{
+  "display": {
+    "title": {
+      "text": "UNLIMITED POWER"
+    },
+    "description": {
+      "text": "Overcharge a waystone causing it to explode"
+    },
+    "icon": {
+      "item": "minecraft:glowstone"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "frame": "challenge",
+    "background": "minecraft:textures/block/chiseled_quartz_block.png"
+  },
+  "criteria": {
+    "command": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "waystones:heavy_artillery"
+}

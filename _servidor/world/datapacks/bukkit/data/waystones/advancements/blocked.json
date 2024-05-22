@@ -1,0 +1,23 @@
+{
+  "display": {
+    "title": {
+      "text": "Blocked"
+    },
+    "description": {
+      "text": "Suppress a waystone"
+    },
+    "icon": {
+      "item": "minecraft:obsidian"
+    },
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/block/chiseled_quartz_block.png"
+  },
+  "criteria": {
+    "command": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "waystones:secret_tunnel"
+}

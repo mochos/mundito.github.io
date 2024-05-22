@@ -108,11 +108,12 @@ PLUGINS:
 	/crawl /lay /sit
 	[LISTO]
 
-	----
-
 	Waystones
-	
-	[Por probar]
+	https://www.spigotmc.org/resources/waystones.93917/
+	Esta reemplaza la dinámica de /sethome
+	[LISTO]
+
+	----
 
 	----
 
@@ -136,7 +137,7 @@ PLUGINS:
 	https://www.spigotmc.org/resources/fancywaystones-waystones-waypoints-warpstones-a-teleporter-location-marker-and-fast-travel.94376/
 	https://www.youtube.com/watch?v=RVr3Eyn65L8
 	[Muy complicado y muy caro]
-	
+
 	https://modrinth.com/plugin/teawaystones
 	https://www.spigotmc.org/resources/teawaystones.109905/
 	[No funciona bien]
