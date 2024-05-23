@@ -109,7 +109,7 @@ PLUGINS:
 
 	Anti grifeo (Pirata)
 	https://www.spigotmc.org/resources/lands-%E2%AD%95-land-claim-plugin-%E2%9C%85-grief-prevention-protection-gui-management-nations-wars-1-20-support.53313/
-	[LISTO: Probar si se buggea]
+	[LISTO: Probar si se buggea con el nuevo worldguard]
 
 	Mochilas
 	https://www.spigotmc.org/resources/minepacks-backpack-plugin-mc-1-7-1-20.19286/
@@ -118,6 +118,7 @@ PLUGINS:
 	Mochilas nuevo
 	https://www.spigotmc.org/resources/havenbags-shulker-like-player-bound-bags-1-17-1-20-4.110420/
 	https://www.spigotmc.org/resources/valorlessutils-1-17-1-20-4.109586/
+	https://www.youtube.com/watch?v=8yXRvnIPCBM
 	[Probando...]
 
 	----
