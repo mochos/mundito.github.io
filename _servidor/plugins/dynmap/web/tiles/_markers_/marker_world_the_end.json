@@ -1,8 +1,8 @@
-{"sets": {"me.angeschossen.lands": {"hide": false,"circles": {}
+{"sets": {"towny.markerset": {"hide": false,"circles": {}
 ,"areas": {}
-,"label": "Lands","markers": {}
+,"label": "Towny","markers": {}
 ,"lines": {}
-,"layerprio": 10,"showlabels": true}
+,"layerprio": 2}
 ,"markers": {"hide": false,"circles": {}
 ,"areas": {}
 ,"label": "Markers","markers": {"_spawn_world_the_end": {"markup": false,"x": 0.00,"icon": "world","y": 61.00,"dim": "16x16","z": 0.00,"label": "Spawn"}
@@ -10,4 +10,4 @@
 ,"lines": {}
 ,"layerprio": 0}
 }
-,"timestamp": 1716493832822}
+,"timestamp": 1716503083738}

@@ -1,16 +1,16 @@
-{"sets": {"me.angeschossen.lands": {"hide": false,"circles": {}
-,"areas": {"01HYBDZYW9CZEEGQQDWBY120VC_world_0": {"fillcolor": "#00FF00","ytop": 64.00,"color": "#009933","markup": false,"x": [0.00,16.00,16.00,32.00,32.00,16.00,16.00,0.00]
-,"weight": 2,"z": [-16.00,-16.00,0.00,0.00,32.00,32.00,16.00,16.00]
-,"ybottom": 64.00,"label": "01HYBDZYW9CZEEGQQDWBY120VC_world","opacity": 1.00,"fillopacity": 0.35,"desc": "<div><span style=\"font-size:200%\">Sirpol<br \/><\/span>Alg\u00FAn mensaje bonito<\/div> <ul><li>Level: <\/li><li>Balance: $0.00<\/li><li>Chunks: 4<\/li><li>Players (2): sirpol, lorspi<\/li><\/ul>"}
-,"01HYJTBC8WG371GK4ACFPP07B9_world_0": {"fillcolor": "#00FF00","ytop": 64.00,"color": "#009933","markup": false,"x": [16.00,32.00,32.00,48.00,48.00,64.00,64.00,80.00,80.00,32.00,32.00,16.00]
-,"weight": 2,"z": [64.00,64.00,48.00,48.00,64.00,64.00,48.00,48.00,96.00,96.00,80.00,80.00]
-,"ybottom": 64.00,"label": "01HYJTBC8WG371GK4ACFPP07B9_world","opacity": 1.00,"fillopacity": 0.35,"desc": "<div><span style=\"font-size:200%\">Nadie<br \/><\/span> of lorspi.<\/div> <ul><li>Level: <\/li><li>Balance: $0.00<\/li><li>Chunks: 9<\/li><li>Players (2): lorspi, sirpol<\/li><\/ul>"}
+{"sets": {"towny.markerset": {"hide": false,"circles": {}
+,"areas": {"Algo__0": {"fillcolor": "#FF0000","ytop": 64.00,"color": "#FF0000","markup": false,"x": [64.00,80.00,80.00,64.00]
+,"weight": 3,"z": [0.00,0.00,32.00,32.00]
+,"ybottom": 64.00,"label": "Algo","opacity": 0.80,"fillopacity": 0.35,"desc": "<div><div><span style=\"font-size:120%\">Algo ()<\/span><br \/> Mayor <span style=\"font-weight:bold\">lorspi<\/span><br \/> Associates <span style=\"font-weight:bold\">lorspi, _lorspi<\/span><br \/>Flags<br \/><span style=\"font-weight:bold\">PvP: Deshabilitado<br \/>Spawn de Mobs: Deshabilitado<br \/>Explosiones: Deshabilitado<br \/>Propagaci\u00F3n del Fuego: Deshabilitado<\/span><\/div><\/div>"}
+,"Perryland__0": {"fillcolor": "#FF0000","ytop": 64.00,"color": "#FF0000","markup": false,"x": [-32.00,-16.00,-16.00,16.00,16.00,-16.00,-16.00,-32.00]
+,"weight": 3,"z": [-80.00,-80.00,-32.00,-32.00,0.00,0.00,-16.00,-16.00]
+,"ybottom": 64.00,"label": "Perryland","opacity": 0.80,"fillopacity": 0.35,"desc": "<div><div><span style=\"font-size:120%\">Perryland ()<\/span><br \/> Mayor <span style=\"font-weight:bold\">elPantallazoAzul<\/span><br \/> Associates <span style=\"font-weight:bold\">elPantallazoAzul<\/span><br \/>Flags<br \/><span style=\"font-weight:bold\">PvP: Habilitado<br \/>Spawn de Mobs: Deshabilitado<br \/>Explosiones: Deshabilitado<br \/>Propagaci\u00F3n del Fuego: Deshabilitado<\/span><\/div><\/div>"}
 }
-,"label": "Lands","markers": {"01HYJTBC8WG371GK4ACFPP07B9_spawn": {"markup": false,"x": 60.11,"icon": "greenflag","y": 83.50,"dim": "16x16","z": 70.55,"label": "Nadie","minzoom": 0,"desc": "<div><span style=\"font-size:200%\">Spawnpoint<\/span><\/div> <div><br \/>Open to untrusted: No<\/div> <ul><li>If this spawn is open to untrusted, anyone can teleport to it by executing \/lands spawn Nadie.<\/li><\/ul>"}
-,"01HYBDZYW9CZEEGQQDWBY120VC_spawn": {"markup": false,"x": 8.31,"icon": "greenflag","y": 94.50,"dim": "16x16","z": 14.29,"label": "Sirpol","minzoom": 0,"desc": "<div><span style=\"font-size:200%\">Spawnpoint<\/span><\/div> <div><br \/>Open to untrusted: No<\/div> <ul><li>If this spawn is open to untrusted, anyone can teleport to it by executing \/lands spawn Sirpol.<\/li><\/ul>"}
+,"label": "Towny","markers": {"Algo__home": {"markup": false,"x": 72.00,"icon": "greenflag","y": 64.00,"dim": "16x16","z": 8.00,"label": "Algo","desc": "<div><div><span style=\"font-size:120%\">Algo ()<\/span><br \/> Mayor <span style=\"font-weight:bold\">lorspi<\/span><br \/> Associates <span style=\"font-weight:bold\">lorspi, _lorspi<\/span><br \/>Flags<br \/><span style=\"font-weight:bold\">PvP: Deshabilitado<br \/>Spawn de Mobs: Deshabilitado<br \/>Explosiones: Deshabilitado<br \/>Propagaci\u00F3n del Fuego: Deshabilitado<\/span><\/div><\/div>"}
+,"Perryland__home": {"markup": false,"x": -8.00,"icon": "greenflag","y": 64.00,"dim": "16x16","z": -24.00,"label": "Perryland","desc": "<div><div><span style=\"font-size:120%\">Perryland ()<\/span><br \/> Mayor <span style=\"font-weight:bold\">elPantallazoAzul<\/span><br \/> Associates <span style=\"font-weight:bold\">elPantallazoAzul<\/span><br \/>Flags<br \/><span style=\"font-weight:bold\">PvP: Habilitado<br \/>Spawn de Mobs: Deshabilitado<br \/>Explosiones: Deshabilitado<br \/>Propagaci\u00F3n del Fuego: Deshabilitado<\/span><\/div><\/div>"}
 }
 ,"lines": {}
-,"layerprio": 10,"showlabels": true}
+,"layerprio": 2}
 ,"markers": {"hide": false,"circles": {}
 ,"areas": {}
 ,"label": "Markers","markers": {"_spawn_world": {"markup": false,"x": 17.00,"icon": "world","y": 71.00,"dim": "16x16","z": 49.00,"label": "Spawn"}
@@ -18,4 +18,4 @@
 ,"lines": {}
 ,"layerprio": 0}
 }
-,"timestamp": 1716494437272}
+,"timestamp": 1716504285735}

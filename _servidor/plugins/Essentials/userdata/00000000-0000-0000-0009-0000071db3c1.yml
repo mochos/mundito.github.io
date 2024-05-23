@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 186.27.198.26
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1716504309573
+  login: 1716503402690
+money: '0'
+last-account-name: _lorspi
+logoutlocation:
+  world: b339dda7-0e12-48e2-99c8-d31b6a44bf65
+  world-name: world
+  x: 78.08362
+  y: 101.0
+  z: 7.5334563
+  yaw: 66.77392578125
+  pitch: 38.3155517578125
+lastlocation:
+  world: b339dda7-0e12-48e2-99c8-d31b6a44bf65
+  world-name: world
+  x: 76.69999
+  y: 96.4312500178814
+  z: -2.69999
+  yaw: 30.717742919921875
+  pitch: 10.94256591796875

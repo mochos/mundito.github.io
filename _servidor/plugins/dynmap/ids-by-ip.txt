@@ -1,6 +1,10 @@
 %YAML 1.1
 ---
+'186_27_198_26':
+- lorspi
+- _lorspi
 0:0:0:0:0:0:0:1:
 - lorspi
 '127_0_0_1':
+- elPantallazoAzul
 - sirpol

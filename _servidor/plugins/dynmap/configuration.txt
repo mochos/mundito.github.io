@@ -321,7 +321,7 @@ render-triggers:
   - blockformed
   - blockfaded
   - blockspread
-  - pistonmoved
+  #- pistonmoved
   - explosion
   #- blockfromto
   #- blockphysics
