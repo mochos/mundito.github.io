@@ -75,10 +75,6 @@ PLUGINS:
 	https://www.spigotmc.org/resources/shopkeepers.80756/
 	[LISTO]
 
-	Anti grifeo (Pirata)
-	https://www.spigotmc.org/resources/lands-%E2%AD%95-land-claim-plugin-%E2%9C%85-grief-prevention-protection-gui-management-nations-wars-1-20-support.53313/
-	[LISTO]
-
 	Clear lag
 	https://www.spigotmc.org/resources/clearlagg.68271/
 	[LISTO]
@@ -114,6 +110,10 @@ PLUGINS:
 	[LISTO]
 
 	----
+
+	Anti grifeo (Pirata)
+	https://www.spigotmc.org/resources/lands-%E2%AD%95-land-claim-plugin-%E2%9C%85-grief-prevention-protection-gui-management-nations-wars-1-20-support.53313/
+	[LISTO]
 
 	----
 

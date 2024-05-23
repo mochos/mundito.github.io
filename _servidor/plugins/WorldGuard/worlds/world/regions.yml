@@ -9,18 +9,4 @@
 #
 # REMEMBER TO KEEP PERIODICAL BACKUPS.
 #
-regions:
-    ps8x78y11z:
-        min: {x: -56, y: -32768, z: -53}
-        max: {x: 72, y: 32767, z: 75}
-        members: {}
-        flags: {wither-damage: deny, creeper-explosion: deny, farewell-action: §lLeaving
-                §b§llorspi's §f§lprotected area, greeting-action: §lEntering §b§llorspi's
-                §f§lprotected area, greeting: Hola, ps-home: 8.0 79.0 11.0, tnt: deny,
-            pvp: deny, ps-tax-autopayer: 6b935d9e-c2fe-3085-a6fa-227d8624c201, ghast-fireball: deny,
-            ps-block-material: EMERALD_ORE, farewell: §lLeaving §b§llorspi's §f§lprotected
-                area}
-        owners:
-            unique-ids: [6b935d9e-c2fe-3085-a6fa-227d8624c201]
-        type: cuboid
-        priority: 0
+regions: {}
