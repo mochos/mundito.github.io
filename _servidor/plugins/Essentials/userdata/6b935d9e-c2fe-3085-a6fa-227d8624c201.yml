@@ -11,31 +11,31 @@ powertoolsenabled: true
 accepting-pay: true
 baltop-exempt: false
 timestamps:
-  lastteleport: 1716384221777
+  lastteleport: 1716482164508
   lastheal: 0
   mute: 0
   jail: 0
   onlinejail: 0
-  logout: 1716472447844
-  login: 1716470890858
+  logout: 1716482192837
+  login: 1716481749226
 money: '0'
 last-account-name: lorspi
 logoutlocation:
   world: b339dda7-0e12-48e2-99c8-d31b6a44bf65
   world-name: world
-  x: 60.57187206275557
-  y: 83.0
-  z: 70.40672183499976
-  yaw: 89.55561065673828
-  pitch: 0.15003301203250885
+  x: 5.570920874431946
+  y: 94.5625
+  z: 13.220761446560454
+  yaw: -123.30741882324219
+  pitch: 0.6014991402626038
 lastlocation:
   world: b339dda7-0e12-48e2-99c8-d31b6a44bf65
   world-name: world
-  x: 325.3174754714843
-  y: 123.48746717917872
-  z: 1729.6959773765573
-  yaw: -171.60202026367188
-  pitch: 47.85040283203125
+  x: 6.5
+  y: 94.0
+  z: 12.5
+  yaw: 89.99999237060547
+  pitch: 15.449993133544922
 homes:
   home:
     world: b339dda7-0e12-48e2-99c8-d31b6a44bf65

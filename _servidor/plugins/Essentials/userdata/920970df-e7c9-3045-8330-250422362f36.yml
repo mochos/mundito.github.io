@@ -16,18 +16,18 @@ timestamps:
   mute: 0
   jail: 0
   onlinejail: 0
-  logout: 1716472441494
-  login: 1716472129847
+  logout: 1716481076917
+  login: 1716480535461
 money: '0'
 last-account-name: sirpol
 logoutlocation:
   world: b339dda7-0e12-48e2-99c8-d31b6a44bf65
   world-name: world
-  x: 5.704491989968229
-  y: 95.0
-  z: 16.04747541608394
-  yaw: -172.85072326660156
-  pitch: 45.45115280151367
+  x: 6.970478039482449
+  y: 94.0
+  z: 14.84419743384025
+  yaw: -111.5054931640625
+  pitch: -4.498779773712158
 lastlocation:
   world: b339dda7-0e12-48e2-99c8-d31b6a44bf65
   world-name: world

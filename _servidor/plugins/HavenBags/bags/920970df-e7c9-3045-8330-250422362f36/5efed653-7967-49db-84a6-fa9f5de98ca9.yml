@@ -1,0 +1,11 @@
+uuid: 5efed653-7967-49db-84a6-fa9f5de98ca9
+owner: 920970df-e7c9-3045-8330-250422362f36
+creator: 920970df-e7c9-3045-8330-250422362f36
+size: 9
+texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGNiM2FjZGMxMWNhNzQ3YmY3MTBlNTlmNGM4ZTliM2Q5NDlmZGQzNjRjNjg2OTgzMWNhODc4ZjA3NjNkMTc4NyJ9fX0=
+custommodeldata: 0
+trusted: []
+auto-pickup: 'null'
+weight: 1300.0
+weight-max: 0
+content: '[null,null,null,{"==":"org.bukkit.inventory.ItemStack","v":3465,"type":"LODESTONE"},null,null,null,null,null]'

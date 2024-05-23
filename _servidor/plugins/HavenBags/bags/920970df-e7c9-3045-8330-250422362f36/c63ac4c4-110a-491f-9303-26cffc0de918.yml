@@ -1,0 +1,15 @@
+uuid: c63ac4c4-110a-491f-9303-26cffc0de918
+owner: 920970df-e7c9-3045-8330-250422362f36
+creator: 920970df-e7c9-3045-8330-250422362f36
+size: 9
+texture: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNGNiM2FjZGMxMWNhNzQ3YmY3MTBlNTlmNGM4ZTliM2Q5NDlmZGQzNjRjNjg2OTgzMWNhODc4ZjA3NjNkMTc4NyJ9fX0=
+custommodeldata: 0
+trusted: []
+auto-pickup: 'null'
+weight: 1300.0
+weight-max: 0
+content: '[null,null,null,{"==":"org.bukkit.inventory.ItemStack","v":3465,"type":"WRITTEN_BOOK","meta":{"==":"ItemMeta","meta-type":"BOOK_SIGNED","lore":["{\"extra\":[{\"bold\":false,\"italic\":false,\"underlined\":false,\"strikethrough\":false,\"obfuscated\":false,\"color\":\"gray\",\"text\":\"Date:
+  22-05-2024\"}],\"text\":\"\"}"],"enchants":{"DURABILITY":1},"ItemFlags":["HIDE_ENCHANTS"],"title":"§f§csirpol◊s
+  Obituary","author":"lorspi","pages":["{\"extra\":[{\"text\":\"         Obituary         \\n-------------------\\n  Name:
+  sirpol\\n  Cause: lorspi\\n  Date: 22-05-2024\\n  Items: 0\\n  Exp: 0\\n  Location:\\n    World:
+  Overworld\\n    X: 5.5\\n    Y: 95.5\\n    Z: 12.5\"}],\"text\":\"\"}"]}},null,null,null,null,null]'
