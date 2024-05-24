@@ -8,6 +8,7 @@
   "minecraft:adventure/adventuring_time": {
     "criteria": {
       "minecraft:stony_shore": "2024-05-23 16:36:18 -0500",
+      "minecraft:forest": "2024-05-23 21:13:04 -0500",
       "minecraft:plains": "2024-05-23 16:35:50 -0500"
     },
     "done": false
@@ -159,6 +160,24 @@
   "minecraft:recipes/building_blocks/birch_stairs": {
     "criteria": {
       "has_planks": "2024-05-23 17:06:33 -0500"
+    },
+    "done": true
+  },
+  "minecraft:story/root": {
+    "criteria": {
+      "crafting_table": "2024-05-23 21:15:26 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/chest": {
+    "criteria": {
+      "has_lots_of_items": "2024-05-23 21:16:21 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/shulker_box": {
+    "criteria": {
+      "has_shulker_shell": "2024-05-23 21:40:54 -0500"
     },
     "done": true
   },

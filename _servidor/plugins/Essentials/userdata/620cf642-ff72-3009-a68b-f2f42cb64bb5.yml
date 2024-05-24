@@ -3,7 +3,7 @@ teleportauto: false
 godmode: false
 muted: false
 jailed: false
-ip-address: 127.0.0.1
+ip-address: 181.234.49.135
 afk: false
 socialspy: false
 npc: false
@@ -16,18 +16,18 @@ timestamps:
   mute: 0
   jail: 0
   onlinejail: 0
-  logout: 1716504309563
-  login: 1716503126098
+  logout: 1716518373153
+  login: 1716515121070
 money: '0'
 last-account-name: elPantallazoAzul
 logoutlocation:
   world: b339dda7-0e12-48e2-99c8-d31b6a44bf65
   world-name: world
-  x: 75.4133999091708
-  y: 98.9375
-  z: 8.684813816251223
-  yaw: -134.7186737060547
-  pitch: 12.02165412902832
+  x: 70.07751329669159
+  y: 98.0
+  z: 11.948911166721446
+  yaw: 139.5883026123047
+  pitch: 27.53982925415039
 lastlocation:
   world: b339dda7-0e12-48e2-99c8-d31b6a44bf65
   world-name: world

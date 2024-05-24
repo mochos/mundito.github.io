@@ -2,7 +2,7 @@ name=Perryland
 mayor=elPantallazoAzul
 
 
-townBoard=/town set board [msg]
+townBoard=Ola bb
 tag=
 founder=elPantallazoAzul
 protectionStatus=residentBuild,residentDestroy,residentSwitch,residentItemUse,pvp

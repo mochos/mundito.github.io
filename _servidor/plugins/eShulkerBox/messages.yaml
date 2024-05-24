@@ -1,0 +1,49 @@
+#
+#   ███████╗███████╗██╗  ██╗██╗   ██╗██╗     ██╗  ██╗███████╗██████╗ ██████╗  ██████╗ ██╗  ██╗
+#   ██╔════╝██╔════╝██║  ██║██║   ██║██║     ██║ ██╔╝██╔════╝██╔══██╗██╔══██╗██╔═══██╗╚██╗██╔╝
+#   █████╗  ███████╗███████║██║   ██║██║     █████╔╝ █████╗  ██████╔╝██████╔╝██║   ██║ ╚███╔╝
+#   ██╔══╝  ╚════██║██╔══██║██║   ██║██║     ██╔═██╗ ██╔══╝  ██╔══██╗██╔══██╗██║   ██║ ██╔██╗
+#   ███████╗███████║██║  ██║╚██████╔╝███████╗██║  ██╗███████╗██║  ██║██████╔╝╚██████╔╝██╔╝ ██╗
+#   ╚══════╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═════╝  ╚═════╝ ╚═╝  ╚═╝
+#
+# "ANSI Shadow" from http://patorjk.com/software/taag/
+# --
+# General messages
+# You can use %prefix% to replace it for the currently prefix in config.yaml
+# If you want to, you can use RGB colors (Gradients, Solid) -> more on our wiki
+# Our systems supports PAPI
+# --
+
+prefix: "<BOLD><GRADIENT:D579E9:B922CC>ShulkerBox</BOLD></GRADIENT> &8»&7"
+
+help-command:
+  - "&8&m-------------------&8[ <BOLD><GRADIENT:D579E9:B922CC>ShulkerBox</BOLD></GRADIENT>&8 ]&8&m-------------------"
+  - " &f/shulkerbox help &8» &7Shows this help page"
+  - " &f/shulkerbox reload &8» &7Reloads the plugin"
+  - " &f/shulkerbox give <type> [player] &8» &7Gives a shulker box to a player"
+  - " &f/shulkerbox list &8» &7Shows all shulker box types"
+  - " &f/shulkerbox info &8» &7Shows info about the plugin"
+  - "&8&m----------------------------------------------------"
+
+invalid-command: "%prefix% &cInvalid command! Type '/shulkerbox help' for help!"
+
+no-permission: "%prefix% &cYou don't have permission to do that!"
+no-player: "%prefix% &cYou can't do that from console!"
+
+player-not-found: "%prefix% &cPlayer not found!"
+shulkerbox-not-found: "%prefix% &cShulker box not found!"
+
+shulkerbox-given: "%prefix% &7You have been given a &b%type% &7shulker box!"
+shulkerbox-given-other: "%prefix% &7You have given a &b%type% &7shulker box to &b%player%&7!"
+
+cooldown: "%prefix% &cYou can't do that yet! You have to wait &b%time% &cseconds!"
+
+plugin-reloading: "%prefix% &7Reloading plugin..."
+# Custom Placeholders for this message:
+# %time% - Reload time in milliseconds
+plugin-reloaded: "%prefix% &7Plugin reloaded in %time%ms!"
+
+# Custom Placeholders for this message:
+# %new_version% - New version of the plugin
+# %current_version% - Current version of the plugin
+update-available: "%prefix% &7There is an %new_version% update available!"
