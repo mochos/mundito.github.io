@@ -1,0 +1,27 @@
+Towny:
+
+/town create <nombre>
+/town claim
+/town invite <nombre>
+/accept /deny
+/town spawn
+/town set spawn
+/town toggle <flag>
+/town claim outpost
+¿Eliminar ciudad?
+¿Abandonar ciudad?
+¿Desclaimear chunks?
+
+
+¿Usamos plots para permisos individuales?
+/plot forsale
+/plot notforsale
+/plot claim
+/plot perm add <nombre>
+/plot perm remove <nombre>
+/plot perm gui
+¿Abandonar plot?
+
+- Si pertenezco a una ciudad y quiero tener por aparte mis zonas protegidas
+- Darle permiso a jugadores específicos en la zona sin que pertenezcan a la ciudad
+- Revisar distancias entre ciudades. ¿0 para que sean vecinos?

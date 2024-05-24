@@ -1,7 +1,8 @@
 name=
 price=-1.0
 taxed=true
-town=Algo
+town=Nada
+resident=lorspi
 type=Default
 outpost=false
 changed=false
@@ -9,4 +10,4 @@ claimedAt=1716502820973
 metadata=
 groupID=
 trustedResidents=
-customPermissionData={}
+customPermissionData={"4dad4ec6-8794-3c8d-9d3b-4caef5ed388a":"lorspi,1716563062648,SET,SET,SET,SET"}
