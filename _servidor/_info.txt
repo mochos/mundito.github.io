@@ -109,7 +109,11 @@ PLUGINS:
 
 	Anti grifeo
 	https://www.spigotmc.org/resources/towny-advanced.72694/
-	[Pendiete finalizar config]
+	[Pendiente finalizar config]
+
+	Límite de tiempo de juego?
+	https://www.spigotmc.org/resources/playertimelimit-1-8-1-19.96577/
+	[Pendiente]
 
 	----
 
