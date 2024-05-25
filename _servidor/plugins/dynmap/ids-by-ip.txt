@@ -8,9 +8,9 @@
 '181_234_49_135':
 - elPantallazoAzul
 0:0:0:0:0:0:0:1:
+- lorspi
 - sirpol
 - nadie
-- lorspi
 '127_0_0_1':
 - sirpol
 - elPantallazoAzul

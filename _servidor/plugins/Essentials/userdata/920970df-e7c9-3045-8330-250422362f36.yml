@@ -3,7 +3,7 @@ teleportauto: false
 godmode: true
 muted: false
 jailed: false
-ip-address: 0:0:0:0:0:0:0:1
+ip-address: 127.0.0.1
 afk: false
 socialspy: false
 npc: false
@@ -16,18 +16,18 @@ timestamps:
   mute: 0
   jail: 0
   onlinejail: 0
-  logout: 1716563161695
-  login: 1716563135347
+  logout: 1716644921919
+  login: 1716644509464
 money: '0'
 last-account-name: sirpol
 logoutlocation:
   world: b339dda7-0e12-48e2-99c8-d31b6a44bf65
   world-name: world
-  x: 78.93097987833603
-  y: 103.0
-  z: 11.38631610451003
-  yaw: 137.04052734375
-  pitch: 27.608930587768555
+  x: -106.09790386355212
+  y: 86.0
+  z: 164.97846835356256
+  yaw: -139.20037841796875
+  pitch: 12.150003433227539
 lastlocation:
   world: b339dda7-0e12-48e2-99c8-d31b6a44bf65
   world-name: world
