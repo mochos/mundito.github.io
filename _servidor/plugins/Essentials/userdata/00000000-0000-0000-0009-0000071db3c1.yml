@@ -1,6 +1,6 @@
 teleportenabled: true
 teleportauto: false
-godmode: true
+godmode: false
 muted: false
 jailed: false
 ip-address: 192.168.1.1
@@ -16,18 +16,18 @@ timestamps:
   mute: 0
   jail: 0
   onlinejail: 0
-  logout: 1716519453455
-  login: 1716518417593
+  logout: 1716607432243
+  login: 1716607298684
 money: '0'
 last-account-name: _lorspi
 logoutlocation:
   world: b339dda7-0e12-48e2-99c8-d31b6a44bf65
   world-name: world
-  x: 77.69999
-  y: 101.0
-  z: 10.520729
-  yaw: 102.790771484375
-  pitch: 17.135086059570312
+  x: 81.075806
+  y: 121.45607
+  z: 12.940307
+  yaw: 66.4351806640625
+  pitch: 36.986328125
 lastlocation:
   world: b339dda7-0e12-48e2-99c8-d31b6a44bf65
   world-name: world
