@@ -12,6 +12,7 @@ Towny:
 ¿Abandonar ciudad?
 ¿Desclaimear chunks?
 ¿Se pueden limitar los claims por ciudad? Y que por cada ciudadano se sumen la cantidad de chunks que puede claimear la ciudad?
+Que los ciudadanos puedan montar outposts
 
 
 ¿Usamos plots para permisos individuales?
