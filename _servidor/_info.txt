@@ -116,6 +116,19 @@ PLUGINS:
 	https://www.spigotmc.org/resources/playertimelimit-1-8-1-19.96577/
 	[Pendiente]
 
+	Skript?
+	https://www.spigotmc.org/resources/skript.114544/
+	[Pendiente]
+
+	Opcionales si no resolvemos límites de towny:
+	Jobs
+	https://www.spigotmc.org/resources/jobs-reborn.4216/
+	[Pendiente]
+
+	Auction
+	https://www.spigotmc.org/resources/auctionhouse.61836/
+	[Pendiente]
+
 	----
 
 	Pendientes:
