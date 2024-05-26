@@ -75,115 +75,129 @@ levels:
     resourceProductionModifier: 1.0
   - townBlockTypeLimits: {}
     upkeepModifier: 1.0
-    townOutpostLimit: 0
+    townOutpostLimit: 2
     numResidents: 1
     debtCapModifier: 1.0
-    namePostfix: ' (Settlement)'
+    namePostfix: ' (Acentamiento)'
     bankCapModifier: 1.0
     mayorPrefix: 'Hermit '
     townBlockBuyBonusLimit: 0
     namePrefix: ''
     mayorPostfix: ''
     peacefulCostMultiplier: 1.0
-    townBlockLimit: 16
+    townBlockLimit: 9
     resourceProductionModifier: 1.0
   - townBlockTypeLimits: {}
     upkeepModifier: 1.0
-    townOutpostLimit: 1
+    townOutpostLimit: 2
     numResidents: 2
     debtCapModifier: 1.0
-    namePostfix: ' (Hamlet)'
+    namePostfix: ' (Vereda)'
     bankCapModifier: 1.0
     mayorPrefix: 'Chief '
     townBlockBuyBonusLimit: 0
     namePrefix: ''
     mayorPostfix: ''
     peacefulCostMultiplier: 1.0
-    townBlockLimit: 32
+    townBlockLimit: 18
     resourceProductionModifier: 1.0
   - townBlockTypeLimits: {}
     upkeepModifier: 1.0
-    townOutpostLimit: 1
-    numResidents: 6
+    townOutpostLimit: 6
+    numResidents: 3
     debtCapModifier: 1.0
-    namePostfix: ' (Village)'
+    namePostfix: ' (Pueblo)'
     bankCapModifier: 1.0
     mayorPrefix: 'Baron Von '
     townBlockBuyBonusLimit: 0
     namePrefix: ''
     mayorPostfix: ''
     peacefulCostMultiplier: 1.0
-    townBlockLimit: 96
+    townBlockLimit: 27
     resourceProductionModifier: 1.0
   - townBlockTypeLimits: {}
     upkeepModifier: 1.0
-    townOutpostLimit: 2
-    numResidents: 10
+    townOutpostLimit: 8
+    numResidents: 4
     debtCapModifier: 1.0
-    namePostfix: ' (Town)'
+    namePostfix: ' (Ciudad)'
     bankCapModifier: 1.0
     mayorPrefix: 'Viscount '
     townBlockBuyBonusLimit: 0
     namePrefix: ''
     mayorPostfix: ''
     peacefulCostMultiplier: 1.0
-    townBlockLimit: 160
+    townBlockLimit: 36
     resourceProductionModifier: 1.0
   - townBlockTypeLimits: {}
     upkeepModifier: 1.0
-    townOutpostLimit: 2
-    numResidents: 14
+    townOutpostLimit: 10
+    numResidents: 5
     debtCapModifier: 1.0
-    namePostfix: ' (Large Town)'
+    namePostfix: ' (Ciudad Grande)'
     bankCapModifier: 1.0
     mayorPrefix: 'Count Von '
     townBlockBuyBonusLimit: 0
     namePrefix: ''
     mayorPostfix: ''
     peacefulCostMultiplier: 1.0
-    townBlockLimit: 224
+    townBlockLimit: 45
     resourceProductionModifier: 1.0
   - townBlockTypeLimits: {}
     upkeepModifier: 1.0
-    townOutpostLimit: 3
-    numResidents: 20
+    townOutpostLimit: 12
+    numResidents: 6
     debtCapModifier: 1.0
-    namePostfix: ' (City)'
+    namePostfix: ' (Ciudadela)'
     bankCapModifier: 1.0
     mayorPrefix: 'Earl '
     townBlockBuyBonusLimit: 0
     namePrefix: ''
     mayorPostfix: ''
     peacefulCostMultiplier: 1.0
-    townBlockLimit: 320
+    townBlockLimit: 54
     resourceProductionModifier: 1.0
   - townBlockTypeLimits: {}
     upkeepModifier: 1.0
-    townOutpostLimit: 3
-    numResidents: 24
+    townOutpostLimit: 14
+    numResidents: 7
     debtCapModifier: 1.0
-    namePostfix: ' (Large City)'
+    namePostfix: ' (Ciudad)'
     bankCapModifier: 1.0
     mayorPrefix: 'Duke '
     townBlockBuyBonusLimit: 0
     namePrefix: ''
     mayorPostfix: ''
     peacefulCostMultiplier: 1.0
-    townBlockLimit: 384
+    townBlockLimit: 63
     resourceProductionModifier: 1.0
   - townBlockTypeLimits: {}
     upkeepModifier: 1.0
-    townOutpostLimit: 4
-    numResidents: 28
+    townOutpostLimit: 16
+    numResidents: 8
     debtCapModifier: 1.0
-    namePostfix: ' (Metropolis)'
+    namePostfix: ' (Metrópolis)'
     bankCapModifier: 1.0
     mayorPrefix: 'Lord '
     townBlockBuyBonusLimit: 0
     namePrefix: ''
     mayorPostfix: ''
     peacefulCostMultiplier: 1.0
-    townBlockLimit: 448
+    townBlockLimit: 72
+    resourceProductionModifier: 1.0
+  - townBlockTypeLimits: {}
+    upkeepModifier: 1.0
+    townOutpostLimit: 18
+    numResidents: 9
+    debtCapModifier: 1.0
+    namePostfix: ' (Gran Metrópolis)'
+    bankCapModifier: 1.0
+    mayorPrefix: 'Lord '
+    townBlockBuyBonusLimit: 0
+    namePrefix: ''
+    mayorPostfix: ''
+    peacefulCostMultiplier: 1.0
+    townBlockLimit: 81
     resourceProductionModifier: 1.0
   
   # Guide On How to Configure: https://github.com/TownyAdvanced/Towny/wiki/How-Towny-Works#configuring-town_level-and-nation_level
@@ -389,7 +403,7 @@ nation:
 new_world_settings:
   # Do new worlds have Towny enabled by default?
   # You can adjust this setting for an existing world using /townyworld toggle usingtowny
-  using_towny: 'true'
+  using_towny: 'false'
   
   # Are new worlds claimable by default?
   # Setting this to false means that Towny will still be active but no land can be claimed by towns.
@@ -578,7 +592,7 @@ global_town_settings:
   # Number of seconds that must pass before pvp can be toggled by a town.
   # Applies to residents of the town using /res toggle pvp, as well as
   # plots having their PVP toggled using /plot toggle pvp.
-  pvp_cooldown_time: '30'
+  pvp_cooldown_time: '10'
   
   # Number of seconds that must pass before peacfulness can be toggled by a town or nation.
   peaceful_cooldown_time: '30'
@@ -712,11 +726,11 @@ global_town_settings:
   
   # The Maximum price that a town can be put for sale at. This refers to the price that
   # someone could pay if they ran /t buytown, to buy a town that has been put up for sale.
-  max_buytown_price: '999999999'
+  max_buytown_price: '0'
   
   # Maximum amount that a town can set their plot, embassy, shop, etc plots' prices to.
   # Setting this higher can be dangerous if you use Towny in a mysql database. Large numbers can become shortened to scientific notation. 
-  maximum_plot_price_cost: '1000000.0'
+  maximum_plot_price_cost: '0.0'
   
   # maximum number of plots any single resident can own
   max_plots_per_resident: '100'
@@ -784,7 +798,7 @@ global_town_settings:
   allowed_map_colors: aqua:00ffff, azure:f0ffff, beige:f5f5dc, black:000000, blue:0000ff, brown:a52a2a, cyan:00ffff, darkblue:00008b, darkcyan:008b8b, darkgrey:a9a9a9, darkgreen:006400, darkkhaki:bdb76b, darkmagenta:8b008b, darkolivegreen:556b2f, darkorange:ff8c00, darkorchid:9932cc, darkred:8b0000, darksalmon:e9967a, darkviolet:9400d3, fuchsia:ff00ff, gold:ffd700, green:008000, indigo:4b0082, khaki:f0e68c, lightblue:add8e6, lightcyan:e0ffff, lightgreen:90ee90, lightgrey:d3d3d3, lightpink:ffb6c1, lightyellow:ffffe0, lime:00ff00, magenta:ff00ff, maroon:800000, navy:000080, olive:808000, orange:ffa500, pink:ffc0cb, purple:800080, violet:800080, red:ff0000, silver:c0c0c0, white:ffffff, yellow:ffff00
   
   # List of ranks (separated by a comma) that will prevent a player from being kicked from a town.
-  unkickable_ranks: assistant
+  unkickable_ranks: asistente
   
   # When true any trusted players will get permissions in town owned land, and the personally-owned land in that town.
   # When false, trusted players get permissions only in the town owned land, leaving player-owned plots to their normal plot perms.
@@ -960,18 +974,18 @@ claiming:
     # Put in other words: the buffer area around every claim that no other town can claim into.
     # Does not affect towns which are in the same nation.
     # This will prevent town encasement to a certain degree.
-    min_plot_distance_from_town_plot: '5'
+    min_plot_distance_from_town_plot: '2'
   
     # Minimum number of plots any towns home plot must be from the next town.
     # Put in other words: the buffer area around every homeblock that no other town can claim into.
     # Does not affect towns which are in the same nation.
     # This will prevent someone founding a town right on your doorstep
-    min_distance_from_town_homeblock: '5'
+    min_distance_from_town_homeblock: '2'
   
     # Minimum number of plots an outpost must be from any other town's plots.
     # Useful when min_plot_distance_from_town_plot is set to near-zero to allow towns to have claims
     # near to each other, but want to keep outposts away from towns.
-    min_distance_for_outpost_from_plot: '5'
+    min_distance_for_outpost_from_plot: '9'
   
     # Set to 0 to disable. When above 0 an outpost may only be claimed within the given number of townblocks from a townblock owned by the town.
     # Setting this to any value above 0 will stop outposts being made off-world from the town's homeworld.
@@ -1077,17 +1091,17 @@ spawning:
   spawning_warmups:
   
     # If non zero it delays any spawn request by x seconds.
-    teleport_warmup_time: '0'
+    teleport_warmup_time: '3'
   
     # When set to true, if players are currently in a spawn warmup, moving will cancel their spawn.
-    movement_cancels_spawn_warmup: 'false'
+    movement_cancels_spawn_warmup: 'true'
   
     # When set to true, if players are damaged in any way while in a spawn warmup, their spawning will be cancelled.
-    damage_cancels_spawn_warmup: 'false'
+    damage_cancels_spawn_warmup: 'true'
   
     # When set to true, players get a large Title message showing how long until their teleport will happen,
     # as well as a message telling them not to move if movement_cancels_spawn_warmup is true.
-    uses_title_message: 'false'
+    uses_title_message: 'true'
   
     # When set to true, players get a particle effect matching the towny spawn particles, which appears around them for the warmup duration.
     uses_particle_effect: 'true'
@@ -1140,19 +1154,19 @@ spawning:
     spawning_cooldowns:
   
       # Number of seconds that must pass before a player can use /t spawn or /res spawn.
-      town_spawn_cooldown_time: '30'
+      town_spawn_cooldown_time: '10'
   
       # Number of seconds that must pass before a player can use /t outpost.
-      outpost_cooldown_time: '30'
+      outpost_cooldown_time: '10'
   
       # Number of seconds that must pass before a player of the same nation can use /t spawn.
-      nation_member_town_spawn_cooldown_time: '30'
+      nation_member_town_spawn_cooldown_time: '10'
   
       # Number of seconds that must pass before a player in an allied nation can use /t spawn.
-      nation_ally_town_spawn_cooldown_time: '30'
+      nation_ally_town_spawn_cooldown_time: '10'
   
       # Number of seconds that must pass before a player who is not a member or ally of town can use /t spawn.
-      unaffiliated_town_spawn_cooldown_time: '30'
+      unaffiliated_town_spawn_cooldown_time: '10'
   
   nation_spawn:
   
@@ -1251,7 +1265,7 @@ plugin:
     web_map:
   
       # If enabled, players will be prompted to open a url when clicking on coordinates in towny status screens.
-      enabled: 'false'
+      enabled: 'true'
   
       # The url that players will be prompted to open when clicking on a coordinate in a status screen.
       # Valid placeholders are {world}, {x}, and {y}, for the world name, x, and y coordinates respectively.
@@ -1494,7 +1508,7 @@ protection:
   potion_types: BLINDNESS,CONFUSION,HARM,HUNGER,POISON,SLOW,SLOW_DIGGING,WEAKNESS,WITHER
   
   # When set to true, players with the Frost Walker enchant will need to be able to build where they are attempting to freeze.
-  prevent_frost_walker_freezing: 'false'
+  prevent_frost_walker_freezing: 'true'
   
   # When set to true, players will never trample crops. When false, players will still
   # have to be able to break the crop by hand in order to be able to trample crops.
@@ -1568,10 +1582,10 @@ notification:
   plot:
     splitter: ' '
     format: '%s'
-    homeblock: '&b[Home]'
+    homeblock: '&b[Hogar]'
     outpostblock: '&b[Outpost]'
-    forsale: '&e[For Sale: %s]'
-    notforsale: '&e[Not For Sale]'
+    forsale: '&e[A la venta: %s]'
+    notforsale: '&e[No a la venta]'
     type: '&6[%s]'
   group: '&f[%s]'
   
@@ -1697,7 +1711,7 @@ default_perm_flags:
   # switch - trigger or activate switches (as defined in switch_ids)
   town:
     default:
-      pvp: 'true'
+      pvp: 'false'
       fire: 'false'
       explosion: 'false'
       mobs: 'false'
@@ -1749,7 +1763,7 @@ invite_system:
   
   # How many seconds before a confirmation times out for the receiver.
   # This is used for cost-confirmations and confirming important decisions.
-  confirmation_timeout: '20'
+  confirmation_timeout: '60'
   
   # When set for more than 0m, the amount of time (in minutes) which must have passed between
   # a player's first log in and when they can be invited to a town.
@@ -1836,7 +1850,7 @@ economy:
   # This will first attempt to use Vault or Reserve to bridge your economy plugin with Towny.
   # If Reserve/Vault is not present it will attempt to find a supported economy plugin.
   # If neither Vault/Reserve or supported economy are present it will not be possible to create towns or do any operations that require money.
-  using_economy: 'true'
+  using_economy: 'false'
   
   # By default it is set to true.
   # Rarely set to false. Set to false if you get concurrent modification errors on timers for daily tax collections.

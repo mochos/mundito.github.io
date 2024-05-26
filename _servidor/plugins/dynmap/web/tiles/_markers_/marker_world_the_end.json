@@ -4,10 +4,13 @@
 ,"lines": {}
 ,"layerprio": 2}
 ,"markers": {"hide": false,"circles": {}
-,"areas": {}
+,"areas": {"_worldborder_world_the_end": {"fillcolor": "#000000","ytop": 64.00,"color": "#FF0000","markup": false,"x": [-900.00,1100.00,1100.00,-900.00]
+,"weight": 3,"z": [-1200.00,-1200.00,800.00,800.00]
+,"ybottom": 64.00,"label": "Border","opacity": 0.80,"fillopacity": 0.00}
+}
 ,"label": "Markers","markers": {"_spawn_world_the_end": {"markup": false,"x": 0.00,"icon": "world","y": 61.00,"dim": "16x16","z": 0.00,"label": "Spawn"}
 }
 ,"lines": {}
 ,"layerprio": 0}
 }
-,"timestamp": 1716676360865}
+,"timestamp": 1716746371578}

@@ -108,31 +108,14 @@ towns:
   # Ranks contain additional permissions residents will be
   # granted if they are assigned that specific rank.
   ranks:
-  
-    # assistants are able to grant VIP and helper rank.
-    assistant:
+    asistente:
     - towny.tax_exempt
     - towny.command.town.claim.*
     - towny.command.town.invite.add
     - towny.command.plot.*
     - towny.command.town.toggle.public
+    - towny.command.town.toggle.pvp
     - towny.claimed.owntown.switch.*
-    - towny.command.town.rank.vip
-    - towny.command.town.rank.helper
-    - towny.outlaw.jailer
-    helper:
-    - towny.claimed.townowned.switch.*
-  
-    # Currently only an example rank holder with no extra permissions.
-    donator:
-    - foo.bar
-  
-    # Currently only an example rank holder with no extra permissions.
-    vip:
-    - foo.bar
-  
-    # Sheriff rank is able to jail other town members.
-    sheriff:
     - towny.command.town.jail
     - towny.command.town.unjail
     - towny.command.town.jail.list

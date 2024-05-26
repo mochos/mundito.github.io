@@ -3,8 +3,10 @@
 '192_168_1_1':
 - _lorspi
 '186_27_198_26':
-- lorspi
 - _lorspi
+- lorspi
+- sirpol
+- otro
 '181_234_49_135':
 - elPantallazoAzul
 0:0:0:0:0:0:0:1:
@@ -12,5 +14,5 @@
 - sirpol
 - nadie
 '127_0_0_1':
-- sirpol
 - elPantallazoAzul
+- sirpol

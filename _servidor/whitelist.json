@@ -8,8 +8,16 @@
     "name": "lorspi"
   },
   {
+    "uuid": "620cf642-ff72-3009-a68b-f2f42cb64bb5",
+    "name": "elPantallazoAzul"
+  },
+  {
     "uuid": "15df0f3e-4f41-47cf-bb2a-052391e2778b",
     "name": "PantallazoAzul"
+  },
+  {
+    "uuid": "00000000-0000-0000-0009-0000071db3c1",
+    "name": "_lorspi"
   },
   {
     "uuid": "d5047556-5517-4a5e-a00c-e7e82d1e20da",

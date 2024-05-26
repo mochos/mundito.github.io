@@ -1,13 +1,10 @@
 uuid=00000000-0000-0000-0009-0000071db3c1
-lastOnline=1716607432233
+lastOnline=1716746223888
 registered=1716502412899
-joinedTownAt=1716502952242
+joinedTownAt=0
 isNPC=false
 title=
 surname=
-town=Nada
-town-ranks=
-nation-ranks=
 friends=
 
 protectionStatus=residentBuild,residentDestroy,residentSwitch,residentItemUse

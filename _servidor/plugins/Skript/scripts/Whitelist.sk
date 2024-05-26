@@ -1,0 +1,58 @@
+command /whitelist [<text>] [<text>]:
+	permission: whitelist.use
+	trigger:
+		if arg 1 is not set:
+			send "&7&oUse /whitelist add/remove/on/off/list (player)"
+			stop
+		if arg 1 is "add":
+			if arg 2 is not set:
+				send "&7&oYou need to fill in a player."
+				stop
+			if arg 2 is set:
+				add arg 2 to {whitelist::*}
+				set {whitelisted.%arg 2%} to true
+				send "&7&oYou've added %arg 2% to the whitelist."
+				stop
+		if arg 1 is "remove":
+			if arg 2 is not set:
+				send "&7&oYou need to fill in a player."
+				stop
+			if arg 2 is set:
+				remove arg 2 from {whitelist::*}
+				set {whitelisted.%arg 2%} to false
+				send "&7&oYou've removed %arg 2% from the whitelist."
+				stop
+		if arg 1 is "list":
+			send "&7&oPlayers added to the whitelist: &r&7%{whitelist::*}%"
+			stop
+		if arg 1 is "on":
+			set {whitelist.stat} to true
+			send "&7&oThe whitelist is now on."
+			stop
+		if arg 1 is "off":
+			set {whitelist.stat} to false
+			send "&7&oThe whitelist is now off."
+			stop
+		if arg 1 is "setmessage":
+			if arg 2 is not set:
+				send "&7&oYou need to fill in the kick message."
+				stop
+			if arg 2 is set:
+				set {km1s.s} to true
+				send "&7&oThe kick message has been changed to: %arg 2%"
+				set {kickm1} to arg 2
+				stop
+
+on join:
+	if {whitelist.stat} is true:
+		if {whitelisted.%player%} is true:
+			stop
+		else:
+			if {km1s.s} is true:
+				wait 15 ticks
+				kick player due to "%{kickm1}%"
+				stop
+			else:
+				wait 15 ticks
+				kick player due to "&7&oYou're not whitelisted!"
+				stop

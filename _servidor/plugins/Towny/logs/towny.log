@@ -1,24 +1,21 @@
-2024-05-25 17:32:34,087 [Server thread]: [Towny] Database: [Load] flatfile [Save] flatfile
-2024-05-25 17:32:34,296 [Server thread]: [Towny] Database: Loaded in 209ms.
-2024-05-25 17:32:34,305 [ForkJoinPool.commonPool-worker-1]: [Towny] Cleaning up old backups...
-2024-05-25 17:32:34,309 [ForkJoinPool.commonPool-worker-1]: [Towny] Successfully cleaned backups.
-2024-05-25 17:32:34,311 [ForkJoinPool.commonPool-worker-1]: [Towny] Making backup...
-2024-05-25 17:32:34,440 [Server thread]: [Towny] Loaded class net.kyori.adventure.text.Component from eShulkerBox v0.4.0 which is not a depend or softdepend of this plugin.
-2024-05-25 17:32:34,449 [Server thread]: [Towny] Searching for third-party plugins...
-2024-05-25 17:32:34,449 [Server thread]: [Towny] Plugins found: 
-2024-05-25 17:32:34,451 [Server thread]: [Towny]   Permissions: TownyPerms, LuckPerms v5.4.102 via Vault
-2024-05-25 17:32:34,451 [Server thread]: [Towny]   Chat: LuckPerms v5.4.102 via Vault
-2024-05-25 17:32:34,455 [Server thread]: [Towny]   Economy: EssentialsX Economy via Vault
-2024-05-25 17:32:34,459 [Server thread]: [Towny]   Add-ons: Dynmap-Towny v1.1.2, PlaceholderAPI v2.11.5
-2024-05-25 17:32:34,459 [Server thread]: [Towny]   Warning: EssentialsX Economy has been known to reset
-                           town and nation bank accounts on rare occasions.
-2024-05-25 17:32:34,551 [Server thread]: [Towny] Version: 0.100.2.0 - Plugin Enabled
-2024-05-25 17:32:35,032 [ForkJoinPool.commonPool-worker-1]: [Towny] Towny flatfiles and settings successfully backed up.
-2024-05-25 17:32:39,964 [Craft Scheduler Thread - 10]: [Towny] Buscando actualizaciones...
-2024-05-25 17:32:39,966 [Craft Scheduler Thread - 9]: [Towny] Time until a New Day: 18 horas, 27 minutos, 21 segundos
-2024-05-25 17:32:40,948 [Craft Scheduler Thread - 10]: [Towny] Nueva actualizacion disponible: 0.100.2.11 | Version Actual: 0.100.2.0
-2024-05-25 17:32:40,948 [Craft Scheduler Thread - 10]: [Towny] Descargala aqui: https://github.com/TownyAdvanced/Towny/releases/tag/0.100.2.11
-2024-05-25 17:34:57,828 [Server thread]: [Towny] Disabling Towny v0.100.2.0
-2024-05-25 17:34:57,830 [Server thread]: [Towny] Finishing File IO Tasks...
-2024-05-25 17:34:57,831 [Server thread]: [Towny] Finishing Universe Tasks...
-2024-05-25 17:34:57,832 [Server thread]: [Towny] Version: 0.100.2.0 - Plugin Disabled
+2024-05-26 12:36:29,815 [Server thread]: [Towny] Database: [Load] flatfile [Save] flatfile
+2024-05-26 12:36:29,885 [Server thread]: [Towny] Database: Loaded in 69ms.
+2024-05-26 12:36:29,894 [ForkJoinPool.commonPool-worker-1]: [Towny] Cleaning up old backups...
+2024-05-26 12:36:29,899 [ForkJoinPool.commonPool-worker-1]: [Towny] Successfully cleaned backups.
+2024-05-26 12:36:29,900 [ForkJoinPool.commonPool-worker-1]: [Towny] Making backup...
+2024-05-26 12:36:30,030 [Server thread]: [Towny] Loaded class net.kyori.adventure.text.Component from eShulkerBox v0.4.0 which is not a depend or softdepend of this plugin.
+2024-05-26 12:36:30,038 [Server thread]: [Towny] Searching for third-party plugins...
+2024-05-26 12:36:30,039 [Server thread]: [Towny] Plugins found: 
+2024-05-26 12:36:30,041 [Server thread]: [Towny]   Permissions: TownyPerms, LuckPerms v5.4.102 via Vault
+2024-05-26 12:36:30,042 [Server thread]: [Towny]   Chat: LuckPerms v5.4.102 via Vault
+2024-05-26 12:36:30,045 [Server thread]: [Towny]   Add-ons: Dynmap-Towny v1.1.2, PlaceholderAPI v2.11.5
+2024-05-26 12:36:30,132 [Server thread]: [Towny] Version: 0.100.2.0 - Plugin Enabled
+2024-05-26 12:36:30,442 [ForkJoinPool.commonPool-worker-1]: [Towny] Towny flatfiles and settings successfully backed up.
+2024-05-26 12:36:35,736 [Craft Scheduler Thread - 13]: [Towny] Buscando actualizaciones...
+2024-05-26 12:36:35,740 [Craft Scheduler Thread - 12]: [Towny] Time until a New Day: 23 horas, 23 minutos, 25 segundos
+2024-05-26 12:36:36,674 [Craft Scheduler Thread - 13]: [Towny] Nueva actualizacion disponible: 0.100.2.11 | Version Actual: 0.100.2.0
+2024-05-26 12:36:36,675 [Craft Scheduler Thread - 13]: [Towny] Descargala aqui: https://github.com/TownyAdvanced/Towny/releases/tag/0.100.2.11
+2024-05-26 12:59:33,346 [Server thread]: [Towny] Disabling Towny v0.100.2.0
+2024-05-26 12:59:33,347 [Server thread]: [Towny] Finishing File IO Tasks...
+2024-05-26 12:59:33,349 [Server thread]: [Towny] Finishing Universe Tasks...
+2024-05-26 12:59:33,349 [Server thread]: [Towny] Version: 0.100.2.0 - Plugin Disabled
