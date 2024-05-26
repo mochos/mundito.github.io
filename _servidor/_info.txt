@@ -106,11 +106,19 @@ PLUGINS:
 	Esta reemplaza la dinámica de /sethome
 	[LISTO]
 
-	----
+	Coreprotect
+	https://www.spigotmc.org/resources/coreprotect.8631/
+	[LISTO]
+
+	Borde del mundo
+	https://www.spigotmc.org/resources/worldborder-1-13-x-1-20-x.111156/
+	[LISTO]
 
 	Anti grifeo
 	https://www.spigotmc.org/resources/towny-advanced.72694/
-	[Pendiente finalizar config]
+	[LISTO]
+
+	----
 
 	Límite de tiempo de juego?
 	https://www.spigotmc.org/resources/playertimelimit-1-8-1-19.96577/
@@ -118,6 +126,7 @@ PLUGINS:
 
 	Skript?
 	https://www.spigotmc.org/resources/skript.114544/
+	https://www.spigotmc.org/resources/skript-whitelist.47589/
 	[Pendiente]
 
 	Opcionales si no resolvemos límites de towny:

@@ -1,33 +1,50 @@
 Towny:
-	/town create <nombre>
-	/town claim
-	/town invite <nombre>
-	/accept /deny
-	/town spawn
-	/town set spawn
-	/town toggle <flag>
-	/town claim outpost
-	¿Eliminar ciudad?
-	¿Abandonar ciudad?
-	¿Desclaimear chunks?
-	¿Se pueden limitar los claims por ciudad? Y que por cada ciudadano se sumen la cantidad de chunks que puede claimear la ciudad?
-	¿Se puede limitar la cantidad de plots que puede comprar un jugador en su ciudad?
-	Que los ciudadanos puedan montar outposts
-	¿Se puede que towni cobre items en vez de dinero? ¿o activamos la economía con jobs?
+	/t spawn
+	/t set spawn	
+	/t list - Lista de ciudades
 
-
-	¿Usamos plots para permisos individuales?
+	Alcalde
+	/t create <nombre>
+	/t claim
+	/t invite <nombre>
+	/t toggle <flag>
+	/t claim outpost
+	/t delete <nombre>
+	/t rank add <nombre> assistant
+	/t rank remove <nombre>
+	---
 	/plot forsale
 	/plot notforsale
+
+	Asistente
+	claimear
+	invitar gente
+	toggle pvp ciudad
+	toggle pvp plot
+	hacer publica
+	crear outpost
+	vender o no vender plots
+
+	Ciudadano
+	/accept /deny
+	/t leave
 	/plot claim
+	/plot unclaim
 	/plot perm add <nombre>
 	/plot perm remove <nombre>
 	/plot perm gui
-	¿Abandonar plot?
+	/plot toggle <flag>
 
-	- Si pertenezco a una ciudad y quiero tener por aparte mis zonas protegidas
-	- Darle permiso a jugadores específicos en la zona sin que pertenezcan a la ciudad
-	- Revisar distancias entre ciudades. ¿0 para que sean vecinos?
+	Limite de plots:
+	Solo = 9
+	+9 chunks por cada ciudadano
+	Hasta 8 ciudadanos
+
+	Outpost:
+	Solo = 2
+	+2 outpost por cada ciudadano
+
+	-----
 
 Shopkeepers:
 	Admin shop:
