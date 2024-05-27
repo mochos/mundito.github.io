@@ -118,6 +118,10 @@ PLUGINS:
 	https://www.spigotmc.org/resources/towny-advanced.72694/
 	[LISTO]
 
+	Generador de mundo
+	https://www.spigotmc.org/resources/fast-chunk-pregenerator.74429/
+	[LISTO]
+
 	----
 
 	Límite de tiempo de juego?
