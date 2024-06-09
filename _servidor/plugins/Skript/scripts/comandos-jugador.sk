@@ -30,15 +30,12 @@ command /ayuda:
 on rightclick on sign:
     if line 1 of event-block is "[Sumar]":
         load yaml "plugins/Skript/data/clicks.yml" as "clicks"
-
         set {_total} to yaml value "clicks.total" from "clicks"
         if {_total} is not set:
             set {_total} to 0
-
         add 1 to {_total}
-        
         set yaml value "clicks.total" from "clicks" to {_total}
-
-        save yaml "plugins/Skript/data/clicks.yml"
-        
+        wait 1 tick
+        save yaml "clicks"
         send "&aTu interacción ha sido registrada. Total: %{_total}%" to player
+        unload yaml "clicks"

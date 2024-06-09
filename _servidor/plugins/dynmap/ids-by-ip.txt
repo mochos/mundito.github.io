@@ -9,12 +9,14 @@
 - otro
 '181_234_49_135':
 - elPantallazoAzul
+'190_66_236_14':
+- _lorspi
 0:0:0:0:0:0:0:1:
 - lorspi
 - sirpol
 - nadie
 '127_0_0_1':
+- elPantallazoAzul
 - lorspi
 - 10r571
-- elPantallazoAzul
 - sirpol

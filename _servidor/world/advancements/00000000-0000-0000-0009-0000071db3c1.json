@@ -70,7 +70,9 @@
   },
   "minecraft:adventure/kill_all_mobs": {
     "criteria": {
-      "minecraft:spider": "2024-05-23 16:43:19 -0500"
+      "minecraft:pillager": "2024-06-09 00:06:26 -0500",
+      "minecraft:spider": "2024-05-23 16:43:19 -0500",
+      "minecraft:zombie": "2024-06-09 00:17:47 -0500"
     },
     "done": false
   },
@@ -239,6 +241,18 @@
   "minecraft:recipes/transportation/dark_oak_boat": {
     "criteria": {
       "in_water": "2024-05-24 22:09:09 -0500"
+    },
+    "done": true
+  },
+  "minecraft:adventure/voluntary_exile": {
+    "criteria": {
+      "voluntary_exile": "2024-06-09 00:06:30 -0500"
+    },
+    "done": true
+  },
+  "minecraft:adventure/kill_mob_near_sculk_catalyst": {
+    "criteria": {
+      "kill_mob_near_sculk_catalyst": "2024-06-09 00:17:47 -0500"
     },
     "done": true
   },
