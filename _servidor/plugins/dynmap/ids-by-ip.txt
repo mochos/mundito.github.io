@@ -14,5 +14,7 @@
 - sirpol
 - nadie
 '127_0_0_1':
+- lorspi
+- 10r571
 - elPantallazoAzul
 - sirpol

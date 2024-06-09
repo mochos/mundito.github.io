@@ -1,0 +1,36 @@
+# This is an example book to show how to create one
+# Note: The placeholders in this book (like %player_name%) need PlaceholderAPI installed
+# with the proper expansions, see here for more information: https://www.spigotmc.org/resources/placeholderapi.6245/
+
+# Item's name
+name: Guía de el0town
+
+# Book's title
+title: Guía de el0town
+
+# Book's author
+author: El0tito
+
+# Book's generation
+# Valid values: ORIGINAL, COPY_OF_ORIGINAL, COPY_OF_COPY, TATTERED
+generation: ORIGINAL
+
+# Item's lore
+lore:
+- §fGuía de la ciudad
+
+# Command to open this book
+# You can remove this by setting it to ''
+# Separate multiple commands with a space
+open_command: 'el0town'
+
+# For the placeholders to work correctly
+# you have to download the Vault plugin:
+# https://www.spigotmc.org/resources/vault.34315/
+# and the Player and Vault expansions for PlaceholderAPI:
+# /papi ecloud download Player
+# /papi ecloud download Vault
+# /papi reload
+pages:
+  '1':
+  - '<hover:show_text:"Prueba"><click:run_command:/teleport 3377 68 -2732>Prueba<reset>'

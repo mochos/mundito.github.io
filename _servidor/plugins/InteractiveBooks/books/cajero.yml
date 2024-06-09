@@ -1,0 +1,43 @@
+# This is an example book to show how to create one
+# Note: The placeholders in this book (like %player_name%) need PlaceholderAPI installed
+# with the proper expansions, see here for more information: https://www.spigotmc.org/resources/placeholderapi.6245/
+
+# Item's name
+name: Cajero
+
+# Book's title
+title: Cajero
+
+# Book's author
+author: lorspi
+
+# Book's generation
+# Valid values: ORIGINAL, COPY_OF_ORIGINAL, COPY_OF_COPY, TATTERED
+generation: ORIGINAL
+
+# Item's lore
+lore:
+
+# Command to open this book
+# You can remove this by setting it to ''
+# Separate multiple commands with a space
+open_command: 'cajero'
+
+# For the placeholders to work correctly
+# you have to download the Vault plugin:
+# https://www.spigotmc.org/resources/vault.34315/
+# and the Player and Vault expansions for PlaceholderAPI:
+# /papi ecloud download Player
+# /papi ecloud download Vault
+# /papi reload
+pages:
+  '1':
+  - '&lTu saldo&r'
+  - '&2&l$%vault_eco_balance%&r'
+  - ''
+  - '&lOpciones&r'
+  - '<hover:show_text:"Depositar 10 en tu cuenta"><click:run_command:/depositar10>Depositar $10<reset>'
+  - '<hover:show_text:"Depositar 100 en tu cuenta"><click:run_command:/depositar100>Depositar $100<reset>'
+  - ''
+  - '<hover:show_text:"Retirar 10 de tu cuenta"><click:run_command:/retirar10>Retirar $10<reset>'
+  - '<hover:show_text:"Retirar 100 de tu cuenta"><click:run_command:/retirar100>Retirar $100<reset>'

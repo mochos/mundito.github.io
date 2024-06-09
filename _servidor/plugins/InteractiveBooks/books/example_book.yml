@@ -1,0 +1,47 @@
+# This is an example book to show how to create one
+# Note: The placeholders in this book (like %player_name%) need PlaceholderAPI installed
+# with the proper expansions, see here for more information: https://www.spigotmc.org/resources/placeholderapi.6245/
+
+# Item's name
+name: ExampleName
+
+# Book's title
+title: ExampleTitle
+
+# Book's author
+author: ExampleAuthor
+
+# Book's generation
+# Valid values: ORIGINAL, COPY_OF_ORIGINAL, COPY_OF_COPY, TATTERED
+generation: ORIGINAL
+
+# Item's lore
+lore:
+- Example lore 1
+- Example lore 2
+
+# Command to open this book
+# You can remove this by setting it to ''
+# Separate multiple commands with a space
+open_command: 'example_book'
+
+# For the placeholders to work correctly
+# you have to download the Vault plugin:
+# https://www.spigotmc.org/resources/vault.34315/
+# and the Player and Vault expansions for PlaceholderAPI:
+# /papi ecloud download Player
+# /papi ecloud download Vault
+# /papi reload
+pages:
+  '1':
+  - '<hover:show_text:"I''m a tooltip">Hover here to see a tooltip</hover:show_text>'
+  - '<hover:show_text:"Run the command "/examplecommand""><click:run_command:/examplecommand>Click here to run a command<reset>'
+  - '<click:open_url:"https://www.spigotmc.org/resources/45604/">Click here to open a link</click>'
+  '2':
+  - '<red>Example placeholders</red>'
+  - ''
+  - 'Name: <green>%player_name%</green>'
+  - 'Level: <gold>%player_level%</gold>'
+  - 'Gamemode: <red>%player_gamemode%</red>'
+  - 'Balance: <gold>%vault_eco_balance%</gold>'
+  - 'Online players: <dark_red>%server_online%</dark_red>'

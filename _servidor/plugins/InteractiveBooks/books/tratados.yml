@@ -1,0 +1,86 @@
+# This is an example book to show how to create one
+# Note: The placeholders in this book (like %player_name%) need PlaceholderAPI installed
+# with the proper expansions, see here for more information: https://www.spigotmc.org/resources/placeholderapi.6245/
+
+# Item's name
+name: §9§lTratados de Tarazun
+
+# Book's title
+title: Tratados de Tarazun
+
+# Book's author
+author: lorspi / El0tito
+
+# Book's generation
+# Valid values: ORIGINAL, COPY_OF_ORIGINAL, COPY_OF_COPY, TATTERED
+generation: ORIGINAL
+
+# Item's lore
+lore:
+- §fRepresentantes de
+- §fEl0town y Lomas Turbas
+
+# Command to open this book
+# You can remove this by setting it to ''
+# Separate multiple commands with a space
+open_command: 'tratados'
+
+# For the placeholders to work correctly
+# you have to download the Vault plugin:
+# https://www.spigotmc.org/resources/vault.34315/
+# and the Player and Vault expansions for PlaceholderAPI:
+# /papi ecloud download Player
+# /papi ecloud download Vault
+# /papi reload
+pages:
+  '1':
+  - '&1&lTRATADOS DE TARAZÚN&r'
+  - 'Nosotros, los representantes de El0town y Lomas Turbas, reunidos en territorio neutral alrededor del nexo, acordamos los siguientes tratados para asegurar la paz, el comercio, la economía y la convivencia pacífica.'
+  '2':
+  - '&lCapítulo I: Diplomacia&r'
+  - ''
+  - '&o&1Reconocimiento Mutuo:&r Respetamos la soberanía y fronteras de cada ciudad.'
+  - ''
+  - '&o&1Embajadas:&r Se permiten embajadas con inmunidad diplomática.'
+  '3':
+  - '&o&1Resolución de Conflictos:&r Se resolverán mediante negociación o arbitraje.'
+  '4':
+  - '&lCapítulo II: Comercio&r'
+  - ''
+  - '&o&1Libre Comercio:&r Eliminamos aranceles entre nuestras ciudades.'
+  - '&o&1Protección de Bienes:&r Se garantizará la seguridad en las rutas comerciales.'
+  '5':
+  - '&o&1Normas Comerciales:&r Adoptamos estándares comerciales comunes.'
+  - '&o&1Licencias Comerciales:&r Cada ciudad tiene licencias para fabricar y distribuir bienes y servicios específicos.'
+  '6':
+  - '&lCapítulo III: Economía&r'
+  - ''
+  - '&o&1Moneda Común:&r La economía es centralizada. Establecemos el "Ceitil" como moneda común, respaldada por la esmeralda. Una esmeralda equivale a 50 Ceitiles.'
+  '7':
+  - '&o&1Control Económico:&r Cada estado controla su propia economía y es dueño de sus medios productivos.'
+  - '&oBanco Central:&r El banco encargado de emitir la moneda está ubicado en Lomas Turbas. Todos los habitantes de las ciudades pueden realizar sus transacciones allí.'
+  '8':
+  - '&o&1Desarrollo Sostenible:&r Protegemos los recursos naturales y promovemos el desarrollo sostenible.'
+  - '&o&1Inversiones Conjuntas:&r Promovemos proyectos conjuntos de infraestructura y tecnología.'
+  '9':
+  - '&lCapítulo IV: Fronteras&r'
+  - ''
+  - '&o&1Definición de Fronteras:&r Claras y precisas, con hitos estratégicos.'
+  - '&o&1Paso Fronterizo:&r Facilitamos el paso seguro de ciudadanos y mercancías.'
+  - '&o&1Protección Fronteriza:&r Colaboramos en la defensa mutua.'
+  '10':
+  - '&lCapítulo V: Convivencia&r'
+  - ''
+  - '&o&1Derechos Humanos:&r Garantizamos derechos básicos y un comité de supervisión.'
+  - '&o&1Intercambio Cultural:&r Promovemos eventos periódicos de intercambio cultural.'
+  '11':
+  - '&o&1Innovación y Tecnología:&r Colaboramos en investigación y desarrollo.'
+  '12':
+  - '&lCláusulas Finales&r'
+  - ''
+  - '&o&1Ratificación y Enmiendas:&r Deben ser ratificadas y cualquier cambio aprobado por unanimidad.'
+  - '&o&1Duración y Terminación:&r El tratado es indefinido, con posible retiro mediante notificación de un año.'
+  '13':
+  - '&o&1Vigencia:&r Entrará en vigor tras la ratificación.'
+  - ''
+  - 'Firmado el # de junio de 2024 por los representantes de El0town y Lomas Turbas.'

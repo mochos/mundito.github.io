@@ -1,0 +1,44 @@
+command /ayuda:
+    trigger:
+        send " " to player
+        send "&a&lENLACES DE INTERÉS" to player
+        send "<tooltip:&fClic para abrir><link:https://mochos.xyz/mundito/wiki> &bWiki de Mundito<reset>" to player
+        send "<tooltip:&fClic para abrir><link:https://mochos.xyz/mundito/mapa/> &bMapa dinámico del mundo<reset>" to player
+        send "<tooltip:&fClic para abrir><link:https://discord.mochos.xyz/> &bDiscord de Team Mochos<reset>" to player
+        send " " to player
+
+#command /stream <text>:
+#	permission: mundito.streamer
+#	trigger:
+#		send "&a&llorem ipsum" to player
+#		send "<tooltip:&fClic para abrir><link:https://twitch.tv/%arg-1%> &btwitch.tv/%arg-1%<reset>" to player
+
+
+#broadcast "&a[Anuncio] &f%arg-1%"
+
+#Sirve bien
+#on rightclick on sign:
+#    if line 1 of event-block is "[Sumar]":
+#        set {_player} to player
+#        add 1 to {clicks::%{_player}%}
+#        load yaml "plugins/Skript/data/clicks.yml" as "clicks"
+#        set yaml value "clicks" from "plugins/Skript/data/clicks.yml" to {clicks::%{_player}%}
+#        save yaml "plugins/Skript/data/clicks.yml"
+#        send "&aTu interacción ha sido registrada. Total: %{clicks::%{_player}%}%" to player
+#
+
+on rightclick on sign:
+    if line 1 of event-block is "[Sumar]":
+        load yaml "plugins/Skript/data/clicks.yml" as "clicks"
+
+        set {_total} to yaml value "clicks.total" from "clicks"
+        if {_total} is not set:
+            set {_total} to 0
+
+        add 1 to {_total}
+        
+        set yaml value "clicks.total" from "clicks" to {_total}
+
+        save yaml "plugins/Skript/data/clicks.yml"
+        
+        send "&aTu interacción ha sido registrada. Total: %{_total}%" to player

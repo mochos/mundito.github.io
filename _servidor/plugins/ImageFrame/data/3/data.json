@@ -1,0 +1,18 @@
+{
+  "type": "com.loohp.imageframe.objectholders.URLStaticImageMap",
+  "index": 3,
+  "name": "EloInvi",
+  "url": "https://i.imgur.com/ewGdJve.png",
+  "width": 1,
+  "height": 1,
+  "creator": "6b935d9e-c2fe-3085-a6fa-227d8624c201",
+  "hasAccess": {},
+  "creationTime": 1717709798112,
+  "mapdata": [
+    {
+      "mapid": 55,
+      "image": "0.png",
+      "markers": []
+    }
+  ]
+}

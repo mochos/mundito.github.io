@@ -1,0 +1,49 @@
+# This is an example book to show how to create one
+# Note: The placeholders in this book (like %player_name%) need PlaceholderAPI installed
+# with the proper expansions, see here for more information: https://www.spigotmc.org/resources/placeholderapi.6245/
+
+# Item's name
+name: Tratados de Tarazun
+
+# Book's title
+title: Tratados de Tarazun
+
+# Book's author
+author: lorspi / Eltito
+
+# Book's generation
+# Valid values: ORIGINAL, COPY_OF_ORIGINAL, COPY_OF_COPY, TATTERED
+generation: ORIGINAL
+
+# Item's lore
+lore:
+- §7Example lore 1
+- §7Example lore 2
+
+# Command to open this book
+# You can remove this by setting it to ''
+# Separate multiple commands with a space
+open_command: 'example_book'
+
+# For the placeholders to work correctly
+# you have to download the Vault plugin:
+# https://www.spigotmc.org/resources/vault.34315/
+# and the Player and Vault expansions for PlaceholderAPI:
+# /papi ecloud download Player
+# /papi ecloud download Vault
+# /papi reload
+pages:
+  '1':
+  - '&lPreámbulo&r'
+  - ' '
+  - 'Nosotros, los representantes de las ciudades de Aldrania, Brivonia, Cedaria y Drakonia, reunidos en la ciudad neutral de Tarazún, con el fin de asegurar la paz, fomentar el comercio, fortalecer nuestras economías y garantizar la convivencia pacífica, hemos acordado y ratificado los siguientes tratados:'
+  '2':
+  - 'y garantizar la convivencia pacífica, hemos acordado y ratificado los siguientes tratados:'
+  '3':
+  - '&lCapítulo I: Parámetros Diplomáticos&r'
+  - ' '
+  - '&oArtículo 1: Reconocimiento Mutuo&r'
+  - '1.1 Cada ciudad reconoce la soberanía e independencia de las demás.'
+  - '1.2 Las fronteras establecidas de cada ciudad serán respetadas por todas las partes.'
+  '4':
+  - 'respetadas por todas las partes.'
