@@ -27,14 +27,34 @@ command /ayuda:
 #        send "&aTu interacción ha sido registrada. Total: %{clicks::%{_player}%}%" to player
 #
 
+#on rightclick on sign:
+#    if line 1 of event-block is "[Sumar]":
+#        load yaml "plugins/Skript/data/clicks.yml" as "clicks"
+#        set {_total} to yaml value "clicks.total" from "clicks"
+#        if {_total} is not set:
+#            set {_total} to 0
+#        add 1 to {_total}
+#        set yaml value "clicks.total" from "clicks" to {_total}
+#        wait 1 tick
+#        save yaml "clicks"
+#        send "&aTu interacción ha sido registrada. Total: %{_total}%" to player
+#        unload yaml "clicks"
+
+#Emitir moneda
 on rightclick on sign:
     if line 1 of event-block is "[Sumar]":
+        set {_player} to player
         load yaml "plugins/Skript/data/clicks.yml" as "clicks"
         set {_total} to yaml value "clicks.total" from "clicks"
+        set {_totalplayer} to yaml value "clicks.%{_player}%" from "clicks"
         if {_total} is not set:
             set {_total} to 0
         add 1 to {_total}
+        if {_totalplayer} is not set:
+            set {_totalplayer} to 0
+        add 1 to {_totalplayer}
         set yaml value "clicks.total" from "clicks" to {_total}
+        set yaml value "clicks.%{_player}%" from "clicks" to {_totalplayer}
         wait 1 tick
         save yaml "clicks"
         send "&aTu interacción ha sido registrada. Total: %{_total}%" to player

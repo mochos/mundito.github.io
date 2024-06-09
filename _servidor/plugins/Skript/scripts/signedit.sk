@@ -1,0 +1,18 @@
+command /signedit <Number> [<Text=" ">]:
+    aliases: /editsign, /modifysign, /modsign
+    permission: mundito.signedit
+    permission message: §cYou require {@perm} permission to use this command!
+    trigger:
+        if arg-1 is set:
+            if arg-1 is less than 1:
+                message "§3Number must be between 1 and 4."
+            if arg-1 is more than 4:
+                message "§3Number must be between 1 and 4."
+            else:
+                set {_text} to arg-2
+                replace all "&" in {_text} with "§" # allow use of ampersands for text styling
+                replace all "§§" in {_text} with "&" # allow use of double ampersands to negate that
+                set line arg-1 of target block to {_text}
+                message "§3Successfully edited sign!"
+        if arg-1 is not set:
+            message "§3Proper usage: §e/signedit <Line> <Text (Leave blank to clear line.)>"
