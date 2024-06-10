@@ -2,10 +2,22 @@ command /ayuda:
     trigger:
         send " " to player
         send "&a&lENLACES DE INTERÉS" to player
-        send "<tooltip:&fClic para abrir><link:https://mochos.xyz/mundito/wiki> &bWiki de Mundito<reset>" to player
-        send "<tooltip:&fClic para abrir><link:https://mochos.xyz/mundito/mapa/> &bMapa dinámico del mundo<reset>" to player
-        send "<tooltip:&fClic para abrir><link:https://discord.mochos.xyz/> &bDiscord de Team Mochos<reset>" to player
+        send " &f&lWiki de Mundito: &r&b<tooltip:&fClic para abrir><link:https://mochos.xyz/mundito/wiki>mochos.xyz/mundito/wiki<reset>" to player
+        send " &f&lMapa dinámico: &r&b<tooltip:&fClic para abrir><link:https://mochos.xyz/mundito/mapa/>mochos.xyz/mundito/mapa<reset>" to player
+        send " &f&lDiscord de Team Mochos: &r&b<tooltip:&fClic para abrir><link:https://discord.mochos.xyz/>discord.mochos.xyz<reset>" to player
         send " " to player
+
+command /stream <text>:
+    permission: mundito.streamer
+    trigger:
+        broadcast " "
+        broadcast "&d-------------------------------------------------"
+        broadcast " "
+        broadcast "   &f¡&a&l%player% &r&fha iniciado directo!"
+        broadcast "   &fVamos a dejarle un saludo en: &dtwitch.tv/%arg-1%"
+        broadcast " "
+        broadcast "&d-------------------------------------------------"
+        broadcast " "
 
 #command /stream <text>:
 #	permission: mundito.streamer
@@ -39,23 +51,3 @@ command /ayuda:
 #        save yaml "clicks"
 #        send "&aTu interacción ha sido registrada. Total: %{_total}%" to player
 #        unload yaml "clicks"
-
-#Emitir moneda
-on rightclick on sign:
-    if line 1 of event-block is "[Sumar]":
-        set {_player} to player
-        load yaml "plugins/Skript/data/clicks.yml" as "clicks"
-        set {_total} to yaml value "clicks.total" from "clicks"
-        set {_totalplayer} to yaml value "clicks.%{_player}%" from "clicks"
-        if {_total} is not set:
-            set {_total} to 0
-        add 1 to {_total}
-        if {_totalplayer} is not set:
-            set {_totalplayer} to 0
-        add 1 to {_totalplayer}
-        set yaml value "clicks.total" from "clicks" to {_total}
-        set yaml value "clicks.%{_player}%" from "clicks" to {_totalplayer}
-        wait 1 tick
-        save yaml "clicks"
-        send "&aTu interacción ha sido registrada. Total: %{_total}%" to player
-        unload yaml "clicks"

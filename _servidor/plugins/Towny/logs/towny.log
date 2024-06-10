@@ -1,31 +1,22 @@
-2024-06-09 11:41:50,886 [Server thread]: [Towny] Database: [Load] flatfile [Save] flatfile
-2024-06-09 11:41:51,026 [Server thread]: [Towny] Database: Loaded in 140ms.
-2024-06-09 11:41:51,032 [ForkJoinPool.commonPool-worker-1]: [Towny] Cleaning up old backups...
-2024-06-09 11:41:51,042 [ForkJoinPool.commonPool-worker-1]: [Towny] Successfully cleaned backups.
-2024-06-09 11:41:51,043 [ForkJoinPool.commonPool-worker-1]: [Towny] Making backup...
-2024-06-09 11:41:51,153 [Server thread]: [Towny] Loaded class net.kyori.adventure.text.Component from eShulkerBox v0.4.0 which is not a depend or softdepend of this plugin.
-2024-06-09 11:41:51,159 [Server thread]: [Towny] Searching for third-party plugins...
-2024-06-09 11:41:51,159 [Server thread]: [Towny] Plugins found: 
-2024-06-09 11:41:51,161 [Server thread]: [Towny]   Permissions: TownyPerms, LuckPerms v5.4.102 via Vault
-2024-06-09 11:41:51,161 [Server thread]: [Towny]   Chat: LuckPerms v5.4.102 via Vault
-2024-06-09 11:41:51,163 [Server thread]: [Towny]   Add-ons: Dynmap-Towny v1.1.2, PlaceholderAPI v2.11.5
-2024-06-09 11:41:51,245 [Server thread]: [Towny] Version: 0.100.2.0 - Plugin Enabled
-2024-06-09 11:41:51,707 [ForkJoinPool.commonPool-worker-1]: [Towny] Towny flatfiles and settings successfully backed up.
-2024-06-09 11:41:55,484 [Craft Scheduler Thread - 10]: [Towny] Buscando actualizaciones...
-2024-06-09 11:41:55,484 [Craft Scheduler Thread - 9]: [Towny] Time until a New Day: 18 minutos, 5 segundos
-2024-06-09 11:41:56,359 [Craft Scheduler Thread - 10]: [Towny] Nueva actualizacion disponible: 0.100.2.14 | Version Actual: 0.100.2.0
-2024-06-09 11:41:56,359 [Craft Scheduler Thread - 10]: [Towny] Descargala aqui: https://github.com/TownyAdvanced/Towny/releases/tag/0.100.2.14
-2024-06-09 11:50:57,407 [Server thread]: [Towny] Time until a New Day: 9 minutos, 3 segundos
-2024-06-09 11:55:28,414 [Server thread]: [Towny] Time until a New Day: 4 minutos, 32 segundos
-2024-06-09 11:57:44,417 [Server thread]: [Towny] Time until a New Day: 2 minutos, 16 segundos
-2024-06-09 11:58:52,418 [Server thread]: [Towny] Time until a New Day: 1 minutos, 8 segundos
-2024-06-09 12:00:00,418 [ForkJoinPool.commonPool-worker-4]: [Towny] Cleaning up old backups...
-2024-06-09 12:00:00,418 [Craft Scheduler Thread - 5]: [Towny] Towny DailyTimerTask took 4ms to process.
-2024-06-09 12:00:00,422 [ForkJoinPool.commonPool-worker-4]: [Towny] Successfully cleaned backups.
-2024-06-09 12:00:00,423 [ForkJoinPool.commonPool-worker-4]: [Towny] Making backup...
-2024-06-09 12:00:01,467 [ForkJoinPool.commonPool-worker-4]: [Towny] Towny flatfiles and settings successfully backed up.
-2024-06-09 12:01:00,411 [Server thread]: [Towny] Time until a New Day: 23 horas, 59 minutos
-2024-06-09 12:09:35,487 [Server thread]: [Towny] Disabling Towny v0.100.2.0
-2024-06-09 12:09:35,488 [Server thread]: [Towny] Finishing File IO Tasks...
-2024-06-09 12:09:35,490 [Server thread]: [Towny] Finishing Universe Tasks...
-2024-06-09 12:09:35,491 [Server thread]: [Towny] Version: 0.100.2.0 - Plugin Disabled
+2024-06-10 09:09:52,725 [Server thread]: [Towny] Database: [Load] flatfile [Save] flatfile
+2024-06-10 09:09:52,945 [Server thread]: [Towny] Database: Loaded in 220ms.
+2024-06-10 09:09:52,951 [ForkJoinPool.commonPool-worker-1]: [Towny] Cleaning up old backups...
+2024-06-10 09:09:52,961 [ForkJoinPool.commonPool-worker-1]: [Towny] Successfully cleaned backups.
+2024-06-10 09:09:52,962 [ForkJoinPool.commonPool-worker-1]: [Towny] Making backup...
+2024-06-10 09:09:53,064 [Server thread]: [Towny] Loaded class net.kyori.adventure.text.Component from eShulkerBox v0.4.0 which is not a depend or softdepend of this plugin.
+2024-06-10 09:09:53,070 [Server thread]: [Towny] Searching for third-party plugins...
+2024-06-10 09:09:53,071 [Server thread]: [Towny] Plugins found: 
+2024-06-10 09:09:53,072 [Server thread]: [Towny]   Permissions: TownyPerms, LuckPerms v5.4.102 via Vault
+2024-06-10 09:09:53,073 [Server thread]: [Towny]   Chat: LuckPerms v5.4.102 via Vault
+2024-06-10 09:09:53,076 [Server thread]: [Towny]   Add-ons: Dynmap-Towny v1.1.2, PlaceholderAPI v2.11.5
+2024-06-10 09:09:53,150 [Server thread]: [Towny] Version: 0.100.2.0 - Plugin Enabled
+2024-06-10 09:09:53,639 [ForkJoinPool.commonPool-worker-1]: [Towny] Towny flatfiles and settings successfully backed up.
+2024-06-10 09:09:58,110 [Craft Scheduler Thread - 10]: [Towny] Buscando actualizaciones...
+2024-06-10 09:09:58,112 [Craft Scheduler Thread - 9]: [Towny] Time until a New Day: 2 horas, 50 minutos, 2 segundos
+2024-06-10 09:09:58,993 [Craft Scheduler Thread - 10]: [Towny] Nueva actualizacion disponible: 0.100.3.0 | Version Actual: 0.100.2.0
+2024-06-10 09:09:58,993 [Craft Scheduler Thread - 10]: [Towny] Descargala aqui: https://github.com/TownyAdvanced/Towny/releases/tag/0.100.3.0
+2024-06-10 10:34:59,028 [Server thread]: [Towny] Time until a New Day: 1 horas, 25 minutos, 1 segundos
+2024-06-10 11:13:44,250 [Server thread]: [Towny] Disabling Towny v0.100.2.0
+2024-06-10 11:13:44,251 [Server thread]: [Towny] Finishing File IO Tasks...
+2024-06-10 11:13:44,253 [Server thread]: [Towny] Finishing Universe Tasks...
+2024-06-10 11:13:44,254 [Server thread]: [Towny] Version: 0.100.2.0 - Plugin Disabled
