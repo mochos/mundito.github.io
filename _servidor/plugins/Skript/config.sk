@@ -103,7 +103,7 @@ date format: default
 #  dd.MM.yyyy, HH:mm => 16.03.2013, 09:33
 
 
-verbosity: normal
+verbosity: very high
 # Determines how much info is logged.
 # Allowed values: low, normal, high, very high, debug
 # The highest you should go is very high, which prints quite a lot of useful information,
@@ -231,7 +231,7 @@ databases:
 	database 1:
 		# An example database to describe all possible options.
 		
-		type: SQLite
+		type: CSV
 		# The type of this database. Allowed values are 'CSV', 'SQLite', 'MySQL' and 'disabled'.
 		# CSV uses a text file to store the variables, while SQLite and MySQL use databases, and 'disabled' makes Skript ignore the database as if it wasn't defined at all.
 		
@@ -257,7 +257,7 @@ databases:
 		table: variables21# The name of the table to create. 'variables21' is the default name, if this was to be omitted.
 		# (If the table exists but is defined differently that how Skript expects it to be you'll get errors and no variables will be saved and/or loaded)
 		# == SQLite/CSV configuration ==
-		file: ./plugins/Skript/variables.db
+		file: ./plugins/Skript/variables.csv
 		# Where to save the variables to. For a CSV file, the file extension '.csv' is recommended, but not required, but SQLite database files must end in '.db' (SQLibrary forces this).
 		# The file path can either be absolute (e.g. 'C:\whatever\...' [Windows] or '/usr/whatever/...' [Unix]), or relative to the server directory (e.g. './plugins/Skript/...').
 		

@@ -1,8 +1,11 @@
+options:
+    banco: "&a&l[Banco Central] &r&f"
+
 #Abrir cajero
 on rightclick on sign:
     if line 2 of event-block is "&2&l[Banco]":
         cancel event
-        make player execute command "/banco"
+        banco(player)
 
 #Admin crear cajero
 command /crearbanco:
@@ -11,33 +14,56 @@ command /crearbanco:
         set {_target} to target block of player
         if {_target} is a sign:
             set line 2 of block at location of {_target} to "&2&l[Banco]"
-            send "&aCajero creado con éxito."
+            send "%{@banco}%&aCajero creado con éxito."
         else:
-            send "&cNo estás mirando un cartel."
+            send "%{@banco}%&cNo estás mirando un cartel."
+
+command /logeconomia:
+    permission: mundito.admin
+    trigger:
+        logEco()
+        send "Se han actualizado los datos de la economía." to player
+
+function logEco():
+    load yaml "plugins/Skript/data/economia.yml" as "economia"
+    set {_total} to 0
+    loop all offline players:
+        set {_tempPlayer} to "%loop-value%"
+        set {_tempBalance} to "%balance of loop-value%"
+        replace all "$" with "" in {_tempBalance}
+        replace all "," with "" in {_tempBalance}
+        set {_tempBalance} to {_tempBalance} parsed as integer
+        set yaml value "dinero.%{_tempPlayer}%" from "economia" to {_tempBalance}
+        add {_tempBalance} to {_total}
+        wait 1 tick
+    broadcast "%{@banco}%&aTotal: %{_total}%"
+    set yaml value "dinero.total" from "economia" to {_total}
+    save yaml "economia"
+    unload yaml "economia"
 
 #Depositar en el banco
-command /depositar <number>:
-    #permission: mundito.transacciones
-    trigger:
-        set {_cantidad} to arg-1
-        if player has {_cantidad} of sunflower named "&6&lCeitil" with lore "&7Banco Central":
-            remove {_cantidad} of sunflower named "&6&lCeitil" from player's inventory
-            execute console command "eco give %player% %{_cantidad}%"
-            send "&aHas depositado &6&l$%{_cantidad}% ceitiles &aen tu cuenta" to {_player}
-        else:
-            send "&cNo tienes suficientes &6&lceitiles &cpara depositar. Necesitas al menos %{_cantidad}%." to player
+function depositar(p: player, num: number):
+    if {_p} has {_num} of sunflower named "&6&lCeitil" with lore "&7Banco Central":
+        remove {_num} of sunflower named "&6&lCeitil" from {_p}'s inventory
+        execute console command "eco give %{_p}% %{_num}%"
+        send "%{@banco}%Has depositado &6&l$%{_num}% ceitiles &aen tu cuenta" to {_p}
+        play sound "entity.experience_orb.pickup" with volume 1 to {_p}
+        banco({_p})
+    else:
+        send "%{@banco}%&cNo tienes suficientes &6&lceitiles &cpara depositar." to {_p}
+        play sound "entity.villager.no" with volume 1 to {_p}
 
 #Retirar en el banco
-command /retirar <number>:
-    #permission: mundito.transacciones
-    trigger:
-        set {_cantidad} to arg-1
-        if player's money is greater than or equal to {_cantidad}:
-            execute console command "eco take %player% %{_cantidad}%"
-            give {_cantidad} of sunflower named "&6&lCeitil" with lore "&7Banco Central" to player's inventory
-            message "&aHas retirado &6&l$%{_cantidad}% ceitiles &ade tu cuenta"
-        else:
-            send "&cNo tienes suficientes dinero en tu cuenta para retirar. Necesitas al menos $%{_cantidad}%." to player
+function retirar(p: player, num: number):
+    if {_p}'s money is greater than or equal to {_num}:
+        execute console command "eco take %{_p}% %{_num}%"
+        give {_num} of sunflower named "&6&lCeitil" with lore "&7Banco Central" to {_p}'s inventory
+        play sound "entity.experience_orb.pickup" with volume 1 to {_p}
+        send "%{@banco}%Has retirado &6&l$%{_num}% ceitiles &ade tu cuenta" to {_p}
+        banco({_p})
+    else:
+        send "%{@banco}%&cNo tienes suficientes dinero en tu cuenta para retirar." to {_p}
+        play sound "entity.villager.no" with volume 1 to {_p}
 
 #Evita plantar los ceitiles
 on place of sunflower:
@@ -63,23 +89,44 @@ command /emitirceitil <text> <number>:
         set yaml value "ceitiles.%{_player}%" from "economia" to {_totalplayer}
         wait 1 tick
         save yaml "economia"
-        send "&aTu interacción ha sido registrada. Total: %{_total}%" to player
+        send "%{@banco}%&aTu interacción ha sido registrada. Total: %{_total}%" to player
         unload yaml "economia"
 
 #Interfaz del banco
-command /banco:
-    #permission: mundito.banco
-    trigger:
-        set {_balance} to balance of player
-        set {_banco} to a new chest inventory with 3 row named "&a&lBanco Central"
-        set slot 12 of {_banco} to emerald named "&e&lCambio de divisa" with lore "&fEntra aquí para cambiar" and "&ftus esmeraldas por dinero"
-        set slot 14 of {_banco} to sunflower named "&e&lTransacciones" with lore "&fEntra aquí para depositar o" and "&fretirar tu dinero" and "&aTu saldo: &l%{_balance}%"
-        open {_banco} to player
+function banco(p: player):
+    set {_transacciones} to a new chest inventory with 4 row named "&a&lBanco Central"
+    set slot 11 of {_transacciones} to book named "&6&lSaldo" with lore "&f%balance of {_p}%"
+    #Retirar
+    set slot 13 of {_transacciones} to sunflower named "&6&lRetirar 5 ceitiles" with lore "&fPoner 5 ceitiles en tu inventario"
+    set slot 14 of {_transacciones} to sunflower named "&6&lRetirar 50 ceitiles" with lore "&fPoner 50 ceitiles en tu inventario"
+    set slot 15 of {_transacciones} to sunflower named "&6&lRetirar 500 ceitiles" with lore "&fPoner 500 ceitiles en tu inventario"
+    #Depositar
+    set slot 22 of {_transacciones} to sunflower named "&6&lDepositar 5 ceitiles" with lore "&fPoner 5 ceitiles en tu cuenta bancaria"
+    set slot 23 of {_transacciones} to sunflower named "&6&lDepositar 50 ceitiles" with lore "&fPoner 50 ceitiles en tu cuenta bancaria"
+    set slot 24 of {_transacciones} to sunflower named "&6&lDepositar 500 ceitiles" with lore "&fPoner 500 ceitiles en tu cuenta bancaria"
+    open {_transacciones} to {_p}
 
+#Transacciones
 on inventory click:
     name of event-inventory is "&a&lBanco Central"
     cancel event
-    if index of event-slot is 12:
+    if index of event-slot is 13:
+        retirar(player, 5)
+    if index of event-slot is 14:
+        retirar(player, 50)
+    if index of event-slot is 15:
+        retirar(player, 500)
+    if index of event-slot is 22:
+        depositar(player, 5)
+    if index of event-slot is 23:
+        depositar(player, 50)
+    if index of event-slot is 24:
+        depositar(player, 500)
+
+#Interfaz de divisas
+command /divisa:
+    permission: mundito.divisa
+    trigger:
         set {_divisa} to a new chest inventory with 4 row named "&a&lCambio de divisa"
         #1 esmeralda
         set slot 11 of {_divisa} to emerald named "&e&l1 esmeralda" with lore "&fTransacciones con 1 esmeralda:"
@@ -89,20 +136,7 @@ on inventory click:
         set slot 20 of {_divisa} to emerald named "&e&l10 esmeraldas" with lore "&fTransacciones con 10 esmeraldas:"
         set slot 23 of {_divisa} to sunflower named "&6&lRetirar 500 ceitiles" with lore "&fPoner 500 ceitiles en tu inventario"
         set slot 24 of {_divisa} to sunflower named "&6&lDepositar 500 ceitiles" with lore "&fPoner 500 ceitiles en tu cuenta bancaria"
-        set slot 35 of {_divisa} to arrow named "&fMenú principal"
         open {_divisa} to player
-    if index of event-slot is 14:
-        set {_transacciones} to a new chest inventory with 4 row named "&a&lTransacciones"
-        #Retirar
-        set slot 12 of {_transacciones} to sunflower named "&6&lRetirar 5 ceitiles" with lore "&fPoner 5 ceitiles en tu inventario"
-        set slot 13 of {_transacciones} to sunflower named "&6&lRetirar 50 ceitiles" with lore "&fPoner 50 ceitiles en tu inventario"
-        set slot 14 of {_transacciones} to sunflower named "&6&lRetirar 500 ceitiles" with lore "&fPoner 500 ceitiles en tu inventario"
-        #Depositar
-        set slot 21 of {_transacciones} to sunflower named "&6&lDepositar 5 ceitiles" with lore "&fPoner 5 ceitiles en tu cuenta bancaria"
-        set slot 22 of {_transacciones} to sunflower named "&6&lDepositar 50 ceitiles" with lore "&fPoner 50 ceitiles en tu cuenta bancaria"
-        set slot 23 of {_transacciones} to sunflower named "&6&lDepositar 500 ceitiles" with lore "&fPoner 500 ceitiles en tu cuenta bancaria"
-        set slot 35 of {_transacciones} to arrow named "&fMenú principal"
-        open {_transacciones} to player
 
 #Cambio de divisa
 on inventory click:
@@ -113,62 +147,40 @@ on inventory click:
         if player has 1 of emerald:
             remove 1 of emerald from player's inventory
             give 50 of sunflower named "&6&lCeitil" with lore "&7Banco Central" to player's inventory
-            send "&aHas depositado &6&l$50 ceitiles &aen tu cuenta" to player
+            send "%{@banco}%&aHas depositado &6&l$50 ceitiles &aen tu cuenta" to player
+            play sound "entity.experience_orb.pickup" with volume 1 to the player
             execute console command "/emitirceitil %player% 50"
         else:
-            send "&cNo tienes suficientes &6&lcesmeraldas &cpara cambiar. Necesitas al menos 1." to player
+            send "%{@banco}%&cNo tienes suficientes &6&lcesmeraldas &cpara cambiar." to player
+            play sound "entity.villager.no" with volume 1 to player
     if index of event-slot is 15:
         #send "Depositar 50"
         if player has 1 of emerald:
             remove 1 of emerald from player's inventory
             execute console command "eco give %player% 50"
-            send "&aHas depositado &6&l$50 ceitiles &aen tu cuenta" to player
+            send "%{@banco}%&aHas depositado &6&l$50 ceitiles &aen tu cuenta" to player
             execute console command "/emitirceitil %player% 50"
         else:
-            send "&cNo tienes suficientes &6&lcesmeraldas &cpara cambiar. Necesitas al menos 1." to player
+            send "%{@banco}%&cNo tienes suficientes &6&lcesmeraldas &cpara cambiar." to player
     if index of event-slot is 23:
         #send "Retirar 500"
         if player has 10 of emerald:
             remove 10 of emerald from player's inventory
             give 500 of sunflower named "&6&lCeitil" with lore "&7Banco Central" to player's inventory
-            send "&aHas depositado &6&l$500 ceitiles &aen tu cuenta" to player
+            send "%{@banco}%&aHas depositado &6&l$500 ceitiles &aen tu cuenta" to player
             execute console command "/emitirceitil %player% 500"
         else:
-            send "&cNo tienes suficientes &6&lcesmeraldas &cpara cambiar. Necesitas al menos 10." to player
+            send "%{@banco}%&cNo tienes suficientes &6&lcesmeraldas &cpara cambiar." to player
     if index of event-slot is 24:
         #send "Depositar 500"
         if player has 10 of emerald:
             remove 10 of emerald from player's inventory
             execute console command "eco give %player% 500"
-            send "&aHas depositado &6&l$500 ceitiles &aen tu cuenta" to player
+            send "%{@banco}%&aHas depositado &6&l$500 ceitiles &aen tu cuenta" to player
             execute console command "/emitirceitil %player% 500"
         else:
-            send "&cNo tienes suficientes &6&lcesmeraldas &cpara cambiar. Necesitas al menos 10." to player
-    if index of event-slot is 35:
-        execute player command "/banco"
+            send "%{@banco}%&cNo tienes suficientes &6&lcesmeraldas &cpara cambiar." to player
 
-#Transacciones
-on inventory click:
-    name of event-inventory is "&a&lTransacciones"
-    cancel event
-    if index of event-slot is 12:
-        #send "Retirar 5"
-        execute player command "/retirar 5"
-    if index of event-slot is 13:
-        #send "Retirar 50"
-        execute player command "/retirar 50"
-    if index of event-slot is 14:
-        #send "Retirar 500"
-        execute player command "/retirar 500"
-    if index of event-slot is 21:
-        #send "Depositar 5"
-        execute player command "/depositar 5"
-    if index of event-slot is 22:
-        #send "Depositar 50"
-        execute player command "/depositar 50"
-    if index of event-slot is 23:
-        #send "Depositar 500"
-        execute player command "/depositar 500"
-    if index of event-slot is 35:
-        execute player command "/banco"
 
+#Registro de economía: Que cada 40 minutos haga un recorrido de todos los blances de los usuarios y lo deje en el YML.
+#dinero.total, dinero.%player%, sume el total de todos y el individual en lista.

@@ -1,32 +1,63 @@
+#Variables que se usarán en este script.
+variables:
+    {streamer.url::%player%} = " "
+
+#Comando de ayuda para recibir los links más importantes
 command /ayuda:
     trigger:
-        send " " to player
-        send "&a&lENLACES DE INTERÉS" to player
-        send " &f&lWiki de Mundito: &r&b<tooltip:&fClic para abrir><link:https://mochos.xyz/mundito/wiki>mochos.xyz/mundito/wiki<reset>" to player
-        send " &f&lMapa dinámico: &r&b<tooltip:&fClic para abrir><link:https://mochos.xyz/mundito/mapa/>mochos.xyz/mundito/mapa<reset>" to player
-        send " &f&lDiscord de Team Mochos: &r&b<tooltip:&fClic para abrir><link:https://discord.mochos.xyz/>discord.mochos.xyz<reset>" to player
-        send " " to player
+        message formatted " " to player
+        message formatted "&a&lENLACES DE INTERÉS" to player
+        message formatted " &f&lWiki de Mundito: &r&b<tooltip:&fClic para abrir><link:https://mochos.xyz/mundito/wiki>mochos.xyz/mundito/wiki<reset>" to player
+        message formatted " &f&lMapa dinámico: &r&b<tooltip:&fClic para abrir><link:https://mochos.xyz/mundito/mapa/>mochos.xyz/mundito/mapa<reset>" to player
+        message formatted " &f&lDiscord de Team Mochos: &r&b<tooltip:&fClic para abrir><link:https://discord.mochos.xyz/>discord.mochos.xyz<reset>" to player
+        message formatted " " to player
 
-command /stream <text>:
+#Comando para anunciar nuevo stream.
+command /stream [<text>]:
     permission: mundito.streamer
+    cooldown: 3 seconds
+    cooldown message: No puedes volver a utilizar este comando en %remaining time%.
     trigger:
-        broadcast " "
-        broadcast "&d-------------------------------------------------"
-        broadcast " "
-        broadcast "   &f¡&a&l%player% &r&fha iniciado directo!"
-        broadcast "   &fVamos a dejarle un saludo en: &dtwitch.tv/%arg-1%"
-        broadcast " "
-        broadcast "&d-------------------------------------------------"
-        broadcast " "
+        if arg-1 is not set:
+            if {streamer.url::%player%} is " ":
+                message "&5&l[&d&lStream&5&l] &rAgrega tu canal de Twitch para que avises con /stream cuando estés en vivo." to player
+                message "&5&l[&d&lStream&5&l] &rEscribe /stream <nombre del canal de twitch>, para agregar tu canal.):" to player
+            else:
+                send " " to player
+                message formatted " " to all players
+                message formatted "&d-------------------------------------------------" to all players
+                message formatted " " to all players
+                message formatted "   &f¡&a&l%player% &r&fha iniciado directo!" to all players
+                message formatted "   &fVamos a dejarle un saludo en: &r&b<tooltip:&fClic para abrir><link:https://twitch.tv/%{streamer.url::%player%}%>&bhttps://twitch.tv/%{streamer.url::%player%}%<reset>" to all players
+                message formatted " " to all players
+                message formatted "&d-------------------------------------------------" to all players
+        else:
+            set {streamer.url::%player%} to arg-1
+            send "&5&l[&d&lStream&5&l] &rTu canal ha sido agregado correctamente: &b%arg-1%" to player
+            send "&5&l[&d&lStream&5&l] &rAvísanos a todos cuando estés en directo escribiendo /stream" to player
+            send "&5&l[&d&lStream&5&l] &rSi la URL no es correcta, utiliza el comando nuevamente." to player
 
 #command /stream <text>:
-#	permission: mundito.streamer
-#	trigger:
-#		send "&a&llorem ipsum" to player
-#		send "<tooltip:&fClic para abrir><link:https://twitch.tv/%arg-1%> &btwitch.tv/%arg-1%<reset>" to player
+#    permission: mundito.streamer
+#    trigger:
+#        message formatted " " to all players
+#        message formatted "&d-------------------------------------------------" to all players
+#        message formatted " " to all players
+#        message formatted "   &f¡&a&l%player% &r&fha iniciado directo!" to all players
+#        message formatted "   &fVamos a dejarle un saludo en: &r&b<tooltip:&fClic para abrir><link:https://twitch.tv/%arg-1%>&btwitch.tv/%arg-1%<reset> %arg-1%" to all players
+#        message formatted " " to all players
+#        message formatted "&d-------------------------------------------------" to all players
+#        message formatted " " to all players
 
+#Este ya funciona, por ende se deja el comando de más arriba.
+#command /stream <text>:
+#    permission: mundito.streamer
+#    trigger:
+#        message "&a&llorem ipsum" to all players
+#        #message "&r&b<tooltip:&fClic para abrir><link:https://twitch.tv/%arg-1%>&btwitch.tv/%arg-1%<reset> %message%" to all players
+#        message formatted "&r&b<tooltip:&fClic para abrir><link:https://twitch.tv/%arg-1%>&btwitch.tv/%arg-1%<reset> %arg-1%" to all players
 
-#broadcast "&a[Anuncio] &f%arg-1%"
+#? ? ? ? ? ? broadcast "&a[Anuncio] &f%arg-1%"
 
 #Sirve bien
 #on rightclick on sign:

@@ -1,3 +1,17 @@
 ceitiles:
-    total: 1100
-    lorspi: 1100
+    total: 5000
+    lorspi: 3950
+    elPantallazoAzul: 750
+    _lorspi: 50
+    ShakalChapa: 250
+
+dinero:
+    total: 4336
+    _lorspi: 0
+    otro: 0
+    10r571: 0
+    nadie: 0
+    sirpol: 0
+    ShakalChapa: 245
+    elPantallazoAzul: 250
+    lorspi: 3841
