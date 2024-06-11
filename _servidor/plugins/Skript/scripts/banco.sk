@@ -1,9 +1,15 @@
 options:
     banco: "&a&l[Banco Central] &r&f"
 
-#Abrir cajero
+#Abrir banco con cartel
 on rightclick on sign:
     if line 2 of event-block is "&2&l[Banco]":
+        cancel event
+        banco(player)
+
+#Abrir banco con aldeano
+on rightclick on villager:
+    if name of clicked entity contains "&a&lBanco":
         cancel event
         banco(player)
 
