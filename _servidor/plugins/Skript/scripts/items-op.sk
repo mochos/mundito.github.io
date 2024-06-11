@@ -1,0 +1,20 @@
+#on rightclick with any tool:
+#    if name of player's tool contains "&6&lEC":
+#        send "&aHas hecho clic derecho con el ítem renombrado &6&lCeitil &a!" to player
+#        # Reducir durabilidad en 1
+#        damage player's tool by 1
+
+on rightclick with echo shard:
+    if name of player's tool contains "&d&lCofre de ender portátil":
+        send "&aHas hecho clic derecho con el ítem renombrado &6&lCeitil &a!" to player
+        # Quitar uno
+        remove 1 of echo shard named "&d&lCofre de ender portátil" from player's inventory
+        execute console command "/lp user %player% permission set essentials.enderchest"
+        wait 2 ticks
+        execute player command "/ec"
+        play sound "block.ender_chest.open" with volume 1 to the player
+        wait 2 ticks
+        execute console command "/lp user %player% permission unset essentials.enderchest"
+
+#/itemname &d&lCofre de ender portátil
+#/itemlore add &fUn solo uso/

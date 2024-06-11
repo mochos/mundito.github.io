@@ -896,5 +896,17 @@
     },
     "done": true
   },
+  "minecraft:recipes/tools/recovery_compass": {
+    "criteria": {
+      "has_echo_shard": "2024-06-11 15:58:52 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/music_disc_5": {
+    "criteria": {
+      "has_disc_fragment_5": "2024-06-11 15:59:28 -0500"
+    },
+    "done": true
+  },
   "DataVersion": 3465
 }

@@ -16,18 +16,18 @@ timestamps:
   mute: 0
   jail: 0
   onlinejail: 0
-  logout: 1718118946319
-  login: 1718118461149
+  logout: 1718140088382
+  login: 1718139836981
 money: '5105'
 last-account-name: lorspi
 logoutlocation:
   world: b339dda7-0e12-48e2-99c8-d31b6a44bf65
   world-name: world
-  x: 3.507805824673578
-  y: 71.0
-  z: 47.0991126144445
-  yaw: -3.0392093658447266
-  pitch: 6.698971271514893
+  x: -2.0105510557084925
+  y: 72.0
+  z: 45.33680064066094
+  yaw: -85.25909423828125
+  pitch: 5.799017429351807
 lastlocation:
   world: b339dda7-0e12-48e2-99c8-d31b6a44bf65
   world-name: world
