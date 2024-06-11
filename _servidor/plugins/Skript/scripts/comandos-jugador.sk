@@ -31,6 +31,8 @@ command /stream [<text>]:
                 message formatted "   &fVamos a dejarle un saludo en: &r&b<tooltip:&fClic para abrir><link:https://twitch.tv/%{streamer.url::%player%}%>&bhttps://twitch.tv/%{streamer.url::%player%}%<reset>" to all players
                 message formatted " " to all players
                 message formatted "&d-------------------------------------------------" to all players
+                message formatted " " to all players
+                play sound "entity.elder_guardian.curse" with volume 1 to all players
         else:
             set {streamer.url::%player%} to arg-1
             send "&5&l[&d&lStream&5&l] &rTu canal ha sido agregado correctamente: &b%arg-1%" to player

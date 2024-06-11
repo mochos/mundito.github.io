@@ -7,9 +7,9 @@ on rightclick on sign:
         cancel event
         banco(player)
 
-#Admin crear cajero
+#Admin crear banco
 command /crearbanco:
-    permission: cambio.cartel
+    permission: mundito.crearbanco
     trigger:
         set {_target} to target block of player
         if {_target} is a sign:
@@ -97,12 +97,12 @@ function banco(p: player):
     set {_transacciones} to a new chest inventory with 4 row named "&a&lBanco Central"
     set slot 11 of {_transacciones} to book named "&6&lSaldo" with lore "&f%balance of {_p}%"
     #Retirar
-    set slot 13 of {_transacciones} to sunflower named "&6&lRetirar 5 ceitiles" with lore "&fPoner 5 ceitiles en tu inventario"
-    set slot 14 of {_transacciones} to sunflower named "&6&lRetirar 50 ceitiles" with lore "&fPoner 50 ceitiles en tu inventario"
+    set slot 13 of {_transacciones} to sunflower named "&6&lRetirar 1 ceitil" with lore "&fPoner 1 ceitil en tu inventario"
+    set slot 14 of {_transacciones} to sunflower named "&6&lRetirar 100 ceitiles" with lore "&fPoner 100 ceitiles en tu inventario"
     set slot 15 of {_transacciones} to sunflower named "&6&lRetirar 500 ceitiles" with lore "&fPoner 500 ceitiles en tu inventario"
     #Depositar
-    set slot 22 of {_transacciones} to sunflower named "&6&lDepositar 5 ceitiles" with lore "&fPoner 5 ceitiles en tu cuenta bancaria"
-    set slot 23 of {_transacciones} to sunflower named "&6&lDepositar 50 ceitiles" with lore "&fPoner 50 ceitiles en tu cuenta bancaria"
+    set slot 22 of {_transacciones} to sunflower named "&6&lDepositar 1 ceitil" with lore "&fPoner 1 ceitil en tu cuenta bancaria"
+    set slot 23 of {_transacciones} to sunflower named "&6&lDepositar 100 ceitiles" with lore "&fPoner 100 ceitiles en tu cuenta bancaria"
     set slot 24 of {_transacciones} to sunflower named "&6&lDepositar 500 ceitiles" with lore "&fPoner 500 ceitiles en tu cuenta bancaria"
     open {_transacciones} to {_p}
 
@@ -111,15 +111,15 @@ on inventory click:
     name of event-inventory is "&a&lBanco Central"
     cancel event
     if index of event-slot is 13:
-        retirar(player, 5)
+        retirar(player, 1)
     if index of event-slot is 14:
-        retirar(player, 50)
+        retirar(player, 100)
     if index of event-slot is 15:
         retirar(player, 500)
     if index of event-slot is 22:
-        depositar(player, 5)
+        depositar(player, 1)
     if index of event-slot is 23:
-        depositar(player, 50)
+        depositar(player, 100)
     if index of event-slot is 24:
         depositar(player, 500)
 
@@ -129,54 +129,73 @@ command /divisa:
     trigger:
         set {_divisa} to a new chest inventory with 4 row named "&a&lCambio de divisa"
         #1 esmeralda
-        set slot 11 of {_divisa} to emerald named "&e&l1 esmeralda" with lore "&fTransacciones con 1 esmeralda:"
-        set slot 14 of {_divisa} to sunflower named "&6&lRetirar 50 ceitiles" with lore "&fPoner 50 ceitiles en tu inventario"
-        set slot 15 of {_divisa} to sunflower named "&6&lDepositar 50 ceitiles" with lore "&fPoner 50 ceitiles en tu cuenta bancaria"
+        set slot 12 of {_divisa} to sunflower named "&6&lRetirar 10 ceitiles" with lore "&fPoner 10 ceitiles en tu inventario"
+        set slot 21 of {_divisa} to sunflower named "&6&lDepositar 10 ceitiles" with lore "&fPoner 10 ceitiles en tu cuenta bancaria"
         #10 esmeraldas
-        set slot 20 of {_divisa} to emerald named "&e&l10 esmeraldas" with lore "&fTransacciones con 10 esmeraldas:"
-        set slot 23 of {_divisa} to sunflower named "&6&lRetirar 500 ceitiles" with lore "&fPoner 500 ceitiles en tu inventario"
-        set slot 24 of {_divisa} to sunflower named "&6&lDepositar 500 ceitiles" with lore "&fPoner 500 ceitiles en tu cuenta bancaria"
+        set slot 13 of {_divisa} to sunflower named "&6&lRetirar 100 ceitiles" with lore "&fPoner 100 ceitiles en tu inventario"
+        set slot 22 of {_divisa} to sunflower named "&6&lDepositar 100 ceitiles" with lore "&fPoner 100 ceitiles en tu cuenta bancaria"
+        #50 esmeraldas
+        set slot 14 of {_divisa} to sunflower named "&6&lRetirar 500 ceitiles" with lore "&fPoner 500 ceitiles en tu inventario"
+        set slot 23 of {_divisa} to sunflower named "&6&lDepositar 500 ceitiles" with lore "&fPoner 500 ceitiles en tu cuenta bancaria"
         open {_divisa} to player
 
 #Cambio de divisa
 on inventory click:
     name of event-inventory is "&a&lCambio de divisa"
     cancel event
-    if index of event-slot is 14:
-        #send "Retirar 50"
+    if index of event-slot is 12:
+        #send "Retirar 10"
         if player has 1 of emerald:
             remove 1 of emerald from player's inventory
-            give 50 of sunflower named "&6&lCeitil" with lore "&7Banco Central" to player's inventory
-            send "%{@banco}%&aHas depositado &6&l$50 ceitiles &aen tu cuenta" to player
+            give 10 of sunflower named "&6&lCeitil" with lore "&7Banco Central" to player's inventory
+            send "%{@banco}%&aHas depositado &6&l$10 ceitiles &aen tu inventario." to player
+            execute console command "/emitirceitil %player% 10"
             play sound "entity.experience_orb.pickup" with volume 1 to the player
-            execute console command "/emitirceitil %player% 50"
         else:
             send "%{@banco}%&cNo tienes suficientes &6&lcesmeraldas &cpara cambiar." to player
             play sound "entity.villager.no" with volume 1 to player
-    if index of event-slot is 15:
-        #send "Depositar 50"
+    if index of event-slot is 21:
+        #send "Depositar 10"
         if player has 1 of emerald:
             remove 1 of emerald from player's inventory
-            execute console command "eco give %player% 50"
-            send "%{@banco}%&aHas depositado &6&l$50 ceitiles &aen tu cuenta" to player
-            execute console command "/emitirceitil %player% 50"
+            execute console command "eco give %player% 10"
+            send "%{@banco}%&aHas depositado &6&l$10 ceitiles &aen tu cuenta" to player
+            execute console command "/emitirceitil %player% 10"
         else:
             send "%{@banco}%&cNo tienes suficientes &6&lcesmeraldas &cpara cambiar." to player
-    if index of event-slot is 23:
+    if index of event-slot is 13:
+        #send "Retirar 100"
+        if player has 10 of emerald:
+            remove 10 of emerald from player's inventory
+            give 100 of sunflower named "&6&lCeitil" with lore "&7Banco Central" to player's inventory
+            send "%{@banco}%&aHas depositado &6&l$100 ceitiles &aen tu inventario" to player
+            execute console command "/emitirceitil %player% 100"
+        else:
+            send "%{@banco}%&cNo tienes suficientes &6&lcesmeraldas &cpara cambiar." to player
+    if index of event-slot is 22:
+        #send "Depositar 100"
+        if player has 10 of emerald:
+            remove 10 of emerald from player's inventory
+            execute console command "eco give %player% 100"
+            send "%{@banco}%&aHas depositado &6&l$100 ceitiles &aen tu cuenta." to player
+            execute console command "/emitirceitil %player% 100"
+        else:
+            send "%{@banco}%&cNo tienes suficientes &6&lcesmeraldas &cpara cambiar." to player
+    if index of event-slot is 14:
         #send "Retirar 500"
         if player has 10 of emerald:
             remove 10 of emerald from player's inventory
             give 500 of sunflower named "&6&lCeitil" with lore "&7Banco Central" to player's inventory
-            send "%{@banco}%&aHas depositado &6&l$500 ceitiles &aen tu cuenta" to player
+            send "%{@banco}%&aHas depositado &6&l$500 ceitiles &aen tu inventario." to player
             execute console command "/emitirceitil %player% 500"
         else:
             send "%{@banco}%&cNo tienes suficientes &6&lcesmeraldas &cpara cambiar." to player
-    if index of event-slot is 24:
+    if index of event-slot is 23:
         #send "Depositar 500"
         if player has 10 of emerald:
             remove 10 of emerald from player's inventory
             execute console command "eco give %player% 500"
-            send "%{@banco}%&aHas depositado &6&l$500 ceitiles &aen tu cuenta" to player
+            send "%{@banco}%&aHas depositado &6&l$500 ceitiles &aen tu cuenta." to player
             execute console command "/emitirceitil %player% 500"
         else:
             send "%{@banco}%&cNo tienes suficientes &6&lcesmeraldas &cpara cambiar." to player
