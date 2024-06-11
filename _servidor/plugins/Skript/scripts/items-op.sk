@@ -18,3 +18,53 @@ on rightclick with echo shard:
 
 #/itemname &d&lCofre de ender portátil
 #/itemlore add &fUn solo uso/
+
+
+#Taladro
+# - Dar minerales en vez de menas?
+#on block break:
+#   if name of player's tool contains "&9&lTaladro" or "&9&lSuper taladro":
+#       damage player's tool by 3
+#       loop blocks in radius 1.8 of event-block:
+#           if loop-block is stone or cobblestone or obsidian or any ore:
+#               add loop-block to {_explosive.%player%::*}
+#               loop {_explosive.%player%::*}:
+#                   drop loop-block
+#                   set loop-block to air
+#                   play raw sound "dig.stone" at player with pitch 1 volume 20
+#                   wait 3 ticks
+
+
+on block break:
+    if name of player's tool contains "&9&lInstaminador":
+        damage player's tool by 3
+        loop blocks in radius 1.8 of event-block:
+            if loop-block is stone or cobblestone or obsidian or deepslate or any ore:
+                drop loop-block
+                set loop-block to air
+                play sound "dig.stone" with volume 1 to player
+                wait 1 ticks
+
+#Evita reparar con comando
+on command "/repair":
+    if player don't have the permission "skript.admin":
+        if name of player's tool contains "&9&lInstaminador" or "&9&lDerribadora":
+            cancel event
+            message "&cNo puedes reparar esta herramienta."
+
+#Evita reparar o encantar con yunque
+on anvil prepare:
+    if name of event-item contains "&9&lInstaminador" or "&9&lDerribadora":
+        set repair cost of event-inventory to 999
+
+#Evita reparar con mending
+on item mend:
+    if name of event-item contains "&9&lInstaminador" or "&9&lDerribadora":
+        cancel the event
+        send "&cNo puedes reparar esta herramienta." to player
+
+#Evita encantar con mesa de encantamientos
+on enchant:  
+    if name of event-item contains "&9&lInstaminador" or "&9&lDerribadora":
+        cancel event
+        message "&cNo puedes encantar esta herramienta."
