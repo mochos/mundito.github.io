@@ -24,6 +24,16 @@ command /crearbanco:
         else:
             send "%{@banco}%&cNo estás mirando un cartel."
 
+#Cartel dinero en circulación
+on rightclick on sign:
+    if line 2 of event-block is "&2&l[Dinero]":
+        cancel event
+        load yaml "plugins/Skript/data/economia.yml" as "economia"
+        set {_total} to yaml value "ceitiles.total" from "economia"
+        set line 3 of event-block to "&b$%{_total}%"
+        wait 60 seconds
+        set line 3 of event-block to "&bConsultar"
+
 command /logeconomia:
     permission: mundito.admin
     trigger:
