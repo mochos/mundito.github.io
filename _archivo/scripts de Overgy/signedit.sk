@@ -1,0 +1,83 @@
+command /se [<text="help">] [<text>]:
+    aliases: /signedit, /edit
+    permission: skript.admin
+    permission message: &cYou don't have permission to perform this command.
+    trigger:
+        if arg-1 is "copy":
+            if target block is sign:
+                delete {SELineStorage.%event-player%::*}
+                add line 1 of target block to {SELineStorage.%event-player%::*}
+                add line 2 of target block to {SELineStorage.%event-player%::*}
+                add line 3 of target block to {SELineStorage.%event-player%::*}
+                add line 4 of target block to {SELineStorage.%event-player%::*}
+                message "&1[&eSignEdit&1] &eSign copied."
+            else:
+                message "&1[&eSignEdit&1] &cYou are not facing a sign!"
+        else if arg-1 is "paste":
+            if target block is sign:
+                loop 4 times:
+                    set line loop-number of target block to colored {SELineStorage.%event-player%::%loop-number%}
+                message "&1[&eSignEdit&1] &eSign pasted."
+            else:
+                message "&1[&eSignEdit&1] &cYou are not facing a sign!"
+        else if arg-1 is "reset":
+            delete {SELineStorage.%event-player%::*}
+            message "&1[&eSignEdit&1] &eClipboard cleared."
+        else if arg-1 is "clear":
+            loop 4 times:
+                set line loop-number of target block to ""
+            message "&1[&eSignEdit&1] &eSign cleared."
+        else if arg-1 is "clipboard":
+            #set {_SEDataBase.%event-player%} to "%size of {SELineStorage.%event-player%::*}%" parsed as integer
+            #message "&1[&eSignEdit&1] &eYour clipboard:"
+            #loop {_SEDataBase.%event-player%} times:
+            #    message "&1[&eSignEdit&1] &eLine %loop-number%: %{SELineStorage.%event-player%::%loop-number%}%"
+            message "&1[&eSignEdit&1] &eYour clipboard:"
+            loop 4 times:
+                if {SELineStorage.%event-player%::%loop-number%} is set:
+                    message "&1[&eSignEdit&1] &e%{SELineStorage.%event-player%::%loop-number%}%"
+                else:
+                    message "&1[&eSignEdit&1]"
+        else if arg-1 parsed as integer is set:
+            if arg-1 is "1" or "2" or "3" or "4":
+                if target block is sign:
+                    set {_SETemp} to arg-1 parsed as integer
+                    if arg-2 is set:
+                        set line {_SETemp} of target block to colored arg-2
+                        message "&1[&eSignEdit&1] &eLine set."
+                    else:
+                        set line {_SETemp} of target block to ""
+                        message "&1[&eSignEdit&1] &eLine cleared!"
+                else:
+                    message "&1[&eSignEdit&1] &cYou are not facing a sign!"
+            else:
+                message "&1[&eSignEdit&1] &cSign only have 4 lines!"
+        else:
+            message "&1[&eSignEdit&1] &eSign Edit by i998979"
+            message "&cCommands:"
+            message "&e/signedit <line> <text>: &bSet specific line to specific text"
+            message "&e/signedit copy: &bCopy the sign that you are facing"
+            message "&e/signedit paste: &bPaste the sign that you are facing"
+            message "&e/signedit reset: &bReset the text that you copied"
+            message "&e/signedit clear: &bClear the text on the sign that you are facing"
+            message "&e/signedit clipboard: &bShow your clipboard message"
+            message "&e/signedit help: &bShow this help page"
+on quit:
+    delete {SELineStorage.%event-player%::*}
+on right click:
+    if player's tool is ink sack:
+        if clicked block is sign:
+            cancel event
+            delete {SELineStorage.%event-player%::*}
+            add line 1 of clicked block to {SELineStorage.%event-player%::*}
+            add line 2 of clicked block to {SELineStorage.%event-player%::*}
+            add line 3 of clicked block to {SELineStorage.%event-player%::*}
+            add line 4 of clicked block to {SELineStorage.%event-player%::*}
+            message "&1[&eSignEdit&1] &eSign copied."
+on left click:
+    if player's tool is ink sack:
+        if clicked block is sign:
+            cancel event
+            loop 4 times:
+                set line loop-number of clicked block to colored {SELineStorage.%event-player%::%loop-number%}
+            message "&1[&eSignEdit&1] &eSign pasted."

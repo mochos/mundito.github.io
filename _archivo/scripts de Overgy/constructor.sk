@@ -1,0 +1,338 @@
+options:
+	materiales: stone or grass or dirt or cobblestone or planks or sand or gravel or log or leaves or sponge or glass or lapis block or sandstone or wool or gold block or iron block or brick block or mossy cobblestone or obsidian or diamond block or ice or snow or clay or netherrack or soul sand or glowstone or stained glass or stone brick or mycelium or nether brick or end stone or emerald block or redstone block or quartz block or stained hardened clay or 161 or 162 or 165 or carpet or hardened clay or coal block or 179 or fence
+
+command /constructor [<text>] [<item>]:
+	executable by: players
+	aliases: /c
+	trigger:
+		if arg 1 is not set:
+			message "&6&lConstructor" to player
+			message " Comando opcional: &a/c" to player
+			message " &a/constructor &f- Ver ayuda." to player
+			message " &a/constructor herramienta &f- Habilita tu pala, pico o hacha como herramienta de construcción." to player
+			message " &a/constructor contar &f- Cuenta la cantidad de bloques que necesitas para rellenar el área seleccionada." to player
+			message " &a/constructor id &f- Ver la ID del bloque sostenido." to player
+			message " &a/constructor poner <material> &f- Toma ese material de tu inventario y lo pone en el área seleccionada." to player
+			#message " &a/constructor limpiar &f- Limpia el área seleccionada y te entrega los bloques sacados. Cuesta una pepita de oro por bloque limpiado." to player
+			message " &a/constructor limpiar &f- Limpia el área seleccionada y te entrega los bloques sacados. Debes tener un pico en tu mano que se desgastará por cada bloque picado." to player
+			message " &a/constructor cincel &f- Habilita tu pala, pico o hacha como herramienta de cincelado." to player
+			message " " to player
+			message " &f&lAyuda adicional:" to player
+			send json of " &eUso de la herramienta de construcción" tooltip "&fClic para ver ayuda" run "/c uso" to player
+			send json of " &eUso de la herramienta de cincelado" tooltip "&fClic para ver ayuda" run "/c cincela" to player
+			send json of " &eColorear bloques" tooltip "&fClic para ver ayuda" run "/c colores" to player
+			stop
+		if arg 1 is "id":
+			if player's tool is {@materiales}:
+				message " La ID del bloque sostenido es: &a%id of the player's tool%:%data of the player's tool%" to player
+			else:
+				message " &cEste material no puede usarse en el constructor." to player
+		if arg 1 is "uso":
+			message "&6&lConstructor - Herramienta de construcción" to player
+			message " Para seleccionar un área debes dar clic en un bloque para seleccionar la posición 1 y clic derecho en otro bloque para seleccionar la posición 2. Lo anterior usando la herramienta de construcción establecida con el comando &a/constructor herramienta&f." to player
+			message " Para obtener ayuda adicional y conocer la lista de materiales disponibles para construir, visita nuestro foro:" to player
+			send json of " &eovergt.net/foro" tooltip "&fClic para abrir el enlace" open "http://overgt.net/foro/" to player
+		if arg 1 is "cincela":
+			message "&6&lConstructor - Herramienta de cincelado" to player
+			message " Usa la herramienta de cincelado para modificar la apariencia de los bloques de cuarzo, ladrillos de piedra, arenizca y arenizca roja." to player
+			message " Clic derecho sobre el bloque deseado para cambiarlo." to player
+		if arg 1 is "colores":
+			message "&6&lConstructor - Colorear bloques" to player
+			message " Usa tintes para cambiar los colores de bloques de cristal, paneles de cristal, arcilla endurecida, lana y alfombra " to player
+			message " Clic derecho sobre el bloque deseado para pintarlo." to player
+		if arg 1 is "herramienta":
+			if player's tool is shovel or pickaxe or axe:
+				set the 1st line of lore of the player's tool to "&fHerramienta de construcción"
+				message " &aAhora puedes usar esta herramienta para seleccionar." to player
+				stop
+			else:
+				message "&cDebes tener en tu mano una pala, pico o hacha." to player
+		if arg 1 is "cincel":
+			if player's tool is shovel or pickaxe or axe:
+				set the 1st line of lore of the player's tool to "&fHerramienta de cincelado"
+				message " &aAhora puedes usar esta herramienta para cincelar en cuarzo, ladrillos de piedra, arenizca y arenizca roja." to player
+				stop
+			else:
+				message "&cDebes tener en tu mano una pala, pico o hacha." to player
+		if arg 1 is "contar":
+			if {we.%player%.pos1} is set:
+				if {we.%player%.pos2} is set:
+					loop blocks within {we.%player%.pos1} to {we.%player%.pos2}:
+						add 1 to {we.%player%.cant}
+					message "&aNecesitas %{we.%player%.cant}% bloques."
+					delete {we.%player%.cant}
+					stop
+				else:
+					message " &cNo has seleccionado la posición 2."
+					message " &fClic derecho en un bloque para seleccionar la posición 2."
+					stop
+			else:
+				message " &cPrimero debes seleccionar el área."
+				stop
+		if arg 1 is "poner":
+			if arg 2 is {@materiales}:
+			#if arg 2 is set: 
+				if {we.%player%.pos1} is set:
+					if {we.%player%.pos2} is set:
+						loop blocks within {we.%player%.pos1} to {we.%player%.pos2}:
+							add 1 to {we.%player%.cant}
+						if player has {we.%player%.cant} of arg 2:
+							message "&aConstruyendo..." to player
+							remove {we.%player%.cant} of arg 2 from the player
+							loop blocks within {we.%player%.pos1} to {we.%player%.pos2}:
+								set {_owner} to owner of plot at loop-block
+								set {_conteo} to yaml value "poner.%player%" from file "../variables/constructor.yml"
+								if {_owner} is player:
+									if loop-block is bedrock:
+										message "&cNo puedes reemplazar piedra base." to player
+									else:
+										set loop-block to arg 2
+										add 1 to {_conteo}
+										set yaml value "poner.%player%" from file "../variables/constructor.yml" to {_conteo}
+										wait 5 ticks
+										delete {_owner}
+								else:
+									message "&cNo puedes construir en un área que no te pertenece." to player
+									stop loop
+							message "&aConstrucción finalizada." to player
+							delete {we.%player%.pos1}
+							delete {we.%player%.pos2}
+						else:
+							message "&cNo tenes suficiente material. Necesitas %{we.%player%.cant}% bloques." to player
+						delete {we.%player%.cant}
+						stop  
+					else:
+						message " &cNo has seleccionado la posición 2."
+						message " &fClic derecho en un bloque para seleccionar la posición 2."
+						stop
+				else:
+					message " &cPrimero debes seleccionar el área."
+					stop
+			else:
+				message " &cDebes especificar un material válido permitido."
+				message " Usa su ID o alias en inglés. Ejemplo: '1' o 'stone' para piedra."
+		#if arg 1 is "limpiar":
+		#	if {we.%player%.pos1} is set:
+		#		if {we.%player%.pos2} is set:
+		#			loop blocks within {we.%player%.pos1} to {we.%player%.pos2}:
+		#				add 1 to {we.%player%.cant}
+		#			if player has {we.%player%.cant} of gold nugget:
+		#				message "&aLimpiando..." to player
+		#				remove {we.%player%.cant} of gold nugget from the player
+		#				loop blocks within {we.%player%.pos1} to {we.%player%.pos2}:
+		#					set {_owner} to owner of plot at loop-block
+		#					if {_owner} is player:
+		#						if loop-block is bedrock:
+		#							message "&cNo puedes quitar piedra base." to player
+		#						else:
+		#							set {_bloque} to 1 of the loop-block
+		#							set loop-block to air
+		#							give {_bloque} to player
+		#							wait 5 ticks
+		#							delete {_owner}
+		#					else:
+		#						message "&cNo puedes limpiar en un área que no te pertenece." to player
+		#						stop loop
+		#				message "&aLimpieza finalizada finalizada." to player
+		#				delete {we.%player%.pos1}
+		#				delete {we.%player%.pos2}
+		#			else:
+		#				message "&cDebes pagar %{we.%player%.cant}% pepitas de oro para limpiar el área seleccionada." to player
+		#			delete {we.%player%.cant}
+		#			stop
+		#		else:
+		#			message " &cNo has seleccionado la posición 2."
+		#			message " &fClic derecho en un bloque para seleccionar la posición 2."
+		#			stop
+		#	else:
+		#		message " &cPrimero debes seleccionar el área."
+		#		stop
+		if arg 1 is "limpiar":
+			set {_conteo} to yaml value "limpiar.%player%" from file "../variables/constructor.yml"
+			if {we.%player%.pos1} is set:
+				if {we.%player%.pos2} is set:
+					message "&aLimpiando..." to player
+					loop blocks within {we.%player%.pos1} to {we.%player%.pos2}:
+						set {_owner} to owner of plot at loop-block
+						if {_owner} is player:
+							if loop-block is bedrock:
+								message "&cNo puedes quitar piedra base." to player
+							else:
+								if player is holding any pickaxe:
+									set {_bloque} to 1 of the loop-block
+									set loop-block to air
+									damage player's tool by 3
+									give {_bloque} to player
+									wait 5 ticks
+									delete {_owner}
+									add 1 to {_conteo}
+									set yaml value "limpiar.%player%" from file "../variables/constructor.yml" to {_conteo}
+								else:
+									message "&cDebes estar sosteniendo un pico en tu mano para limpiar la zona." to player
+									play raw sound "random.break" at player with pitch 1 volume 10
+									stop
+						else:
+							message "&cNo puedes limpiar en un área que no te pertenece." to player
+							stop loop
+					message "&aLimpieza finalizada finalizada." to player
+					delete {we.%player%.pos1}
+					delete {we.%player%.pos2}
+				else:
+					message " &cNo has seleccionado la posición 2."
+					message " &fClic derecho en un bloque para seleccionar la posición 2."
+					stop
+			else:
+				message " &cPrimero debes seleccionar el área."
+				stop
+
+
+
+on leftclick with shovel or pickaxe or axe:
+	if the lore of the player's tool is "&fHerramienta de construcción":
+		cancel event
+		set {_owner} to owner of plot at event-location
+		if {_owner} is player:
+			set {we.%player%.pos1} to event-location
+			message "&aPosición 1:&r %{we.%player%.pos1}%"
+			delete {_owner}
+			stop
+		else:
+			message "&cNo puedes seleccionar un área que no te pertenece." to player
+			delete {_owner}
+			stop
+
+on rightclick with shovel or pickaxe or axe:
+	if the lore of the player's tool is "&fHerramienta de construcción":
+		cancel event
+		set {_owner} to owner of plot at event-location
+		if {_owner} is player:
+			set {we.%player%.pos2} to event-location
+			message "&aPosición 2:&r %{we.%player%.pos2}%"
+			stop
+		else:
+			message "&cNo puedes seleccionar un área que no te pertenece." to player
+			delete {_owner}
+			stop
+
+command /cborrar:
+	executable by: players
+	trigger:
+		delete {we.%player%.pos1}
+		delete {we.%player%.pos2}
+
+#pruebas....
+on click with shovel or pickaxe or axe:
+	if the lore of the player's tool is "&fPrueba":
+		cancel event
+		
+
+#Cincel
+on rightclick with shovel or pickaxe or axe:
+	if the lore of the player's tool is "&fHerramienta de cincelado":
+		set {_owner} to owner of plot at event-location
+		set {_conteo} to yaml value "cincel.%player%" from file "../variables/constructor.yml"
+		if {_owner} is player:
+			if clicked block is quartz or stone brick or sand stone or 179:
+				add 1 to the data value of the clicked block
+				damage player's tool by 1
+				play raw sound "dig.stone" at player with pitch 1 volume 10
+				wait 1 tick
+				add 1 to {_conteo}
+				set yaml value "cincel.%player%" from file "../variables/constructor.yml" to {_conteo}
+				delete {_owner}
+			else:
+				message "&cSólo puedes usar el cincel en cuarzo, ladrillos de piedra, arenizca y arenizca roja." to player
+		else:
+			message "&cNo puedes cincelar en un área que no te pertenece." to player
+			delete {_owner}
+			stop
+
+on rightclick:
+	if player's tool is dye:
+		if clicked block is wool or stained hardened clay or 95 or carpet or stained glass pane or hardened clay or glass or glass pane:
+			set {_owner} to owner of plot at event-location
+			set {_conteo} to yaml value "tinte.%player%" from file "../variables/constructor.yml"
+			if {_owner} is player:
+				if clicked block is hardened clay:
+					set block to stained hardened clay
+				if clicked block is glass:
+					set block to 95:0
+				if clicked block is glass pane:
+					set block to stained glass pane
+				wait 2 tick
+				if data value of tool is 0:
+					delete the data value of the clicked block
+					wait 1 tick
+					add 15 to the data value of the clicked block
+				if data value of tool is 1:
+					delete the data value of the clicked block
+					wait 1 tick
+					add 14 to the data value of the clicked block
+				if data value of tool is 2:
+					delete the data value of the clicked block
+					wait 1 tick
+					add 13 to the data value of the clicked block
+				if data value of tool is 3:
+					delete the data value of the clicked block
+					wait 1 tick
+					add 12 to the data value of the clicked block
+				if data value of tool is 4:
+					delete the data value of the clicked block
+					wait 1 tick
+					add 11 to the data value of the clicked block
+				if data value of tool is 5:
+					delete the data value of the clicked block
+					wait 1 tick
+					add 10 to the data value of the clicked block
+				if data value of tool is 6:
+					delete the data value of the clicked block
+					wait 1 tick
+					add 9 to the data value of the clicked block
+				if data value of tool is 7:
+					delete the data value of the clicked block
+					wait 1 tick
+					add 8 to the data value of the clicked block
+				if data value of tool is 8:
+					delete the data value of the clicked block
+					wait 1 tick
+					add 7 to the data value of the clicked block
+				if data value of tool is 9:
+					delete the data value of the clicked block
+					wait 1 tick
+					add 6 to the data value of the clicked block
+				if data value of tool is 10:
+					delete the data value of the clicked block
+					wait 1 tick
+					add 5 to the data value of the clicked block
+				if data value of tool is 11:
+					delete the data value of the clicked block
+					wait 1 tick
+					add 4 to the data value of the clicked block
+				if data value of tool is 12:
+					delete the data value of the clicked block
+					wait 1 tick
+					add 3 to the data value of the clicked block
+				if data value of tool is 13:
+					delete the data value of the clicked block
+					wait 1 tick
+					add 2 to the data value of the clicked block
+				if data value of tool is 14:
+					delete the data value of the clicked block
+					wait 1 tick
+					add 1 to the data value of the clicked block
+				if data value of tool is 15:
+					delete the data value of the clicked block
+				play raw sound "random.splash" at player with pitch 1 volume 7
+				add 1 to {_conteo}
+				set yaml value "tinte.%player%" from file "../variables/constructor.yml" to {_conteo}
+				remove 1 of tool from tool
+				stop
+
+
+
+#Validar:
+# - No aplique a roca madre
+# - que no supere un tamaño de área determinado (?)
+
+#Addon:
+#https://forums.skunity.com/t/addon-skeeland-0-5-9-towny-skyblock/2589

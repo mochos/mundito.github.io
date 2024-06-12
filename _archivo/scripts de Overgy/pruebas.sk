@@ -1,0 +1,18 @@
+options:
+	pre: &6[MAE]&l -> &b
+	yml: "../variables/miMadre.yml"
+
+command /mae <string>:
+	permission: skript.admin
+	trigger:
+		if arg 1 is "hola":
+			loop 5 times:
+				set {_number} to loop-value
+				add "%{_number}%" to yaml list "hola.soy.yo" from file {@yml}
+			set yaml value "hola.soy.2punto0" from file {@yml} to "alol"
+			message "{@pre}Creado." to player
+		else:
+			delete yaml list "hola.soy.yo" from file {@yml}
+			delete yaml value "hola.soy.2punto0" from file {@yml}
+			delete yaml value "hola" from file {@yml}
+			message "{@pre}Eliminado." to player

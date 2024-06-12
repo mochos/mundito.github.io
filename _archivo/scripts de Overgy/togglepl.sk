@@ -1,0 +1,5 @@
+command /toggleplugin <string>:
+	permission: skript.admin
+	trigger:
+		disable plugin "%arg 1%"
+		message "&4&l¡%arg 1% desactivado!" to player

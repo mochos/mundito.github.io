@@ -1,0 +1,33 @@
+#=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=#
+#Auteur: Spartan9802																				 #
+#Serveur: WorldCube.fr																				 #
+#-#!Il est interdit d'utiliser ce skript à des fin commercial ou de le publier sans mon accord.		 #
+#=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=--=-=-=-=-=-=#
+options:
+	Color.Health: §4
+	Color.Health.Other: §7
+	Color.Name: §6§l
+
+on damage:
+	if attacker is a player:
+		if "%type of victim%" is not "armor stand","item frame","fire ball" or "projectile":
+			set {_health} to health of victim
+			set {_maxhealth} to max health of victim
+			wait 1 tick
+			if {_health} > health of victim:
+				set {_healthbar} to ""
+				loop floor({_maxhealth}) times:
+					if health of victim >= loop-value:
+						set {_healthbar} to "%{_healthbar}%{@Color.Health}❤"
+					else:
+						set {_healthbar} to "%{_healthbar}%{@Color.Health.Other}❤"
+				if name of victim is not set:
+					set {_victimname} to "%type of victim%"
+				else:
+					set {_victimname} to "%uncoloured name of victim%"
+				# set {_victimname} to upperfirst of {_victimname}
+				send action bar from "{@Color.Name}%{_victimname}%: %{_healthbar}%" to attacker
+			else:
+				stop
+
+ 

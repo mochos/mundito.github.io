@@ -1,0 +1,160 @@
+command /sorteo [<text>]:
+	trigger:
+		if player has permission "skript.admin":
+			if arg 1 is not set:
+				message "&ainiciar &fIniciar sorteo." to player
+				message "&acargar &fCarga los participantes y premios." to player
+				message "&alista &fVer participantes y premios." to player
+				message "&aconsulta &fVer ganador y premio a reclamar." to player
+				message "&acartel &fEstablecer ganador en el cartel." to player
+			if arg 1 is "cargar":
+				delete {participantes::*}
+				delete {premios::*}
+				wait 1 tick
+				set {participantes::*} to getListYML("suscritos","../variables/sorteo")
+				set {premios::*} to getListYML("premios","../variables/sorteo")
+				wait 1 tick
+				loop {participantes::*}:
+					add 1 to {_participantes}
+				loop {premios::*}:
+					add 1 to {_premios}
+				message " &a%{_participantes}% jugadores y %{_premios}% premios cargados con éxito." to player
+				stop
+			if arg 1 is "lista":
+				loop {participantes::*}:
+					message "%loop-value%" to player
+				message "--" to player
+				loop {premios::*}:
+					message "%loop-value%" to player
+				stop
+			if arg 1 is "consulta":
+				message "%{sorteo.ganador}% - %{sorteo.premio}%" to player
+				stop
+			if arg 1 is "cartel":
+				if target block is sign:
+					set line 2 of target block to "&l%{sorteo.ganador}%"
+					set line 3 of target block to "&aClic derecho"
+					set line 4 of target block to "&apara reclamar"
+				stop
+			if arg 1 is "lorspi":
+				if target block is sign:
+					set line 2 of target block to "&llorspi"
+					set line 3 of target block to "&aClic derecho"
+					set line 4 of target block to "&apara reclamar"
+				stop
+			if arg 1 is "iniciar":
+				set {_max} to size of {participantes::*}
+				set {_maxDos} to size of {premios::*}
+				wait 5 seconds
+				#---------------------------
+				play raw sound "random.orb" at player with pitch 1 volume 10
+				send player title "&6GRAN SORTEO MENSUAL" with subtitle "&fCargando participantes..." for 4 seconds
+				wait 4 seconds
+				#---------------------------
+				loop {participantes::*}:
+					send player title "&f" with subtitle "&e%loop-value%" for 5 ticks
+					wait 5 ticks
+				wait 1 second
+				#---------------------------
+				play raw sound "random.orb" at player with pitch 1 volume 10
+				send player title "&6" with subtitle "&fIniciando sorteo..." for 2 seconds
+				wait 2 seconds
+				#---------------------------
+				set {_sorteo} to a random integer from 1 to {_max}
+				play raw sound "random.orb" at player with pitch 1 volume 10
+				send player title "&c&m%{participantes::%{_sorteo}%}%" with subtitle "&fEste no :P" for 3 seconds
+				wait 3 seconds
+				#---------------------------
+				set {_sorteo} to a random integer from 1 to {_max}
+				play raw sound "random.orb" at player with pitch 1 volume 10
+				send player title "&c&m%{participantes::%{_sorteo}%}%" with subtitle "&fPara la próxima será :(" for 3 seconds
+				wait 3 seconds
+				#---------------------------
+				play raw sound "random.orb" at player with pitch 1 volume 10
+				send player title "&c&m" with subtitle "&fY el ganador es..." for 4 seconds
+				wait 4 seconds
+				#---------------------------
+				set {_sorteo} to a random integer from 1 to {_max}
+				set {_efecto} to location of player
+				spawn 1000 of particle happy villager offset by 2, 2, 2 at {_efecto}
+				play raw sound "random.levelup" at player with pitch 1 volume 10
+				send player title "&2&k!! &2&l%{participantes::%{_sorteo}%}% &2&k!!" with subtitle "&f¡Felicidades!" for 5 seconds
+				set {sorteo.ganador} to {participantes::%{_sorteo}%}
+				wait 5 seconds
+				#---------------------------
+				play raw sound "random.orb" at player with pitch 1 volume 10
+				send player title "&c&m" with subtitle "&fEl premio será..." for 3 seconds
+				wait 3 seconds
+				#---------------------------
+				set {_sorteo} to a random integer from 1 to {_maxDos}
+				set {_efecto} to location of player
+				spawn 1000 of particle happy villager offset by 2, 2, 2 at {_efecto}
+				play raw sound "random.levelup" at player with pitch 1 volume 10
+				send player title "&2&k!! &2&l%{premios::%{_sorteo}%}% &2&k!!" with subtitle "&f" for 5 seconds
+				set {sorteo.premio} to {premios::%{_sorteo}%}
+				#---------------------------
+				wait 3 seconds
+				set yaml value "ganador.nombre" from file "../variables/sorteo.yml" to {sorteo.ganador}
+				set yaml value "ganador.premio" from file "../variables/sorteo.yml" to {sorteo.premio}
+				set yaml value "ganador.reclamado" from file "../variables/sorteo.yml" to "No"
+				add "[%now%] INICIO DE SORTEO" to yaml list "registro" from file "../variables/sorteo.yml"
+				add "[%now%] Ganador: %{sorteo.ganador}% - Premio: %{sorteo.premio}%" to yaml list "registro" from file "../variables/sorteo.yml"
+				stop
+		else:
+			message "&cNo tienes permiso para usar esta función." to player
+			stop
+
+#play raw sound "fireworks.launch" at player with pitch 1 volume 10
+#random.orb
+#random.levelup
+
+on rightclick on sign:
+	line 1 of the clicked block is "&1[Premio]":
+		line 2 of the clicked block contains "%player%":
+			line 3 of the clicked block is "&aClic derecho":
+				set {_efecto} to location of player
+				spawn 1000 of particle happy villager offset by 2, 2, 2 at {_efecto}
+				play raw sound "fireworks.launch" at player with pitch 1 volume 10
+				message " " to player
+				message " &a¡FELICIDADES!" to player
+				message " &fDisfruta tu premio" to player
+				message " " to player
+				set line 3 to "&4Premio"
+				set line 4 to "&4reclamado"
+				wait 5 ticks
+				loop blocks in radius 5:
+					if loop-block is chest:
+						set loop-block to air
+				set yaml value "ganador.reclamado" from file "../variables/sorteo.yml" to "Si"
+				add "[%now%] %player% ha reclamado su premio." to yaml list "registro" from file "../variables/sorteo.yml"
+				add "[%now%] FINAL DEL SORTEO" to yaml list "registro" from file "../variables/sorteo.yml"
+				stop
+			else:
+				message " &cEl premio ha sido reclamado." to player
+				wait 5 ticks
+				add "[%now%] %player% ha intentado reclamar el premio reclamado." to yaml list "registro" from file "../variables/sorteo.yml"
+				stop
+		else:
+			message " " to player
+			message " &cNo eres el ganador." to player
+			message " &fRecuerda suscribirte para participar." to player
+			message " &fUsa el comando &a/suscribete &f para suscribirte." to player
+			message " " to player
+			wait 5 ticks
+			add "[%now%] %player% ha intentado reclamar un premio que no le corresponde." to yaml list "registro" from file "../variables/sorteo.yml"
+			stop
+
+on rightclick on chest:
+	if world is "test" or "tierramedia":
+		if "%region at event-block%" contains "premio":
+			if player have permission "skript.admin":
+				message " &aCofre del premio" to player
+				wait 5 ticks
+				add "[%now%] %player% ha intentado abrir el cofre del premio." to yaml list "registro" from file "../variables/sorteo.yml"
+				stop
+			else:
+				cancel event
+				message " &cEste cofre sólo puede ser abierto por el ganador del sorteo mensual haciendo clic derecho en el cartel superior." to player
+				stop
+
+

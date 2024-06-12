@@ -1,0 +1,6 @@
+command /madre <text>:
+	permission: skript.admin
+	trigger:
+		set {_msg} to hashed text-argument
+		wait 1 tick
+		message "%{_msg}%" to player

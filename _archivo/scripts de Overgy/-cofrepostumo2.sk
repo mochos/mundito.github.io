@@ -1,0 +1,76 @@
+# COFRE PÓSTUMO
+#
+# Funciones
+
+function setVarYML(to: text , value: text , file: text):
+	#to = Quoi modifier ?
+	#value = a set
+	#file = fichier a modifier
+	
+	set yaml value "%{_to}%" from file "%{_file}%.yml" to "%{_value}%"
+
+function setListYML(to: text , value: text , file: text):
+	#to = Quoi modifier ?
+	#value = a set
+	#file = fichier a modifier
+	
+	set yaml value "%{_to}%" from file "%{_file}%.yml" to "%{_value}%"
+	add "%{_value}%" to yaml list "%{_to}%" from file "%{_file}%.yml"
+	
+function getVarYML(research: text , file: text) :: text:
+	#r = research
+	#f = file
+	
+	set {_g} to yaml value {_research} from file "%{_file}%.yml"
+	return {_g}
+	
+function getListYML(research: text , file: text) :: texts:
+	#research = a récupéré
+	#file = file
+	
+	set {_g::*} to yaml list "%{_research}%" from file "%{_file}%.yml"
+	return {_g::*}
+
+#
+options:
+	dir: /cofres/
+#Al morir el jugador en tierra baja, infierno o fin, si tiene un seguro para inventario, deja un cofre póstumo
+on death of player:
+	if victim is in world "test":
+		if player has 1 paper named "&e&lSeguro para inventario" with lore "&fDeja un cofre protegido con tu inventario tras tu muerte.":
+			remove 1 paper named "&e&lSeguro para inventario" with lore "&fDeja un cofre protegido con tu inventario tras tu muerte." from the victim
+			set block at location of victim to chest
+			set {cofrepostumo::%block at location of victim%} to victim
+			set {_cofrepostumo} to block at location of victim
+			# loop victim's inventory:
+			add inventory of victim to {_inventario.muerto::*}
+			setListYML("inventarios.%victim%" , "%{_inventario.muerto::*}%" , "{@dir}%victim%")
+			add inventory of victim to {_cofrepostumo}
+			add helmet of victim to {_cofrepostumo}
+			add chestplate of victim to {_cofrepostumo}
+			add leggings of victim to {_cofrepostumo}
+			add boots of victim to {_cofrepostumo}
+			clear drops
+			wait 2 seconds
+			message "&aHas dejado un cofre en tu lecho de muerte. Vuelve a ese lugar para recuperar tus cosas." to victim
+
+#Al tratar romper o abrir un cofre en tierra baja, infierno o fin, si es un cofre póstumo y no es el dueño, cancela el evento.
+#Si es el dueño, desaparece y dropea su contenido.
+on click on chest:
+	if player is in world "test":
+		if {cofrepostumo::%clicked block%} is set:
+			if player is not {cofrepostumo::%clicked block%}:
+				cancel event
+				message "&cCofre póstumo de &l%{cofrepostumo::%clicked block%}%&c. Sólo él puede abrirlo o romperlo."
+				stop
+			else:
+				loop blocks in radius 5:
+					if {cofrepostumo::%loop-block%} is set:
+						set loop-block to air
+				stop
+
+#Al explotar cerca de un cofre póstumo, no lo rompe.
+on explode:
+	loop blocks in radius 5 of entity:
+		if {cofrepostumo::%loop-block%} is set:
+			cancel event

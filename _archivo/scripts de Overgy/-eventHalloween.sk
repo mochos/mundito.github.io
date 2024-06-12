@@ -1,0 +1,178 @@
+#derecha de mi cadaver (-307, 68, 795)
+#izquierda de mi cadaver (-299, 68, 795)
+#más arribita de ahí mismo (-294, 68, 801)
+#centro                             (-303, 68, 805)
+#más a la derecha             (-311, 68, 800)
+#esquina arriba derecha    (-311, 68, 805)
+
+# Script para evento de Halloween, aparición de zombies con recompensas
+
+options:
+	nombre: "&2No muerto"
+	mensajeON: "&6¡&l%player% &6ha despertado una horda de zombies en el cementerio de Tarazún! &fVen a ayudarlo antes de que lo devoren."
+	mensajeOFF: "&6Aún no están listos para salir de sus tumbas... &fVuelve más tarde."
+
+command /halloween [<string>]:
+	aliases: /h
+	permission: "skript.admin"
+	permission message: "&fComando desconocido. Ve a &a/warp biblioteca &fpara buscar ayuda."
+	trigger:
+		if arg 1 is "activar":		
+			execute player command "/rg flag eventohalloween mob-spawning allow"
+			stop
+			
+		else if arg 1 is "desactivar":		
+			execute player command "/rg flag eventohalloween mob-spawning deny"
+			stop
+			
+		else if arg 1 is "horda":		
+			spawn a zombie at location (-307, 68, 795) in "tierramedia"
+			wait 5 ticks
+			spawn a zombie at location (-299, 68, 795) in "tierramedia"
+			wait 5 ticks
+			spawn a zombie at location (-294, 68, 801) in "tierramedia"
+			wait 5 ticks
+			spawn a zombie at location (-303, 68, 805) in "tierramedia"
+			wait 5 ticks
+			spawn a zombie at location (-311, 68, 800) in "tierramedia"
+			wait 20 ticks
+			spawn a giant at location (-311, 68, 805) in "tierramedia"
+			
+		else if arg 1 is "reload":		
+			execute player command "/sk reload eventHalloween"
+			
+		else:
+		
+			message " " to player
+			message " &a&l/halloween <argumento>" to player
+			message "  activar &b - Permite mob-spawning" to player
+			message "  desactivar &b - Niega mob-spawning" to player
+			message "  horda &b- Spawnea los zombies" to player
+			message "  reload &b- Recargar script" to player
+			message " &bAlias: &l/h <argumento>" to player
+			message " " to player
+
+on region enter:
+	if "%region at player%" contains "eventohalloween":
+		set {_cooldown} to difference between {halloween.cooldown} and now
+		if {_cooldown} is less than 10 minutes:
+			message {@mensajeOFF} to player
+			if player has permission "halloween.evento":
+				message "&bQuedan: &l%{_cooldown}%" to player
+			stop
+		# player is "PantallazoAzul"
+		execute console command "/halloween horda"
+		broadcast {@mensajeON}
+		log "%player% activó el cementerio de Tarazún." to "halloween"
+		set {halloween.cooldown} to now
+
+on spawn of a creeper:
+	if "%region at entity%" contains "eventohalloween":
+		cancel event
+
+on spawn of a skeleton:
+	if "%region at entity%" contains "eventohalloween":
+		set name of the skeleton to {@nombre}
+		set helmet of skeleton to jack-o-lantern with name "&eHalloween"
+		set tool of skeleton to iron sword of sharpness 2 with name "&6Espada del no muerto"
+		delete chestplate of skeleton
+		delete leggings of skeleton
+		delete boots of skeleton
+		chance of 0.3:
+			set tool of skeleton to bow of flame 1 and power 4 with name "&6Arco del no muerto"
+			set chestplate of skeleton to leather tunic
+			set leggings of skeleton to leather pants
+			set boots of skeleton to leather boots
+			apply resistance 2 to the skeleton for 9999 minutes
+			apply fire resistance 1 to the skeleton for 9999 minutes
+			enchant tool of skeleton with flame 1
+
+on spawn of a zombie:
+	if "%region at entity%" contains "eventohalloween":
+		strike lightning effect at location of zombie
+		set name of the zombie to {@nombre}
+		set helmet of zombie to jack-o-lantern with name "&eHalloween"
+		set tool of zombie to wooden hoe with name "&6Azada del no muerto"
+		
+		chance of 0.1:
+			# Zombie BEBÉ
+			set age of event-entity to baby
+			
+		chance of 0.5:
+			# Zombie RÁPIDO !!
+			set max health of zombie to 8
+			# set name of the zombie to "&6Holi"
+			# set helmet of zombie to pumpkin with name "&eHalloween"
+			set tool of zombie to iron sword of knockback 2 with name "&6Espada del no muerto"
+			delete chestplate of zombie
+			delete leggings of zombie
+			delete boots of zombie
+			apply speed 2 to the zombie for 9999 minutes
+			apply resistance 2 to the zombie for 9999 minutes
+			set {_spawneado} to true
+			
+		if {_spawneado} is not set:
+			# chance of 0.5:
+				# Zombie FUERTE !!
+			set max health of zombie to 28
+			set health of zombie to 30
+			# set name of the zombie to "&6Holi2"
+			# set helmet of zombie to pumpkin with name "&eHalloween"
+			set chestplate of zombie to iron chestplate of protection 2 with name "&6Peto del no muerto"
+			set tool of zombie to wooden sword
+			delete leggings of zombie
+			delete boots of zombie
+			apply resistance 1 to the zombie for 9999 minutes
+			apply slowness 1 to the zombie for 9999 minutes
+
+on spawn of giant:
+	wait 20 ticks
+	push the giant behind
+	wait 10 ticks
+	push the giant behind
+	wait 10 ticks
+	push the giant behind
+	wait 10 ticks
+	push the giant behind
+	wait 10 ticks
+	push the giant behind
+	wait 10 ticks
+	push the giant behind
+
+on death of giant:
+	# strike lightning effect at location of giant
+	spawn 3 zombies at location of giant
+
+on death of zombie:
+	victim is in "tierramedia"
+	if name of zombie contains {@nombre}:
+		drop 2 of gold nugget at location of victim
+		drop 12 xp at location of victim
+		# send action bar from "&eHoliwis c:" to attacker
+
+on death of skeleton:
+	victim is in "tierramedia"
+	if name of skeleton contains {@nombre}:
+		chance of 0.5:
+			drop 1 diamond at location of victim
+		drop 20 xp at location of victim
+
+on death of zombie:
+	victim is in "tierramedia"
+	if name of zombie contains {@nombre}:
+		chance of 0.8:
+			spawn 1 skeleton at location of victim
+		# set age of event-entity to baby
+
+on damage:
+	attacker is a zombie
+	if name of attacker contains {@nombre}:
+		chance of 0.8:
+			apply slowness 1 to victim for 2 seconds
+			push the attacker behind
+			push the victim upwards
+			chance of 0.5:
+				apply blindness to victim for 5 seconds
+
+# on spawn of zombie:
+	# set age of event-entity to baby

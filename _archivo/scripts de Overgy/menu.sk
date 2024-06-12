@@ -1,0 +1,30 @@
+Command /ciudades2:
+	trigger:
+		#set {_txt} to text from "http://geoip.nekudo.com/api/158.69.54.241"
+		#message "%{_txt}%" to player
+		#--------
+		set {_milista::*} to getListYML("ciudades","../variables/ciudades")
+		#establecer numero de rows con la longitud de la lista
+		open chest with 2 rows named "&1Lista de ciudades" to player
+		play raw sound "note.pling" at player with pitch 1 volume 10
+		wait 1 tick
+		set {_ind} to 0
+		#message "%{_milista::*}%" to player
+		loop {_milista::*}:
+			format slot {_ind} of player with 395 named "&6%{_milista::%loop-index%}%" with lore "&fViaja al spawn de %{_milista::%loop-index%}%||&7Comando: /town spawn %{_milista::%loop-index%}%" to close then run [make player execute command "/town spawn %{_milista::%loop-index%}%"]
+			add 1 to {_ind}
+		stop
+
+Command /ciudades:
+	trigger:
+		#set {_txt} to text from "http://geoip.nekudo.com/api/158.69.54.241"
+		#message "%{_txt}%" to player
+		#--------
+		set {_milista::*} to getListYML("ciudades","../variables/ciudades")
+		play raw sound "note.pling" at player with pitch 1 volume 10
+		wait 1 tick
+		message "&6&lLista de ciudades" to player
+		message "&fClic sobre el nombre para viajar." to player
+		loop {_milista::*}:
+			send json of " &a⚫ %{_milista::%loop-index%}%" tooltip "&fClic para viajar a %{_milista::%loop-index%}%%new line%&7Comando: /town spawn %{_milista::%loop-index%}%" run "/town spawn %{_milista::%loop-index%}% uso" to player
+		stop

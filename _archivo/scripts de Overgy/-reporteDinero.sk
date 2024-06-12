@@ -1,0 +1,35 @@
+options:
+	dir: "../variables/reporteDinero.yml"
+
+command /dinero [<integer>]:
+	aliases: /reporte, /reportar
+	trigger:
+		if arg 1 is not set:
+			message "" to player
+			message "&a Reporta a los administradores" to player
+			message "&a la cantidad de dinero que tenías." to player
+			message "&c Recuerda que el fraude es motivo de sanción." to player
+			message "" to player
+		else:
+			set {_cash} to getVarYML("recuperar.%player%" , {@dir})
+			if {_cash} is set: 
+				message "" to player
+				message "&a Ya has reportado tu dinero" to player
+				message "&a a los administradores." to player
+				message "&a Sé &lpaciente&a, pronto recuperarás tu dinero." to player
+				message "" to player
+			else:
+				setVarYML("recuperar.%player%" , "%arg 1%" , {@dir})
+				message "" to player
+				message "&a Has reportado la cantidad de" to player
+				message "&a $ %arg 1%" to player
+				message "&a Sé &lpaciente&a, pronto recuperarás tu dinero." to player
+
+every 2000 ticks:
+	loop all players:
+		# if loop-player has permission "essentials.pay":
+		message "" to loop-player
+		message "&r Si perdiste tu dinero repentinamente" to loop-player
+		message "&r puedes recuperarlo reportando a los administradores:" to loop-player
+		message "&6 /dinero <cantidad>&r, y pronto lo recuperarás." to loop-player
+		message "" to loop-player

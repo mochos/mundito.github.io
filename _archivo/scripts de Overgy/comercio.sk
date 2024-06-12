@@ -1,0 +1,120 @@
+# SCRIPT DE REGIONES (WorldGuard)
+# Versión 1.0
+# Autor: PantallazoAzul
+
+# Variables ->| PERMITE MODIFICAR EL TEXTO |<-
+options:
+	intercambiosINmsg: &lEntrando al área de intercambios. &c&oNo te desconectes. #Mensaje envia al usuario.
+	intercambiosLOGINmsg: Has perdido tu inventario por desconectarde dentro de una &eSala de intercambios&r. # Mensaje al conectarse luego de morir.
+
+# AL ENTRAR POR PRIMERA VEZ
+# Configura la variable comercio.%player%.disconnect.times en 0.
+on first join:
+	wait 20 ticks
+	set {comercio.%player%.disconnect.times} to 0
+	stop
+
+# ENTRAR EN EL ÁREA DE INTERCAMBIOS
+# Al entrar al área de intercambios del /warp comercio, mandar un mensaje (por favor configurar :v)
+on region enter:
+	wait 1 tick
+	if "%region at player%" contains "intercambios":
+		wait 1 tick
+		send "{@intercambiosINmsg}"
+		stop
+	stop
+
+# Al salir, si está en el área de intercambios, dropear sus items. Log en intercambios-log.log
+on quit: 
+	if "%region at player%" contains "intercambios":
+		wait 1 tick
+		force drop inventory of player at player's location
+		# loop all items in the player's inventory:
+			# drop loop-item at player
+		set {comercio.%player%.disconnect} to true
+		wait 1 tick
+		broadcast "%player% se ha desconectado en una &eSala de intercambios&r, ha perdido su inventario."
+		wait 1 tick
+		set {comercio.%player%.disconnect.times} to {comercio.%player%.disconnect.times} + 1
+		wait 1 tick
+		log "> %player% se desconectó en @Intercambios. Por %{comercio.%player%.disconnect.times}%º vez." to "intercambios"
+		stop
+	stop
+
+# Al entrar, si se ha desconectado en el área de intercambios, limpiar inventario y matar.
+on join:
+	if {comercio.%player%.disconnect} is not set:
+		set {comercio.%player%.disconnect} to false
+		stop
+	if {comercio.%player%.disconnect} is true:
+		clear the player's inventory
+		set {comercio.%player%.disconnect} to false
+		wait 1 tick
+		execute console command "/kill %player%"
+		wait 1 tick
+		message "{@intercambiosLOGINmsg}"
+		stop
+	stop
+
+# No permitir comandos dentro del área de intercambios
+on command:
+	player is in "comercio"
+	if "%region at player%" contains "intercambios":
+		if command is not "pay":
+			send "&cNo puedes utilizar comandos aquí." to player
+			cancel event
+	else:
+		stop
+
+# Registro de las transacciones de los jugadores.
+on command "/pay":
+	set {_s::*} to split "%now%" by " "
+	replace all "/" with "-" in {_s::1}
+	log "%player% pagó a %arguments%" to "economia/pagos-%{_s::1}%"
+	stop
+
+# Registro de depositos a la ciudad.
+on command "/t deposit":
+	set {_s::*} to split "%now%" by " "
+	replace all "/" with "-" in {_s::1}
+	log "%player% depositó %arguments% en su ciudad." to "economia/depositos-%{_s::1}%"
+	stop
+on command "/town deposit":
+	set {_s::*} to split "%now%" by " "
+	replace all "/" with "-" in {_s::1}
+	log "%player% depositó %arguments% en su ciudad." to "economia/depositos-%{_s::1}%"
+	stop
+
+# Registro de compras.
+command /comprado <text> <text> <text>:
+	permission: skript.anuncio
+	trigger:
+		set {_s::*} to split "%now%" by " "
+		replace all "/" with "-" in {_s::1}
+		log "%arg 1% compró %arg 2% por %arg 3%." to "economia/compraventa-%{_s::1}%"
+		stop
+# Registro de ventas.
+command /vendido <text> <text> <text>:
+	permission: skript.anuncio
+	trigger:
+		set {_s::*} to split "%now%" by " "
+		replace all "/" with "-" in {_s::1}
+		log "%arg 1% vendió %arg 2% por %arg 3%." to "economia/compraventa-%{_s::1}%"
+		stop
+
+# Registro de compras a admin.
+command /compradoadmin <text> <text> <text>:
+	permission: skript.anuncio
+	trigger:
+		set {_s::*} to split "%now%" by " "
+		replace all "/" with "-" in {_s::1}
+		log "[AdminShop] %arg 1% compró %arg 2% por %arg 3%." to "economia/compraventa-%{_s::1}%"
+		stop
+# Registro de ventas a admin.
+command /vendidoadmin <text> <text> <text>:
+	permission: skript.anuncio
+	trigger:
+		set {_s::*} to split "%now%" by " "
+		replace all "/" with "-" in {_s::1}
+		log "[AdminShop] %arg 1% vendió %arg 2% por %arg 3%." to "economia/compraventa-%{_s::1}%"
+		stop

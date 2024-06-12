@@ -1,0 +1,34 @@
+﻿on rightclick on sign:
+	if player is in "tierramedia":
+		line 1 of the clicked block is "&4[COLOMBIA]":
+			if player has permission "colombia.evento":
+				add 1 to {colombia.%player%.evento}
+				wait 1 tick
+				message "&a&lEncontraste %{colombia.%player%.evento}% de 3 carteles." to player
+				set line 1 to "&aReclamado"
+			else:
+				message "&cEl evento ya ha terminado :( lo sentimos." to player
+				stop
+			if {colombia.%player%.evento} is 3:
+				launch creeper firework colored red at player timed 1
+				message "&a¡Felicidades! Has ganado el evento &620 de Julio.&a Habla con un &7[&9Creador&7]."
+				broadcast "&a&l%player% ha ganado el evento &620 de Julio&a&l. ¡Felicidades!"
+				wait 1 tick
+				execute console command "/pex group default remove colombia.evento"
+				clear {colombia.%player%.evento}
+				give 1 paper named "Llévame con PantallazoAzul" with lore "Reclama tu premio con un creador" to player
+				wait 1 tick
+				loop all players:
+					clear {colombia.%player%.evento}
+				stop
+			stop
+	else:
+		stop
+	stop
+
+command /limpiarevento:
+	executable by: players
+	trigger:
+		loop all players:
+			clear {colombia.%player%.evento}
+		stop

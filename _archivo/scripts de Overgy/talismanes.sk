@@ -1,0 +1,225 @@
+# COFRE PÓSTUMO
+#Al morir el jugador en tierra baja, infierno o fin, si tiene un seguro para inventario, deja un cofre póstumo
+on death of player:
+	if victim is in world "tierrabaja" or "infierno" or "fin":
+		if player has 1 paper named "&e&lSeguro para inventario" with lore "&fDeja un cofre protegido con tu inventario tras tu muerte.":
+			remove 1 paper named "&e&lSeguro para inventario" with lore "&fDeja un cofre protegido con tu inventario tras tu muerte." from the victim
+			set block at location of victim to chest
+			set {cofrepostumo::%block at location of victim%} to victim
+			set {_cofrepostumo} to block at location of victim
+			add inventory of victim to {_cofrepostumo}
+			add helmet of victim to {_cofrepostumo}
+			add chestplate of victim to {_cofrepostumo}
+			add leggings of victim to {_cofrepostumo}
+			add boots of victim to {_cofrepostumo}
+			clear drops
+			wait 2 seconds
+			message "&aHas dejado un cofre en tu lecho de muerte. Vuelve a ese lugar para recuperar tus cosas." to victim
+
+
+
+#--------------------------------------------------------------------------
+
+
+#--------- Talismán de la inmortalidad   ---------#
+on damage of a player:
+	if damage is greater than or equal to health of victim:
+		if victim is in world "tierrabaja" or "infierno" or "fin":
+			if victim has 1 sunflower named "&e&lTalismán de la inmortalidad" with lore "&fTe regresa de la muerte inmediatamente.||&fSana todas tus heridas.||&cVálido en Tierra Baja, Infierno y Fin.":
+				remove 1 sunflower named "&e&lTalismán de la inmortalidad" with lore "&fTe regresa de la muerte inmediatamente.||&fSana todas tus heridas.||&cVálido en Tierra Baja, Infierno y Fin." from the victim
+				#cancel event
+				heal victim by 5 hearts
+				set {_efecto} to location of victim
+				spawn 1000 of particle red dust offset by 2, 2, 2 at {_efecto}
+				play raw sound "random.fizz" at victim with pitch 1 volume 10
+				apply potion of regeneration 2 to the victim for 30 seconds
+				message " &aHas sido salvado por tu &e&lTalismán de la inmortalidad&a." to victim
+				stop
+
+
+#---------   Talismán del caído   ---------#
+on death of player:
+	if victim is in world "tierrabaja" or "infierno" or "fin":
+		if player has 1 sunflower named "&e&lTalismán del caído" with lore "&fDeja un cofre protegido con tu||&finventario en tu lecho de muerte.||&cVálido en Tierra Baja, Infierno y Fin.":
+			remove 1 sunflower named "&e&lTalismán del caído" with lore "&fDeja un cofre protegido con tu||&finventario en tu lecho de muerte.||&cVálido en Tierra Baja, Infierno y Fin." from the victim
+			set block at location of victim to chest
+			set {cofrepostumo::%block at location of victim%} to victim
+			set {_cofrepostumo} to block at location of victim
+			add inventory of victim to {_cofrepostumo}
+			add helmet of victim to {_cofrepostumo}
+			add chestplate of victim to {_cofrepostumo}
+			add leggings of victim to {_cofrepostumo}
+			add boots of victim to {_cofrepostumo}
+			clear drops
+			wait 2 seconds
+			message "&aHas dejado un cofre en tu lecho de muerte. Vuelve a ese lugar para recuperar tus cosas." to victim
+
+#Al tratar romper o abrir un cofre en tierra baja, infierno o fin, si es un cofre póstumo y no es el dueño, cancela el evento.
+#Si es el dueño, desaparece y dropea su contenido.
+on click on chest:
+	if player is in world "tierrabaja" or "infierno" or "fin":
+		if {cofrepostumo::%clicked block%} is set:
+			if player have the permission "skript.admin":
+				message "&aCofre póstumo de &l%{cofrepostumo::%clicked block%}%&c."
+				stop
+			else:
+				if player is not {cofrepostumo::%clicked block%}:
+					cancel event
+					message "&cCofre póstumo de &l%{cofrepostumo::%clicked block%}%&c. Sólo él puede abrirlo o romperlo."
+					stop
+				else:
+					loop blocks in radius 5:
+						if {cofrepostumo::%loop-block%} is set:
+							set loop-block to air
+					stop
+
+#Al explotar cerca de un cofre póstumo, no lo rompe.
+on explode:
+	loop blocks in radius 5 of entity:
+		if {cofrepostumo::%loop-block%} is set:
+			cancel event
+
+#Evita que se plante un talismán
+on place:
+	if name of tool contains "&e&lTalismán":
+		cancel event
+		message " &cNo puedes plantar un talismán." to player
+		stop
+
+#---------   Botas del invierno   ---------#
+#{display:{color:59647}
+on any movement:
+	if name of player's boots contains "&b&lBotas del invierno":
+		if lore of player's boots contains "&fCongelan el agua bajo tus pies.":
+			if player is in world "tierrabaja" or "tierramedia":
+				loop blocks in radius 2 of player:
+					if loop-block is water:
+						set loop-block to ice
+						set {bloquemajico::%loop-block%} to "bloquemajico"
+						wait 5 second
+						set loop-block to water
+						set {bloquemajico::%loop-block%} to "normal"
+
+on leftclick:
+	if {bloquemajico::%clicked block%} is "bloquemajico":
+		if player don't have the permission "skript.admin":
+			cancel event
+			message "&cNo puedes romper un bloque mágico." to player
+		else:
+			message "&cBloque mágico roto." to player
+
+#---------   Botas del infierno   ---------#
+#{display:{color:16752896}
+on any movement:
+	if name of player's boots contains "&6&lBotas del infierno":
+		if lore of player's boots contains "&fConvierte la lava en roca bajo tus pies.":
+			if player is in world "tierrabaja" or "infierno" or "tierramedia":
+				loop blocks in radius 2 of player:
+					if loop-block is lava:
+						set loop-block to cobblestone
+						set {bloquemajico::%loop-block%} to "bloquemajico"
+						wait 15 second
+						set loop-block to lava
+						set {bloquemajico::%loop-block%} to "normal"
+
+on damage of a player:
+	if damage was caused by lava, fire or burning:
+		if victim is in world "tierrabaja" or "infierno" or "tierramedia":
+			if name of victim's boots contains "&6&lBotas del infierno":
+				if lore of victim's boots contains "&fConvierte la lava en roca bajo tus pies.":
+					#cancel event
+					extinguish the victim
+					wait 2 ticks
+					heal victim by 1 heart	
+					stop
+
+#---------   Botas del viento   ---------#
+#{display:{color:16777215}
+on right click on air:
+	if name of player's boots contains "&f&lBotas del viento":
+		if lore of player's boots contains "&fTe salvan de una caida de gran altura.":
+			if player is not flying:
+				if the player is not riding a chicken:
+					if player is in world "tierrabaja" or "infierno" or "fin" or "tierramedia":
+						set {_espera} to difference between {viento.%player%.usado} and now
+						if {_espera} is less than 2 seconds:
+							stop
+						set {viento.%player%.usado} to now
+						set {_efecto} to location of player
+						spawn 100 of particle explode offset by 1, 2, 1 at {_efecto}
+						play raw sound "random.fizz" at player with pitch 1 volume 10
+						#push the player forwards
+						push the player upwards at speed 1.5
+						set {viento.%player%.activo} to true
+
+on damage of a player:
+	damage cause is fall:
+		if victim is in world "tierrabaja" or "infierno" or "fin" or "tierramedia":
+			if name of victim's boots contains "&f&lBotas del viento":
+				if lore of victim's boots contains "&fTe salvan de una caida de gran altura.":
+					if damage is greater than or equal to health of victim:
+						cancel event
+						set {_efecto} to location of victim
+						#spawn 10 of particle heart offset by 1, 1, 1 at {_efecto}
+						spawn 100 of particle explode offset by 1, 2, 1 at {_efecto}
+						play raw sound "random.fizz" at victim with pitch 1 volume 10
+						push the victim upwards at speed 0.5
+						damage victim's boots by 25
+						stop
+					if damage is less than health of victim:
+						apply potion of regeneration 2 to the victim for 15 seconds
+						heal the victim by 1 heart
+						set {_efecto} to location of victim
+						spawn 10 of particle heart offset by 1, 1, 1 at {_efecto}
+
+
+
+#---------   Botas de la madre tierra   ---------#
+#{display:{color:3520000}
+on any movement:
+	if name of player's boots contains "&2&lBotas de la madre tierra":
+		if lore of player's boots contains "&fHacen crecer los cultivos que pisas.":
+			if player is in world "tierrabaja" or "tierramedia":
+				if block at location of the player is a potato plant or a wheat or a carrot plant or a pumpkin stem or a melon stem:
+					set {_efecto} to location of player
+					add 1 to the data value of the block at {_efecto}
+					spawn 10 of particle happy villager offset by 1, 1, 1 at {_efecto}
+					stop
+
+
+
+#---------   No reparar   ---------#
+on command "/repair":
+	if player don't have the permission "skript.admin":
+		if lore of player's tool contains "&fConvierte la lava en roca bajo tus pies." or "&fCongelan el agua bajo tus pies." or "&fTe salvan de una caida de gran altura." or "&fHacen crecer los cultivos que pisas.":
+			cancel event
+			message "&cNo puedes reparar botas elementales."
+
+#---------   Desgastar   ---------#
+on walking on dirt or grass or stone or cobblestone or ice or water or netherrack or soul sand or sand or planks or slabs or leaves or logs or ores or glass or stone brick or nether brick:
+	if lore of player's boots contains "&fConvierte la lava en roca bajo tus pies." or "&fCongelan el agua bajo tus pies." or "&fTe salvan de una caida de gran altura." or "&fHacen crecer los cultivos que pisas.":
+		add 1 to {desgastebotas.%player%}
+		#message "%{desgastebotas.%player%}%" to player
+		if {desgastebotas.%player%} is greater than 6:
+			damage player's boots by 1
+			set {desgastebotas.%player%} to 0
+		stop
+
+#---------   No encantar   ---------#
+on enchant:  
+	if lore of event-item contains "&fConvierte la lava en roca bajo tus pies." or "&fCongelan el agua bajo tus pies." or "&fTe salvan de una caida de gran altura." or "&fHacen crecer los cultivos que pisas.":
+		cancel event
+		message "&cNo puedes encantar botas elementales."
+
+
+
+#on any movement:
+#	if rounded down x-coordinate of from-location is not rounded down x-coordinate of to-location:
+#		set {_changed} to true
+#	else if rounded down z-coordinate of from-location is not rounded down z-coordinate of to-location:
+#		set {_changed} to true
+#	else:
+#		stop
+#	if {_changed} is set:
+#		if block below player is not air:
+#			#Something (player moved 1 square more)

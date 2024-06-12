@@ -1,0 +1,133 @@
+command /streamer [<text>] [<text>]:
+	aliases: /st, /youtuber, /yt
+	trigger:
+		if player has permission "skript.streamer":
+			if arg 1 is not set:
+				message "&6&lYouTuber - Streamer" to player
+				message " Comandos opcionales: &a/st /youtuber /yt" to player
+				message " &a/streamer &f- Ver ayuda." to player
+				message " &a/streamer web &f- Muestra en tu pantalla un titulo con la web de Overgy." to player
+				message " &a/streamer ip &f- Muestra en tu pantalla un titulo con la IP de Overgy." to player
+				message " &a/streamer video [minutos] &f- Anuncia a los demás jugadores que vas a grabar un video." to player
+				message " &a/streamer subido &f- Anuncia a los demás jugadores que has subido un video." to player
+				message " &a/streamer directo [minutos] &f- Anuncia a los demás jugadores que vas a iniciar un directo." to player
+				message " Los últimos dos comandos tienen un tiempo de espera de 5 minutos para volver a usarse." to player
+				message " Recuerda haber leido las instrucciones para YouTubers y Streamers en:" to player
+				send json of " &eovergy.net/youtubers" tooltip "&fClic para abrir el enlace" open "http://overgy.net/youtubers" to player
+				stop
+			if arg 1 is "web":
+				send player title "&6www.overgy.net" with subtitle "&eSitio Web" for 10 seconds
+				stop
+			if arg 1 is "ip":
+				send player title "&6mc.overgy.net:25707" with subtitle "&eIP del servidor" for 10 seconds
+				stop
+			if arg 1 is "directo":
+				set {_espera} to difference between {directo.%player%.ultimouso} and now
+				set {_url} to yaml value "streamers.%player%" from file "../variables/streamers.yml"
+				if {_espera} is less than 5 minutes:
+					message "&cDebes esperar %difference between 5 minutes and {_espera}% para volver a usar este comando." to player
+					stop
+				else:
+					if arg 2 is set:
+						set {_tiempo} to arg 2
+					else:
+						set {_tiempo} to "pocos"
+					broadcast " "
+					broadcast " ¡Hola amigos! Soy &e%player% &fy en %{_tiempo}% minutos iniciaré una transmisión en directo."
+					broadcast " Pueden visitar mi canal en el siguiente enlace:"
+					send json of " &e%{_url}%" tooltip "&fClic para abrir el enlace" open "http://%{_url}%" to all players
+					broadcast " "
+					set {directo.%player%.ultimouso} to now
+					stop					
+			if arg 1 is "video":
+				set {_espera} to difference between {video.%player%.ultimouso} and now
+				set {_url} to yaml value "streamers.%player%" from file "../variables/streamers.yml"
+				if {_espera} is less than 5 minutes:
+					message "&cDebes esperar %difference between 5 minutes and {_espera}% para volver a usar este comando." to player
+					stop
+				else:
+					if arg 2 is set:
+						set {_tiempo} to arg 2
+					else:
+						set {_tiempo} to "pocos"
+					broadcast " "
+					broadcast " ¡Hola amigos! Soy &e%player% &fy en %{_tiempo}% minutos iniciaré la grabación de un video para mi canal."
+					broadcast " Pueden visitar mi canal en el siguiente enlace:"
+					send json of " &e%{_url}%" tooltip "&fClic para abrir el enlace" open "http://%{_url}%" to all players
+					broadcast " "
+					set {video.%player%.ultimouso} to now
+					stop
+			if arg 1 is "subido":
+				set {_espera} to difference between {video.%player%.ultimouso} and now
+				set {_url} to yaml value "streamers.%player%" from file "../variables/streamers.yml"
+				if {_espera} is less than 5 minutes:
+					message "&cDebes esperar %difference between 5 minutes and {_espera}% para volver a usar este comando." to player
+					stop
+				else:
+					if arg 2 is set:
+						set {_tiempo} to arg 2
+					else:
+						set {_tiempo} to "pocos"
+					broadcast " "
+					broadcast " ¡Hola amigos! Soy &e%player% &fHe subido un nuevo video de Overgy."
+					broadcast " Pueden verlo visitando mi canal en el siguiente enlace:"
+					send json of " &e%{_url}%" tooltip "&fClic para abrir el enlace" open "http://%{_url}%" to all players
+					broadcast " "
+					set {video.%player%.ultimouso} to now
+					stop
+		else:
+			message " &cNo tienes permiso para ejecutar este comando." to player
+			message " Mayor información en:" to player
+			send json of " &eovergy.net/youtubers" tooltip "&fClic para abrir el enlace" open "http://overgy.net/youtubers" to player
+			stop
+
+command /streameradmin [<text>] [<text>] [<text>]:
+	aliases: /sta, /youtuberadmin, /yta
+	trigger:
+		if player has permission "skript.admin":
+			if arg 1 is not set:
+				message " &a/streamer nuevo <jugador> <url> &f- Agrega nuevo youtuber/streamer. La url debe ser en este formato &eyoutube.com/channel/UCjk-lU9DDcKvDKM9uvCSpQg" to player
+				message " &a/streamer borrar &f- Borra un youtuber/streamer" to player
+				message " &a/streamer lista &f- Mira la lista de youtubers/streamers" to player
+				stop
+			if arg 1 is "nuevo":
+				set yaml value "streamers.%arg 2%" from file "../variables/streamers.yml" to arg 3
+				execute console command "pex user %arg 2% add skript.streamer"
+				message "&aAgregado a la base de datos. &fRecuerda repetir la acción en todos los servidores." to player
+				stop
+			if arg 1 is "borrar":
+				delete yaml value "streamers.%arg 2%" from file "../variables/streamers.yml"
+				execute console command "pex user %arg 2% remove skript.streamer"
+				message "&aBorrado de la base de datos. &fRecuerda repetir la acción en todos los servidores." to player
+				stop
+			if arg 1 is "lista":
+				message "&6&lLista de youtubers/streamers" to player
+				set {_milista::*} to yaml nodes "streamers" from "../variables/streamers.yml"
+				loop {_milista::*}:
+					set {_nombre} to {_milista::%loop-index%}
+					set {_url} to yaml value "streamers.%{_nombre}%" from file "../variables/streamers.yml"
+					send json of " &e%{_nombre}%" tooltip "&fClic para abrir el canal" open "http://%{_url}%" to player
+				stop
+		else:
+			message " &cNo tienes permiso para ejecutar este comando." to player
+			stop
+		
+
+#every 2 minutes:
+#	loop all players:
+#		loop-player has permission "skript.streamer"
+#		set bossbar named "&6&lwww.overgy.net" for loop-player to 1
+#		wait 20 seconds
+#		set bossbar named "&fIP del servidor: &6mc.overgy.net:25707" for loop-player to 1
+#		wait 20 seconds
+#		delete bossbar of loop-player
+#		stop
+
+# on join:
+	# while player is online:
+		# if player has permission "skript.streamer":
+			# set bossbar named "&6&lwww.overgy.net" for player to 1
+			# wait 20 seconds
+			# set bossbar named "&fIP del servidor: &6mc.overgy.net:25707" for player to 1
+			# wait 20 seconds
+			# delete bossbar of player

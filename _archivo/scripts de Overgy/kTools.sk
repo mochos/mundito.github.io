@@ -1,0 +1,96 @@
+#kTools - A Skript Library
+#Version 1.1
+#Written by TenzorMatic
+#With Several Helpful Contributions from DemonPenguin
+command /getint <integer> [<text="int">]:
+	description: Converts input to an integer, which is set to {ktools.%arg-2%}
+	usage: /getint <text to convert> [<variable name>]
+	trigger:
+		clear {ktools.%text-arg%}
+		set {ktools.%text-arg%} to arg-integer
+
+command /getnum <number> [<text="num">]:
+	description: Converts input to an num, which is set to {ktools.%arg-2%}
+	usage: /getnum <text to convert> [<variable name>]
+	trigger:
+		clear {ktools.%text-arg%}
+		set {ktools.%text-arg%} to arg-number
+
+command /getmaterial <material>[ to <text="material">]:
+	description: Converts input to a material, which is set to {ktools.%arg-2%}
+	usage: /getmaterial <text to convert>[ to <variable name>]
+	aliases: /getitem
+	trigger:
+		clear {ktools.%text arg%}
+		set {ktools.%text arg%} to arg-material
+		
+command /getitemtype <itemtype>[ to <text="material">]:
+	description: Converts input to an itemtype, which is set to {ktools.%arg-2%}
+	usage: /getitemtype <text to convert>[ to <variable name>]
+	aliases: /getitems, /getmaterials
+	trigger:
+		clear {ktools.%text arg%}
+		set {ktools.%text arg%} to arg 1
+
+command /getplayer <player> [<text="player">]:
+	description: Converts input to a player, which is set to {ktools.%arg-2%}
+	trigger:
+		clear {ktools.%text-arg%}
+		set {ktools.%text-arg%} to arg-player
+
+command /getlocation <integer> <integer> <integer> [<text="%player's world%">][ to <text="location">]:
+	description: Converts input to a location object, which is set to {ktools.%arg-text-2%}
+	usage: /getlocation <x> <y> <z> [<world=player's world>][ to <variable name="ktools.location">]
+	trigger:
+		clear {ktools.%text-arg-2%}
+		if x coord of {ktools.%arg-text-1%.origin} is .5:
+			if y coord of {ktools.%arg-text-1%.origin} is .5:
+				if z coord of {ktools.%arg-text-1%.origin} is .5:
+					set {_destinationx} to the block arg-1 east of the block at {ktools.%arg-text-1%.origin}
+					set {_destinationy} to the block arg-2 above the block at {_destinationx}
+					set {ktools.%text-arg-2%} to location of the block arg-3 south of the block at {_destinationy}
+					#send "{ktools.%text-arg-2%} set to %{ktools.%text-arg-2%}%"
+					exit trigger
+		send "Origin is not set. Use /setorigin in game to fix."
+
+command /getblock <integer> <integer> <integer> [<text="%player's world%">][ to <text="block">]:
+	description: Converts input to a block object, which is set to {ktools.%arg-text-2%}
+	usage: /getblock <x> <y> <z> [<world=player's world>][ to <variable name="ktools.block">]
+	trigger:
+		clear {ktools.%text-arg-2%}
+		if x coord of {ktools.%arg-text-1%.origin} is .5:
+			if y coord of {ktools.%arg-text-1%.origin} is .5:
+				if z coord of {ktools.%arg-text-1%.origin} is .5:
+					set {_destinationx} to the block arg-1 east of the block at {ktools.%arg-text-1%.origin}
+					set {_destinationy} to the block arg-2 above the block at {_destinationx}
+					set {ktools.%text-arg-2%} to the block arg-3 south of the block at {_destinationy}
+					#send "{ktools.%text-arg-2%} set to %{ktools.%text-arg-2%}%"
+					exit trigger
+		send "Origin is not set. Use /setorigin in game to fix."
+
+command /getchunk <integer> <integer> <integer> [<text="%player's world%">][ to <text="chunk">]:
+	description: Converts input to a chunk object, which is set to {ktools.%arg-text-2%}
+	usage: /getchunk <x> <y> <z> [<world=player's world>][ to <variable name="ktools.chunk">]
+	trigger:
+		clear {ktools.%text-arg-2%}
+		if x coord of {ktools.%arg-text-1%.origin} is .5:
+			if y coord of {ktools.%arg-text-1%.origin} is .5:
+				if z coord of {ktools.%arg-text-1%.origin} is .5:
+					set {_destinationx} to the block arg-1 east of the block at {ktools.%arg-text-1%.origin}
+					set {_destinationy} to the block arg-2 above the block at {_destinationx}
+					set {ktools.%text-arg-2%} to chunk of location of the block arg-3 south of the block at {_destinationy}
+					#send "{ktools.%text-arg-2%} set to %{ktools.%text-arg-2%}%"
+					exit trigger
+		send "Origin is not set. Use /setorigin in game to fix."
+
+command /setorigin:
+	description: Gets the origin location of the current world. Must be used once before location/block/chunk commands can be used for that world. Origin is set to {ktools.%world%.origin}.
+	trigger:
+		set {_currentlocation} to location of player
+		set {_relative.x} to rounded down the x coord of {_currentlocation}
+		set {_relative.y} to rounded down the y coord of {_currentlocation}
+		set {_relative.z} to rounded down the z coord of {_currentlocation}
+		set {_destinationx} to the block {_relative.x} west of the block at {_currentlocation}
+		set {_destinationy} to the block {_relative.y} below the block at {_destinationx}
+		set {ktools.%player's world%.origin} to location of the block {_relative.z} north of the block at {_destinationy}
+		send "{ktools.%player's world%.origin} origin set to %{ktools.%player's world%.origin}%"

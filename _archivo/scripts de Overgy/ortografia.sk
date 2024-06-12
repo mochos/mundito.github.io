@@ -1,0 +1,33 @@
+command /ortografia <player> <text> <text>:
+	executable by: players
+	aliases: /og
+	trigger:
+		if player has permission "chat.regulador":
+			if arg 1 is not set:
+				message "/og <jugador> <error> <correcta>"
+			if arg 1 is set:
+				# --- Cargar ---
+				set {_conteo} to yaml value "ortografia.errores" from file "../variables/ortografia.yml"
+				set {_contjugador} to yaml value "ortografia.jugadores.%arg 1%" from file "../variables/ortografia.yml"
+				set {_dinero} to arg 1's balance/10
+				set {_recaudado} to yaml value "ortografia.recaudado" from file "../variables/ortografia.yml"
+				# --- Operaciones ---
+				add 1 to {_conteo}
+				add 1 to {_contjugador}
+				add {_dinero} to {_recaudado}
+				remove {_dinero} from the arg 1's balance 
+				# --- mensajes ---
+				broadcast " &4&l¡Cuida tu ortografía!"
+				broadcast " &c%arg 1% ha sido castigado por usar mal la palabra &f%arg 2%&c. La palabra correcta es &f%arg 3%&c."
+				broadcast " &cSe le han removido &f$%{_dinero}% &cde su cuenta."
+				send arg 1 title "&4&l¡Cuida tu ortografía!" with subtitle "&cSe te ha removido &f$%{_dinero}% &cde tu cuenta." for 7 seconds
+				# --- Guardar ---
+				set yaml value "ortografia.errores" from file "../variables/ortografia.yml" to {_conteo}
+				set yaml value "ortografia.jugadores.%arg 1%" from file "../variables/ortografia.yml" to {_contjugador}
+				add "%arg 2%" to yaml list "ortografia.palabras" from file "../variables/ortografia.yml"
+				set yaml value "ortografia.recaudado" from file "../variables/ortografia.yml" to {_recaudado}
+				add "[%now%] %player% - %arg 1% - %arg 2% - %arg 3% - $%{_dinero}%" to yaml list "ortografia.registro" from file "../variables/ortografia.yml"
+				stop
+		else:
+			message " &cNo tienes permiso para hacer esto." to player
+			stop

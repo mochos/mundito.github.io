@@ -1,0 +1,129 @@
+on join:
+	if player has permission "skript.admin":
+		set {session.%player%} to new editsession in player's world with limit -1
+
+options:
+	dir: "/portales/prueba.yml"
+	prefijo: portal-
+	pl: &7[&ePortales&7] &r
+
+on load:
+	if existence of {@dir} is false:
+		create file {@dir}
+		stop
+
+command portales [<string>] [<string>] [<material>]:
+	executable by: players
+	permission: skript.admin
+	trigger:
+		if arg 1 is not set:
+			invoke "help" from player
+		else if arg 1 is not "destino" or "dest" or "crear" or "nuevo" or "borrar" or "delete" or "eliminar" or "lista" or "list":
+			invoke "help" from player
+		else if arg 1 is "destino" or "dest":
+			set {destino.%player%} to player's location
+			message "{@pl}&rDestino del futuro portal correctamente marcado en: &b%{destino.%player%}%"
+			stop	
+		else if arg 1 is "crear" or "nuevo":
+			if arg 2 is not set:
+				invoke "help" from player
+			else if arg 3 is not set:
+				invoke "help" from player
+			else:
+				set {_pos1} to we pos 1 of player
+				set {_pos2} to we pos 2 of player
+				wait 0.5 ticks
+				set yaml value "portales.{@prefijo}%arg 2%.enabled" from file {@dir} to true
+				execute player command "/rg create {@prefijo}%arg 2%"
+				wait 0.5 ticks
+				set yaml value "portales.{@prefijo}%arg 2%.nombre" from file {@dir} to "{@prefijo}%arg 2%"
+				set yaml value "portales.{@prefijo}%arg 2%.portal" from file {@dir} to {_pos1}
+				set yaml value "portales.{@prefijo}%arg 2%.destino" from file {@dir} to {destino.%player%}
+				set {portal.destino.{@prefijo}%arg 2%} to {destino.%player%}
+				wait 0.5 ticks
+				set blocks from {_pos1} to {_pos2} to arg 3 using {session.%player%}
+				stop
+		else if arg 1 is "borrar" or "delete" or "eliminar":
+			if arg 2 is not set:
+				invoke "help" from player
+			else:
+				wait 0.5 ticks
+				delete yaml nodes "portales.%arg 2%" from {@dir}
+				delete {portal.destino.%arg 2%}
+				wait 0.5 ticks
+				execute player command "/rg delete %arg 2%"
+				wait 0.5 ticks
+				message "{@pl}&bCorrectamente eliminado el portal &r%arg 2%"
+				# delete {portal::%arg 2%}
+				stop
+				# message "{@pl}&c¿Estás seguro de eliminar el portal &a%arg 2%&c?"
+				# message " &aVuelve a escribir el comando con -confirmar"
+				# message " &a/portales eliminar <portal> -confirmar"
+				# stop
+		else if arg 1 is "lista" or "list":
+			set {_portales::*} to yaml nodes "portales" from {@dir}
+			wait 0.5 ticks
+			message "{@pl}&rPortales: %{_portales::*}%"
+
+on region enter:
+	wait 0.5 ticks
+	# message "Estás en %region at player%"
+	set {_portales::*} to yaml nodes "portales" from file {@dir}
+	wait 0.5 ticks
+	loop {_portales::*}:
+		if "%region at player%" contains "%loop-value%":
+			wait 0.5 ticks
+			# set {_tp::w} to yaml value "portales.%region at player%.destino.world" from file {@dir}
+			# set {_tp::x} to yaml value "portales.%region at player%.destino.x" from file {@dir}
+			# set {_tp::y} to yaml value "portales.%region at player%.destino.y" from file {@dir}
+			# set {_tp::z} to yaml value "portales.%region at player%.destino.z" from file {@dir}
+			# message "Holi %loop-value%"
+			# wait 0.5 ticks
+			# set {_loc} to ({_tp::x}, {_tp::y}, {_tp::z})
+			wait 1 tick
+			teleport the player to {portal.destino.%region at player%}
+	# if "%region at player%" contains "%{_portales::*}%":
+	# message "%{_portales::*}%"
+	# set {_tp::*} to yaml nodes "portales.%region at player%.detino" from {@dir}
+	# wait 1 tick
+	# message "Hola: %{_tp::*}%"
+	# teleport the player to {_tp::2}, {_tp::3}, {_tp::4} of the world {_tp::1}
+	stop
+
+# on region enter:
+	# loop {portal::*}:
+		# message "%{portal::*}%"
+		# if  loop-value is "%region at player%":
+			# set {_tp::==} to yaml value "portales.%region at player%.destino.==" from file {@dir}
+			# set {_tp::world} to yaml value "portales.%region at player%.destino.world" from file {@dir}
+			# set {_tp::x} to yaml value "portales.%region at player%.destino.x" from file {@dir}
+			# set {_tp::y} to yaml value "portales.%region at player%.destino.y" from file {@dir}
+			# set {_tp::z} to yaml value "portales.%region at player%.destino.z" from file {@dir}
+			# set {_tp::pitch} to yaml value "portales.%region at player%.destino.pitch" from file {@dir}
+			# set {_tp::yaw} to yaml value "portales.%region at player%.destino.yaw" from file {@dir}
+			# set {_destino.%player%} to the location at (x={_tp::x}, y={_tp::y}, z={_tp::z}) of the world {_tp::world}
+			# teleport the player to {_destino.%player%}
+			# teleport the player to {portal::%loop-value%}
+			# message "Teleportado..."
+			# stop
+
+# on region enter:
+	# if "%region at player%" contains {@prefijo}:
+		# wait 1 tick
+		# invoke "portalTP" from player
+
+# sub "portalTP":
+	# if "%region at parameter 1%" contains ""
+
+sub "help":
+	send " " to parameter 1
+	send "{@pl}Correcto uso de &7/&bportales&7 ..." to parameter 1
+	send " &aPara señalar el destino del portal:" to parameter 1
+	send "  &7/&bportales &6destino&7|&6dest" to parameter 1
+	send " &aPara crear un portal:" to parameter 1
+	send "  &7/&bportales &6crear &7<&6nombre portal&7> &7<&6bloque&7>" to parameter 1
+	send " &aPara eliminar un portal:" to parameter 1
+	send "  &7/&bportales &6eliminar&7|&6borrar &7<&6nombre portal&7>" to parameter 1
+	send " &aPara ver la lista de portales:" to parameter 1
+	send "  &7/&bportales &6lista&7|&6list &7<&6nombre portal&7>" to parameter 1
+	stop

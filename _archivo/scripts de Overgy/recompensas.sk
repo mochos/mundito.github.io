@@ -1,0 +1,31 @@
+every 3599 seconds: #3599
+	loop all players:
+		set {_conteo} to yaml value "monedas.%loop-player%.pendientes" from file "../variables/recompenzas.yml"
+		if {_conteo} is more than 9:
+			set yaml value "monedas.%loop-player%.pendientes" from file "../variables/recompenzas.yml" to {_conteo}
+		else:
+			add 1 to {_conteo}
+			wait 1 tick
+			set yaml value "monedas.%loop-player%.pendientes" from file "../variables/recompenzas.yml" to {_conteo}
+	stop
+
+on rightclick on sign:
+	line 1 of the clicked block is "&1[Recompensa]":
+		set {_conteo} to yaml value "monedas.%player%.pendientes" from file "../variables/recompenzas.yml"
+		set {_total} to yaml value "monedas.%player%.reclamadas" from file "../variables/recompenzas.yml"
+		loop {_conteo} times:
+			give 1 gold nugget named "&e&lMoneda de oro" with lore "&fCámbialas por llaves del sobreviviente." to player
+		if {_conteo} contains "none":
+			message " &cNo tienes monedas de oro por reclamar." to player
+			stop
+		if {_conteo} is less than 1:
+			message " &cNo tienes monedas de oro por reclamar." to player
+			stop
+		else:
+			message " &aHas reclamado %{_conteo}% monedas de oro." to player
+		add {_conteo} to {_total}
+		wait 1 tick
+		set {_conteo} to 0
+		wait 1 tick
+		set yaml value "monedas.%player%.pendientes" from file "../variables/recompenzas.yml" to {_conteo}
+		set yaml value "monedas.%player%.reclamadas" from file "../variables/recompenzas.yml" to {_total}

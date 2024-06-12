@@ -1,0 +1,45 @@
+# Log de invitaciones a ciudades
+on command "/town add":
+	set {_args} to "%arguments%"
+	replace all "add" with "a" in {_args}
+	set {_msg} to "&a¡%player% ha invitado a %{_args}% a pertenecer a su ciudad!"
+	log "%{_msg}%" to "towny"
+	broadcast "%{_msg}%"
+# Para el comando alias /t
+on command "/t add":
+	set {_args} to "%arguments%"
+	replace all "add" with "a" in {_args}
+	set {_msg} to "&a¡%player% ha invitado a %{_args}% a pertenecer a su ciudad!"
+	log "%{_msg}%" to "towny"
+	broadcast "%{_msg}%"
+
+on command "/accept":
+	log "%player% aceptó la invitación" to "towny"
+
+on command "/deny":
+	log "%player% rechazó la invitación" to "towny"
+
+# Comando para modificar el muro de ciudades en /warp aldeanos
+# Primero cambia el cartel por los argumentos y luego
+# entrega la cabeza del alcalde al ejecutante del comando.
+command /laciudad <player> [<string>]:
+	permission: script.admin
+	trigger:
+		set {_town} to town of argument player
+		if {_town} is not set:
+			send "&cHa ocurrido un error, el jugador debe estar online, y debe tener una ciudad." to player
+		else:
+			send "&aCiudad de &e%argument player%&a: &b%{_town}%" to player
+			set {_y} to 833
+			loop 16 times:
+				if line 1 of block at location (-206, 69, {_y}) in world "tierramedia" is empty:
+					set {_pos} to location (-206, 69, {_y}) in world "tierramedia"
+					stop loop
+				add 1 to {_y}
+			set block at {_pos} to wall sign
+			set line 1 of block at {_pos} to "&4&l%{_town}%"
+			set line 3 of block at {_pos} to "&e%argument player%"
+			set the block above {_pos} to air
+			wait 1 tick
+			set the block above {_pos} to the argument player's skull
+			give the argument player's skull to player

@@ -1,0 +1,19 @@
+command /venta <text> <player>:
+	executable by: console
+	trigger:
+		#log "%arg 2% vendió %arg 1% en %world of arg 2% cerca de %location of arg 2%" to "ventas"
+		set {_s::*} to split "%now%" by " "
+		replace all "/" with "-" in {_s::1}
+		log "%arg 2% vendió %arg 1% en %world of arg 2% cerca de %location of arg 2%" to "ventas-cosechas/ventas-%{_s::1}%"
+		stop
+
+on break of melon:
+	add 1 to {cosechas.%player%.sandias}
+	#message "%{cosechas.%player%.sandias}%" to player
+	if {cosechas.%player%.sandias} is greater than 31:
+		#log "%player% rompió %{cosechas.%player%.sandias}% de %event-block% en %event-world% cerca de %event-location%" to "cosechas"
+		set {_s::*} to split "%now%" by " "
+		replace all "/" with "-" in {_s::1}
+		log "%player% rompió %{cosechas.%player%.sandias}% de %event-block% en %event-world% cerca de %event-location%" to "ventas-cosechas/cosechas-%{_s::1}%"
+		set {cosechas.%player%.sandias} to 0
+		stop

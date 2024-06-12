@@ -1,0 +1,253 @@
+#Aguinaldos
+#on place:
+#	if player have the permission "skript.admin":
+#		if the name of the player's tool is "&2Aguinaldo":
+#			set {aguinaldo::%event-block%} to "&2Aguinaldo"
+#			add "%event-location%" to yaml list "colocados.basicos" from file "../variables/aguinaldos.yml"
+#			stop
+#		if the name of the player's tool is "&2Rango":
+#			set {aguinaldo::%event-block%} to "&2Rango"
+#			add "%event-location%" to yaml list "colocados.rangos" from file "../variables/aguinaldos.yml"
+#			stop
+#
+#on rightclick:
+#	if {aguinaldo::%event-block%} is "&2Rango":
+#		set the clicked block to air
+#		wait 1 tick
+#		spawn 500 of particle happy villager offset by 2, 2, 2 at location of player
+#		play raw sound "fireworks.launch" at event-location with pitch 1 volume 10
+#		set {_conteo} to yaml value "recogidos.rango.%player%" from file "../variables/aguinaldos.yml"
+#		wait 1 tick
+#		add 1 to {_conteo}
+#		wait 1 tick
+#		set yaml value "recogidos.rango.%player%" from file "../variables/aguinaldos.yml" to {_conteo}
+#		remove "%event-location%" from yaml list "colocados.rangos" from file "../variables/aguinaldos.yml"
+#		give 1 373:8193 named "&6&lRango por 1 día" with lore "&fBébela para probar un rango||&faleatorio por 1 día." to player
+#		message " &2&l¡HAS ENCONTRADO UN RANGO!"
+#		broadcast " &2¡&2&l%player% &2ha encontrado un rango escondido en un aguinaldo en Tarazún!"
+#		stop
+#	if {aguinaldo::%event-block%} is "&2Aguinaldo":
+#		set the clicked block to air
+#		wait 1 tick
+#		spawn 500 of particle happy villager offset by 2, 2, 2 at location of player
+#		play raw sound "fireworks.launch" at event-location with pitch 1 volume 10
+#		set {_premio} to random integer between 1 to 3
+#		if {_premio} is 1:
+#			set {_conteo} to yaml value "recogidos.64-diamantes.%player%" from file "../variables/aguinaldos.yml"
+#			wait 1 tick
+#			add 1 to {_conteo}
+#			wait 1 tick
+#			set yaml value "recogidos.64-diamantes.%player%" from file "../variables/aguinaldos.yml" to {_conteo}
+#			remove "%event-location%" from yaml list "colocados.basicos" from file "../variables/aguinaldos.yml"
+#			give 64 diamond to the player
+#			message " &2&l¡HAS ENCONTRADO UN AGUINALDO!"
+#			message " Felicidades por tus 64 diamantes."
+#			broadcast " &2¡&2&l%player% &2ha encontrado un aguinaldo escondido en Tarazún!"
+#			stop
+#		if {_premio} is 2:
+#			set {_conteo} to yaml value "recogidos.200k.%player%" from file "../variables/aguinaldos.yml"
+#			wait 1 tick
+#			add 1 to {_conteo}
+#			wait 1 tick
+#			set yaml value "recogidos.100k.%player%" from file "../variables/aguinaldos.yml" to {_conteo}
+#			remove "%event-location%" from yaml list "colocados.basicos" from file "../variables/aguinaldos.yml"
+#			execute console command "money give %player% 100000"
+#			message " &2&l¡HAS ENCONTRADO UN AGUINALDO!"
+#			message " Felicidades por tus $100,000."
+#			broadcast " &2¡&2&l%player% &2ha encontrado un aguinaldo escondido en Tarazún!"
+#			stop
+#		if {_premio} is 3:
+#			set {_conteo} to yaml value "recogidos.carbon.%player%" from file "../variables/aguinaldos.yml"
+#			wait 1 tick
+#			add 1 to {_conteo}
+#			wait 1 tick
+#			set yaml value "recogidos.carbon.%player%" from file "../variables/aguinaldos.yml" to {_conteo}
+#			remove "%event-location%" from yaml list "colocados.basicos" from file "../variables/aguinaldos.yml"
+#			give 1 coal to the player
+#			message " &2&l¡HAS ENCONTRADO UN AGUINALDO!"
+#			message " Te has portado mal y has recibido un carbón."
+#			broadcast " &2¡&2&l%player% &2ha encontrado un aguinaldo escondido en Tarazún!"
+#			stop
+
+
+#Tesoros de Tarazún
+on leftclick on chest:
+	if player have the permission "skript.admin":
+		if the name of the player's tool is "&e&lLlave de tesoro":
+			cancel event
+			message "&aHas creado un cofre del tesoro."
+			set {tesoro::%clicked block%} to "&6&lTesoro"
+			stop
+	else:
+		if {tesoro::%clicked block%} is "&6&lTesoro":
+			cancel event
+			message "&fUtiliza una &e&lLlave de tesoro&f para abrir este cofre."
+			stop
+
+on rightclick on chest:
+	if {tesoro::%clicked block%} is "&6&lTesoro":
+		if the name of the player's tool is "&e&lLlave de tesoro":
+			if inventory of targeted block contains 27 air:
+				cancel event
+				message "&cEste cofre está vacío. Intenta en otro momento." to player
+				stop
+			else:
+				remove 1 of tool from tool
+				message "&a¡Has encontrado un tesoro!" to player
+				set {_efecto} to location of player
+				spawn 1000 of particle happy villager offset by 2, 2, 2 at {_efecto}
+				play raw sound "fireworks.launch" at player with pitch 1 volume 10
+				wait 30 seconds
+				stop
+		if the name of the player's tool is "&a&lLlave de tesoro":
+			cancel event
+			delete player's tool
+			message " " to player
+			message "&cEsta llave es falsa. Te han estafado." to player
+			message "&fEstá decomisada para evitar más estafas." to player
+			message " " to player
+			log "%player%: Tesoro con llave falsa" to "estafas"
+		else:
+			if player do not have the permission "skript.admin":
+				cancel event
+				message "&fUtiliza una &e&lLlave de tesoro&f para abrir este cofre."
+				stop
+
+#Evitar poner la llave en cualquier sitio
+on place:
+	if the name of the player's tool is "&e&lLlave de tesoro":
+		cancel event
+		wait 1 tick
+		message "&fSólo puedes usar &e&lLlave de tesoro&f para abrir tesoros." to player
+		stop
+
+#Alimentar conejos
+on npc right click:
+	if citizen is named "Isabel":
+		#message "&6Isabel -> Tu &7» &f ¡Hola %player%! Bienvenido a mi ciudad. He llegado para traer el progreso a esta hermosa tierra." to player
+		message "&6Isabel -> Tu &7» &f ¡Hola %player%! Me alegra haber regresado a esta hermosa tierra." to player
+	if citizen is named "Dianita":
+		if player is holding a flower:
+			message "&6Dianita -> Tu &7» &c❤&f Que romántico. Gracias." to player
+			remove 1 flower from the player
+			set {_efecto} to location in front of player
+			spawn 20 of particle heart offset by 1, 1, 1 at {_efecto}
+		else:
+			message "&6Dianita -> Tu &7» &f ¡Hola %player%! Te presento a mis hijitos.%new line%Son &lApache &fy &lPepper&f. Les gusta mucho comer hiervita. A mi casi no me gusta que los extraños se les acerquen pero tu pareces buena persona. Cuando quieras ven a alimentarlos." to player
+	if player is holding a tall grass:
+		if citizen is named "Apache":
+			remove 1 tall grass from the player
+			set {_efecto} to location in front of player
+			spawn 20 of particle heart offset by 1, 1, 1 at {_efecto}
+			execute console command "misionterminada Dianita Apache %player%"
+			chance of 7%:
+				drop 1 golden carrot
+		if citizen is named "Pepper":
+			remove 1 tall grass from the player
+			set {_efecto} to location in front of player
+			spawn 20 of particle heart offset by 1, 1, 1 at {_efecto}
+			execute console command "misionterminada Dianita Pepper %player%"
+			chance of 4%:
+				drop 1 golden carrot
+	if citizen is named "Habichuela":
+		set {_sonido} to random integer between 1 to 3
+		if {_sonido} is 1:
+			play raw sound "mob.cat.meow" at player with pitch 1 volume 10
+			message "&6Habichuela &7» &f Miauuu!" to player
+		if {_sonido} is 2:
+			play raw sound "mob.cat.purr" at player with pitch 1 volume 20
+			message "&6Habichuela &7» &f Purrrrrr" to player
+		if {_sonido} is 3:
+			play raw sound "mob.cat.purreow" at player with pitch 1 volume 10
+			message "&6Habichuela &7» &f Prrrauuu!" to player
+		set {_efecto} to location in front of player
+		spawn 20 of particle heart offset by 1, 1, 1 at {_efecto}
+		stop
+
+on npc left click:
+	if citizen is named "Habichuela":
+		play raw sound "mob.cat.hitt" at player with pitch 1 volume 10
+		wait 10 ticks
+		play raw sound "mob.cat.hiss" at player with pitch 1 volume 10
+		wait 10 ticks
+		damage player by 9 hearts
+		execute console command "/misionterminada Habichuela Golpe %player%"
+		stop
+
+#Entrada al mercado negro
+on npc right click:
+	if citizen is named "Jhon":
+		if name of player's tool is "&4&kChachipistachi":
+			message "&aVeo que tienes la contraseña para entrar. Pues adelante." to player
+			wait 2 seconds
+			set {_loc} to location (-313.5, 30, 650.5) in player's world
+			apply blindness to player for 4 seconds
+			play raw sound "portal.trigger" at player with pitch 2 volume 5
+			wait 1 second
+			teleport the player to {_loc}
+			wait 1 second
+			remove blindness from player
+			stop
+		else:
+			message "&c¿Qué quieres? Si quieres entrar, debes mostrarme la contraseña." to player
+			stop
+
+
+# Fuente de los deseos (pruebas)
+on drop of gold nugget:
+	if "%region at player%" contains "fuentedeseos":
+		if name of event-item is "&e&lMoneda de oro":
+			wait 10 ticks
+			clear dropped item
+			launch ball firework colored yellow at event-location timed 0.1
+			launch star firework colored gold at event-location timed 0.1
+			set {_premio} to random integer between 1 to 6
+			if {_premio} is 1:
+				give a diamond helmet to the player
+				give a diamond chestplate to the player
+				give a diamond leggings to the player
+				give a diamond boots to the player
+				message " &a&l¡TU DESEO SE HA CUMPLIDO! &fFelicidades por armadura de diamante." to player
+				broadcast " &a¡A &a&l%player% &ase le ha cumplido un deseo! Ahora podrá andar protegido."
+				execute console command "misionterminada fuente armadura %player%"
+				stop
+			if {_premio} is 2:
+				give 32 cooked beef to the player
+				message " &a&l¡TU DESEO SE HA CUMPLIDO! &fFelicidades por tus 32 filetes." to player
+				broadcast " &a¡A &a&l%player% &ase le ha cumplido un deseo! No morirá de hambre."
+				execute console command "misionterminada fuente filetes %player%"
+				stop
+			if {_premio} is 3:
+				execute console command "money give %player% 50000"
+				message " &a&l¡TU DESEO SE HA CUMPLIDO! &fFelicidades por tus $50,000." to player
+				broadcast " &a¡A &a&l%player% &ase le ha cumplido un deseo! Nada le faltará."
+				execute console command "misionterminada fuente 50k %player%"
+				stop
+			#if {_premio} is 4:
+			#	give 1 373:8193 named "&6&lRango por 1 día" with lore "&fBébela para probar un rango||&faleatorio por 1 día." to player
+			#	message " &a&l¡TU DESEO SE HA CUMPLIDO! &fFelicidades por tu rango por 1 día." to player
+			#	broadcast " &a¡A &a&l%player% &ase le ha cumplido un deseo! Ahora se siente superior a todos."
+			#	execute console command "misionterminada fuente rango-1d %player%"
+			#	stop
+			if {_premio} is 4:
+				give 1 diamond sword of sharpness 3 and unbreaking 3 to player
+				message " &a&l¡TU DESEO SE HA CUMPLIDO! &fFelicidades por tu espada." to player
+				broadcast " &a¡A &a&l%player% &ase le ha cumplido un deseo! Ahora podrá defenderse."
+				execute console command "misionterminada fuente espada %player%"
+				stop
+			# if {_premio} is 5:
+				# give 1 bow of power 2 and unbreaking 3 to player
+				# message " &a&l¡TU DESEO SE HA CUMPLIDO! &fFelicidades por tu arco." to player
+				# broadcast " &a¡A &a&l%player% &ase le ha cumplido un deseo! Ahora podrá defenderse."
+				# execute console command "misionterminada fuente arco %player%"
+				# stop
+			#------------
+			if {_premio} is 5 or 6:
+				message " &cTu deseo no se ha cumplido." to player
+				execute console command "misionterminada fuente no-cumplido %player%"
+				stop
+
+#if name of player's tool is "&e&lMoneda de oro":
+#if name of dropped item is "&e&lMoneda de oro":
+
+

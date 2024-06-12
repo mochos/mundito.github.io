@@ -1,0 +1,18 @@
+#on place of TNT or lava:
+on place of TNT:
+	if player don't have the permission "skript.admin":
+		player is in "tierrabaja"
+		message "&cNo puedes usar esto aquí" to player
+		cancel the event
+
+#on place of item frame:
+#	if player is in "comercio":
+#		message "frame" to player
+#		stop
+#
+#
+#on damage of item frame:
+#	if attacker is in "comercio":
+#		cancel event
+#		message "nope" to attacker
+#		stop

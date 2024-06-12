@@ -1,0 +1,185 @@
+# Referrals Skript made by Rop
+# Feel free to alter the skript, but do not claim it as your own.
+	
+#command /clave:
+#	description: Generate your referral code!
+#	usage: /clave
+#	executable by: players
+#	trigger:
+#		if {ref.%player%.number} is not set:
+#			set {ref.%player%.number} to "%random integer from 1000 to 1000000 * length of the player's name%"
+#			loop {reflist::*}:
+#				if loop-value == {ref.%player%.number}:
+#					delete {ref.%player%.number}
+#					message "<light red>Ha ocurrido un error. Por favor ejecuta el comando de nuevo." to player
+#					stop trigger
+#			message "<light green>Generando tu clave de referido..." to player
+#			add {ref.%player%.number} to {reflist::*}
+#			message "Tu clave de referido es: <light green>%{ref.%player%.number}%" to player
+#		else:
+#			message "Tu clave de referido es: <light green>%{ref.%player%.number}%" to player
+# 
+#command /activar <number>:
+#	description: Activate a referral code gained from your friend!
+#	usage: /activar <clave>
+#	executable by: players
+#	trigger:
+#		if {ref.%player%.check} is 1:
+#			message "<light red>Ya has usado esta clave" to player
+#		else:
+#			set {ref.%player%.check} to argument
+#			message "Verificando clave:<light green> %{ref.%player%.check}%" to player
+#			if {ref.%player%.check} == {ref.%player%.number}:
+#				message "<light red>No puedes usar tu propia clave." to player
+#				stop trigger
+#			loop {reflist::*}:
+#				if loop-value == {ref.%player%.check}:
+#					add 1 to {ref.%{ref.%player%.check}%}
+#					message "<light green>¡Clave usada con éxito!" to player
+#					execute console command "money give %player% 1500"			# These lines are the commands that get executed when player activates a code,
+#					give 5 diamond to player									# feel free to change the executed commands/rewards to your liking.
+#					message "Has ganado $1,500 y 5 diamantes por usar una clave de referido."	# Message about the rewards. Change is to suit your rewards.
+#					set {ref.%player%.check} to 1
+#					stop trigger
+#			message "<light red>¡La clave no es válida!" to player
+#
+#command /reclamar:
+#	description: Claim the rewards when someone has used your referral code!
+#	trigger:
+#		if {ref.%{ref.%player%.number}%} > 0:
+#			message "<light green>Tu clave de referido ha sido usada <white>%{ref.%{ref.%player%.number}%}%<light green> veces!" to player
+#			message "<light green> Has ganado 5 puntos y $1,500 por cada jugador referido" to player	
+#			loop {ref.%{ref.%player%.number}%} times:
+#				execute console command "money give %player% 1500"		# These 3 lines over here are the lines that get executed,
+#				execute console command "enjin addpoints %player% 5"	# when your code has been activated and you use /claim command.
+#				add 1 to {ref.%{ref.%player%.number}%.times}
+#			set {ref.%{ref.%player%.number}%} to 0
+#		else:
+#			message "Nadie ha usado tu clave de referido."
+#			message "Hasta ahora llevas<light green> %{ref.%{ref.%player%.number}%.times}%<white> jugadores referidos."
+#
+#command /refercoderemove <player>:
+#	permission: ref.admin
+#	trigger:
+#		remove {ref.%argument%.number} from {reflist::*}
+#		delete {ref.%argument%.number}
+#		message "<light red>Variable removed!" to player
+#		message "<light red>Code list:" to player
+#		loop {reflist::*}:
+#			message "<light green>%loop-value%" to player
+#
+#command /referlist:
+#	permission: ref.admin
+#	trigger:
+#		message "<light red>Code list:" to player
+#		loop {reflist::*}:
+#			message "<light green>%loop-value%" to player
+#
+#command /referhelp:
+#	permission: ref.user
+#	trigger:
+#		message "<light red>Referral system:" to player
+#		message "<light green>Use /code to get your code and give it to someone who you wish to refer!" to player
+#		message "<light green>If you got code from someone use /activate <code> to use the code. One player can activate only one code!" to player
+#		message "<light green>Use /claim to get rewards when someone used your code!" to player
+#		message "<light red>Available commands:" to player
+#		message "<light green>/activate <number> <light red> Use this to activate referral code that you've gotten from someone!" to player
+#		message "<light green>/code <light red> Use this to generate your code/see your code!" to player
+#		message "<light green>/claim <light red>Use this to claim your rewards!" to player
+#		message "<light green>/refercoderemove <player> <light red>ADMINS ONLY" to player
+#		message "<light green>/referlist <light red>ADMINS ONLY" to player
+
+
+#NUEVA VERSIÓN
+#By lorspi
+
+command /referido [<text>] [<offline player>]:
+	aliases: /ref
+	executable by: players
+	trigger:
+		if arg 1 is not set:
+			message "&6&lReferidos" to player
+			message " &fEste es un sistema que re recompensa por invitar a otros jugadores al survival." to player
+			message " Comando opcional: &a/ref" to player
+			message " &a/referido activar <jugador> &f- Escribe el jugador que te invitó y ambos recibirán recompensa." to player
+			message " &a/referido recoger &f- Verifica si te han referido y reclama tu recompensa." to player
+			stop
+		if arg 1 is "activar":
+			if arg 2 is not set:
+				message "<light red>Debes poner el nombre del jugador que te invitó al juego." to player
+				stop
+			else if arg 2 has played before:
+				if {ref.%player%.verifica} is equal to 1:
+					message "<light red>Ya has reclamado tu recompensa anteriormente." to player
+					stop
+				else:
+					message "Verificando..." to player
+					if player == arg 2:
+						message "<light red>No puedes usar tu popio nombre." to player
+						stop trigger
+					else:
+						message "<light green>¡Referido con éxito!" to player
+						execute console command "money give %player% 1500"
+						give 5 diamond to player
+						message "Has ganado $1,500 y 5 diamantes."
+						set {ref.%player%.verifica} to 1
+						log "%player% ha invitado a %arg 2%" to "referidos"
+						add "%player%" to yaml list "estadisticas.%arg 2%.lista" from file "../variables/referidos.yml"
+						set {_conteo} to yaml value "estadisticas.%arg 2%.invitados" from file "../variables/referidos.yml"
+						wait 1 tick
+						add 1 to {_conteo}
+						wait 1 tick
+						set yaml value "estadisticas.%arg 2%.invitados" from file "../variables/referidos.yml" to {_conteo}
+						set yaml value "ultimouso.activar" from file "../variables/referidos.yml" to "%now%"
+						stop trigger
+			else:
+				message "<light red>¡Este jugador no está registrado!" to players
+				stop
+		if arg 1 is "recoger":
+			set {_invitados} to yaml value "estadisticas.%player%.invitados" from file "../variables/referidos.yml"
+			set {_recogidos} to yaml value "estadisticas.%player%.recogidos" from file "../variables/referidos.yml"
+			set {_resta} to {_invitados} - {_recogidos}
+			message "%{_resta}% to %{_invitados}% - %{_recogidos}%"
+			if {_resta} is not set:
+				set {_resta} to 0
+				stop
+			if {_resta} > 0:
+				message "<light green>¡Te han referido <white>%{_resta}%<light green> veces!" to player
+				message "<light green>Has ganado 5 diamantes y $1,500 por cada jugador referido." to player
+				message "Hasta ahora llevas<light green> %{ref.%player%.total}%<white> jugadores referidos."
+				loop {_resta} times:
+					execute console command "money give %player% 1500"
+					give 5 diamond to player
+					add 1 to {_recogidos}
+				set yaml value "estadisticas.%player%.recogidos" from file "../variables/referidos.yml" to {_recogidos}
+				set yaml value "ultimouso.recoger" from file "../variables/referidos.yml" to "%now%"
+				stop
+			else:
+				message "Nadie te ha referido."
+				message "Hasta ahora llevas<light green> %{ref.%player%.total}%<white> jugadores referidos."
+				stop
+
+
+#Admin
+command /refver [<offline player>]:
+	executable by: players
+	trigger:
+		if arg 1 is set:
+			set {_invitados} to yaml value "estadisticas.%arg 1%.invitados" from file "../variables/referidos.yml"
+			set {_recogidos} to yaml value "estadisticas.%arg 1%.recogidos" from file "../variables/referidos.yml"
+			set {_milista::*} to getListYML("estadisticas.%arg 1%.lista","../variables/referidos")
+			message "&6&lReferidos por %arg 1%" to player
+			message " &aCantidad de referidos: &f%{_invitados}%" to player
+			message " &aCantidad de recogidos: &f%{_recogidos}%" to player
+			message " &aJugadores invitados: &f%{_milista::*}%" to player
+			stop
+		else:
+			set {_milista::*} to yaml nodes "estadisticas" from "../variables/referidos.yml"
+			message " &aJugadores refiriendo: &f%{_milista::*}%" to player
+command /refborrar [<offline player>]:
+	executable by: players
+	trigger:
+		delete yaml value "estadisticas.%arg 1%" from "../variables/referidos.yml"
+		delete {ref.%arg 1%.verifica}
+		message "Datos borrados" to player
+		stop

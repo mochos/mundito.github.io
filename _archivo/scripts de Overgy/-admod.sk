@@ -1,0 +1,15 @@
+on join:
+  #if player has permission "skript.admin":
+  if "%player's suffix%" contains "Creador" or "Guardián":
+    set {admin.%player%.entrada} to now
+on quit:
+  #if player has permission "skript.admin":
+  if "%player's suffix%" contains "Creador" or "Guardián":
+    set {admin.%player%.salida} to now
+    wait 1 second
+    set {admin.%player%.tiempo} to difference between {admin.%player%.entrada} and now
+    wait 1 second
+    if "%player's suffix%" contains "Creador":
+      log "[Creador] %player% -> Entrada: %{admin.%player%.entrada}% Salida: %{admin.%player%.salida}% Tiempo total: %{admin.%player%.tiempo}%" to "admin-mod"
+    else if "%player's suffix%" contains "Guardián":
+      log "[Guardián] %player% -> Entrada: %{admin.%player%.entrada}% Salida: %{admin.%player%.salida}% Tiempo total: %{admin.%player%.tiempo}%" to "admin-mod"

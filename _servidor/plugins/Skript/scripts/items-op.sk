@@ -28,7 +28,6 @@ on consume of bread:
 
 on rightclick with echo shard:
     if name of player's tool contains "&d&lCofre de ender portátil":
-        send "&aHas hecho clic derecho con el ítem renombrado &6&lCeitil &a!" to player
         remove 1 of echo shard named "&d&lCofre de ender portátil" from player's inventory
         play sound "block.ender_chest.open" with volume 1 to the player
         open player's ender chest to the player
@@ -52,7 +51,7 @@ on block break:
     if name of player's tool contains "&9&lInstaminador":
         damage player's tool by 3
         loop blocks in radius 1.8 of event-block:
-            if loop-block is stone or cobblestone or obsidian or deepslate or netherrack:
+            if loop-block is stone or cobblestone or obsidian or deepslate or netherrack or tuff or andesite or diorite or granite:
                 drop loop-block
                 set loop-block to air
                 play sound "dig.stone" with volume 1 to player

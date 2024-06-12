@@ -1,0 +1,532 @@
+#KILLSTREAK BY JUSTPRIMED
+# SCRIPT QUE PERMITE GUARDAR ESTADÍSTICAS DEL JUGADOR EN COLISEO O EN LOS MUNDOS
+#Moded by: PantallazoAzul
+#Además: https://www.spigotmc.org/resources/playercmds-skript-1-7-1-10.6357/
+options:
+	prefix: &6&lCOLISEO&r 
+	databasePrefix: jdogdatabase_
+
+on script load:
+	send "[Info] coliseoInfo.sk correctamente cargado." to console
+
+on script unload:
+	send "[Info] coliseoInfo.sk apagado." to console
+
+on join:
+	if {{@databasePrefix}%player%_joindate} is not set:
+		set {{@databasePrefix}%player%_joindate} to now
+	else:
+		stop
+	
+command /joindate <player=%player%>:
+	permission: skript.admin
+	executable by: players and console
+	trigger:
+		if arg 1 is set:
+			if arg 1 is "%player%":
+				message ""
+				message "&aTe uniste el &b%{{@databasePrefix}%player%_joindate}%"
+				message "&bEres el jugador &a##%{{@databasePrefix}PlayerCmds_%player%_numberofplayer.2}%"
+				message "&f&lInfo: &ePuedes ver la fecha de ingreso de otros con /joindate <jugador>"
+				message ""
+			else:
+				message ""
+				message "&a%arg 1%'s joindate is &b##%{{@databasePrefix}%arg 1%_joindate}%"
+				message "&b%arg 1% is &a##%{{@databasePrefix}PlayerCmds_%arg 1%_numberofplayer.2}% &bplayer of the server."
+				message ""
+
+command /totaljoined:
+	permission: skript.admin
+	executable by: players and console
+	trigger:
+		message "&aTotal players joined: &f%{{@databasePrefix}PlayerCmds_TotalPlayers.2}%"
+
+command /playtime [<offline player>]:
+	aliases: ptime
+	usage: /playtime
+	permission: skript.admin
+	trigger:
+		if arg 1 is not set:
+			message ""
+			message "&a      &b&lTu tiempo de juego"
+			message ""
+			message "&d        &d%{{@databasePrefix}TimePlayed.1.Time.Days.%player%}%&f días &d&d%{{@databasePrefix}TimePlayed.1.Time.Hours.%player%}%&f horas &d&d%{{@databasePrefix}TimePlayed.1.Time.Minutes.%player%}%&f minutos &d&d%{{@databasePrefix}TimePlayed.1.Time.Seconds.%player%}%&f segundos"
+			message ""
+			message "&7&oPuedes ver el tiempo de juego de otros con /playtime &f<jugador>"
+		if arg 1 is set:
+			if player has permission "skript.admin":
+				if {{@databasePrefix}TimePlayed.1.Time.Seconds.%arg 1%} is not set:
+					message "&4&lERROR: &aJugador no registrado!"
+				else if {{@databasePrefix}TimePlayed.1.Time.Seconds.%player%} is set:
+					message ""
+					message "&a     &b&lTiempo de juego de %arg 1%"
+					message ""
+					message "&d        &d%{{@databasePrefix}TimePlayed.1.Time.Days.%arg 1%}%&f días &d&d%{{@databasePrefix}TimePlayed.1.Time.Hours.%arg 1%}%&f horas &d&d%{{@databasePrefix}TimePlayed.1.Time.Minutes.%arg 1%}%&f minutos &d&d%{{@databasePrefix}TimePlayed.1.Time.Seconds.%arg 1%}%&f segundos"
+					message ""
+			else:
+				message "&c¡No tienes permisos para eso!"
+
+every 1 second:
+	loop all players:
+		add 1 to {{@databasePrefix}TimePlayed.1.Time.Seconds.%loop-player%}
+every 1 second:
+	loop all players:
+		if {{@databasePrefix}TimePlayed.1.Time.Minutes.%loop-player%} is more than 59:
+			remove 59 from {{@databasePrefix}TimePlayed.1.Time.Minutes.%loop-player%}
+			add 1 to {{@databasePrefix}TimePlayed.1.Time.Hours.%loop-player%}
+every 1 second:
+	loop all players:
+		if {{@databasePrefix}TimePlayed.1.Time.Hours.%loop-player%} is more than 23:
+			remove 24 from {{@databasePrefix}TimePlayed.1.Time.Hours.%loop-player%}
+			add 1 to {{@databasePrefix}TimePlayed.1.Time.Days.%loop-player%}
+every 1 second:
+	loop all players:
+		if {{@databasePrefix}TimePlayed.1.Time.Seconds.%loop-player%} is more than 59:
+			remove 60 from {{@databasePrefix}TimePlayed.1.Time.Seconds.%loop-player%}
+			add 1 to {{@databasePrefix}TimePlayed.1.Time.Minutes.%loop-player%}
+
+on join:
+	if {{@databasePrefix}TimePlayed.1.Time.Days.%player%} is not set:
+		set {{@databasePrefix}TimePlayed.1.Time.Days.%player%} to 0
+on join:
+	if {{@databasePrefix}TimePlayed.1.Time.Hours.%player%} is not set:
+		set {{@databasePrefix}TimePlayed.1.Time.Hours.%player%} to 0
+on join:
+	if {{@databasePrefix}TimePlayed.1.Time.Minutes.%player%} is not set:
+		set {{@databasePrefix}TimePlayed.1.Time.Minutes.%player%} to 0
+
+on join:
+	if {{@databasePrefix}TotalPlayTime.Add.%player%} is not set:
+		add {{@databasePrefix}TimePlayed.1.Time.Seconds.%player%}  to {{@databasePrefix}TotalTimePlayed.Time.Seconds}
+		add {{@databasePrefix}TimePlayed.1.Time.Minutes.%player%}  to {{@databasePrefix}TotalTimePlayed.Time.Minutes}
+		add {{@databasePrefix}TimePlayed.1.Time.Hours.%player%}  to {{@databasePrefix}TotalTimePlayed.Time.Hours}
+		add {{@databasePrefix}TimePlayed.1.Time.Days.%player%}  to {{@databasePrefix}TotalTimePlayed.Time.Days}
+		set {{@databasePrefix}TotalPlayTime.Add.%player%} to true
+command /totalplaytime:
+	permission: playercmds.totalplaytime
+	permission message: {{@databasePrefix}PlayerCmds.Main.Settings.NoPermission}
+	trigger:
+		message ""
+		message "&a      &b&l › Global Play Time"
+		message ""
+		message "&d%{{@databasePrefix}TotalTimePlayed.Time.Days}%&fD &d&d%{{@databasePrefix}TotalTimePlayed.Time.Hours}%&fH &d&d%{{@databasePrefix}TotalTimePlayed.Time.Minutes}%&fM &d&d%{{@databasePrefix}TotalTimePlayed.Time.Seconds}%&fS"
+		message ""
+every 1 second:
+	loop all players:
+		add 1 to {{@databasePrefix}TimePlayed.1.Time.Seconds.%loop-player%}
+every 1 second:
+	loop all players:
+		add 1 to {{@databasePrefix}TotalTimePlayed.Time.Seconds}
+every 1 second:
+	loop all players:
+		if {{@databasePrefix}TimePlayed.1.Time.Minutes.%loop-player%} is more than 59:
+			remove 59 from {{@databasePrefix}TimePlayed.1.Time.Minutes.%loop-player%}
+			add 1 to {{@databasePrefix}TimePlayed.1.Time.Hours.%loop-player%}
+every 1 second:
+	if {{@databasePrefix}TotalTimePlayed.Time.Seconds} is more than 59:
+		remove 59 from {{@databasePrefix}TotalTimePlayed.Time.Seconds}
+		add 1 to {{@databasePrefix}TotalTimePlayed.Time.Minutes}
+every 1 second:
+	if {{@databasePrefix}TotalTimePlayed.Time.Minutes} is more than 59:
+		remove 59 from {{@databasePrefix}TotalTimePlayed.Time.Minutes}
+		add 1 to {{@databasePrefix}TotalTimePlayed.Time.Hours}
+every 1 second:
+	if {{@databasePrefix}TotalTimePlayed.Time.Hours} is more than 23:
+		remove 23 from {{@databasePrefix}TotalTimePlayed.Time.Hours}
+		add 1 to {{@databasePrefix}TotalTimePlayed.Time.Days}
+
+on join:
+	if {{@databasePrefix}PlayerCmds_%player%_numberofplayer.2} is not set:
+		add 1 to {{@databasePrefix}PlayerCmds_TotalPlayers.2}
+		set {{@databasePrefix}PlayerCmds_%player%_numberofplayer.2} to {{@databasePrefix}PlayerCmds_TotalPlayers.2}
+		set {{@databasePrefix}PlayerCmds_NewPlayer.2} to 1
+	else:
+		stop
+
+on join:
+	if {arena.racha.%player%} is not set:
+		set {enderdragon.muertes.%player%} to 0
+		set {arena.bajas.%player%} to 0
+		set {arena.muertes.%player%} to 0
+		set {arena.racha.%player%} to 0
+		set {global.bajas.%player%} to 0
+		set {global.muertes.%player%} to 0
+		set {global.racha.%player%} to 0
+		set {mobs.bajas.%player%} to 0
+		stop
+	stop
+
+on join:
+	wait 5 ticks
+	invoke "mostrarContador" from player
+	if {info.mostrar.siempre.%player%} is not set:
+		set {info.mostrar.siempre.%player%} to false
+	stop
+
+# ==========================#
+# CÓDIGO PARA EXPULSAR DEL COLISEO #
+# ==========================#
+
+sub "coliseohelp":
+	send "{@prefix} Usos de &7/&acoliseo &7<parámetro>" to parameter 1
+	# send " &bkick&r - Expulsa los jugadores hacia &e%{coliseoLoc}%" to parameter 1
+	send json of " &akick&r - Expulsa los jugadores hacia &e%{coliseoLoc}%" tooltip "&7/&acoliseo kick" suggest "/coliseo kick" to parameter 1
+	# send " &btp&r - Cambiar punto de kick &7(&e%{coliseoLoc}%&7)" to parameter 1
+	send json of " &atp&r - Cambiar punto de kick &7(&e%{coliseoLoc}%&7)" tooltip "&7/&acoliseo tp" suggest "/coliseo tp" to parameter 1
+	# send " &blista&r - Muestra los jugadores dentro del coliseo" to parameter 1
+	# send json of " &alista&r - Muestra los jugadores dentro del coliseo" suggest "/coliseo lista" to parameter 1
+	send json of " &alista&r - Muestra los jugadores dentro del coliseo" tooltip "&7/&acoliseo lista" suggest "/coliseo lista" to parameter 1
+	send " " to parameter 1
+
+# Comando con opciones kick, lista y tp.
+
+command /coliseo <string=help>:
+	aliases: /coliseopvp
+	description: Saca a todos los jugadores que están en el coliseo.
+	permission: skript.admin
+	executable by: players
+	trigger:
+		if arg 1 is "help":
+			invoke "coliseohelp" from player
+			stop
+		if arg 1 is not "kick" or "lista" or "tp":
+			invoke "coliseohelp" from player
+			stop
+		if arg 1 is "kick":
+			loop all players in "tierramedia":
+				if loop-player is in the region "coliseopvp":
+					add loop-player to {_expulsados::*}
+					teleport loop-value to {coliseoLoc}
+			wait 1 tick
+			if {_expulsados::*} is not set:
+				message "{@prefix} Nadie a quien expulsar."
+				stop
+			else:
+				message "{@prefix} Jugadores expulsados: %{_expulsados::*}%"
+				stop
+			wait 1 tick
+			stop
+		if arg 1 is "lista":
+			message "{@prefix} Jugadores en el coliseo:"
+			loop all players in "tierramedia":
+				if loop-player is in the region "coliseopvp":
+					add loop-player to {_enColiseo::*}
+					# message "&r - %loop-player%"#recordar cambiar esto!!
+			wait 1 tick
+			message "&r - %{_enColiseo::*}%"
+			stop
+		if arg 1 is "tp":
+			set {coliseoLoc} to location
+			wait 1 tick
+			message "{@prefix} Localización correctamente guardada."
+			message "&c >&r Ahora los jugadores kickeados del coliseo vendrán aquí."
+			stop
+
+# Top kills
+command /admininfo [<string>]:
+	trigger:
+		if arg 1 is not set:
+			loop {lista.jugadores::*}:
+				send "Jugador: %{lista.jugadores::%loop-value%}%" to player
+				send "Kills: %{lista.jugadores::%loop-index%}%" to player
+			send "Todo: %{lista.jugadores::*}%" to player
+		else:
+			delete {lista.jugadores::*}
+
+command /pruebabuena:
+	permission: skript.admin
+	trigger:
+		display hologram "&aSoy un ceitil;ItemStack:emerald;&a¡Soy muy valioso!" at location of player to player for 20 seconds
+
+command /topkill:
+	aliases: /topkills, /topbajas
+	trigger:
+		# loop all players:
+			# wait 1 tick
+			# set {_kills} to {arena.bajas.%loop-player%}
+			# set {_kills} to "%{_kills}%" parsed as integer
+			# set {_topkills::%loop-player%} to {_kills}
+		wait 1 tick
+		# set {_topkills::*} to {_topkills::*} sorted from highest to lowest with output "@index avec @value meurtre(s)"
+		set {_topkills::*} to {lista.jugadores::*} sorted from highest to lowest with output "@index con @value bajas"
+		set {_topkills.global::*} to {lista.jugadores.global::*} sorted from highest to lowest with output "@index con @value bajas"
+		
+		message "&6====== [ &e&lTOP DE BAJAS EN COLISEO &6] ======"
+		set {_size} to size of {_topkills::*}
+		message ""
+		loop {_topkills::*}:
+			# set {_li} to "%loop-index%" parsed as number
+			if loop-index is "1":
+				message "  &cPrimero &7→ &f%loop-value%"
+			if loop-index is "2":
+				message "  &6Segundo &7→ &f%loop-value%"
+			if loop-index is "3":
+				message "  &eTercero &7→ &f%loop-value%"
+			if loop-index is "3":
+				exit loop
+		message ""
+		
+		message "&6=== [ &e&lTOP DE BAJAS FUERA DE COLISEO &6] ==="
+		set {_size} to size of {_topkills.global::*}
+		message ""
+		loop {_topkills.global::*}:
+			# set {_top} to "%loop-index%" parsed as number
+			if loop-index is "1":
+				message "  &cPrimero &7&l→ &f%loop-value%"
+			if loop-index is "2":
+				message "  &6Segundo &7&l→ &f%loop-value%"
+			if loop-index is "3":
+				message "  &eTercero &7&l→ &f%loop-value%"
+			if loop-index is "3":
+				exit loop
+		message ""
+		
+		message "&aOtros jugadores:"
+		loop {_topkills.global::*}:
+			set {_top} to "%loop-index%" parsed as number
+			if {_top} > 3:
+				message "  &f%{_top}% &7&l→ &f%loop-value%"
+			if {_top} = {_size}:
+				message "&aNo hay más jugadores..."
+			if {_top} = 11:
+				exit loop
+
+
+
+# Cada 20 segundos actualizar dinero
+# every 1 second:
+	# loop all players:
+		# if {info.mostrar.siempre.%loop-player%} is true:
+			# set {_pMoney} to "%loop-player's money%"
+			# invoke "actualizarInfo" from "%loop-value%"
+			# send "Tu dinero es %{_pMoney}%" to loop-player
+			# stop
+		# else:
+			# stop
+
+# Comando para activar siempre la scoreboard
+
+command /infocambiar:
+	executable by: players
+	trigger:
+		if {info.mostrar.siempre.%player%} is true:
+			set {info.mostrar.siempre.%player%} to false
+			send "&aAhora tus estadísticas ya no se verán permanentemente."
+			stop
+		else:
+			set {info.mostrar.siempre.%player%} to true
+			send "&aAhora tus estadísticas se verán permanentemente"
+			stop
+
+# Comando para visualizar las estadísticas en Scoreboard y en Chat.
+
+command /info [<offline player>]:
+	aliases: /informacion, /información, /estadísticas, /estadisticas, /stats
+	description: Muestra las estadísticas del jugador o de algún jugador.
+	executable by: players
+	trigger:
+		if arg 1 is not set:
+			set {_cooldown} to difference between {comando.info.%player%} and now
+			if {_cooldown} is less than 31 seconds:
+				message "{@prefix} &rYa se están mostrando las estadísticas." to player
+				stop
+			invoke "mostrarInfo" from player#execute player command "mostrarinfoscoreboard"
+			send "&8&m----------&r &a&lESTADÍSTICAS &8&m----------&r" to player
+			send "&2&lMUERTES:" to player
+			send "&a‣En coliseo &2%{arena.muertes.%player%}%" to player
+			send "&a‣Fuera &2%{global.muertes.%player%}%" to player
+			send "&2&lBAJAS:" to player
+			send "&a‣En coliseo &2%{arena.bajas.%player%}%" to player
+			send "&a‣‣Con racha de &2%{arena.racha.%player%}%" to player
+			send "&a‣Fuera &2%{global.bajas.%player%}%" to player
+			send "&a‣‣Con racha de &2%{global.racha.%player%}%" to player
+			send "&a‣Mobs &2%{mobs.bajas.%player%}%" to player
+			send "&aDinero: &2$&a%player's money%" to player
+			send "&aTiempo jugado: &d%{{@databasePrefix}TimePlayed.1.Time.Days.%player%}%&f ds &d&d%{{@databasePrefix}TimePlayed.1.Time.Hours.%player%}%&f hrs &d&d%{{@databasePrefix}TimePlayed.1.Time.Minutes.%player%}%&f mins &d&d%{{@databasePrefix}TimePlayed.1.Time.Seconds.%player%}%&f segs" to player
+			send "&aBloques rotos: &2%{bloques.rotos.%player%}%" to player
+			send "&aBloques puestos: &2%{bloques.puestos%player%}%" to player
+			send "&aDinero: $ &2%player's balance%" to player
+			send "" to player
+			if {info.mostrar.siempre.%player%} is true:
+				send json of "&a&lCLIC para no visualizar siempre las estadísticas" tooltip "&4Hazme clic!" run "/infocambiar" to player
+			else:
+				send json of "&a&lCLIC para visualizar siempre las estadísticas" tooltip "&4Hazme clic!" run "/infocambiar" to player
+			wait 1 tick
+			set {comando.info.%player%} to now
+			stop
+		if arg 1 is set:
+			if player have permission "skript.admin":
+				if {arena.bajas.%arg 1%} is not set:
+					message "&cEl jugador %arg 1% no existe."
+					stop
+				else:
+					send "&8&m----------&r &a&lEstadísticas de &6&l%arg 1% &8&m----------&r" to player
+					send "&aBajas: &2%{arena.bajas.%arg 1%}%" to player
+					send "&aMuertes: &2%{arena.muertes.%arg 1%}%" to player
+					send "&a‣Racha actual: &2%{arena.racha.%arg 1%}%" to player
+					send "&8&m----------&r &a&lEstadísticas generales &8&m----------&r" to player
+					send "&aBajas: &2%{global.bajas.%arg 1%}%" to player
+					send "&aMuertes: &2%{global.muertes.%arg 1%}%" to player
+					send "&a‣Racha actual: &2%{global.racha.%arg 1%}%" to player
+					send "&aDragones: &2%{enderdragon.muertes.%arg 1%}%" to player
+					send "&aTiempo jugado: &2&d%{{@databasePrefix}TimePlayed.1.Time.Days.%arg 1%}%&f ds &d&d%{{@databasePrefix}TimePlayed.1.Time.Hours.%arg 1%}%&f hrs &d&d%{{@databasePrefix}TimePlayed.1.Time.Minutes.%arg 1%}%&f mins &d&d%{{@databasePrefix}TimePlayed.1.Time.Seconds.%arg 1%}%&f segs" to player
+					send "&aDinero: $ &2%arg 1's balance%" to player
+					stop
+			else:
+				message "&cNo tienes permisos para esto."
+				stop
+
+on place:
+	add 1 to {bloques.puestos%player%}
+#	make player execute command "info"
+
+on break:
+	add 1 to {bloques.rotos.%player%}
+#	make player execute command "info"
+
+on death:
+	if victim is enderdragon:
+		add 1 to {enderdragon.muertes.%attacker%}
+		stop
+	else:
+		stop
+
+on death:
+	if "%region at player%" contains "coliseopvp":
+		set {arena.racha.%victim%} to 0
+		victim is a player
+		attacker is a player
+		add 1 to {arena.bajas.%attacker%}
+		add 1 to {arena.muertes.%victim%}
+		add 1 to {arena.racha.%attacker%}
+		send "&2Tienes una racha de &a%{arena.racha.%attacker%}%" to attacker
+		wait 1 tick
+		invoke "mostrarContador" from attacker
+		wait 1 tick
+		set {lista.jugadores::%attacker%} to {arena.bajas.%attacker%}
+		stop
+	else:
+		victim is a player
+		attacker is a player
+		wait 1 tick
+		add 1 to {global.bajas.%attacker%}
+		add 1 to {global.muertes.%victim%}
+		add 1 to {global.racha.%attacker%}
+		set {global.racha.%victim%} to 0
+		invoke "mostrarContador" from attacker
+		wait 1 tick
+		set {lista.jugadores.global::%attacker%} to {global.bajas.%attacker%}
+		stop
+
+on death:
+	victim is a zombie or spider or skeleton or slime or wither or enderman or witch or endermite or cave spider or creeper or ghast or magma cube or enderdragon or blaze or zombie pigman or guardian
+	attacker is a player
+	add 1 to {mobs.bajas.%attacker%}
+	invoke "mostrarContador" from attacker
+
+on respawn:
+	invoke "mostrarContador" from player
+
+command /resetstats [<player>]:
+	trigger:
+		if player have permission "skript.admin":
+			if arg 1 is not set:
+				set {arena.bajas.%player%} to 0
+				set {arena.muertes.%player%} to 0
+				set {arena.racha.%player%} to 0
+				set {arena.mejorracha.%player%} to 0
+				send "{@prefix} &2Tus estadísticas han sido reiniciadas." to player
+				stop
+			else:
+				set {arena.bajas.%arg 1%} to 0
+				set {arena.muertes.%arg 1%} to 0
+				set {arena.racha.%arg 1%} to 0
+				set {arena.mejorracha.%arg 1%} to 0
+				send "{@prefix} &2Estadísticas reiniciadas para &a%arg 1%" to player
+				stop
+		else:
+			send "{@prefix} &c¡No tienes permisos!" to player
+
+# Al hacer /back, si su destino es el Coliseo, devolverlo al punto de kick configurado con /coliseo tp.
+
+on command "/back":
+	wait 20 ticks
+	player is in "tierramedia"
+	wait 3 seconds
+	if "%region at player%" contains "coliseopvp":
+		teleport the player to {coliseoLoc}
+		message "&cNo tienes permitido teleportarte al Coliseo."
+		stop
+	player is in "isla"
+	execute console command "/sudo %player% spawn"
+	stop
+
+on command "/back":
+	wait 20 ticks
+	wait 3 seconds
+	player is in "fullfps"
+	execute console command "/tp %player% 1329 97 1212"
+	message "&cNo tienes permitido teleportarte a FullFPS"
+	stop
+
+sub "mostrarInfo":
+	wait 0.5 tick # Muestra las estadísticas generales en la scoreboard.
+	set name of sidebar of parameter 1 to "&e† &6&LOVERGY  &e†"
+	wait 1 tick
+	set id score "&9&lFORO" in sidebar of parameter 1 to 11 with id "ID11"
+	wait 1 tick
+	set id score "&b ● &bovergy.net" in sidebar of parameter 1 to 10 with id "ID1"
+	wait 1 tick
+	set id score "&9&lMUERTES" in sidebar of parameter 1 to 9 with id "ID11"
+	wait 1 tick
+	set id score "&b ● &fEn coliseo: &7%{arena.muertes.%parameter 1%}%" in sidebar of parameter 1 to 8 with id "ID10"
+	wait 1 tick
+	set id score "&b ● &fFuera: &7%{global.muertes.%parameter 1%}%" in sidebar of parameter 1 to 7 with id "ID9"
+	wait 1 tick
+	set id score "&9&lBAJAS" in sidebar of parameter 1 to 6 with id "ID8"
+	wait 1 tick
+	set id score "&b ● &fEn coliseo: &7%{arena.bajas.%parameter 1%}%" in sidebar of parameter 1 to 5 with id "ID7"
+	wait 1 tick
+	set id score "&b ● &fRacha: &7%{arena.racha.%parameter 1%}%" in sidebar of parameter 1 to 4 with id "ID6"
+	wait 1 tick
+	set id score "&b ● &fFuera: &7%{global.bajas.%parameter 1%}%" in sidebar of parameter 1 to 3 with id "ID5"
+	wait 1 tick
+	set id score "&b ● &fMobs: &7%{mobs.bajas.%parameter 1%}%" in sidebar of parameter 1 to 2 with id "ID4"
+	wait 1 tick
+	#set score "&6Racha: &f%{global.racha.%player%}%" in sidebar of player to #
+	set id score "&b ● &fDragón del fin: &7%{enderdragon.muertes.%parameter 1%}%" in sidebar of parameter 1 to 1 with id "ID3"
+	wait 1 tick
+	#set score "&6Tiempo jugado: &f%{{@databasePrefix}TimePlayed.1.Time.Hours.%player%}% Hrs" in sidebar of player to #
+	# set id score "&6Dinero:" in sidebar of parameter 1 to 2 with id "ID2"
+	# set id score " &2$&a%parameter 1's money%" in sidebar of parameter 1 to 1 with id "ID1"
+	move display of parameter 1 to sidebar
+	wait 1 tick
+	if {info.mostrar.siempre.%parameter 1%} is true:
+		stop
+	else:
+		wait 30 seconds
+		wipe parameter 1's sidebar
+		stop
+
+sub "actualizarInfo": #Actualiza las estadísticas generales en la scoreboard.
+	update score id "ID10" to "&b ● &fEn coliseo: &7%{arena.muertes.%parameter 1%}%" and 8
+	update score id "ID9" to "&b ● &fFuera: &7%{global.muertes.%parameter 1%}%" and 7
+	update score id "ID7" to "&b ● &fEn coliseo: &7%{arena.bajas.%parameter 1%}%" and 5
+	update score id "ID6" to "&b ● &fRacha: &7%{arena.racha.%parameter 1%}%" and 4
+	update score id "ID5" to "&b ● &fFuera: &7%{global.bajas.%parameter 1%}%" and 3
+	update score id "ID4" to "&b ● &fMobs: &7%{mobs.bajas.%parameter 1%}%" and 2
+	update score id "ID3" to "&b ● &fDragón del fin: &7%{enderdragon.muertes.%parameter 1%}%" and 1
+	# update score id "ID1" to " &2$&a%parameter 1's money%" and 1
+	# update score id "ID1" to " &f&lovergy.enjin.com" and 1
+	
+	stop
+
+sub "mostrarContador":
+	if side bar is set for parameter 1:
+		wait 0.5 ticks
+		invoke "actualizarInfo" from "%parameter 1%"
+		stop
+	else:
+		wait 0.5 ticks
+		invoke "mostrarInfo" from parameter 1
+		stop

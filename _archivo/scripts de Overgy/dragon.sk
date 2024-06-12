@@ -1,0 +1,113 @@
+# PowerEnder - Respawnar o EnderDragon!
+# Criado por MrPowerGamerBR - mrpowergamerbr.blogspot.com
+# SparklyPower: sparklypower.melhorserver.net
+# Edit By LoD_Doc.
+
+options:
+	prefijo: &e&l El fin&7 »&f 
+	revivido: El principio del fin ha regresado. La bestia ha despertado de su sueño.
+	invocado: El principio del fin ha regresado. Has invocado a la bestia.
+	tiempo: 5 hours
+
+on death of enderdragon:
+	attacker is a player
+	set {_exp} to random integer between 150 and 500
+	set {_money} to random integer between 4000 and 10000
+	set {dragon.muerte} to now
+	set {dragon.vive} to false
+	if attacker is a player:
+		broadcast "{@prefijo} %attacker% ha asesinado al dragón."
+		execute console command "/xp %{_exp}% %attacker% "
+		execute console command "/money give %attacker% %{_money}%"
+		give dragon egg to the attacker
+		message "{@prefijo} Has ganado &a$%{_money}%&f y &a%{_exp}%&f puntos de experiencia." to attacker
+		log "Dragón eliminado por %attacker%" to "dragon"
+		stop
+
+every 10 minutes:
+	if {dragon.vive} is false:
+		set {esperado} to difference between {dragon.muerte} and now
+		if {esperado} is more than {@tiempo}:
+			set {dragon.vive} to true
+			spawn an enderdragon at {dragon.nacimiento}
+			wait 1 second
+			broadcast "{@prefijo} {@revivido}"
+			log "Dragón generado automáticamente." to "dragon"
+			stop
+				
+#every 5 minutes:
+#	if {EnderAlive} is false:
+#		broadcast "{@prefijo} está vivo."
+		
+command /dragonlugar:
+	permission: skript.dragon
+	trigger:
+		if world is "fin":
+			set {dragon.nacimiento} to location of player
+			send "&aEstablecido el punto de nacimiento del dragón."
+			stop
+		
+command /dragonrevive:
+	permission: skript.dragon
+	trigger:
+		set {dragon.vive} to true
+		wait 3 seconds
+		spawn an enderdragon at {dragon.nacimiento}
+		broadcast "{@prefijo} {@revivido}"
+		send "&aDragon generado manualmente."
+		log "Dragón generado por comando por %player%." to "dragon"
+		stop
+
+on command "/killall enderdragon":
+	set {dragon.muerte} to now
+	set {dragon.vive} to false
+	log "Dragón eliminado por comando por %player%" to "dragon"
+	stop
+
+on dragon portal create:
+	cancel event	
+
+command /dragonaltar:
+	permission: skript.dragon
+	trigger:
+		if world is "fin":
+			set {dragon.altar} to location of player
+			stop
+
+on place:
+	if world is "fin":
+		if the name of the player's tool is "&e&lHuevo fértil de dragón":
+			if "%region at event-block%" contains "altardragon":
+				if {dragon.vive} is false:
+					wait 10 ticks
+					set {_efecto} to location of player
+					spawn 1000 of particle witch magic:1 offset by 2, 2, 2 at {_efecto}
+					play raw sound "mob.enderdragon.growl" at player with pitch 1 volume 5
+					set {dragon.vive} to true
+					spawn an enderdragon at {dragon.nacimiento}
+					wait 1 seconds
+					message "{@prefijo} {@invocado}" to player
+					set block at {dragon.altar} to air
+					log "Dragón invocado por %player%." to "dragon"
+					stop
+				else:
+					message "&cNo puedes invocar al dragón mientras está vivo." to player
+					cancel event
+			else:
+				cancel event
+				message "&aEntra en el altar del dragón y pon el huevo fértil en el medio." to player
+				stop
+		else:
+			if player don't have permission "skript.admin":
+				cancel event
+				message "&cNo puedes construir en este lugar." to player
+				stop
+	if world is not "fin":
+		if the name of the player's tool is "&e&lHuevo fértil de dragón":
+			cancel event
+			message "&cSólo puedes invocar al dragón en &eEl fin&c." to player
+			stop
+
+
+# on place of bedrock:
+	# message "Hola %region at event-block%" to player

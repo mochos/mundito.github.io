@@ -1,0 +1,14 @@
+on rightclick on sign:
+	line 1 of the clicked block is "&4[FullFPS]"
+	player is in "fullfps"
+	if balance of player is more than 3249.99:
+		remove 3250 from player's balance
+		give 1 iron helmet to player
+		give 1 iron chestplate to player
+		give 1 iron leggings to player
+		give 1 iron boots to player
+		give 1 iron sword to player
+		message "&aRemovidos $3250 de tu cuenta." to player
+		stop
+	else:
+		message "&cNo tienes dinero suficiente, cuesta $3250" to player

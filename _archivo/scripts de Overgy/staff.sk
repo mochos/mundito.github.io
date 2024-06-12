@@ -1,0 +1,215 @@
+# Programa que contabiliza el tiempo y número de conexiones de cada jugador de staff.
+# By: PantallazoAzul
+# 04/10/2016
+# XXXX Versión Beta XXXX
+# Versión Beta 2
+# 21/11/2016
+#=================================================
+#=======RESTO DE CÓDIGO =============================
+#=================================================
+
+options:
+	directorio: ../variables/staff
+
+every 59 seconds:
+	if "%now%" contains "12:57 AM":
+	
+		loop {staff.tiempo.online::*}:
+		# Hace loop de todos los staff conectados este día.
+			set {_conexiones} to "%{staff.conexiones::%loop-index%}%"
+			# Escribir vez o veces según corresponda
+			if {_conexiones} = "1":			
+				set {_veces} to "%{_conexiones}% vez"
+				
+			else:			
+				set {_veces} to "%{_conexiones}% veces"
+			# Log con veces de conexiones y tiempo
+			log "%loop-index%: %{_veces}% - %loop-value%" to "staff-tiempo"
+			# Guarda en YML las variables del tiempo actual (o sea del día anterior)
+			setVarYML("staff.%loop-index%.tiempo.actual" , "%loop-value%" , "{@directorio}")
+			setVarYML("staff.%loop-index%.conexiones.actual" , "%{_conexiones}%" , "{@directorio}")
+			# Esperar para evitar confusiones en el programa
+			wait 1 tick
+			# Solicita variables del YML y verifica si el total aún no existe
+			set {_stats.hoy} to getVarYML("staff.%loop-index%.tiempo.actual" , "{@directorio}")
+			set {_stats.total} to getVarYML("staff.%loop-index%.tiempo.total" , "{@directorio}")
+			# Si el total aún no existe, entonces...
+			if {_stats.total} is "<none>":
+			# Configura las variables 'total' del YML
+				setVarYML("staff.%loop-index%.tiempo.total" , "%{_stats.hoy}%" , "{@directorio}")
+				setVarYML("staff.%loop-index%.conexiones.total" , "%{_conexiones}%" , "{@directorio}")
+				
+			else:
+			# Si el total ya existe, entonces extrae sus valores para ser sumados con el tiempo actual
+				set {_stats.hoy} to {_stats.hoy} parsed as time span
+				set {_stats.total} to {_stats.total} parsed as time span
+				add {_stats.hoy} to {_stats.total}
+				
+				set {_conexiones.total} to getVarYML("staff.%loop-index%.conexiones.total" , "{@directorio}")
+				set {_conexiones} to {_conexiones} parsed as integer
+				set {_conexiones.total} to {_conexiones.total} parsed as integer
+				add {_conexiones} to {_conexiones.total}
+				# Esperar para evitar confusiones en el programa
+				wait 1 tick
+				# Finalmente, configura las variables 'total' del YML
+				setVarYML("staff.%loop-index%.tiempo.total" , "%{_stats.total}%" , "{@directorio}")
+				setVarYML("staff.%loop-index%.conexiones.total" , "%{_conexiones.total}%" , "{@directorio}")
+				# Limpia los valores de tiempo actual para ser nuevamente renovados al día siguiente
+				# set {_players::*} to yaml nodes "staff" from "{@directorio}.yml"
+				# set {_miembro} to {_players::%loop-index%}
+				# send "%{_miembro}%" to player
+					# delete yaml value "staff.%loop-index%.tiempo.actual" from file {@yml}
+				# Eso ^ aún no funciona :v
+				
+		log "-----------------------------------------------------" to "staff-tiempo"
+			
+		log "Tiempos de staff correctamente registrados."
+		
+		wait 20 ticks
+		
+		delete {staff.tiempo.online::*}
+		delete {staff.conexiones::*}
+
+command /iStaff [<string>]:
+	permission: essentials.tp
+	permission message: &c¡No tienes permiso para ejecutar ese comando!
+	trigger:
+		
+		if player has permission "skript.admin":
+			# if arg 1 is not set:
+				# message "Current server time: %now%" to player
+				# give player diamond sword with no nbt
+				# wait 20 ticks
+				# set {_log} to getVarYML("staff.%player%" , "{@directorio}")
+				# message "&7%{_log}%" to player
+				# log "mensaje pa la consola :v"
+				# setVarYML("staff.%player%" , "%player%" , "{@directorio}")
+			if arg 1 is "mae":
+				loop {staff.tiempo.online::*}:
+					set {_players::*} to yaml nodes "staff" from "{@directorio}.yml"
+					loop {_players::*}:
+						if "%loop-index-1%" contains "%loop-value-2%":
+							add "%loop-value-2%" to {_miembrosDENTRO::*}
+						# else:
+							# add "%loop-value-2%" to {_miembrosFUERA::*}
+				# send "&6%{_miembrosFUERA::*}%" to player
+				send "&b%{_miembrosDENTRO::*}%" to player
+				loop {_miembrosDENTRO::*}:
+					loop {staff.tiempo.online::*}:
+						if "%loop-value-1%" is not "%loop-index-2%":
+							add "%loop-index-2%" to {_miembros::*}
+				send "&a%{_miembros::*}%" to player
+				stop
+			
+			# Argumento de ejemplo para ejecutar lo escrito arriba en el every 59 seconds.
+			if arg 1 is "loco":
+			
+				loop {staff.tiempo.online::*}:
+					set {_conexiones} to "%{staff.conexiones::%loop-index%}%"
+					if {_conexiones} = "1":
+						set {_veces} to "%{_conexiones}% vez"
+					else:
+						set {_veces} to "%{_conexiones}% veces"
+					log "%loop-index%: %{_veces}% - %loop-value%" to "staff-tiempo"
+					setVarYML("staff.%loop-index%.tiempo.actual" , "%loop-value%" , "{@directorio}")
+					setVarYML("staff.%loop-index%.conexiones.actual" , "%{_conexiones}%" , "{@directorio}")
+					wait 1 tick
+					set {_stats.hoy} to getVarYML("staff.%loop-index%.tiempo.actual" , "{@directorio}")
+					set {_stats.total} to getVarYML("staff.%loop-index%.tiempo.total" , "{@directorio}")
+					if {_stats.total} is "<none>":
+						setVarYML("staff.%loop-index%.tiempo.total" , "%{_stats.hoy}%" , "{@directorio}")
+						setVarYML("staff.%loop-index%.conexiones.total" , "%{_conexiones}%" , "{@directorio}")
+					else:
+						set {_stats.hoy} to {_stats.hoy} parsed as time span
+						set {_stats.total} to {_stats.total} parsed as time span
+						add {_stats.hoy} to {_stats.total}
+						
+						set {_conexiones.total} to getVarYML("staff.%loop-index%.conexiones.total" , "{@directorio}")
+						set {_conexiones} to {_conexiones} parsed as integer
+						set {_conexiones.total} to {_conexiones.total} parsed as integer
+						add {_conexiones} to {_conexiones.total}
+						
+						wait 1 tick
+						
+						setVarYML("staff.%loop-index%.tiempo.total" , "%{_stats.total}%" , "{@directorio}")
+						setVarYML("staff.%loop-index%.conexiones.total" , "%{_conexiones.total}%" , "{@directorio}")
+						
+						
+				log "-----------------------------------------------------" to "staff-tiempo"
+				
+				message "&a&lHecho." to player
+			
+			# Argumento para ver el tiempo total de los rango staff
+			else if arg 1 is "hoy":
+				
+				message "&3&lTIEMPO ONLINE STAFF - HOY" to player
+				loop {staff.tiempo.online::*}:
+					# set {_tiempo} to getVarYML("staff.%loop-index%.tiempo.total" , "{@directorio}")
+					message "&l&6%loop-index%: &b%{staff.conexiones::%loop-index%}% &3veces, durante &b%loop-value%" to player
+			
+			# Argumento para ver el tiempo de hoy
+			else if arg 1 is "ayer":
+			
+				set {_players::*} to yaml nodes "staff" from "{@directorio}.yml"
+				
+				message "&3&lTIEMPO ONLINE STAFF - AYER" to player
+				loop {_players::*}:
+					set {_tiempo.ayer} to getVarYML("staff.%loop-value%.tiempo.actual" , "{@directorio}")
+					set {_conexiones.ayer} to getVarYML("staff.%loop-value%.conexiones.actual" , "{@directorio}")
+					
+					message "&l&6%loop-value%: &b%{_conexiones.ayer}% &3veces, durante &b%{_tiempo.ayer}%" to player
+			
+			# else if arg 1 is "sacar":
+			
+				# set {_hola} to getVarYML("staff.%player%.tiempo.total" , "{@directorio}")
+				# set {_hola} to {_hola} parsed as time
+				# wait 1 tick
+				# add 69 days to {_hola}
+				# wait 1 tick
+				# message "%{_hola}%" to player
+			
+			else if arg 1 is "total":
+			
+				set {_players::*} to yaml nodes "staff" from "{@directorio}.yml"
+				message "&3&lTIEMPO ONLINE STAFF - TOTAL" to player
+				loop {_players::*}:
+					set {_tiempo.total} to getVarYML("staff.%loop-value%.tiempo.total" , "{@directorio}")
+					set {_conexiones.total} to getVarYML("staff.%loop-value%.conexiones.total" , "{@directorio}")
+					message "&l&6%loop-value%: &b%{_conexiones.total}% &3veces, durante &b%{_tiempo.total}%" to player
+			
+			else:
+			
+				message "&aMensaje de ayuda" to player
+				message "&6Mensaje de ayuda" to player
+				message "&b/iStaff loco/hoy/ayer/mae/total" to player
+				message "&bAlgunos argumentos aún no funcionan correctamente" to player
+				message "" to player
+				
+		else:
+		
+			message "&6&lInformación Staff" to player
+			message "&f Opciones para staff:" to player
+			message "&f &a/iStaff interno&f - Activar chat grupal" to player
+			message "&f (aún sin implementar)" to player
+			
+		stop
+
+#Contador de tiempo utilizando el método de "now"
+every 3 seconds:
+	loop all players:
+		loop-player has permission "essentials.tp"
+		if "%loop-player's suffix%" contains "centinela", "guardian" or "creador":
+			if {staff.tiempo.online::%loop-player%} is not set:
+				set {staff.tiempo.online::%loop-player%} to difference between now and now
+			else:
+				add 3 seconds to {staff.tiempo.online::%loop-player%}
+
+#Contador de número de conexiones
+on join:
+	player has permission "essentials.tp"
+	if "%player's suffix%" contains "centinela", "guardian" or "creador":
+		if {staff.conexiones::%player%} is not set:
+			set {staff.conexiones::%player%} to 1
+		else:
+			add 1 to {staff.conexiones::%player%}
+		

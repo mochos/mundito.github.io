@@ -1,0 +1,199 @@
+#Coliseo
+on rightclick on sign:
+	line 2 of the clicked block is "&l[Arena-1]":
+		player has the permission "skript.carteles":
+			line 3 of the clicked block is "&2Encendido":
+				execute player command "setblock -144 64 782 air"
+				wait 1 seconds
+				set line 3 to "&4Apagado"
+				stop
+			line 3 of the clicked block is "&4Apagado":
+				execute player command "setblock -144 64 782 redstone_block"
+				wait 1 seconds
+				set line 3 to "&2Encendido"
+				stop
+	line 2 of the clicked block is "&l[Arena-2]":
+		player has the permission "skript.carteles":
+			line 3 of the clicked block is "&2Encendido":
+				execute player command "setblock -144 64 785 air"
+				wait 1 seconds
+				set line 3 to "&4Apagado"
+				stop
+			line 3 of the clicked block is "&4Apagado":
+				execute player command "setblock -144 64 785 redstone_block"
+				wait 1 seconds
+				set line 3 to "&2Encendido"
+				stop
+	line 2 of the clicked block is "&l[Puerta-Int]":
+		player has the permission "skript.carteles":
+			line 3 of the clicked block is "&2Abierta":
+				execute player command "fill -178 74 785 -178 74 782 fence"
+				wait 5 tick
+				execute player command "fill -178 73 785 -178 73 782 fence"
+				wait 5 tick
+				execute player command "fill -178 72 785 -178 72 782 fence"
+				wait 5 tick
+				execute player command "fill -178 71 785 -178 71 782 fence"
+				execute player command "particle cloud -178 71 783 1 3 2 0.01 100"
+				wait 1 seconds
+				set line 3 to "&4Cerrada"
+				stop
+			line 3 of the clicked block is "&4Cerrada":
+				execute player command "fill -178 71 785 -178 71 782 air"
+				wait 7 tick
+				execute player command "fill -178 72 785 -178 72 782 air"
+				wait 7 tick
+				execute player command "fill -178 73 785 -178 73 782 air"
+				wait 7 tick
+				execute player command "fill -178 74 785 -178 74 782 air"
+				execute player command "particle cloud -178 71 783 1 3 2 0.01 100"
+				wait 1 seconds
+				set line 3 to "&2Abierta"
+				stop
+	line 2 of the clicked block is "&l[Puerta-Ext]":
+		player has the permission "skript.carteles":
+			line 3 of the clicked block is "&2Abierta":
+				execute player command "fill -195 73 782 -195 73 785 fence"
+				wait 7 tick
+				execute player command "fill -195 72 782 -195 72 785 fence"
+				wait 7 tick
+				execute player command "fill -195 71 782 -195 71 785 fence"
+				execute player command "particle cloud -195 71 783 1 3 2 0.01 100"
+				wait 1 seconds
+				set line 3 to "&4Cerrada"
+				stop
+			line 3 of the clicked block is "&4Cerrada":
+				execute player command "fill -195 71 782 -195 71 785 air"
+				wait 7 tick
+				execute player command "fill -195 72 782 -195 72 785 air"
+				wait 7 tick
+				execute player command "fill -195 73 782 -195 73 785 air"
+				execute player command "particle cloud -195 71 783 1 3 2 0.01 100"
+				wait 1 seconds
+				set line 3 to "&2Abierta"
+				stop
+	line 2 of the clicked block is "&l[Camerino-Int]":
+		player has the permission "skript.carteles":
+			line 3 of the clicked block is "&2Abierta":
+				execute player command "fill -144 73 785 -144 73 785 spruce_fence"
+				execute player command "fill -144 73 782 -144 73 782 spruce_fence"
+				wait 10 tick
+				execute player command "fill -144 73 784 -144 73 784 spruce_fence"
+				execute player command "fill -144 73 783 -144 73 783 spruce_fence"
+				execute player command "particle cloud -144 73 784 1 3 2 0.01 100"
+				wait 1 seconds
+				set line 3 to "&4Cerrada"
+				stop
+			line 3 of the clicked block is "&4Cerrada":
+				execute player command "fill -144 73 784 -144 73 784 air"
+				execute player command "fill -144 73 783 -144 73 783 air"
+				wait 10 tick
+				execute player command "fill -144 73 785 -144 73 785 air"
+				execute player command "fill -144 73 782 -144 73 782 air"
+				execute player command "particle cloud -144 73 784 1 3 2 0.01 100"
+				wait 1 seconds
+				set line 3 to "&2Abierta"
+				stop
+	line 2 of the clicked block is "&l[Camerino-Ext]":
+		player has the permission "skript.carteles":
+			line 3 of the clicked block is "&2Abierta":
+				execute player command "fill -182 70 807 -183 70 807 spruce_fence"
+				wait 5 tick
+				execute player command "fill -182 69 807 -183 69 807 spruce_fence"
+				execute player command "particle cloud -182 69 807 1 3 2 0.01 100"
+				wait 1 seconds
+				set line 3 to "&4Cerrada"
+				stop
+			line 3 of the clicked block is "&4Cerrada":
+				execute player command "fill -182 69 807 -183 69 807 air"
+				wait 5 tick
+				execute player command "fill -182 70 807 -183 70 807 air"
+				execute player command "particle cloud -182 69 807 1 3 2 0.01 100"
+				wait 1 seconds
+				set line 3 to "&2Abierta"
+				stop
+	line 2 of the clicked block is "&l[Inv-Nivel]":
+		player has the permission "skript.carteles":
+			line 3 of the clicked block is "&2Conservar":
+				execute player command "rg flag coliseopvp keep-level deny"
+				execute player command "rg flag coliseopvp keep-inventory deny"
+				wait 1 seconds
+				set line 3 to "&4Perder"
+				stop
+			line 3 of the clicked block is "&4Perder":
+				execute player command "rg flag coliseopvp keep-level allow"
+				execute player command "rg flag coliseopvp keep-inventory allow"
+				wait 1 seconds
+				set line 3 to "&2Conservar"
+				stop
+	line 2 of the clicked block is "&l[Fuegos]":
+		player has the permission "skript.carteles":
+			set line 3 to "&4Ejecuntando..."
+			execute player command "summon FireworksRocketEntity -176 80 763 {LifeTime:20,FireworksItem:{id:fireworks,Count:1,tag:{Fireworks:{Explosions:[{Type:2,Flicker:0,Trail:1,Colors:[15435844,15790320],FadeColors:[4312372,15790320]}]}}}}"
+			wait 7 tick
+			execute player command "summon FireworksRocketEntity -170 80 800 {LifeTime:20,FireworksItem:{id:fireworks,Count:1,tag:{Fireworks:{Explosions:[{Type:1,Flicker:0,Trail:1,Colors:[15435844,15790320],FadeColors:[15790320]}]}}}}"
+			wait 7 tick
+			execute player command "summon FireworksRocketEntity -141 85 767 {LifeTime:20,FireworksItem:{id:fireworks,Count:1,tag:{Fireworks:{Explosions:[{Type:1,Flicker:0,Trail:1,Colors:[15435844,15790320],FadeColors:[15790320]}]}}}}"
+			wait 7 tick
+			execute player command "summon FireworksRocketEntity -140 76 803 {LifeTime:20,FireworksItem:{id:fireworks,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:0,Trail:1,Colors:[15435844,15790320],FadeColors:[11743532,4312372,15790320]}]}}}}"
+			wait 7 tick
+			execute player command "summon FireworksRocketEntity -129 82 784 {LifeTime:20,FireworksItem:{id:fireworks,Count:1,tag:{Fireworks:{Explosions:[{Type:2,Flicker:0,Trail:1,Colors:[15435844,15790320],FadeColors:[4312372,15790320]}]}}}}"
+			wait 7 tick
+			execute player command "summon FireworksRocketEntity -212 84 803 {LifeTime:20,FireworksItem:{id:fireworks,Count:1,tag:{Fireworks:{Explosions:[{Type:1,Flicker:0,Trail:1,Colors:[15435844,15790320],FadeColors:[15790320]}]}}}}"
+			wait 7 tick
+			execute player command "summon FireworksRocketEntity -189 100 783 {LifeTime:20,FireworksItem:{id:fireworks,Count:1,tag:{Fireworks:{Explosions:[{Type:1,Flicker:0,Trail:1,Colors:[15435844,15790320],FadeColors:[15790320]}]}}}}"
+			wait 7 tick
+			execute player command "summon FireworksRocketEntity -154 88 785 {LifeTime:20,FireworksItem:{id:fireworks,Count:1,tag:{Fireworks:{Explosions:[{Type:4,Flicker:0,Trail:1,Colors:[15435844,15790320],FadeColors:[11743532,4312372,15790320]}]}}}}"
+			wait 1 seconds
+			set line 3 to "&2Preparado"
+			stop
+	# else:
+		# message "&cColiseo -- No tienes permiso para usar esta función." to player
+		# stop
+
+#Herrero
+on rightclick on sign:
+	line 1 of the clicked block is "&1[Herrero]":
+		if lore of player's tool contains "&cNo encantable. No reparable.":
+			message "&b&l[HERRERO] &cNo puedes reparar esta herramienta."
+		else if lore of player's tool contains "&fConvierte la lava en roca bajo tus pies." or "&fCongelan el agua bajo tus pies." or "&fTe salvan de una caida de gran altura." or "&fHacen crecer los cultivos que pisas.":
+			message "&b&l[HERRERO] &cNo puedes reparar botas elementales."
+		else:
+			if player is holding any sword or any axe or any spade or any pickaxe or any hoe or any helmet or any chestplate or any leggings or any boots or bow or fishing rod or shears:
+				if player is in "tierraalta":
+					repair tool of player
+					message "&b&l[HERRERO] &rReparado con éxito." to player
+				else:
+					if player's balance is greater than or equal to 1000:
+						tool of the player is enchanted:
+							if player's level is greater than or equal to 30:
+								reduce the player's level by 5
+								execute console command "money take %player% 1000"
+								repair tool of player
+								message "&b&l[HERRERO] &rReparado con éxito." to player
+								stop
+							else:
+								message "&b&l[HERRERO] &rNecesitas un mínimo de &230 &rniveles de experiencia para reparar objetos encantados. De esos niveles se te restarán &25&r para reparar." to player
+								stop
+						tool of the player isn't enchanted:
+							execute console command "money take %player% 1000"
+							repair tool of player
+							message "&b&l[HERRERO] &rReparado con éxito." to player
+							stop
+					else:
+						tool of the player is enchanted:
+							message "&b&l[HERRERO] &rNecesitas como mínimo &2$1,000 &ry &230 &rniveles de experiencia para reparar objetos encantados." to player
+							stop
+						else:
+							message "&b&l[HERRERO] &rNecesitas como mínimo &2$1,000 &rpara reparar objetos." to player
+							stop
+			else:
+				message "&b&l[HERRERO] &rNo tienes ningun objeto para reparar en la mano." to player
+				stop
+
+#Cartel de tienda
+on rightclick on sign:
+	line 1 of the clicked block is "&1[Tienda]":
+		execute player command "tienda"
+		stop
+

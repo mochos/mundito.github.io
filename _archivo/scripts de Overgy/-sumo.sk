@@ -1,0 +1,61 @@
+on any movement:
+	if "%region at player%" contains "coliseopvp":
+		if player don't have the permission "skript.admin":
+			if name of player's helmet is "&6Gran torneo de Sumo":
+				if player has regeneration:
+					#nada
+					stop
+				else:
+					apply potion of regeneration 2 to the player for 5 minutes
+			else:
+				# set {_loc} to location (-140, 72, 784) in player's world
+				# teleport the player to {_loc}
+				teleport the player to location (-140, 72, 784) in "tierramedia" # es mejor todo en una sola línea, no? ñ.ñ
+				clear the player's inventory
+				# la variable se usa más que nada cuando se necesita ese dato más de una vez :3
+				wait 10 ticks
+				message " " to player
+				message " &4&lNo estás preparado para el combate" to player
+				message " &cClic derecho en el cartel &9[Sumo] &c para poder entrar." to player
+				message " " to player
+
+	else:
+		if name of player's helmet is "&6Gran torneo de Sumo":
+			remove helmet from the player
+		if name of player's chestplate is "&6Gran torneo de Sumo":
+			remove chestplate from the player
+		if name of player's boots is "&6Gran torneo de Sumo":
+			remove boots from the player
+		if name of player's leggings is "&6Gran torneo de Sumo":
+			remove leggings from the player
+
+		#Estos no sirvieron ¬¬
+		#if player hasn't regeneration:
+		#if player don't have regeneration:
+		#if player has not regeneration:
+		#if player haven't regeneration:		
+
+on rightclick on sign:
+	line 1 of the clicked block is "&1[Sumo]":
+		remove all potion effects from player
+		clear the player's inventory
+		wait 5 tick
+		equip player with all leather armour
+		wait 1 tick
+		dye player's helmet white
+		dye player's chestplate white
+		dye player's boots white
+		dye player's leggings white
+		wait 1 tick
+		heal the player
+		# add 20 to player's hunger bar
+		execute console command "/feed %player%"
+		wait 1 tick
+		# set {_loc} to location (-161, 72, 783) in player's world
+		teleport the player to location (-161, 72, 783) in "tierramedia"
+		wait 3 tick
+		set the name of the player's helmet to "&6Gran torneo de Sumo"
+		set the name of the player's chestplate to "&6Gran torneo de Sumo"
+		set the name of the player's boots to "&6Gran torneo de Sumo"
+		set the name of the player's leggings to "&6Gran torneo de Sumo"
+		wait 5 tick

@@ -1,0 +1,259 @@
+# on place of TNT or lava:
+	# if player don't have the permission "skript.admin":
+		# player is in "tierrabaja"
+		# message "&cNo puedes usar esto aquí" to player
+		# cancel the event
+
+#Carteles de tiendas
+# on rightclick on sign:
+	# line 1 of the clicked block is "&1[TiendaOP]":
+		# execute player command "buy"
+	# line 1 of the clicked block is "&1[Tienda]":
+		# execute player command "tienda"
+
+#Yunke auto reparable
+# on rightclick on anvil:
+	# if clicked block is an anvil:
+		# set clicked block to anvil
+		# stop
+
+# Carne del infierno
+# on death:
+	# victim is in "infierno":
+		# attacker is a player:
+			# chance of 10%:
+				# drop rotten flesh of unbreaking 10 named "&4&lCarne del infierno" at block 1 above block in front of victim
+
+#Al morir el jugador en tierra baja, infierno o fin, si tiene un seguro para inventario, deja un cofre póstumo
+# on death of player:
+	# if victim is in world "tierrabaja" or "infierno" or "fin" or "test":
+		# if player has 1 paper named "&e&lSeguro para inventario" with lore "&fDeja un cofre protegido con tu inventario tras tu muerte.":
+			# remove 1 paper named "&e&lSeguro para inventario" with lore "&fDeja un cofre protegido con tu inventario tras tu muerte." from the victim
+			# set block at location of victim to chest
+			# set {cofrepostumo::%block at location of victim%} to victim
+			# set {_cofrepostumo} to block at location of victim
+			# add inventory of victim to {_cofrepostumo}
+			# add helmet of victim to {_cofrepostumo}
+			# add chestplate of victim to {_cofrepostumo}
+			# add leggings of victim to {_cofrepostumo}
+			# add boots of victim to {_cofrepostumo}
+			# clear drops
+			# wait 2 seconds
+			# message "&aHas dejado un cofre en tu lecho de muerte. Vuelve a ese lugar para recuperar tus cosas." to victim
+
+#Al tratar romper o abrir un cofre en tierra baja, infierno o fin, si es un cofre póstumo y no es el dueño, cancela el evento.
+#Si es el dueño, desaparece y dropea su contenido.
+# on click on chest:
+	# if player is in world "tierrabaja" or "infierno" or "fin" or "test":
+		# if {cofrepostumo::%clicked block%} is set:
+			# if player is not {cofrepostumo::%clicked block%}:
+				# cancel event
+				# message "&cCofre póstumo de &l%{cofrepostumo::%clicked block%}%&c. Sólo él puede abrirlo o romperlo."
+				# stop
+			# else:
+				# loop blocks in radius 5:
+					# if {cofrepostumo::%loop-block%} is set:
+						# set loop-block to air
+				# stop
+
+#Al explotar cerca de un cofre póstumo, no lo rompe.
+# on explode:
+	# loop blocks in radius 5 of entity:
+		# if {cofrepostumo::%loop-block%} is set:
+			# cancel event
+
+# command music:
+	# executable by: players
+	# trigger:
+		# play midi "test" to player
+		# play noteblock music "/OvergyFight.nbs" for player
+		# message "&eTocando..."
+
+
+# Tesoros de Tarazún
+# on leftclick on chest:
+	# if player have the permission "skript.admin":
+		# if the name of the player's tool is "&e&lLlave de tesoro":
+			# cancel event
+			# message "&aHas creado un cofre del tesoro."
+			# set {tesoro::%clicked block%} to "&6&lTesoro"
+			# stop
+	# else:
+		# if {tesoro::%clicked block%} is "&6&lTesoro":
+			# cancel event
+			# message "&fUtiliza una &e&lLlave de tesoro&f para abrir este cofre."
+			# stop
+
+# on rightclick on chest:
+	# if {tesoro::%clicked block%} is "&6&lTesoro":
+		# if the name of the player's tool is "&e&lLlave de tesoro":
+			# if inventory of targeted block contains 27 air:
+				# cancel event
+				# message "&cEste cofre está vacío. Intenta en otro momento." to player
+				# stop
+			# else:
+				# remove 1 of tool from tool
+				# message "&a¡Has encontrado un tesoro!" to player
+				# set {_efecto} to location of player
+				# spawn 1000 of particle happy villager offset by 2, 2, 2 at {_efecto}
+				# play raw sound "fireworks.launch" at player with pitch 1 volume 10
+				# wait 30 seconds
+				# stop
+		# if the name of the player's tool is "&a&lLlave de tesoro":
+			# cancel event
+			# delete player's tool
+			# message " " to player
+			# message "&cEsta llave es falsa. Te han estafado." to player
+			# message "&fEstá decomisada para evitar más estafas." to player
+			# message " " to player
+			# log "%player%: Tesoro con llave falsa" to "estafas"
+		# else:
+			# if player do not have the permission "skript.admin":
+				# cancel event
+				# message "&fUtiliza una &e&lLlave de tesoro&f para abrir este cofre."
+				# stop
+
+# Evitar poner la llave en cualquier sitio
+# on place:
+	# if the name of the player's tool is "&e&lLlave de tesoro":
+		# cancel event
+		# wait 1 tick
+		# message "&fSólo puedes usar &e&lLlave de tesoro&f para abrir tesoros." to player
+		# stop
+
+# Alimentar conejos
+# on npc right click:
+	# if citizen is named "Dianita":
+		# if player is holding a flower:
+			# message "&6Dianita -> Tu &7» &c❤&f Que romántico. Gracias." to player
+			# remove 1 flower from the player
+			# set {_efecto} to location in front of player
+			# spawn 20 of particle heart offset by 1, 1, 1 at {_efecto}
+		# else:
+			# message "&6Dianita -> Tu &7» &f ¡Hola %player%! Te presento a mis hijitos.%new line%Son &lApache &fy &lPepper&f. Les gusta mucho comer hiervita. A mi casi no me gusta que los extraños se les acerquen pero tu pareces buena persona. Cuando quieras ven a alimentarlos." to player
+	# if player is holding a tall grass:
+		# if citizen is named "Apache":
+			# remove 1 tall grass from the player
+			# set {_efecto} to location in front of player
+			# spawn 20 of particle heart offset by 1, 1, 1 at {_efecto}
+			# chance of 7%:
+				# drop 1 golden carrot
+		# if citizen is named "Pepper":
+			# remove 1 tall grass from the player
+			# set {_efecto} to location in front of player
+			# spawn 20 of particle heart offset by 1, 1, 1 at {_efecto}
+			# chance of 4%:
+				# drop 1 golden carrot
+
+# Entrada al mercado negro
+# on npc right click:
+	# if citizen is named "Jhon":
+		# if name of player's tool is "Chachipistachi":
+			# message "&aVeo que tienes la contraseña para entrar. Pues adelante." to player
+			# wait 2 seconds
+			# set {_loc} to location (-313.5, 30, 650.5) in player's world
+			# apply blindness to player for 4 seconds
+			# play raw sound "portal.trigger" at player with pitch 2 volume 5
+			# wait 1 second
+			# teleport the player to {_loc}
+			# wait 1 second
+			# remove blindness from player
+			# stop
+		# else:
+			# message "&c¿Qué quieres? Si quieres entrar, debes mostrarme la contraseña." to player
+			# stop
+
+
+# on join:
+	# wait 5 seconds
+	# send json of "&6&lPuedes comprar o vender items en la tienda!&r (pasa el mouse en mí)" tooltip "&4Hazme clic!" suggest "/tienda" to player
+
+# on command "/fly":
+	# player is flying
+	# execute console command "/tp %player% %player%"
+	# message "&aFuiste llevado a tierra firme."
+	# stop
+
+# options:
+	# alturaMax: 255
+# on any movement:
+	# if player's gamemode is not creative:
+		# if player's fly mode is true:
+			# if player's y-coordinate is greater than {@alturaMax}:
+				# set {_loc} to player's location
+				# wait 0.5 ticks
+				# set {_y} to y coordinate of {_loc}
+				# wait 0.5 ticks
+				# set {_y} to {_Y} - 3
+				# wait 0.5 ticks
+				# set y coordinate of {_loc} to {_y}
+				# wait 0.5 ticks
+				# teleport the player to {_loc}
+				# set {_loc::x} to x coordinate of player's location
+				# set {_loc::y} to y coordinate of player's location
+				# set {_loc::z} to z coordinate of player's location
+				# make console execute command "/getlocation %{_loc::x}% 253 %{_loc::z}% %player's world%"
+				# wait 1 tick
+				# set {_pLocation} to {ktools.location}
+				# wait 1 tick
+				# teleport the player to {_pLocation}
+				# execute console command "/tp %player% %player%"
+				# message "&cNo puedes volar más allá de {@alturaMax} metros de altura."
+				# stop
+			# stop
+		# stop
+	# stop
+
+# on any movement:
+	# set {_location::x} to x coordinate of player's location
+	# set {_location::y} to y coordinate of player's location
+	# set {_location::z} to z coordinate of player's location
+
+# CUANDO TE DES CUENTA DE ESTO, COMENTA ESTAS LÍNEAS :P
+# CUANDO TE DES CUENTA DE ESTO, COMENTA ESTAS LÍNEAS :P
+# CUANDO TE DES CUENTA DE ESTO, COMENTA ESTAS LÍNEAS :P
+
+#on server list ping:
+#	set {_ip} to ip
+#	loop 3 times:
+#		broadcast "&c&l%{_ip}% ha actualizado la lista de servidores!"
+#		broadcast "&aLorspi, puedes cambiar el mtod con esto :3, revisa varios.sk (al final)"
+#		broadcast " "
+
+#Un ejemplito que encontré por ahí
+# on join:
+	# set {player::%player's ip%} to player
+	# set {uuid::%player's ip%} to "%uuid of player%"
+	# set {uuidtoplayer::%uuid of player%} to player
+# on server ping:
+	# if {player::%ip%} is set:
+		# set motd to "&e&LHi %{player::%ip%}%!"
+
+#Puedes cambiar el motd del sv :D creo :v
+
+# Comando /spawn para ir a tierramedia
+# command /enderchestver [<player=%player%>]:
+	# aliases: /verenderchest, /verec, /ecver
+	# permission: "skript.admin"
+	# trigger:
+		# open the arg 1's ender chest to the player
+		# stop
+
+# on player teleport:
+	# if world is "test":
+		# if player don't have the permission "skript.admin":
+			# log "%player% entró a %world%" to "accesos"
+
+
+# Auditoría de movivientos con ceitiles
+# command /cambioceitil <text>:
+	# executable by: console
+	# trigger:
+		# log "%arg 1% cambió un ceitil por 5 fichas" to "ceitiles"
+		# stop
+
+# command /vendioceitil <text>:
+	# executable by: console
+	# trigger:
+		# log "%arg 1% vendió un ceitil por $400,000" to "ceitiles"
+		# stop

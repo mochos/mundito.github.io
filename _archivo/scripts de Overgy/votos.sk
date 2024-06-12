@@ -1,0 +1,81 @@
+# CONVENCIONES:
+# Usar TAB en lugar de espacios para indentar.
+#
+#Mostrar al jugador la lista de servidores para votar
+command /votar:
+	description: Mostrar al jugador la lista de servidores para votar.
+	executable by: players
+	aliases: /vote, /vota, /voto
+	trigger:
+		if {voto.%player%.conteo} is not set:
+			set {voto.%player%.conteo} to 0
+		message " " to player
+		message " &fVota por &6&lOVERGY &fen los siguientes sitios:" to player
+		send json of "  &e&l» &eMinecraft-MP.com" tooltip "&fClic para abrir el enlace" open "http://minecraft-mp.com/server/124505/vote/" to player
+		send json of "  &e&l» &eMinecraft-Server-List.com" tooltip "&fClic para abrir el enlace" open "http://minecraft-server-list.com/server/357572/vote/" to player
+		send json of "  &e&l» &eMinecraft-Tracker.com" tooltip "&fClic para abrir el enlace" open "https://minecraft-tracker.com/server/3686/vote/" to player
+		send json of "  &e&l» &eMinecraftServers.org" tooltip "&fClic para abrir el enlace" open "http://minecraftservers.org/vote/394759" to player
+		message " &fHas realizado &2%{voto.%player%.conteo}% &rvotos hasta hoy." to player
+		message " " to player
+		stop
+
+#comando para pruebas
+command /votofake:
+	description: Comando para pruebas.
+	executable by: players
+	trigger:
+		delete {voto.%player%.conteo}
+		#add 1 to {voto.%player%.conteo}
+
+#Al votar
+on join:
+	if {voto.%player%.offline} is greater than 0:
+		set {_acu} to 2000 * {voto.%player%.offline}
+		add {voto.%player%.offline} to {voto.%player%.conteo}
+		wait 5 seconds
+		message "&aHas votado con éxito %{voto.%player%.offline}% veces" to player
+		message "&fTe has ganado &2$%{_acu}%&f." to player
+		execute console command "/money give %player% %{_acu}%"
+		delete {_acu}
+		set {voto.%player%.offline} to 0
+		stop
+
+on vote:
+	#Acciones
+	add 1 to {voto.%player%.conteo}
+	wait 1 tick
+	#Mensaje a jugador
+	message "&aHas votado con éxito en &e&l%event-string%" to player
+	message "&fTe has ganado &2$2,000&f." to player
+	execute console command "/money give %player% 2000"
+	if {voto.%player%.conteo} is 1:
+		message "&aPor ser tu primer voto recibes el doble de dinero." to player
+		execute console command "/money give %player% 2000"
+	wait 1 tick
+	chance of 30%:
+		broadcast "&2¡&l%player% &2ha tenido suerte y recibe un &e&lFragmento de llave del votante&2!"
+		execute console command "/crear fragmento %player%"
+		stop
+
+# Comando que ejecutará la consola para hacer el broadcast
+command /votohecho <offline player> <text>:
+	executable by: console
+	trigger:
+		broadcast "&a%arg-1% &fvotó en &l%arg-2%! &fTe amamos &c❤&f"
+		broadcast "&fpuedes ver las opciones para votar con &a/votar&f."
+		if arg 1 is offline:
+			add 1 to {voto.%arg 1%.offline}
+
+# Ejemplo
+# on vote:	
+	# set {premio.%player%} to a rawndom item out of {premios.items::*}
+	# wait 1 tick
+	# give {premio.%player%} to player
+	# broadcast "{@PREFIX} &f%player% &ea voté ! Votez pour gagner un lot !"
+	# broadcast "&bVotez sur: {@VOTELIEN}"
+
+# command /vreward additem:
+	# permission: vreward.admin
+	# trigger:
+		# add tool of player to {premios.items::*}
+		# send "{@PREFIX} &fItem ajouté avec succès dans la liste."

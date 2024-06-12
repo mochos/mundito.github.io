@@ -1,0 +1,419 @@
+﻿on script load:
+    set {mobs::*} to "chicken", "cow", "mooshroom", "pig", "sheep", "squid", "spider", "creeper", "magma_cube", "slime", "horse", "ocelot", and "wolf"
+
+options:
+    Prefix : &6[&ePets&6]&r
+    
+function newPet(p : player, t : string, n : string):
+    set {pet::%{_p}%} to {_t}
+    set {pet.name::%{_p}%} to {_n}
+    if {_t} is "chicken":
+        make console execute "/minecraft:summon Chicken %x-coordinate of {_p}% %y-coordinate of {_p}% %z-coordinate of {_p}% {CustomName:%{_p}%'s %{_n}%,CustomNameVisible:1,Invulnerable:1,PersistenceRequired:1}"
+    else if {_t} is "cow":
+        make console execute "/minecraft:summon Cow %x-coordinate of {_p}% %y-coordinate of {_p}% %z-coordinate of {_p}% {CustomName:%{_p}%'s %{_n}%,CustomNameVisible:1,Invulnerable:1,PersistenceRequired:1}"
+    else if {_t} is "mooshroom":
+        make console execute "/minecraft:summon MushroomCow %x-coordinate of {_p}% %y-coordinate of {_p}% %z-coordinate of {_p}% {CustomName:%{_p}%'s %{_n}%,CustomNameVisible:1,Invulnerable:1,PersistenceRequired:1}"
+    else if {_t} is "pig":
+        make console execute "/minecraft:summon Pig %x-coordinate of {_p}% %y-coordinate of {_p}% %z-coordinate of {_p}% {CustomName:%{_p}%'s %{_n}%,CustomNameVisible:1,Invulnerable:1,PersistenceRequired:1}"
+    else if {_t} is "sheep":
+        make console execute "/minecraft:summon Sheep %x-coordinate of {_p}% %y-coordinate of {_p}% %z-coordinate of {_p}% {CustomName:%{_p}%'s %{_n}%,CustomNameVisible:1,Invulnerable:1,PersistenceRequired:1}"
+    else if {_t} is "squid":
+        make console execute "/minecraft:summon Squid %x-coordinate of {_p}% %y-coordinate of {_p}% %z-coordinate of {_p}% {CustomName:%{_p}%'s %{_n}%,CustomNameVisible:1,Invulnerable:1,PersistenceRequired:1}"
+    else if {_t} is "spider":
+        make console execute "/minecraft:summon Spider %x-coordinate of {_p}% %y-coordinate of {_p}% %z-coordinate of {_p}% {CustomName:%{_p}%'s %{_n}%,CustomNameVisible:1,Invulnerable:1,PersistenceRequired:1}"
+    else if {_t} is "creeper":
+        make console execute "/minecraft:summon Creeper %x-coordinate of {_p}% %y-coordinate of {_p}% %z-coordinate of {_p}% {CustomName:%{_p}%'s %{_n}%,CustomNameVisible:1,Invulnerable:1,PersistenceRequired:1,Fuse:999999}"
+    else if {_t} is "magma_cube":
+        set {_i} to a random integer between 1 and 4
+        make console execute "/minecraft:summon LavaSlime %x-coordinate of {_p}% %y-coordinate of {_p}% %z-coordinate of {_p}% {CustomName:%{_p}%'s %{_n}%,CustomNameVisible:1,Invulnerable:1,PersistenceRequired:1,Size:%{_i}%,ActiveEffects:[{Id:18,Amplifier:255,Duration:999999}]}"
+    else if {_t} is "slime":
+        set {_i} to a random integer between 1 and 4
+        make console execute "/minecraft:summon Slime %x-coordinate of {_p}% %y-coordinate of {_p}% %z-coordinate of {_p}% {CustomName:%{_p}%'s %{_n}%,CustomNameVisible:1,Invulnerable:1,PersistenceRequired:1,Size:%{_i}%,ActiveEffects:[{Id:18,Amplifier:255,Duration:999999}]}"
+    else if {_t} is "horse":
+        make console execute "/minecraft:summon EntityHorse %x-coordinate of {_p}% %y-coordinate of {_p}% %z-coordinate of {_p}% {Type:0,CustomName:""%{_p}%'s %{_n}%"",CustomNameVisible:1,Invulnerable:1,PersistenceRequired:1,ArmorItem:{id:iron_horse_armor},SaddleItem:{id:saddle},Tame:1}"
+    else if {_t} is "ocelot":
+        make console execute "/minecraft:summon Ozelot %x-coordinate of {_p}% %y-coordinate of {_p}% %z-coordinate of {_p}% {CatType:1,CustomName:""%{_p}%'s %{_n}%"",CustomNameVisible:1,PersistenceRequired:1b,CanPickUpLoot:0b,Invulnerable:1,Owner:""%{_p}%""}"
+    else if {_t} is "wolf":
+        set {_i} to a random integer between 1 and 15
+        make console execute "/minecraft:summon Wolf %x-coordinate of {_p}% %y-coordinate of {_p}% %z-coordinate of {_p}% {CustomName:""%{_p}%'s %{_n}%"",CustomNameVisible:1,PersistenceRequired:1b,CanPickUpLoot:0b,Invulnerable:1,Owner:""%{_p}%"",CollarColor:%{_i}%}"
+function removePet(p : player):
+    loop all entities:
+        set {_n2} to "%loop-entity%"
+        replace all " " in {_n2} with "_"
+        if "%{_n2}%" is "%{pet::%{_p}%}%":
+            set {_n::*} to split "%name of loop-entity%" at "'s "
+            if {pet::%{_n::1}%} is set:
+                if {pet.name::%{_n::1}%} is "%{_n::2}%":
+                    delete loop-entity
+function ridePet(p : player):
+    loop all entities:
+        set {_n2} to "%loop-entity%"
+        replace all " " in {_n2} with "_"
+        if "%{_n2}%" is "%{pet::%{_p}%}%":
+            set {_n::*} to split "%name of loop-entity%" at "'s "
+            if {pet::%{_n::1}%} is set:
+                if {pet.name::%{_n::1}%} is "%{_n::2}%":
+                    make {_p} ride loop-entity
+function leashPet(p : player):
+    loop all entities:
+        set {_n2} to "%loop-entity%"
+        replace all " " in {_n2} with "_"
+        if "%{_n2}%" is "%{pet::%{_p}%}%":
+            set {_n::*} to split "%name of loop-entity%" at "'s "
+            if {pet::%{_n::1}%} is set:
+                if {pet.name::%{_n::1}%} is "%{_n::2}%":
+                    make {_p} leash loop-entity
+function petHat(p : player):
+    loop all entities:
+        set {_n2} to "%loop-entity%"
+        replace all " " in {_n2} with "_"
+        if "%{_n2}%" is "%{pet::%{_p}%}%":
+            set {_n::*} to split "%name of loop-entity%" at "'s "
+            if {pet::%{_n::1}%} is set:
+                if {pet.name::%{_n::1}%} is "%{_n::2}%":
+                    make loop-entity ride {_p}
+function unpetHat(p : player):
+    loop all entities:
+        set {_n2} to "%loop-entity%"
+        replace all " " in {_n2} with "_"
+        if "%{_n2}%" is "%{pet::%{_p}%}%":
+            set {_n::*} to split "%name of loop-entity%" at "'s "
+            if {pet::%{_n::1}%} is set:
+                if {pet.name::%{_n::1}%} is "%{_n::2}%":
+                    dismount the passenger from {_p}
+function petCall(p : player):
+    loop all entities:
+        set {_n2} to "%loop-entity%"
+        replace all " " in {_n2} with "_"
+        if "%{_n2}%" is "%{pet::%{_p}%}%":
+            set {_n::*} to split "%name of loop-entity%" at "'s "
+            if {pet::%{_n::1}%} is set:
+                if {pet.name::%{_n::1}%} is "%{_n::2}%":
+                    teleport loop-entity to {_p}
+on vehicle enter:
+    set {_n::*} to split "%name of event-entity%" at "'s "
+    if size of {_n::*} is 2:
+        if "%{_n::1}%" is not "%passenger of event-entity%":
+            message "{@Prefix}&c This is not your mount!"
+            cancel the event
+# on vehicle steer:
+    # set {_n::*} to split "%name of vehicle of player%" at "'s "
+    # if {_n::1} is "%player%":
+        # make vehicle of player pathfind to player with speed 0.3
+        # if event-button is space:
+            # if {pet::%player%} is "chicken":
+                # push vehicle of player upwards at speed 0.4
+            # else if {pet::%player%} is "cow" or "mooshroom" or "pig":
+                # if vehicle of player is not on ground:
+                    # stop
+                # else:
+                    # push vehicle of player upwards at speed 0.8
+                    # push vehicle of player in the direction of player at speed 0.1
+            # else if {pet::%player%} is "spider" or "creeper":
+                # if vehicle of player is not on ground:
+                    # stop
+                # else:
+                    # push vehicle of player upwards at speed 0.8
+                    # push vehicle of player in the direction of player at speed 0.1
+            # else if {pet::%player%} is "slime" or "magma_cube":
+                # if vehicle of player is not on ground:
+                    # stop    
+                # else:
+                    # set {_i} to (slime size of vehicle of player) * 0.25
+                    # push vehicle of player upwards at speed {_i}
+            # else if {pet::%player%} is "ocelot" or "wolf":
+                # if vehicle of player is not on ground:
+                    # stop   
+                # else:
+                    # push vehicle of player upwards at speed 0.6
+        # if event-button is w:
+            # if {pet::%player%} is "chicken":
+                # set yaw of vehicle of player to yaw of player
+                # loop 2 times:
+                    # if vehicle of player is not on ground:
+                        # push vehicle of player upwards at speed 0.1
+                        # wait 10 tick
+                        # push vehicle of player in the direction of player at speed 0.3
+                    # else:
+                        # push vehicle of player in the direction of player at speed 0.3
+            # else if {pet::%player%} is "cow" or "mooshroom" or "pig":
+                # if vehicle of player is not on ground:
+                    # loop 2 times:
+                        # push vehicle of player in the direction of player at speed 0.1
+                        # wait 1 tick
+            # else if {pet::%player%} is "spider" or "creeper":
+                # if vehicle of player is not on ground:
+                    # stop
+                # else:
+                    # push vehicle of player in the direction of player at speed 2.5
+            # else if {pet::%player%} is "slime" or "magma_cube":
+                # if vehicle of player is not on ground:
+                    # stop    
+                # else:
+                    # set {_i} to (slime size of vehicle of player) * 0.3
+                    # push vehicle of player in the direction of player at speed {_i}
+            # else if {pet::%player%} is "ocelot" or "wolf":
+                # if vehicle of player is not on ground:
+                    # push vehicle of player in the direction of player at speed 0.2
+                # else:
+                    # loop 2 times:
+                        # push vehicle of player in the direction of player at speed 1.1
+                        # wait 2 tick
+        # if event-button is a:
+            # if {pet::%player%} is "chicken":
+                # if vehicle of player is not on ground:
+                    # push vehicle of player to the left at speed 0.1
+                # else:
+                    # push vehicle of player to the left at speed 0.3
+            # else if {pet::%player%} is "cow" or "mooshroom" or "pig":
+                # if vehicle of player is not on ground:
+                    # stop
+                # else:
+                    # push vehicle of player left at speed 0.5
+            # else if {pet::%player%} is "spider" or "creeper":
+                # if vehicle of player is not on ground:
+                    # stop
+                # else:
+                    # push vehicle of player left at speed 1
+            # else if {pet::%player%} is "slime" or "magma_cube":
+                # if vehicle of player is not on ground:
+                    # stop    
+                # else:
+                    # push vehicle of player left at speed 2
+            # else if {pet::%player%} is "ocelot" or "wolf":
+                # if vehicle of player is not on ground:
+                    # push vehicle of player left at speed 0.2
+                # else:
+                    # loop 2 times:
+                        # push vehicle of player left at speed 0.2
+                        # wait 2 tick
+        # if event-button is d:
+            # if {pet::%player%} is "chicken":
+                # if vehicle of player is not on ground:
+                    # push vehicle of player to the right at speed 0.1
+                # else:
+                    # push vehicle of player to the right at speed 0.3
+            # else if {pet::%player%} is "cow" or "mooshroom" or "pig":
+                # if vehicle of player is not on ground:
+                    # stop
+                # else:
+                    # push vehicle of player right at speed 0.5
+            # else if {pet::%player%} is "spider" or "creeper":
+                # if vehicle of player is not on ground:
+                    # stop
+                # else:
+                    # push vehicle of player right at speed 1
+            # else if {pet::%player%} is "slime" or "magma_cube":
+                # if vehicle of player is not on ground:
+                    # stop    
+                # else:
+                    # push vehicle of player left at speed 3
+            # else if {pet::%player%} is "ocelot" or "wolf":
+                # if vehicle of player is not on ground:
+                    # push vehicle of player right at speed 0.2
+                # else:
+                    # loop 2 times:
+                        # push vehicle of player right at speed 0.2
+                        # wait 2 tick
+        # if event-button is s:
+            # if {pet::%player%} is "chicken":
+                # if vehicle of player is not on ground:
+                    # push vehicle of player down at speed 0.2
+                # else:
+                    # push vehicle of player backwards at speed 0.2
+            # else if {pet::%player%} is "cow" or "mooshroom" or "pig":
+                # if vehicle of player is not on ground:
+                    # stop
+                # else:
+                    # push vehicle of player backwards at speed 1
+            # else if {pet::%player%} is "spider" or "creeper":
+                # if vehicle of player is not on ground:
+                    # stop
+                # else:
+                    # push vehicle of player backwards at speed 1
+            # else if {pet::%player%} is "slime" or "magma_cube":
+                # if vehicle of player is not on ground:
+                    # stop    
+                # else:
+                    # set {_i} to (slime size of vehicle of player) * 0.2
+                    # push vehicle of player backwards at speed {_i}
+            # else if {pet::%player%} is "ocelot" or "wolf":
+                # if vehicle of player is not on ground:
+                    # push vehicle of player backwards at speed 0.2
+                # else:
+                    # loop 2 times:
+                        # push vehicle of player backwards at speed 0.2
+                        # wait 2 tick
+every 5 second in world "tierrabaja":
+    #Make pet follow player
+    loop all players:
+        if {pet::%loop-player%} is set:
+            set {_p} to loop-player
+            loop all entities:
+                set {_n2} to "%loop-entity-2%"
+                replace all " " in {_n2} with "_"
+                if "%{_n2}%" is "%{pet::%{_p}%}%":
+                    set {_n::*} to split "%name of loop-entity-2%" at "'s "
+                    if {pet::%{_n::1}%} is set:
+                        if {pet.name::%{_n::1}%} is "%{_n::2}%":
+                            if vehicle of {_p} is not set:
+                                if distance between loop-entity-2 and loop-entity-1 is less than 5:
+                                    make loop-entity-2 pathfind to loop-entity-1 with speed 1
+                                else if distance between loop-entity-2 and loop-entity-1 is more than 15:
+                                    teleport loop-entity-2 to loop-entity-1
+                                else:
+                                    make loop-entity-2 pathfind to loop-entity-1 with speed 2
+command /pet [<text>] [<text>] [<text>]:
+    executable by: players
+    trigger:
+        if arg-1 is not set:
+            message ""
+            message "                           {@Prefix} &6&l| &6[&eCommands&6]&r"
+            message ""
+            message "&a/pet new <type> <name>&e Make a new pet"
+            message "&a/pet types&e List all pets that can be made!"
+            message "&a/pet <show/hide>&e Change the visibility of your pet!"
+            message "&a/pet ride&e Ride your pet!"
+            message "&a/pet leash&e Leash your pet to you!"
+            message "&a/pet hat&e Toggle if your pet is on your head!"
+            message "&a/pet call&e Teleport your pet to you!"
+            message "&a/pet remove&e Remove your pet!"
+        else if arg-1 is "new":
+            if player has permission "petsk.new":
+                if arg-2 is set:
+                    if arg-3 is set:
+                        if {pet::%player%} exists:
+                            message "{@Prefix}&c You already have a pet! Delete it using /pet remove"
+                        else:
+                            set {_type} to arg-2
+                            set {_name} to arg-3
+                            loop {mobs::*}:
+                                loop-value is arg-2
+                                set {_mobvalid} to true
+                            if {_mobvalid} is true:
+                                if length of "%arg-2%" is less than 20:
+                                    if "%arg-2%" does not contain " ":
+                                        newPet(player, "%{_type}%", "%{_name}%")
+                                        set {pethidden::%player%} to false
+                                        set {pethat::%player%} to false
+                                        message "{@Prefix}&a Made a new %{_type}% pet named %{_name}%"
+                                    else:
+                                        message "{@Prefix}&c No spaces allowed in name"
+                                else:
+                                    message "{@Prefix}&c Name too long, max length is 20 characthers"
+                            else:
+                                message "{@Prefix}&c Mob type unkown&e /pet types"
+                    else:
+                        message "{@Prefix} &cPlease specify a name!&e /pet new <type> <name>" 
+                else:
+                    message "{@Prefix} &cPlease specify a type&e /pet new <type> <name>" 
+            else:
+                message "{@Prefix} &cNo Permission!" 
+        else if arg-1 is "types":
+            if player has permission "petsk.types":
+                message "                               {@Prefix} | Types"
+                message "&6Minecraft/Skript mobs:&e %{mobs::*}%"
+            else:
+                message "{@Prefix} &cNo Permission!"
+        else if arg-1 is "hide":
+            if player has permission "petsk.hide":
+                if {pet::%player%} exists:
+                    if {pethidden::%player%} is not set:
+                        set {pethidden::%player%} to true
+                        removePet(player)
+                        message "{@Prefix} &aPet has been hidden!"
+                    else if {pethidden::%player%} is false:
+                        set {pethidden::%player%} to true
+                        removePet(player)
+                        message "{@Prefix} &aPet has been hidden!"
+                    else:
+                        message "{@Prefix}&c Pet is already hidden!"
+                else:
+                    message "{@Prefix} &cYou don't have a pet!"
+            else:
+                message "{@Prefix} &cNo Permission!"
+        else if arg-1 is "show":
+            if player has permission "petsk.show":
+                if {pet::%player%} exists:
+                    if {pethidden::%player%} is not set:
+                        message "{@Prefix}&c You pet is not hidden!"
+                    else if {pethidden::%player%} is true:
+                        newPet(player, "%{pet::%player%}%", "%{pet.name::%player%}%")
+                        message "{@Prefix} &aPet has been reshown"
+                        set {pethidden::%player%} to false
+                    else:
+                        message "{@Prefix}&c Your pet is not hidden!"
+                else:
+                    message "{@Prefix} &cYou don't have a pet!"
+            else:
+                message "{@Prefix} &cNo Permission!"
+        else if arg-1 is "ride":
+            if player has permission "petsk.ride":
+                if {pet::%player%} exists:
+                    if {pet::%player%} is "squid":
+                        message "{@Prefix} &cSquids can not be ridden on!"
+                    else:
+                        ridePet(player)
+                        message "{@Prefix} &aYou are now riding your pet!"
+                else:
+                    message "{@Prefix} &cYou don't have a pet!"
+            else:
+                message "{@Prefix} &cNo Permission!"
+        else if arg-1 is "leash":
+            if player has permission "petsk.lead" or "petsk.leash":
+                if {pet::%player%} exists:
+                    leashPet(player)
+                    message "{@Prefix} &aYou have leashed your pet!"
+                else:
+                    message "{@Prefix} &cYou don't have a pet!"
+            else:
+                message "{@Prefix} &cNo Permission!"
+        else if arg-1 is "hat":
+            if player has permission "petsk.hat":
+                if {pet::%player%} exists:
+                    if {pethat::%player%} is false:
+                        petHat(player)
+                        message "{@Prefix} &aYou have made your pet into a hat! Do the command again to take it off!"
+                        set {pethat::%player%} to true
+                    else if {pethat::%player%} is true:
+                        unpetHat(player)
+                        message "{@Prefix} &aYou have taken your pet hat off!"
+                        set {pethat::%player%} to false
+                else:
+                    message "{@Prefix} &cYou don't have a pet!"
+            else:
+                message "{@Prefix} &cNo Permission!"
+        else if arg-1 is "call":
+            if player has permission "petsk.call":
+                if {pet::%player%} exists:
+                    petCall(player)
+                    message "{@Prefix} &aYour pet has been called by your side!"
+                else:
+                    message "{@Prefix} &cYou don't have a pet!"
+            else:
+                message "{@Prefix} &cNo Permission!"
+        else if arg-1 is "remove":
+            if player has permission "petsk.remove":
+                if {pet::%player%} exists:
+                    removePet(player)
+                    delete {pet::%player%}
+                    delete {pet.name::%player%}                
+                    delete {pethidden::%player%}
+                    delete {pethat::%player%}
+                    message "{@Prefix} &6Deleted your pet!"
+                else:
+                    message "{@Prefix} &cYou don't have a pet!"
+            else:
+                message "{@Prefix} &cNo Permission!"
+on death:
+    set {_n::*} to split "%name of victim%" at "-"
+    if size of {_n::*} is 2:
+        clear drops
+on damage of player:
+    set {_n2} to "%attacker%"
+    replace all " " in {_n2} with "_"
+    if "%{_n2}%" is "%{pet::%victim%}%":
+        set {_n::*} to split "%name of attacker%" at "'s "
+        if {pet::%{_n::1}%} is set:
+            if {pet.name::%{_n::1}%} is "%{_n::2}%":
+                cancel the event

@@ -1,0 +1,139 @@
+#Tienda en mantenimiento
+#on command "/tienda":
+#	if player don't have the permission "skript.admin":
+#		cancel event
+#		message " " to player
+#		message " &4&k!! &4&lMANTIENIMIENTO &4&k!!" to player
+#		message " Hola %player%. La tienda está cerrada temporalmente por mantenimiento." to player
+#		message " " to player
+#		message " Disculpa las molestias." to player
+#		message " " to player
+
+# Evita caer y morir al deshabilitar vuelo en pleno vuelo.
+on command "/fly":
+	player is flying
+	execute console command "/tp %player% %player%"
+	message "&aFuiste llevado a tierra firme." to player
+	stop
+
+# Espiar comandos
+on command:
+	if "%command%" is not "msg","r" or "m":
+		if "%player%" is "<none>" or "PantallazoAzul":
+			stop
+		else:
+			set {_comando} to "&7%player% -> /%complete command%"
+			wait 2 ticks
+			loop all players:
+				if loop-player has permission "skript.spy":
+					if loop-player is "PantallazoAzul":
+						send "%{_comando}%" to loop-player
+			stop
+	else:
+		stop
+
+# Evita acceder a las homes de admins.
+on command "/home lorspi:":
+	player don't have the permission "skript.admin"
+	cancel the event
+	send "&c¡No tienes acceso a eso!"
+	wait 20 ticks
+	log "%player% trató de viajar al home %arguments% de lorspi" to "accesos"
+	execute console command "/mail send lorspi %player% trató de ir a tu home."
+	stop
+
+on command "/home PantallazoAzul:":
+	player don't have the permission "skript.admin"
+	cancel the event
+	send "&c¡No tienes acceso a eso!"
+	wait 20 ticks
+	log "%player% trató de viajar al home %arguments% de lorspi" to "accesos"
+	execute console command "/mail send PantallazoAzul %player% trató de ir a tu home."
+	stop
+
+
+on command "/home Rosuor:":
+	player don't have the permission "skript.admin"
+	cancel the event
+	send "&c¡No tienes acceso a eso!"
+	wait 20 ticks
+	log "%player% trató de viajar al home %arguments% de SN_Rosuor" to "accesos"
+	execute console command "/mail send Rosuor %player% trató de ir a tu home."
+	stop
+
+# Evita acceder al inventario de admins.
+on command "/invsee":
+	if "%arguments%" contains "lorspi","PantallazoAzul" or "SN_Rosuor":
+		player don't have the permission "skript.admin"
+		cancel the event
+		send "&c¡No tienes acceso a eso!"
+		wait 20 ticks
+		log "%player% trató de acceder al inventario de %arguments%" to "accesos"
+		stop
+
+# Hacer log cuando alguien intenta /kit
+on command "/kit":
+	if "%executor%" contains "CONSOLE":
+		stop
+	else:
+		log "%executor% usó /kit %arguments%" to "givenKits"
+		stop
+
+# Achievement nether
+# on command "/warp infierno":
+	# wait 80 ticks
+	# execute console command "achievement give achievement.portal %player%"
+
+# Achievement fin
+# on command "/warp fin":
+	# wait 80 ticks
+	# execute console command "achievement give achievement.theEnd %player%"
+
+
+# Comando /spawn para ir a tierramedia
+command /enderchestver [<player=%player%>]:
+	aliases: /verenderchest, /verec, /ecver
+	permission: "skript.admin"
+	trigger:
+		open the arg 1's ender chest to the player
+		stop
+
+on player teleport:
+	wait 5 ticks
+	player is in "test"
+	player don't have the permission "skript.admin"
+	log "%player% entró a %world%" to "accesos"
+	execute console command "/mail send lorspi %player% entró a test"
+	stop
+
+
+#Auditoría de movivientos con ceitiles
+command /cambioceitil <text>:
+	executable by: console
+	trigger:
+		log "%arg 1% cambió un ceitil por 5 fichas" to "ceitiles"
+		stop
+
+command /vendioceitil <text>:
+	executable by: console
+	trigger:
+		log "%arg 1% vendió un ceitil por $400,000" to "ceitiles"
+		stop
+
+
+on break of mob spawner:
+	if player has the permission "spawner.mine.all":
+		#damage tool by 2000
+		play raw sound "random.break" at player with pitch 1 volume 7
+		wait 1 tick
+		disenchant the player's tool 
+		stop
+
+#on leftclick on a chest:
+#	if player has the permission "skript.admin":
+#		player is holding a golden shovel:
+#			cancel event
+#			add inventory of player to {_cofre}
+#			message "%{_cofre}%" to player
+#			#remove 5 wool from the inventory of the clicked block
+#			stop
