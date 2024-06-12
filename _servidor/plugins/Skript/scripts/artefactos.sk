@@ -1,0 +1,67 @@
+on rightclick with stick:
+    if name of player's tool contains "&6&lArtefactos":
+        set {_inv} to a new chest inventory with 2 row named "&eArtefactos"
+        loop 18 times:
+            set slot (loop-number - 1) of {_inv} to {player_inventory::%uuid of player%::slot-%loop-number%}
+        open {_inv} to player
+        #send "Abierto" to player
+
+on inventory close:
+    if name of event-inventory is "&eArtefactos":
+        loop 18 times:
+            set {player_inventory::%uuid of player%::slot-%loop-number%} to slot (loop-number - 1) of event-inventory
+        #send "Cerrado" to player
+
+
+#Item
+# Salto doble
+# Quita daño de caída
+
+#Item
+# Saltar en el aire
+
+#Item
+# Visión nocturna
+
+#Item
+# Respiras bajo el agua
+# Agilidad al bucear
+
+#Item
+# Los hostiles no te ven
+# Inmune al pvp
+# No puede atacar jugadores
+
+#Item
+# Caminar sobre el agua
+
+#Item
+# Cancela la muerte
+# 1 uso
+# Apliable
+
+#Item
+# Aumenta el daño al atacar
+# Invencibilidad temporal al recibir daño
+# Absorbes vida al atacar no muertos
+
+#Item
+# Corres más rápido
+# Subes bloques de 1 altura
+
+#Item
+# Caes lentamente
+
+#Item
+# Te alimenta automáticamente
+
+#Item
+# Atrae objetos cercanos
+
+#Item
+# Aumenta corazones de vida
+
+#Item
+# Mas loot de mobs
+# Más experiencia de mobs
+# Mas fortuna al picar

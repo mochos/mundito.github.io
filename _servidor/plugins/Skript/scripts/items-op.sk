@@ -4,6 +4,7 @@
 #        # Reducir durabilidad en 1
 #        damage player's tool by 1
 
+# Cofre de ender portátil -------------------------------------------------------------------------
 on rightclick with echo shard:
     if name of player's tool contains "&d&lCofre de ender portátil":
         send "&aHas hecho clic derecho con el ítem renombrado &6&lCeitil &a!" to player
@@ -15,8 +16,13 @@ on rightclick with echo shard:
 #/itemlore add &fUn solo uso/
 # Poner encantamiento oculto
 
+# Mesa de crafteo portátil --------------------------------------------------------------------------
 
-#Taladro
+# Pendiente
+# Usos limitados
+
+
+#Taladro -------------------------------------------------------------------------------------------
 on block break:
     if name of player's tool contains "&9&lInstaminador":
         damage player's tool by 3
