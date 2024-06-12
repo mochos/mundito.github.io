@@ -1,3 +1,19 @@
+
+# Alitas de pollo -------------------------------------------------------------------------
+on consume of cooked chicken:
+    if name of player's tool contains "&6Alita de pollo":
+        apply slowness 1 to player for 30 seconds
+        apply saturation 2 to player for 30 seconds
+        apply strength 2 to player for 60 seconds
+
+
+# Pan de masa madre -------------------------------------------------------------------------
+on consume of bread:
+    if name of player's tool contains "&6Pan de masa madre":
+        apply regeneration 2 to player for 10 seconds
+        apply absorption 2 to player for 120 seconds
+        apply resistance 2 to player for 60 seconds
+
 #on rightclick with any tool:
 #    if name of player's tool contains "&6&lEC":
 #        send "&aHas hecho clic derecho con el ítem renombrado &6&lCeitil &a!" to player
@@ -5,6 +21,11 @@
 #        damage player's tool by 1
 
 # Cofre de ender portátil -------------------------------------------------------------------------
+
+#/itemname &d&lCofre de ender portátil
+#/itemlore add &fUn solo uso
+# Poner encantamiento oculto
+
 on rightclick with echo shard:
     if name of player's tool contains "&d&lCofre de ender portátil":
         send "&aHas hecho clic derecho con el ítem renombrado &6&lCeitil &a!" to player
@@ -12,9 +33,7 @@ on rightclick with echo shard:
         play sound "block.ender_chest.open" with volume 1 to the player
         open player's ender chest to the player
 
-#/itemname &d&lCofre de ender portátil
-#/itemlore add &fUn solo uso/
-# Poner encantamiento oculto
+
 
 # Mesa de crafteo portátil --------------------------------------------------------------------------
 
@@ -23,11 +42,17 @@ on rightclick with echo shard:
 
 
 #Taladro -------------------------------------------------------------------------------------------
+
+#/itemname &9&lInstaminador
+#/itemlore add &fRompe un radio de 3x3 bloques
+#/itemlore add &cNo se puede reparar
+# Poner una versión con eficiencia 5
+
 on block break:
     if name of player's tool contains "&9&lInstaminador":
         damage player's tool by 3
         loop blocks in radius 1.8 of event-block:
-            if loop-block is stone or cobblestone or obsidian or deepslate or any ore:
+            if loop-block is stone or cobblestone or obsidian or deepslate or netherrack:
                 drop loop-block
                 set loop-block to air
                 play sound "dig.stone" with volume 1 to player
