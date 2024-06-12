@@ -21,7 +21,7 @@
 - lorspi
 - _lorspi
 '127_0_0_1':
-- lorspi
 - elPantallazoAzul
+- lorspi
 - 10r571
 - sirpol
