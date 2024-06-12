@@ -202,8 +202,8 @@ on inventory click:
             send "%{@banco}%&cNo tienes suficientes &6&lcesmeraldas &cpara cambiar." to player
     if index of event-slot is 14:
         #send "Retirar 500"
-        if player has 10 of emerald:
-            remove 10 of emerald from player's inventory
+        if player has 50 of emerald:
+            remove 50 of emerald from player's inventory
             give 500 of sunflower named "&6&lCeitil" with lore "&7Banco Central" to player's inventory
             send "%{@banco}%&aHas depositado &6&l$500 ceitiles &aen tu inventario." to player
             execute console command "/emitirceitil %player% 500"
@@ -211,8 +211,8 @@ on inventory click:
             send "%{@banco}%&cNo tienes suficientes &6&lcesmeraldas &cpara cambiar." to player
     if index of event-slot is 23:
         #send "Depositar 500"
-        if player has 10 of emerald:
-            remove 10 of emerald from player's inventory
+        if player has 50 of emerald:
+            remove 50 of emerald from player's inventory
             execute console command "eco give %player% 500"
             send "%{@banco}%&aHas depositado &6&l$500 ceitiles &aen tu cuenta." to player
             execute console command "/emitirceitil %player% 500"
