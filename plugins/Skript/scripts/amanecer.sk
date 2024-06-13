@@ -1,0 +1,18 @@
+on bed enter:
+    if time is night:
+        broadcast "&e%player% está durmiendo. ¡Va a amanecer pronto! Escribe /no para cancelar."
+        set {sleep.cancel} to false
+        wait 10 seconds
+        if {sleep.cancel} is false:
+            while time is not day:
+                add 100 ticks to time in world
+                wait 1 ticks
+            broadcast "&e¡Ha amanecido!"
+
+command /no:
+    trigger:
+        if {sleep.cancel} is false:
+            set {sleep.cancel} to true
+            broadcast "&c¡El amanecer ha sido cancelado por %player%!"
+        else:
+            send "&c¡El amanecer ha sido cancelado por %player%!"
