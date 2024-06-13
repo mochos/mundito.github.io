@@ -1,8 +1,0 @@
-isEnabled: true
-structureType:
-- SURFACE
-validWorldEnvironments:
-- NORMAL
-- CUSTOM
-validBiomes: []
-treasureFilename: treasure_overworld_surface.yml

@@ -1,7 +1,0 @@
-options:
-  max_logs: 128
-  auto_pickup_drops: false
-  permission_to_decapitate: ''
-  diagonal_logs: false
-  mangrove_roots: false
-  shift_to_activate: false

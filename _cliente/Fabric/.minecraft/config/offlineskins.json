@@ -1,9 +1,0 @@
-{
-  "useMojang": true,
-  "useCrafatar": false,
-  "useCustomServer": false,
-  "hostCustomServer": "http://example.com",
-  "useCustomServer2": true,
-  "hostCustomServer2Skin": "https://raw.githubusercontent.com/mochos/mochos.github.io/main/skins/skins/%name%.png",
-  "hostCustomServer2Cape": "https://raw.githubusercontent.com/mochos/mochos.github.io/main/skins/capes/%name%.png"
-}

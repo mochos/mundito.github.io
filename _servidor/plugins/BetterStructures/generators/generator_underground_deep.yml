@@ -1,8 +1,0 @@
-isEnabled: true
-structureType:
-- UNDERGROUND_DEEP
-validWorldEnvironments:
-- NORMAL
-- CUSTOM
-validBiomes: []
-treasureFilename: treasure_overworld_underground.yml
