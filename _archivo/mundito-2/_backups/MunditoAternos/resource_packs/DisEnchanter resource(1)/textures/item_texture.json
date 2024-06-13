@@ -1,9 +1,0 @@
-{
-   "resource_pack_name" : "vanilla",
-   "texture_data" : {
-      "slot_shield" : {
-         "textures" : "textures/slot_items/shield"
-      }
-   },
-   "texture_name" : "atlas.items"
-}
