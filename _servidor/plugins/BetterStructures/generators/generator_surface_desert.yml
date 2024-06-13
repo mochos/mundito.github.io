@@ -1,7 +1,0 @@
-isEnabled: true
-structureType:
-- SURFACE
-validBiomes:
-- DESERT
-- CUSTOM
-treasureFilename: treasure_overworld_surface.yml
