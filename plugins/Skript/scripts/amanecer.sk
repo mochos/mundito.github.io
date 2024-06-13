@@ -5,7 +5,7 @@ on bed enter:
         wait 10 seconds
         if {sleep.cancel} is false:
             while time is not day:
-                add 100 ticks to time in world
+                add 60 ticks to time in world
                 wait 1 ticks
             broadcast "&e¡Ha amanecido!"
 
@@ -16,3 +16,19 @@ command /no:
             broadcast "&c¡El amanecer ha sido cancelado por %player%!"
         else:
             send "&c¡El amanecer ha sido cancelado por %player%!"
+
+command /dia:
+    permission: mundito.admin
+    trigger:
+        while time is not day:
+            add 60 ticks to time
+            wait 1 ticks
+        broadcast "&e¡Los dioses nos han regalado la luz de un nuevo día!"
+
+command /noche:
+    permission: mundito.admin
+    trigger:
+        while time is day:
+            add 60 ticks to time
+            wait 1 ticks
+        broadcast "&e¡Los dioses nos han dejado en la oscuridad de la noche!"

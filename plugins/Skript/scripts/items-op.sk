@@ -1,3 +1,132 @@
+# Capturador de criaturas -------------------------------------------------------------------------
+on shoot:
+    if projectile is snowball:
+        shooter is a player
+        name of shooter's tool is "&6&lCapturador de criaturas"
+        # Estadisticas
+        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+        #------------
+        set {_usos} to yaml value "itemsop.capturador.lanzar.total" from "estadisticas"
+        if {_usos} is not set:
+            set {_usos} to 0
+        add 1 to {_usos}
+        set yaml value "itemsop.capturador.lanzar.total" from "estadisticas" to {_usos}
+        #------------
+        set {_player} to shooter
+        set {_usosplayer} to yaml value "itemsop.capturador.lanzar.%{_player}%" from "estadisticas"
+        if {_usosplayer} is not set:
+            set {_usosplayer} to 0
+        add 1 to {_usosplayer}
+        set yaml value "itemsop.capturador.lanzar.%{_player}%" from "estadisticas" to {_usosplayer}
+        #------------
+        wait 1 tick
+        save yaml "estadisticas"
+
+
+# no encuentro como validar esto. Lo golpea pero no le hace daño. ¿como se valida? No sirve click o leftclick.
+on damage of entity:
+    attacker is a player
+    if name of attacker's tool is "&6&lCapturador de criaturas":
+        #send "&a¡Has golpeado una entidad con el Capturador de criaturas!" to attacker
+        # Estadisticas
+        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+        #------------
+        set {_usos} to yaml value "itemsop.capturador.golpear.total" from "estadisticas"
+        if {_usos} is not set:
+            set {_usos} to 0
+        add 1 to {_usos}
+        set yaml value "itemsop.capturador.golpear.total" from "estadisticas" to {_usos}
+        #------------
+        set {_player} to attacker
+        set {_usosplayer} to yaml value "itemsop.capturador.golpear.%{_player}%" from "estadisticas"
+        if {_usosplayer} is not set:
+            set {_usosplayer} to 0
+        add 1 to {_usosplayer}
+        set yaml value "itemsop.capturador.golpear.%{_player}%" from "estadisticas" to {_usosplayer}
+        #------------
+        wait 1 tick
+        save yaml "estadisticas"
+
+
+# Tragos y bebidas -------------------------------------------------------------------------
+on consume of potion:
+    if name of player's tool contains "&eCerveza":
+        # Estadisticas
+        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+        #------------
+        set {_usos} to yaml value "itemsop.cerveza.total" from "estadisticas"
+        if {_usos} is not set:
+            set {_usos} to 0
+        add 1 to {_usos}
+        set yaml value "itemsop.cerveza.total" from "estadisticas" to {_usos}
+        #------------
+        set {_player} to player
+        set {_usosplayer} to yaml value "itemsop.cerveza.%{_player}%" from "estadisticas"
+        if {_usosplayer} is not set:
+            set {_usosplayer} to 0
+        add 1 to {_usosplayer}
+        set yaml value "itemsop.cerveza.%{_player}%" from "estadisticas" to {_usosplayer}
+        #------------
+        wait 1 tick
+        save yaml "estadisticas"
+    if name of player's tool contains "&cCubalibre":
+        # Estadisticas
+        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+        #------------
+        set {_usos} to yaml value "itemsop.cubalibre.total" from "estadisticas"
+        if {_usos} is not set:
+            set {_usos} to 0
+        add 1 to {_usos}
+        set yaml value "itemsop.cubalibre.total" from "estadisticas" to {_usos}
+        #------------
+        set {_player} to player
+        set {_usosplayer} to yaml value "itemsop.cubalibre.%{_player}%" from "estadisticas"
+        if {_usosplayer} is not set:
+            set {_usosplayer} to 0
+        add 1 to {_usosplayer}
+        set yaml value "itemsop.cubalibre.%{_player}%" from "estadisticas" to {_usosplayer}
+        #------------
+        wait 1 tick
+        save yaml "estadisticas"
+    if name of player's tool contains "&bAguardiente":
+        # Estadisticas
+        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+        #------------
+        set {_usos} to yaml value "itemsop.aguardiente.total" from "estadisticas"
+        if {_usos} is not set:
+            set {_usos} to 0
+        add 1 to {_usos}
+        set yaml value "itemsop.aguardiente.total" from "estadisticas" to {_usos}
+        #------------
+        set {_player} to player
+        set {_usosplayer} to yaml value "itemsop.aguardiente.%{_player}%" from "estadisticas"
+        if {_usosplayer} is not set:
+            set {_usosplayer} to 0
+        add 1 to {_usosplayer}
+        set yaml value "itemsop.aguardiente.%{_player}%" from "estadisticas" to {_usosplayer}
+        #------------
+        wait 1 tick
+        save yaml "estadisticas"
+    if name of player's tool contains "&aAbsenta ☠":
+        # Estadisticas
+        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+        #------------
+        set {_usos} to yaml value "itemsop.absenta.total" from "estadisticas"
+        if {_usos} is not set:
+            set {_usos} to 0
+        add 1 to {_usos}
+        set yaml value "itemsop.absenta.total" from "estadisticas" to {_usos}
+        #------------
+        set {_player} to player
+        set {_usosplayer} to yaml value "itemsop.absenta.%{_player}%" from "estadisticas"
+        if {_usosplayer} is not set:
+            set {_usosplayer} to 0
+        add 1 to {_usosplayer}
+        set yaml value "itemsop.absenta.%{_player}%" from "estadisticas" to {_usosplayer}
+        #------------
+        wait 1 tick
+        save yaml "estadisticas"
+
 
 # Alitas de pollo -------------------------------------------------------------------------
 on consume of cooked chicken:
@@ -5,6 +134,24 @@ on consume of cooked chicken:
         apply slowness 1 to player for 30 seconds
         apply saturation 2 to player for 30 seconds
         apply strength 2 to player for 60 seconds
+        # Estadisticas
+        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+        #------------
+        set {_usos} to yaml value "itemsop.alitas.total" from "estadisticas"
+        if {_usos} is not set:
+            set {_usos} to 0
+        add 1 to {_usos}
+        set yaml value "itemsop.alitas.total" from "estadisticas" to {_usos}
+        #------------
+        set {_player} to player
+        set {_usosplayer} to yaml value "itemsop.alitas.%{_player}%" from "estadisticas"
+        if {_usosplayer} is not set:
+            set {_usosplayer} to 0
+        add 1 to {_usosplayer}
+        set yaml value "itemsop.alitas.%{_player}%" from "estadisticas" to {_usosplayer}
+        #------------
+        wait 1 tick
+        save yaml "estadisticas"
 
 
 # Pan de masa madre -------------------------------------------------------------------------
@@ -13,12 +160,25 @@ on consume of bread:
         apply regeneration 2 to player for 10 seconds
         apply absorption 2 to player for 120 seconds
         apply resistance 2 to player for 60 seconds
+        # Estadisticas
+        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+        #------------
+        set {_usos} to yaml value "itemsop.panmadre.total" from "estadisticas"
+        if {_usos} is not set:
+            set {_usos} to 0
+        add 1 to {_usos}
+        set yaml value "itemsop.panmadre.total" from "estadisticas" to {_usos}
+        #------------
+        set {_player} to player
+        set {_usosplayer} to yaml value "itemsop.panmadre.%{_player}%" from "estadisticas"
+        if {_usosplayer} is not set:
+            set {_usosplayer} to 0
+        add 1 to {_usosplayer}
+        set yaml value "itemsop.panmadre.%{_player}%" from "estadisticas" to {_usosplayer}
+        #------------
+        wait 1 tick
+        save yaml "estadisticas"
 
-#on rightclick with any tool:
-#    if name of player's tool contains "&6&lEC":
-#        send "&aHas hecho clic derecho con el ítem renombrado &6&lCeitil &a!" to player
-#        # Reducir durabilidad en 1
-#        damage player's tool by 1
 
 # Cofre de ender portátil -------------------------------------------------------------------------
 
@@ -31,7 +191,24 @@ on rightclick with echo shard:
         remove 1 of echo shard named "&d&lCofre de ender portátil" from player's inventory
         play sound "block.ender_chest.open" with volume 1 to the player
         open player's ender chest to the player
-
+        # Estadisticas
+        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+        #------------
+        set {_usos} to yaml value "itemsop.cofreender.total" from "estadisticas"
+        if {_usos} is not set:
+            set {_usos} to 0
+        add 1 to {_usos}
+        set yaml value "itemsop.cofreender.total" from "estadisticas" to {_usos}
+        #------------
+        set {_player} to player
+        set {_usosplayer} to yaml value "itemsop.cofreender.%{_player}%" from "estadisticas"
+        if {_usosplayer} is not set:
+            set {_usosplayer} to 0
+        add 1 to {_usosplayer}
+        set yaml value "itemsop.cofreender.%{_player}%" from "estadisticas" to {_usosplayer}
+        #------------
+        wait 1 tick
+        save yaml "estadisticas"
 
 
 # Mesa de crafteo portátil --------------------------------------------------------------------------
@@ -50,6 +227,24 @@ on rightclick with echo shard:
 on block break:
     if name of player's tool contains "&9&lInstaminador":
         damage player's tool by 3
+        # Estadisticas
+        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+        #------------
+        set {_usos} to yaml value "itemsop.taladro.total" from "estadisticas"
+        if {_usos} is not set:
+            set {_usos} to 0
+        add 1 to {_usos}
+        set yaml value "itemsop.taladro.total" from "estadisticas" to {_usos}
+        #------------
+        set {_player} to player
+        set {_usosplayer} to yaml value "itemsop.taladro.%{_player}%" from "estadisticas"
+        if {_usosplayer} is not set:
+            set {_usosplayer} to 0
+        add 1 to {_usosplayer}
+        set yaml value "itemsop.taladro.%{_player}%" from "estadisticas" to {_usosplayer}
+        #------------
+        wait 1 tick
+        save yaml "estadisticas"
         loop blocks in radius 1.8 of event-block:
             if loop-block is stone or cobblestone or obsidian or deepslate or netherrack or tuff or andesite or diorite or granite:
                 drop loop-block
@@ -80,3 +275,5 @@ on enchant:
     if name of event-item contains "&9&lInstaminador" or "&9&lDerribadora":
         cancel event
         message "&cNo puedes encantar esta herramienta."
+
+# --------------------------------------------------------------------------------------------------------------------
