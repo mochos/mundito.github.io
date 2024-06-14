@@ -1,4 +1,5 @@
 on bed enter:
+    wait 1 tick
     if time is night:
         #loop all players:
         #    if loop-player is not player:
