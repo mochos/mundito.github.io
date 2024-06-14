@@ -288,6 +288,9 @@ on enchant:
 #/itemlore add &cNo se puede reparar
 # Poner una versión con eficiencia 5
 
+
+# Me faltó ponerle el desgaste de la herramienta en cada uno de los casos !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 on join:
     set {items.impulso.%player%} to false
 
