@@ -414,6 +414,7 @@
   },
   "minecraft:adventure/kill_all_mobs": {
     "criteria": {
+      "minecraft:blaze": "2024-06-14 10:30:48 -0500",
       "minecraft:skeleton": "2024-05-22 11:03:11 -0500",
       "minecraft:spider": "2024-05-20 11:20:18 -0500",
       "minecraft:creeper": "2024-05-22 15:45:37 -0500",
@@ -1171,6 +1172,12 @@
   "minecraft:recipes/misc/nether_brick": {
     "criteria": {
       "has_netherrack": "2024-06-12 17:14:36 -0500"
+    },
+    "done": true
+  },
+  "minecraft:adventure/kill_mob_near_sculk_catalyst": {
+    "criteria": {
+      "kill_mob_near_sculk_catalyst": "2024-06-14 10:26:34 -0500"
     },
     "done": true
   },

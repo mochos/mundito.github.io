@@ -1,0 +1,11 @@
+itemsop:
+    brisa:
+        caida:
+            total: 12
+            player: 12
+        ataque:
+            total: 3
+            player: 3
+        impulso:
+            total: 8
+            lorspi: 8

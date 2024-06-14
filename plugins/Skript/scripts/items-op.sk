@@ -217,7 +217,7 @@ on rightclick with echo shard:
 # Usos limitados
 
 
-#Taladro -------------------------------------------------------------------------------------------
+#Instaminador -------------------------------------------------------------------------------------------
 
 #/itemname &9&lInstaminador
 #/itemlore add &fRompe un radio de 3x3 bloques
@@ -255,25 +255,125 @@ on block break:
 #Evita reparar con comando
 on command "/repair":
     if player don't have the permission "skript.admin":
-        if name of player's tool contains "&9&lInstaminador" or "&9&lDerribadora":
+        if name of player's tool contains "&9&lInstaminador" or "&9&lDerribadora" or "&3&lBrisa Tempestuosa":
             cancel event
             message "&cNo puedes reparar esta herramienta."
 
 #Evita reparar o encantar con yunque
 on anvil prepare:
-    if name of event-item contains "&9&lInstaminador" or "&9&lDerribadora":
+    if name of event-item contains "&9&lInstaminador" or "&9&lDerribadora" or "&3&lBrisa Tempestuosa":
         set repair cost of event-inventory to 999
 
 #Evita reparar con mending
 on item mend:
-    if name of event-item contains "&9&lInstaminador" or "&9&lDerribadora":
+    if name of event-item contains "&9&lInstaminador" or "&9&lDerribadora" or "&3&lBrisa Tempestuosa":
         cancel the event
         send "&cNo puedes reparar esta herramienta." to player
 
 #Evita encantar con mesa de encantamientos
 on enchant:  
-    if name of event-item contains "&9&lInstaminador" or "&9&lDerribadora":
+    if name of event-item contains "&9&lInstaminador" or "&9&lDerribadora" or "&3&lBrisa Tempestuosa":
         cancel event
         message "&cNo puedes encantar esta herramienta."
 
 # --------------------------------------------------------------------------------------------------------------------
+
+
+#Brisa Tempestuosa -------------------------------------------------------------------------------------------
+
+#/itemname &3&lBrisa Tempestuosa
+#/itemlore add &fInfringe más daño al atacar en caída
+#/itemlore add &fEvita el daño por caída
+#/itemlore add &fÚsala para impulsarte hacia arriba
+#/itemlore add &cNo se puede reparar
+# Poner una versión con eficiencia 5
+
+on join:
+    set {items.impulso.%player%} to false
+
+# Por qué al caer desde muy alto no cancela el daño? !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+on damage:
+    if victim is player:
+        if name of victim's tool contains "&3&lBrisa Tempestuosa":
+            if damage cause is fall:
+                cancel event
+                # Estadisticas
+                load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+                #------------
+                set {_usos} to yaml value "itemsop.brisa.caida.total" from "estadisticas"
+                if {_usos} is not set:
+                    set {_usos} to 0
+                add 1 to {_usos}
+                set yaml value "itemsop.brisa.caida.total" from "estadisticas" to {_usos}
+                #------------
+                set {_player} to player
+                set {_usosplayer} to yaml value "itemsop.brisa.caida.%{_player}%" from "estadisticas"
+                if {_usosplayer} is not set:
+                    set {_usosplayer} to 0
+                add 1 to {_usosplayer}
+                set yaml value "itemsop.brisa.caida.%{_player}%" from "estadisticas" to {_usosplayer}
+                #------------
+                wait 1 tick
+                save yaml "estadisticas"
+
+# Evento: Al hacer clic derecho con el hacha
+on right click with axe:
+    if name of player's tool contains "&3&lBrisa Tempestuosa":
+        if {items.impulso.%player%} is false:
+            wait 1 tick
+            push player up at speed 1.5
+            set {items.impulso.%player%} to true
+            wait 3 seconds
+            set {items.impulso.%player%} to false
+            send action bar "&a&lDoble salto disponible!" to player
+            # Estadisticas
+            load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+            #------------
+            set {_usos} to yaml value "itemsop.brisa.impulso.total" from "estadisticas"
+            if {_usos} is not set:
+                set {_usos} to 0
+            add 1 to {_usos}
+            set yaml value "itemsop.brisa.impulso.total" from "estadisticas" to {_usos}
+            #------------
+            set {_player} to player
+            set {_usosplayer} to yaml value "itemsop.brisa.impulso.%{_player}%" from "estadisticas"
+            if {_usosplayer} is not set:
+                set {_usosplayer} to 0
+            add 1 to {_usosplayer}
+            set yaml value "itemsop.brisa.impulso.%{_player}%" from "estadisticas" to {_usosplayer}
+            #------------
+            wait 1 tick
+            save yaml "estadisticas"
+
+# Evento: Al golpear una entidad con el hacha mientras cae
+on damage of entity:
+    attacker is a player
+    if name of attacker's tool contains "&3&lBrisa Tempestuosa":
+        if fall distance of attacker is greater than 0:
+            set {_damage} to damage * fall distance of attacker
+            set {_altura} to fall distance of attacker
+            damage victim by {_damage} - damage
+            push attacker up at speed {_altura} / 5
+            # Estadisticas
+            load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+            #------------
+            set {_usos} to yaml value "itemsop.brisa.ataque.total" from "estadisticas"
+            if {_usos} is not set:
+                set {_usos} to 0
+            add 1 to {_usos}
+            set yaml value "itemsop.brisa.ataque.total" from "estadisticas" to {_usos}
+            #------------
+            set {_player} to player
+            set {_usosplayer} to yaml value "itemsop.brisa.ataque.%{_player}%" from "estadisticas"
+            if {_usosplayer} is not set:
+                set {_usosplayer} to 0
+            add 1 to {_usosplayer}
+            set yaml value "itemsop.brisa.ataque.%{_player}%" from "estadisticas" to {_usosplayer}
+            #------------
+            wait 1 tick
+            save yaml "estadisticas"
+            loop all entities in radius 6 around victim:
+                if loop-entity is not victim:
+                    push loop-entity up at speed 1
+                    # Cómo hago para que adicionalmente los pushee en direccion contraria al atacante? !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    # push loop-entity away from attacker at speed 1   
