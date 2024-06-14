@@ -290,6 +290,7 @@ on enchant:
 
 
 # Me faltó ponerle el desgaste de la herramienta en cada uno de los casos !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# Me faltó ponerle efecto de super salto II !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 on join:
     set {items.impulso.%player%} to false
