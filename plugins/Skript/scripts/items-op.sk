@@ -246,7 +246,7 @@ on block break:
         wait 1 tick
         save yaml "estadisticas"
         loop blocks in radius 1.8 of event-block:
-            if loop-block is stone or cobblestone or obsidian or deepslate or netherrack or tuff or andesite or diorite or granite:
+            if loop-block is stone or cobblestone or obsidian or deepslate or netherrack or tuff or andesite or diorite or granite or any terracotta:
                 drop loop-block
                 set loop-block to air
                 play sound "dig.stone" with volume 1 to player
@@ -276,9 +276,6 @@ on enchant:
         cancel event
         message "&cNo puedes encantar esta herramienta."
 
-# --------------------------------------------------------------------------------------------------------------------
-
-
 #Brisa Tempestuosa -------------------------------------------------------------------------------------------
 
 #/itemname &3&lBrisa Tempestuosa
@@ -288,19 +285,16 @@ on enchant:
 #/itemlore add &cNo se puede reparar
 # Poner una versión con eficiencia 5
 
-
-# Me faltó ponerle el desgaste de la herramienta en cada uno de los casos !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-# Me faltó ponerle efecto de super salto II !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 on join:
     set {items.impulso.%player%} to false
 
-# Por qué al caer desde muy alto no cancela el daño? !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# Por qué al caer desde muy alto no cancela el daño? Se buggea mucho. A veces si lo cancela. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 on damage:
     if victim is player:
         if name of victim's tool contains "&3&lBrisa Tempestuosa":
             if damage cause is fall:
                 cancel event
+                damage victim's tool by 3
                 # Estadisticas
                 load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
                 #------------
@@ -320,13 +314,28 @@ on damage:
                 wait 1 tick
                 save yaml "estadisticas"
 
+#Supersalto al sostener el hacha en la mano
+on any movement:
+    if name of player's tool contains "&3&lBrisa Tempestuosa":
+        apply potion of jump boost 4 to player for 3 seconds
+    else:
+        remove jump boost from player
+
 # Evento: Al hacer clic derecho con el hacha
 on right click with axe:
     if name of player's tool contains "&3&lBrisa Tempestuosa":
         if {items.impulso.%player%} is false:
             wait 1 tick
-            push player up at speed 1.5
+            damage player's tool by 6
+            push player up at speed 1.2
             set {items.impulso.%player%} to true
+            # No pude hacer la partícula desde skript directamente !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            #create explosion_emitter particles at player for 1 second
+            set {_x} to x-coordinate of player
+            set {_y} to y-coordinate of player
+            set {_z} to z-coordinate of player
+            execute console command "particle explosion_emitter %{_x}% %{_y}% %{_z}% 0 0 0 0 1"
+            play sound "entity.wither.shoot" with volume 1 to player
             wait 3 seconds
             set {items.impulso.%player%} to false
             send action bar "&a&lDoble salto disponible!" to player
@@ -356,8 +365,14 @@ on damage of entity:
         if fall distance of attacker is greater than 0:
             set {_damage} to damage * fall distance of attacker
             set {_altura} to fall distance of attacker
+            damage attacker's tool by 6
             damage victim by {_damage} - damage
             push attacker up at speed {_altura} / 5
+            set {_x} to x-coordinate of victim
+            set {_y} to y-coordinate of victim
+            set {_z} to z-coordinate of victim
+            execute console command "particle explosion_emitter %{_x}% %{_y}% %{_z}% 0 0 0 0 1"
+            play sound "entity.wither.hurt" with volume 0.3 to attacker
             # Estadisticas
             load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
             #------------
@@ -381,3 +396,7 @@ on damage of entity:
                     push loop-entity up at speed 1
                     # Cómo hago para que adicionalmente los pushee en direccion contraria al atacante? !!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                     # push loop-entity away from attacker at speed 1   
+
+
+
+# --------------------------------------------------------------------------------------------------------------------
