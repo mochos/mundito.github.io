@@ -24,7 +24,7 @@ language:
   #
   # Your players will select what locale that Towny shows them 
   # by changing their Minecraft client's locale.
-  language: es-ES.yml
+  language: es-CL.yml
   
   # The languages you wish to have enabled. Set to '*' to use all available languages.
   # If you would like to only allow 4 languages use: en-US,ru-RU,es-ES,fr-FR
@@ -1926,7 +1926,7 @@ economy:
     price_new_nation: '0.0'
   
     # How much it costs to start a town.
-    price_new_town: '0.0'
+    price_new_town: '100'
   
     # The base cost a town has to pay to merge with another town. The town that initiates the merge pays the cost.
     price_town_merge: '0'
@@ -1940,13 +1940,13 @@ economy:
     price_reclaim_ruined_town: '0.0'
   
     # How much it costs to make an outpost. An outpost isn't limited to being on the edge of town.
-    price_outpost: '0.0'
+    price_outpost: '800'
   
     # The price for a town to expand one townblock.
-    price_claim_townblock: '0.0'
+    price_claim_townblock: '200'
   
     # How much every additionally claimed townblock increases in cost. Set to 1 to deactivate this. 1.3 means +30% to every bonus claim block cost.
-    price_claim_townblock_increase: '1.0'
+    price_claim_townblock_increase: '1.015'
   
     # The maximum price for an additional townblock. No matter how many blocks a town has the price will not be above this. Set to -1 to deactivate this.
     max_price_claim_townblock: '-1.0'
@@ -1955,7 +1955,7 @@ economy:
     # Warning: do not set this higher than the cost to claim a townblock.
     # It is advised that you do not set this to the same price as claiming either, otherwise towns will get around using outposts to claim far away.
     # Optionally, set this to a negative amount if you want towns to pay money to unclaim their land.
-    price_claim_townblock_refund: '0.0'
+    price_claim_townblock_refund: '200'
   
     # How much it costs a player to buy extra blocks.
     price_purchased_bonus_townblock: '25.0'

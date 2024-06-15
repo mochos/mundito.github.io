@@ -1,3 +1,5 @@
+# /itemlore add &7Hecho en Lomas Turbas
+
 # Pan de masa madre -------------------------------------------------------------------------
 on consume of bread:
     if name of player's tool contains "&6Pan de masa madre":
@@ -24,7 +26,7 @@ on consume of bread:
         save yaml "estadisticas"
 
 
-# Tragos y bebidas -------------------------------------------------------------------------
+# Tragos -------------------------------------------------------------------------
 on consume of potion:
     if name of player's tool contains "&eCerveza":
         # Estadisticas
@@ -103,7 +105,9 @@ on consume of potion:
         wait 1 tick
         save yaml "estadisticas"
 
+
 # Alitas de pollo -------------------------------------------------------------------------
+
 on consume of cooked chicken:
     if name of player's tool contains "&6Alita de pollo":
         apply slowness 1 to player for 30 seconds
@@ -124,6 +128,230 @@ on consume of cooked chicken:
             set {_usosplayer} to 0
         add 1 to {_usosplayer}
         set yaml value "itemsop.alitas.%{_player}%" from "estadisticas" to {_usosplayer}
+        #------------
+        wait 1 tick
+        save yaml "estadisticas"
+
+# Comida oriental -------------------------------------------------------------------------
+
+on consume of salmon:
+    if name of player's tool contains "&dSushi Roll":
+        apply speed 1 to player for 5 minutes
+        apply haste 1 to player for 5 minutes
+        # Estadisticas
+        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+        #------------
+        set {_usos} to yaml value "itemsop.sushi.total" from "estadisticas"
+        if {_usos} is not set:
+            set {_usos} to 0
+        add 1 to {_usos}
+        set yaml value "itemsop.sushi.total" from "estadisticas" to {_usos}
+        #------------
+        set {_player} to player
+        set {_usosplayer} to yaml value "itemsop.sushi.%{_player}%" from "estadisticas"
+        if {_usosplayer} is not set:
+            set {_usosplayer} to 0
+        add 1 to {_usosplayer}
+        set yaml value "itemsop.sushi.%{_player}%" from "estadisticas" to {_usosplayer}
+        #------------
+        wait 1 tick
+        save yaml "estadisticas"
+on consume of beetroot soup:
+    if name of player's tool contains "&cKimchi":
+        apply fire resistance 1 to player for 3 minutes
+        apply resistance 1 to player for 3 minutes
+        # Estadisticas
+        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+        #------------
+        set {_usos} to yaml value "itemsop.kimchi.total" from "estadisticas"
+        if {_usos} is not set:
+            set {_usos} to 0
+        add 1 to {_usos}
+        set yaml value "itemsop.kimchi.total" from "estadisticas" to {_usos}
+        #------------
+        set {_player} to player
+        set {_usosplayer} to yaml value "itemsop.kimchi.%{_player}%" from "estadisticas"
+        if {_usosplayer} is not set:
+            set {_usosplayer} to 0
+        add 1 to {_usosplayer}
+        set yaml value "itemsop.kimchi.%{_player}%" from "estadisticas" to {_usosplayer}
+        #------------
+        wait 1 tick
+        save yaml "estadisticas"
+on consume of rabbit stew:
+    if name of player's tool contains "&eBibimbap":
+        apply strength 1 to player for 1 minute
+        apply regeneration 1 to player for 1 minute
+        # Estadisticas
+        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+        #------------
+        set {_usos} to yaml value "itemsop.bibimbap.total" from "estadisticas"
+        if {_usos} is not set:
+            set {_usos} to 0
+        add 1 to {_usos}
+        set yaml value "itemsop.bibimbap.total" from "estadisticas" to {_usos}
+        #------------
+        set {_player} to player
+        set {_usosplayer} to yaml value "itemsop.bibimbap.%{_player}%" from "estadisticas"
+        if {_usosplayer} is not set:
+            set {_usosplayer} to 0
+        add 1 to {_usosplayer}
+        set yaml value "itemsop.bibimbap.%{_player}%" from "estadisticas" to {_usosplayer}
+        #------------
+        wait 1 tick
+        save yaml "estadisticas"
+on consume of mushroom stew:
+    if name of player's tool contains "&6Ramen tradicional":
+        apply regeneration 1 to player for 3 minutes
+        apply health boost 1 to player for 3 minutes
+        apply luck 1 to player for 3 minutes
+        # Estadisticas
+        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+        #------------
+        set {_usos} to yaml value "itemsop.ramen.total" from "estadisticas"
+        if {_usos} is not set:
+            set {_usos} to 0
+        add 1 to {_usos}
+        set yaml value "itemsop.ramen.total" from "estadisticas" to {_usos}
+        #------------
+        set {_player} to player
+        set {_usosplayer} to yaml value "itemsop.ramen.%{_player}%" from "estadisticas"
+        if {_usosplayer} is not set:
+            set {_usosplayer} to 0
+        add 1 to {_usosplayer}
+        set yaml value "itemsop.ramen.%{_player}%" from "estadisticas" to {_usosplayer}
+        #------------
+        wait 1 tick
+        save yaml "estadisticas"
+on consume of suspicious stew:
+    if name of player's tool contains "&4Ramen Picante":
+        damage player by 4
+        apply fire resistance 1 to player for 3 minutes
+        apply resistance 1 to player for 3 minutes
+        apply regeneration 1 to player for 3 minutes
+        # Estadisticas
+        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+        #------------
+        set {_usos} to yaml value "itemsop.ramenpicante.total" from "estadisticas"
+        if {_usos} is not set:
+            set {_usos} to 0
+        add 1 to {_usos}
+        set yaml value "itemsop.ramenpicante.total" from "estadisticas" to {_usos}
+        #------------
+        set {_player} to player
+        set {_usosplayer} to yaml value "itemsop.ramenpicante.%{_player}%" from "estadisticas"
+        if {_usosplayer} is not set:
+            set {_usosplayer} to 0
+        add 1 to {_usosplayer}
+        set yaml value "itemsop.ramenpicante.%{_player}%" from "estadisticas" to {_usosplayer}
+        #------------
+        wait 1 tick
+        save yaml "estadisticas"
+on consume of chorus fruit:
+    if name of player's tool contains "&3Mochi":
+        cancel event
+        apply potion of jump boost 2 to player for 1 minute
+        apply absorption 1 to player for 1 minute
+        # Estadisticas
+        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+        #------------
+        set {_usos} to yaml value "itemsop.mochi.total" from "estadisticas"
+        if {_usos} is not set:
+            set {_usos} to 0
+        add 1 to {_usos}
+        set yaml value "itemsop.mochi.total" from "estadisticas" to {_usos}
+        #------------
+        set {_player} to player
+        set {_usosplayer} to yaml value "itemsop.mochi.%{_player}%" from "estadisticas"
+        if {_usosplayer} is not set:
+            set {_usosplayer} to 0
+        add 1 to {_usosplayer}
+        set yaml value "itemsop.mochi.%{_player}%" from "estadisticas" to {_usosplayer}
+        #------------
+        wait 1 tick
+        save yaml "estadisticas"
+on consume of dried kelp:
+    if name of player's tool contains "&2Onigiri":
+        cancel event
+        apply invisibility 1 to player for 3 minutes
+        apply water breathing 1 to player for 3 minutes
+        # Estadisticas
+        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+        #------------
+        set {_usos} to yaml value "itemsop.onigiri.total" from "estadisticas"
+        if {_usos} is not set:
+            set {_usos} to 0
+        add 1 to {_usos}
+        set yaml value "itemsop.onigiri.total" from "estadisticas" to {_usos}
+        #------------
+        set {_player} to player
+        set {_usosplayer} to yaml value "itemsop.onigiri.%{_player}%" from "estadisticas"
+        if {_usosplayer} is not set:
+            set {_usosplayer} to 0
+        add 1 to {_usosplayer}
+        set yaml value "itemsop.onigiri.%{_player}%" from "estadisticas" to {_usosplayer}
+        #------------
+        wait 1 tick
+        save yaml "estadisticas"
+
+
+# Bebidas orientales -------------------------------------------------------------------------
+
+on consume of potion:
+    if name of player's tool contains "&aSoyu":
+        # Estadisticas
+        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+        #------------
+        set {_usos} to yaml value "itemsop.soyu.total" from "estadisticas"
+        if {_usos} is not set:
+            set {_usos} to 0
+        add 1 to {_usos}
+        set yaml value "itemsop.soyu.total" from "estadisticas" to {_usos}
+        #------------
+        set {_player} to player
+        set {_usosplayer} to yaml value "itemsop.soyu.%{_player}%" from "estadisticas"
+        if {_usosplayer} is not set:
+            set {_usosplayer} to 0
+        add 1 to {_usosplayer}
+        set yaml value "itemsop.soyu.%{_player}%" from "estadisticas" to {_usosplayer}
+        #------------
+        wait 1 tick
+        save yaml "estadisticas"
+    if name of player's tool contains "&bSake":
+        # Estadisticas
+        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+        #------------
+        set {_usos} to yaml value "itemsop.sake.total" from "estadisticas"
+        if {_usos} is not set:
+            set {_usos} to 0
+        add 1 to {_usos}
+        set yaml value "itemsop.sake.total" from "estadisticas" to {_usos}
+        #------------
+        set {_player} to player
+        set {_usosplayer} to yaml value "itemsop.sake.%{_player}%" from "estadisticas"
+        if {_usosplayer} is not set:
+            set {_usosplayer} to 0
+        add 1 to {_usosplayer}
+        set yaml value "itemsop.sake.%{_player}%" from "estadisticas" to {_usosplayer}
+        #------------
+        wait 1 tick
+        save yaml "estadisticas"
+    if name of player's tool contains "&fMakgeolli":
+        # Estadisticas
+        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+        #------------
+        set {_usos} to yaml value "itemsop.makgeolli.total" from "estadisticas"
+        if {_usos} is not set:
+            set {_usos} to 0
+        add 1 to {_usos}
+        set yaml value "itemsop.makgeolli.total" from "estadisticas" to {_usos}
+        #------------
+        set {_player} to player
+        set {_usosplayer} to yaml value "itemsop.makgeolli.%{_player}%" from "estadisticas"
+        if {_usosplayer} is not set:
+            set {_usosplayer} to 0
+        add 1 to {_usosplayer}
+        set yaml value "itemsop.makgeolli.%{_player}%" from "estadisticas" to {_usosplayer}
         #------------
         wait 1 tick
         save yaml "estadisticas"

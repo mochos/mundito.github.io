@@ -185,9 +185,7 @@ on damage:
 #Supersalto al sostener el hacha en la mano
 on any movement:
     if name of player's tool contains "&3&lBrisa Tempestuosa":
-        apply potion of jump boost 4 to player for 3 seconds
-    else:
-        remove jump boost from player
+        apply potion of jump boost 4 to player for 1 seconds # Esto está algo bug. No funciona el tiempo que es !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 # Evento: Al hacer clic derecho con el hacha
 on right click with axe:
