@@ -1,0 +1,129 @@
+# Pan de masa madre -------------------------------------------------------------------------
+on consume of bread:
+    if name of player's tool contains "&6Pan de masa madre":
+        apply regeneration 2 to player for 10 seconds
+        apply absorption 2 to player for 120 seconds
+        apply resistance 2 to player for 60 seconds
+        # Estadisticas
+        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+        #------------
+        set {_usos} to yaml value "itemsop.panmadre.total" from "estadisticas"
+        if {_usos} is not set:
+            set {_usos} to 0
+        add 1 to {_usos}
+        set yaml value "itemsop.panmadre.total" from "estadisticas" to {_usos}
+        #------------
+        set {_player} to player
+        set {_usosplayer} to yaml value "itemsop.panmadre.%{_player}%" from "estadisticas"
+        if {_usosplayer} is not set:
+            set {_usosplayer} to 0
+        add 1 to {_usosplayer}
+        set yaml value "itemsop.panmadre.%{_player}%" from "estadisticas" to {_usosplayer}
+        #------------
+        wait 1 tick
+        save yaml "estadisticas"
+
+
+# Tragos y bebidas -------------------------------------------------------------------------
+on consume of potion:
+    if name of player's tool contains "&eCerveza":
+        # Estadisticas
+        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+        #------------
+        set {_usos} to yaml value "itemsop.cerveza.total" from "estadisticas"
+        if {_usos} is not set:
+            set {_usos} to 0
+        add 1 to {_usos}
+        set yaml value "itemsop.cerveza.total" from "estadisticas" to {_usos}
+        #------------
+        set {_player} to player
+        set {_usosplayer} to yaml value "itemsop.cerveza.%{_player}%" from "estadisticas"
+        if {_usosplayer} is not set:
+            set {_usosplayer} to 0
+        add 1 to {_usosplayer}
+        set yaml value "itemsop.cerveza.%{_player}%" from "estadisticas" to {_usosplayer}
+        #------------
+        wait 1 tick
+        save yaml "estadisticas"
+    if name of player's tool contains "&cCubalibre":
+        # Estadisticas
+        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+        #------------
+        set {_usos} to yaml value "itemsop.cubalibre.total" from "estadisticas"
+        if {_usos} is not set:
+            set {_usos} to 0
+        add 1 to {_usos}
+        set yaml value "itemsop.cubalibre.total" from "estadisticas" to {_usos}
+        #------------
+        set {_player} to player
+        set {_usosplayer} to yaml value "itemsop.cubalibre.%{_player}%" from "estadisticas"
+        if {_usosplayer} is not set:
+            set {_usosplayer} to 0
+        add 1 to {_usosplayer}
+        set yaml value "itemsop.cubalibre.%{_player}%" from "estadisticas" to {_usosplayer}
+        #------------
+        wait 1 tick
+        save yaml "estadisticas"
+    if name of player's tool contains "&bAguardiente":
+        # Estadisticas
+        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+        #------------
+        set {_usos} to yaml value "itemsop.aguardiente.total" from "estadisticas"
+        if {_usos} is not set:
+            set {_usos} to 0
+        add 1 to {_usos}
+        set yaml value "itemsop.aguardiente.total" from "estadisticas" to {_usos}
+        #------------
+        set {_player} to player
+        set {_usosplayer} to yaml value "itemsop.aguardiente.%{_player}%" from "estadisticas"
+        if {_usosplayer} is not set:
+            set {_usosplayer} to 0
+        add 1 to {_usosplayer}
+        set yaml value "itemsop.aguardiente.%{_player}%" from "estadisticas" to {_usosplayer}
+        #------------
+        wait 1 tick
+        save yaml "estadisticas"
+    if name of player's tool contains "&aAbsenta ☠":
+        # Estadisticas
+        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+        #------------
+        set {_usos} to yaml value "itemsop.absenta.total" from "estadisticas"
+        if {_usos} is not set:
+            set {_usos} to 0
+        add 1 to {_usos}
+        set yaml value "itemsop.absenta.total" from "estadisticas" to {_usos}
+        #------------
+        set {_player} to player
+        set {_usosplayer} to yaml value "itemsop.absenta.%{_player}%" from "estadisticas"
+        if {_usosplayer} is not set:
+            set {_usosplayer} to 0
+        add 1 to {_usosplayer}
+        set yaml value "itemsop.absenta.%{_player}%" from "estadisticas" to {_usosplayer}
+        #------------
+        wait 1 tick
+        save yaml "estadisticas"
+
+# Alitas de pollo -------------------------------------------------------------------------
+on consume of cooked chicken:
+    if name of player's tool contains "&6Alita de pollo":
+        apply slowness 1 to player for 30 seconds
+        apply saturation 2 to player for 30 seconds
+        apply strength 2 to player for 60 seconds
+        # Estadisticas
+        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+        #------------
+        set {_usos} to yaml value "itemsop.alitas.total" from "estadisticas"
+        if {_usos} is not set:
+            set {_usos} to 0
+        add 1 to {_usos}
+        set yaml value "itemsop.alitas.total" from "estadisticas" to {_usos}
+        #------------
+        set {_player} to player
+        set {_usosplayer} to yaml value "itemsop.alitas.%{_player}%" from "estadisticas"
+        if {_usosplayer} is not set:
+            set {_usosplayer} to 0
+        add 1 to {_usosplayer}
+        set yaml value "itemsop.alitas.%{_player}%" from "estadisticas" to {_usosplayer}
+        #------------
+        wait 1 tick
+        save yaml "estadisticas"
