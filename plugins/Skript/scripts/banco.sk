@@ -55,7 +55,7 @@ function logEco():
         set yaml value "dinero.%{_tempPlayer}%" from "economia" to {_tempBalance}
         add {_tempBalance} to {_total}
         wait 1 tick
-    broadcast "%{@banco}%&aTotal: %{_total}%"
+    #broadcast "%{@banco}%&aTotal: %{_total}%"
     set yaml value "dinero.total" from "economia" to {_total}
     save yaml "economia"
     unload yaml "economia"
