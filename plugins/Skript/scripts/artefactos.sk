@@ -13,19 +13,12 @@ on inventory close:
         #send "Cerrado" to player
 
 
-#Item
-# Salto doble
-# Quita daño de caída
 
-#Item
-# Saltar en el aire
-
-#Item
+#Gafas de visión
 # Visión nocturna
 
 #Item
-# Respiras bajo el agua
-# Agilidad al bucear
+# Canalizacion (Conduit power)
 
 #Item
 # Los hostiles no te ven

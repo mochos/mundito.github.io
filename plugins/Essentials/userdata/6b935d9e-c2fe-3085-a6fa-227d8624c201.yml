@@ -3,7 +3,7 @@ teleportauto: false
 godmode: false
 muted: false
 jailed: false
-ip-address: 127.0.0.1
+ip-address: 190.1.241.251
 afk: false
 socialspy: false
 npc: false
@@ -16,26 +16,26 @@ timestamps:
   mute: 0
   jail: 0
   onlinejail: 0
-  logout: 1718546750388
-  login: 1718545347468
+  logout: 1718561921770
+  login: 1718561102973
 money: '5105'
 last-account-name: lorspi
 logoutlocation:
   world: b339dda7-0e12-48e2-99c8-d31b6a44bf65
   world-name: world
-  x: 6.4621103533908695
+  x: -2.4379746665628184
   y: 77.0
-  z: 23.703408102666828
-  yaw: 150.60008239746094
-  pitch: 5.849994659423828
+  z: 17.07889515332346
+  yaw: -23.59912109375
+  pitch: 8.40023422241211
 lastlocation:
   world: b339dda7-0e12-48e2-99c8-d31b6a44bf65
   world-name: world
-  x: 0.6135687673112511
-  y: 76.4312500178814
-  z: 15.948761473079593
-  yaw: 97.96979522705078
-  pitch: -24.899974822998047
+  x: -2.300000011920929
+  y: 75.41999998688698
+  z: 28.125041778333426
+  yaw: -141.7501678466797
+  pitch: 25.500106811523438
 homes:
   home:
     world: b339dda7-0e12-48e2-99c8-d31b6a44bf65

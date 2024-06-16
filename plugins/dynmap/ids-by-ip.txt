@@ -13,6 +13,8 @@
 - _lorspi
 '181_55_68_42':
 - ShakalChapa
+'190_1_241_251':
+- lorspi
 0:0:0:0:0:0:0:1:
 - lorspi
 - sirpol
@@ -21,7 +23,7 @@
 - lorspi
 - _lorspi
 '127_0_0_1':
-- lorspi
 - elPantallazoAzul
+- lorspi
 - 10r571
 - sirpol

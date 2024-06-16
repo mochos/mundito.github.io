@@ -1,21 +1,26 @@
+on load:
+    set {amaneciendo} to false
+
 on bed enter:
     wait 1 tick
     if time is night:
-        #loop all players:
-        #    if loop-player is not player:
-        #        send formatted "&e%player% está durmiendo. ¡Va a amanecer pronto! Escribe &f/no&e o da <tooltip:&fCancelar amanecer><command:/no>&b&lclick aquí<reset>&e para cancelar." to loop-player
-        message formatted "&e%player% está durmiendo. ¡Va a amanecer pronto! Escribe &f/no&e o da <tooltip:&fCancelar amanecer><command:/no>&b&lclick aquí<reset>&e para cancelar." to all players
+        loop all players:
+            if loop-player is not player:
+                send formatted "&e%player% está durmiendo. ¡Va a amanecer pronto! Escribe &f/no&e o da <tooltip:&fCancelar amanecer><command:/no>&b&lclick aquí<reset>&e para cancelar." to loop-player
+        #message formatted "&e%player% está durmiendo. ¡Va a amanecer pronto! Escribe &f/no&e o da <tooltip:&fCancelar amanecer><command:/no>&b&lclick aquí<reset>&e para cancelar." to all players
         set {sleep.cancel} to false
         wait 10 seconds
         if {sleep.cancel} is false:
+            set {amaneciendo} to true
             while time is not day:
                 add 60 ticks to time in world
                 wait 1 ticks
+            set {amaneciendo} to false
             broadcast "&e¡Ha amanecido!"
 
-#on bed leave:
-#    if time is night:
-#        make player execute command "/no"
+on bed leave:
+    if time is night and !{amaneciendo}:
+        make player execute command "/no"
 
 #Cosas que me gustarían:
 # - El jugador no se levanta de la cama automáticamente como sucede ahora.

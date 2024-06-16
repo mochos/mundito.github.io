@@ -1,0 +1,46 @@
+permissions: []
+permissionMessage: ''
+cancelPermission: ''
+cancelPermissionMessage: ''
+world: world
+X: 3329
+Y: 59
+Z: -2734
+price: 0.0
+exp: 0
+cooldown: 0
+globalCooldown: 0
+lastGlobalUse: 0
+confirmation: false
+confirmationMessage: ''
+cancel_mode: ALWAYS
+commands:
+  '0':
+    command: /bank deposit
+    type: PLAYER_COMMAND
+    delay: 0
+    grantPerms: []
+    alwaysPersisted: false
+    interactValue: 0
+grantPermissions: []
+priceItems: []
+heldItems: []
+pi_criteria:
+  enchants: false
+  name: false
+  lores: false
+  durability: false
+hi_criteria:
+  enchants: false
+  name: false
+  lores: false
+  durability: false
+loops: -1
+loop_delay: 1
+uses_limit: 0
+uses_tally: 4
+protectedBlocks:
+- world,3330,59,-2734
+displayInternalMessages: true
+timeLimitMaximum: 0
+timeLimitMinimum: 0

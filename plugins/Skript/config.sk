@@ -103,7 +103,7 @@ date format: default
 #  dd.MM.yyyy, HH:mm => 16.03.2013, 09:33
 
 
-verbosity: very high
+verbosity: normal
 # Determines how much info is logged.
 # Allowed values: low, normal, high, very high, debug
 # The highest you should go is very high, which prints quite a lot of useful information,

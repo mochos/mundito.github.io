@@ -1,0 +1,46 @@
+permissions: []
+permissionMessage: ''
+cancelPermission: ''
+cancelPermissionMessage: ''
+world: world
+X: 3323
+Y: 66
+Z: -2722
+price: 0.0
+exp: 0
+cooldown: 0
+globalCooldown: 0
+lastGlobalUse: 0
+confirmation: false
+confirmationMessage: ''
+cancel_mode: ALWAYS
+commands:
+  '0':
+    command: /ib open licencias <player>
+    type: SERVER_COMMAND
+    delay: 0
+    grantPerms: []
+    alwaysPersisted: false
+    interactValue: 0
+grantPermissions: []
+priceItems: []
+heldItems: []
+pi_criteria:
+  enchants: false
+  name: false
+  lores: false
+  durability: false
+hi_criteria:
+  enchants: false
+  name: false
+  lores: false
+  durability: false
+loops: -1
+loop_delay: 1
+uses_limit: 0
+uses_tally: 25
+protectedBlocks:
+- world,3324,66,-2722
+displayInternalMessages: true
+timeLimitMaximum: 0
+timeLimitMinimum: 0

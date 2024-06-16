@@ -1,14 +1,19 @@
 itemsop:
     brisa:
         caida:
-            total: 74
+            total: 114
             player: 74
+            lorspi: 10
+            elPantallazoAzul: 30
         ataque:
-            total: 17
+            total: 104
             player: 17
+            elPantallazoAzul: 57
+            lorspi: 30
         impulso:
-            total: 109
-            lorspi: 109
+            total: 164
+            lorspi: 142
+            elPantallazoAzul: 22
     taladro:
         total: 16
         lorspi: 16

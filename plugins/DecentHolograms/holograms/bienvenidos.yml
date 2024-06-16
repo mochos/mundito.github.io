@@ -1,0 +1,21 @@
+location: world:19:74:52
+enabled: true
+display-range: 32
+update-range: 32
+update-interval: 20
+facing: 270.0
+down-origin: false
+pages:
+- lines:
+  - content: '#ENTITY: ALLAY'
+    height: 0.6
+  - content: '&e&lBIENVENID@ A MUNDITO'
+    height: 0.3
+  - content: '&fMira toda la información en nuestra Wiki:'
+    height: 0.3
+  - content: '&bmochos.xyz/mundito/wiki'
+    height: 0.3
+  - content: '&fNuestro Discord oficial:'
+    height: 0.3
+  - content: '&bdiscord.mochos.xyz'
+    height: 0.3

@@ -1,0 +1,52 @@
+# Evento al recibir daño letal
+on damage:
+    if victim is a player:
+        if damage is greater than or equal to victim's health:
+            cancel event
+            set victim's health to 1
+            apply blindness 2 to victim for 60 seconds
+            set {downed.%victim%} to true
+            set {downed.time.%victim%} to 60
+            loop 60 times:
+                wait 1 second
+                if {downed.%victim%} is true:
+                    remove 1 from {downed.time.%victim%}
+                    #set title of victim to "&cHas caído!"
+                    #set subtitle of victim to "&e%{downed.time.%victim%}% segundos restantes"
+                    if {downed.time.%victim%} is 0:
+                        kill victim
+                        broadcast "&c%victim% ha muerto en las coordenadas %victim's location%"
+                        delete {downed.%victim%}
+                        delete {downed.time.%victim%}
+                else:
+                    stop
+            broadcast "&e%victim% ha caído en las coordenadas %victim's location%"
+
+# Evento al hacer clic derecho en un jugador caído
+on right click on player:
+    if {downed.%clicked player%} is true:
+        cancel event
+        heal clicked player
+        send "&aHas revivido a %clicked player%!" to player
+        send "&aHas sido revivido por %player%!" to clicked player
+        delete {downed.%clicked player%}
+        delete {downed.time.%clicked player%}
+
+# Evitar que el jugador caído interactúe con bloques e ítems
+on any movement:
+    if {downed.%player%} is true:
+        cancel event
+
+on right click:
+    if {downed.%player%} is true:
+        cancel event
+
+on left click:
+    if {downed.%player%} is true:
+        cancel event
+
+# Manejar la limpieza de variables al desconectarse
+on quit:
+    if {downed.%player%} is set:
+        delete {downed.%player%}
+        delete {downed.time.%player%}
