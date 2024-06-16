@@ -1,14 +1,14 @@
 itemsop:
     brisa:
         caida:
-            total: 73
-            player: 73
+            total: 74
+            player: 74
         ataque:
-            total: 11
-            player: 11
+            total: 17
+            player: 17
         impulso:
-            total: 82
-            lorspi: 82
+            total: 109
+            lorspi: 109
     taladro:
         total: 16
         lorspi: 16

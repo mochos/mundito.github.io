@@ -157,35 +157,36 @@ on join:
     set {items.impulso.%player%} to false
 
 # Por qué al caer desde muy alto no cancela el daño? Se buggea mucho. A veces si lo cancela. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 on damage:
-    if victim is player:
-        if name of victim's tool contains "&3&lBrisa Tempestuosa":
-            if damage cause is fall:
-                cancel event
-                damage victim's tool by 3
-                # Estadisticas
-                load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
-                #------------
-                set {_usos} to yaml value "itemsop.brisa.caida.total" from "estadisticas"
-                if {_usos} is not set:
-                    set {_usos} to 0
-                add 1 to {_usos}
-                set yaml value "itemsop.brisa.caida.total" from "estadisticas" to {_usos}
-                #------------
-                set {_player} to player
-                set {_usosplayer} to yaml value "itemsop.brisa.caida.%{_player}%" from "estadisticas"
-                if {_usosplayer} is not set:
-                    set {_usosplayer} to 0
-                add 1 to {_usosplayer}
-                set yaml value "itemsop.brisa.caida.%{_player}%" from "estadisticas" to {_usosplayer}
-                #------------
-                wait 1 tick
-                save yaml "estadisticas"
+    if name of victim's tool contains "&3&lBrisa Tempestuosa":
+        if damage cause is fall:
+            cancel event
+            damage victim's tool by 3
+            # Estadisticas
+            load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+            #------------
+            set {_usos} to yaml value "itemsop.brisa.caida.total" from "estadisticas"
+            if {_usos} is not set:
+                set {_usos} to 0
+            add 1 to {_usos}
+            set yaml value "itemsop.brisa.caida.total" from "estadisticas" to {_usos}
+            #------------
+            set {_player} to player
+            set {_usosplayer} to yaml value "itemsop.brisa.caida.%{_player}%" from "estadisticas"
+            if {_usosplayer} is not set:
+                set {_usosplayer} to 0
+            add 1 to {_usosplayer}
+            set yaml value "itemsop.brisa.caida.%{_player}%" from "estadisticas" to {_usosplayer}
+            #------------
+            wait 1 tick
+            save yaml "estadisticas"
 
 #Supersalto al sostener el hacha en la mano
 on any movement:
     if name of player's tool contains "&3&lBrisa Tempestuosa":
-        apply potion of jump boost 4 to player for 1 seconds # Esto está algo bug. No funciona el tiempo que es !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        if player don't have potion jump boost:
+            apply potion of jump boost 4 to player for 5 seconds            
 
 # Evento: Al hacer clic derecho con el hacha
 on right click with axe:
@@ -195,16 +196,11 @@ on right click with axe:
             damage player's tool by 6
             push player up at speed 1.2
             set {items.impulso.%player%} to true
-            # No pude hacer la partícula desde skript directamente !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            #create explosion_emitter particles at player for 1 second
-            set {_x} to x-coordinate of player
-            set {_y} to y-coordinate of player
-            set {_z} to z-coordinate of player
-            execute console command "particle explosion_emitter %{_x}% %{_y}% %{_z}% 0 0 0 0 1"
+            play explosion emitter at location of player to player
             play sound "entity.wither.shoot" with volume 1 to player
             wait 3 seconds
             set {items.impulso.%player%} to false
-            send action bar "&a&lDoble salto disponible!" to player
+            send action bar "&a&l¡Impulso de salto disponible!" to player
             # Estadisticas
             load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
             #------------
@@ -234,10 +230,7 @@ on damage of entity:
             damage attacker's tool by 6
             damage victim by {_damage} - damage
             push attacker up at speed {_altura} / 5
-            set {_x} to x-coordinate of victim
-            set {_y} to y-coordinate of victim
-            set {_z} to z-coordinate of victim
-            execute console command "particle explosion_emitter %{_x}% %{_y}% %{_z}% 0 0 0 0 1"
+            play explosion emitter at location of attacker to attacker
             play sound "entity.wither.hurt" with volume 0.3 to attacker
             # Estadisticas
             load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
