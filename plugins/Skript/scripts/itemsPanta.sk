@@ -142,7 +142,3 @@ on rightclick with shield:
     name of player's held item is "&6&lVida extra 4"
     cancel the event
     artefactoCambio(player, 4, true)
-
-command /palo:
-    trigger:
-        give a netherite sword named "&6Arte" to player
