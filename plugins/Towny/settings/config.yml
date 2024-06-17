@@ -1940,10 +1940,10 @@ economy:
     price_reclaim_ruined_town: '0.0'
   
     # How much it costs to make an outpost. An outpost isn't limited to being on the edge of town.
-    price_outpost: '800'
+    price_outpost: '300'
   
     # The price for a town to expand one townblock.
-    price_claim_townblock: '200'
+    price_claim_townblock: '100'
   
     # How much every additionally claimed townblock increases in cost. Set to 1 to deactivate this. 1.3 means +30% to every bonus claim block cost.
     price_claim_townblock_increase: '1.015'

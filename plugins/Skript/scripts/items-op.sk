@@ -114,7 +114,7 @@ on block break:
         wait 1 tick
         save yaml "estadisticas"
         loop blocks in radius 1.8 of event-block:
-            if loop-block is stone or cobblestone or obsidian or deepslate or netherrack or tuff or andesite or diorite or granite or any terracotta:
+            if loop-block is stone or cobblestone or obsidian or deepslate or netherrack or tuff or andesite or diorite or granite or smooth basalt or calcite or any terracotta:
                 drop loop-block
                 set loop-block to air
                 play sound "dig.stone" with volume 1 to player
@@ -155,6 +155,7 @@ on enchant:
 
 on join:
     set {items.impulso.%player%} to false
+    remove jump boost from player
 
 # Por qué al caer desde muy alto no cancela el daño? Se buggea mucho. A veces si lo cancela. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 on damage:

@@ -250,6 +250,7 @@ on consume of suspicious stew:
 on consume of chorus fruit:
     if name of player's tool contains "&3Mochi":
         cancel event
+        remove 1 of chorus fruit named "&3Mochi" from players's inventory
         apply potion of jump boost 2 to player for 1 minute
         apply absorption 1 to player for 1 minute
         # Estadisticas
