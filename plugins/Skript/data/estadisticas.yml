@@ -11,9 +11,9 @@ itemsop:
             elPantallazoAzul: 57
             lorspi: 30
         impulso:
-            total: 164
+            total: 166
             lorspi: 142
-            elPantallazoAzul: 22
+            elPantallazoAzul: 24
     taladro:
         total: 16
         lorspi: 16

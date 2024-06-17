@@ -1,0 +1,36 @@
+#Mejora de mochila que come automáticamente
+# on load:
+    # set {customitems::ambrosia} to unbreakable honey bottle named "&eAmbrosía" with lore "&bAlimento de los dioses. Te alimenta cuando más lo necesitas." with custom model data 420
+
+# on food bar change:
+    # wait 2 ticks
+    # give 1 of {customitems::ambrosia} to player
+
+# on break:
+    # loop all items in player's inventory:
+        # if loop-value is custom model data of player's tool is 420:
+            # broadcast "&bYeah baby"
+            # stop
+
+on join:
+    set {items.doblesalto.%player%} to 1
+
+# Doble salto
+# Le cambie que le haga push para arriba y que no tenga daño por caída. También que le avise cuando puede volver a saltar.
+# ¿Hay forma de que funciona con la misma tecla de saltar y solo sirva si ya estoy en el aire? Intenté varias formas y no lo logré
+on sneak toggle:
+    if {items.doblesalto.%player%} is 1:
+        wait 1 tick
+        push player up at speed 1
+        set {items.doblesalto.%player%} to 2
+        set {fall.protection.%player%} to true
+        wait 3 seconds
+        set {items.doblesalto.%player%} to 1
+        send action bar "&a&lDoble salto disponible!" to player
+        wait 4 seconds
+        delete {fall.protection.%player%}
+
+on damage of player:
+    if {fall.protection.%victim%} is true:
+        damage cause is fall:
+            cancel event

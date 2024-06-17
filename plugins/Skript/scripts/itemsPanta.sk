@@ -1,36 +1,148 @@
-#Mejora de mochila que come automáticamente
-# on load:
-    # set {customitems::ambrosia} to unbreakable honey bottle named "&eAmbrosía" with lore "&bAlimento de los dioses. Te alimenta cuando más lo necesitas." with custom model data 420
+options:
+    prefijo: "&b[Artefactos] &r"
+    barra: "&6====================================================="
 
-# on food bar change:
-    # wait 2 ticks
-    # give 1 of {customitems::ambrosia} to player
+on load:
+    set {artefactos::1} to diamond axe named "&6&lArtefacto 1" with lore "Hágale hágale"
+    set {artefactos::2} to string named "&6&lSin esfuerzo 2" with lore "Rápido"
+    set {artefactos::3} to rabbit stew named "&6&lAlimentador 3" with lore "Auto alimenta"
+    set {artefactos::4} to shield named "&6&lVida extra 4" with lore "Añade 2 corazones"
+    set {artefactosOff::1} to diamond axe named "&7&lArtefacto 1 DESACTIVADO" with lore "&7&o&mHágale hágale"
+    set {artefactosOff::2} to string named "&7&lSin esfuerzo 2 DESACTIVADO" with lore "&7&o&mRápido"
+    set {artefactosOff::3} to rabbit stew named "&7&lAlimentador 3 DESACTIVADO" with lore "&7&o&mAuto alimenta"
+    set {artefactosOff::4} to shield named "&7&lVida extra 4 DESACTIVADO" with lore "&7&o&mAñade 2 corazones"
 
-# on break:
-    # loop all items in player's inventory:
-        # if loop-value is custom model data of player's tool is 420:
-            # broadcast "&bYeah baby"
-            # stop
+on rightclick with stick:
+    if name of player's tool contains "&6&lArtefactos":
+        artefactosGUI(player)
 
-on join:
-    set {items.doblesalto.%player%} to 1
+function artefactosGUI(p: player):
+    set {_gui} to chest inventory with 3 rows named "&6&lArtefactos"
+    
+    set slot (integers between 0 and 27) of {_gui} to light blue stained glass pane named " "
+    if {artefactos::%uuid of {_p}%::1} is true:
+        set slot 10 of {_gui} to {artefactos::1}
+    else:
+        set slot 10 of {_gui} to {artefactosOff::1}
+    if {artefactos::%uuid of {_p}%::2} is true:
+        set slot 12 of {_gui} to {artefactos::2}
+    else:
+        set slot 12 of {_gui} to {artefactosOff::2}
+    if {artefactos::%uuid of {_p}%::3} is true:
+        set slot 14 of {_gui} to {artefactos::3}
+    else:
+        set slot 14 of {_gui} to {artefactosOff::3}
+    if {artefactos::%uuid of {_p}%::4} is true:
+        set slot 16 of {_gui} to {artefactos::4}
+    else:
+        set slot 16 of {_gui} to {artefactosOff::4}
+    open {_gui} to {_p}
 
-# Doble salto
-# Le cambie que le haga push para arriba y que no tenga daño por caída. También que le avise cuando puede volver a saltar.
-# ¿Hay forma de que funciona con la misma tecla de saltar y solo sirva si ya estoy en el aire? Intenté varias formas y no lo logré
-on sneak toggle:
-    if {items.doblesalto.%player%} is 1:
-        wait 1 tick
-        push player up at speed 1
-        set {items.doblesalto.%player%} to 2
-        set {fall.protection.%player%} to true
-        wait 3 seconds
-        set {items.doblesalto.%player%} to 1
-        send action bar "&a&lDoble salto disponible!" to player
-        wait 4 seconds
-        delete {fall.protection.%player%}
+on inventory click:
+    name of event-inventory is "&6&lArtefactos"
+    cancel event
+    event-inventory is not player's inventory
+    if clicked slot is 10:
+        #send "Diste click en el slot 10"
+        if {artefactos::%uuid of player%::1} is true:
+            artefactoCambio(player, 1, false)
+    else if clicked slot is 12:
+        #send "Diste click en el slot 12"
+        if {artefactos::%uuid of player%::2} is true:
+            artefactoCambio(player, 2, false)
+    else if clicked slot is 14:
+        #send "Diste click en el slot 14"
+        if {artefactos::%uuid of player%::3} is true:
+            artefactoCambio(player, 3, false)
+    else if clicked slot is 16:
+        #send "Diste click en el slot 16"
+        if {artefactos::%uuid of player%::4} is true:
+            artefactoCambio(player, 4, false)
 
-on damage of player:
-    if {fall.protection.%victim%} is true:
-        damage cause is fall:
-            cancel event
+function artefactoCambio(p: player, index: integer, cambio: boolean):
+    if {_cambio}: 
+        if {artefactos::%uuid of {_p}%::%{_index}%} is true:
+            message "%{@prefijo}%Ya tienes activo este artefacto, no puedes activar 2." to {_p}
+            stop
+        set {artefactos::%uuid of {_p}%::%{_index}%} to true
+        remove 1 of ({_p}'s tool) from {_p}'s inventory
+        message "%{@prefijo}%Se ha activado el artefacto %{_index}%." to {_p}
+    else:
+        set {artefactos::%uuid of {_p}%::%{_index}%} to false
+        give {artefactos::%{_index}%} to {_p}
+        message "%{@prefijo}%Se ha desactivado el artefacto %{_index}%." to {_p}
+        artefactosGUI({_p})
+
+command /artefactos [<string>] [<string>]:
+    permission: mundito.admin
+    permission message: Comando deshabilitado... para ti.
+    aliases: artifacts, arte
+    usage: Error, intenta con /artefactos <recibir, consulta, borrar>
+    executable by: player
+    cooldown: 2 seconds
+    trigger:
+        if arg-1 is not set:
+            message {@barra} to player
+            message "%{@prefijo}%&lAyuda:" to player
+            message "%{@prefijo}%Argumentos admitidos:" to player
+            message "%{@prefijo}%&e/artefactos &6recibir&r: Recibe todos los artefactos y el contenedor." to player
+            message "%{@prefijo}%&e/artefactos &6consulta&r: Revisa qué artefactos existen." to player
+            message "%{@prefijo}%&e/artefactos &6borrar <player>&r: Desactiva y elimina los artefactos de un jugador." to player
+            message "%{@prefijo}%&e/artefactos &6borrar todos&r: Desactiva y elimina los artefactos de &ctodo el mundo&r." to player
+            stop
+        if arg-1 contains "borrar":
+            if arg-2 is not set:
+                message {@barra} to player
+                message "%{@prefijo}%Ayuda:" to player
+                message "%{@prefijo}%Argumentos admitidos:" to player
+                message "%{@prefijo}%&e/artefactos &6borrar <player>&r: Desactiva y elimina los artefactos de un jugador." to player
+                message "%{@prefijo}%&e/artefactos &6borrar todos&r: Desactiva y elimina los artefactos de &ctodo el mundo&r." to player
+                stop
+            else:
+                if arg-2 is not "todos":
+                    set {_p} to (arg-2 parsed as player)
+                    loop 4 times:
+                        set {artefactos::%uuid of {_p}%::%loop-number%} to false
+                    message {@barra} to player
+                    message "%{@prefijo}%Desactivos y eliminados los artefactos de %arg-2%" to player
+                else:
+                    set {_num} to size of {artefactos::*}
+                    loop {_num} times:
+                        delete {artefactos::%loop-number%::*}
+                    message {@barra} to player
+                    message "%{@prefijo}%Desactivos y eliminados los artefactos de todos los jugadores." to player
+        if arg-1 contains "recibir":
+            give {artefactos::*} to player
+            give a stick named "&6&lArtefactos" with lore "&fContenedor de artefactos." to player
+            message {@barra} to player
+            message "%{@prefijo}%Cinturón y artefactos recibidos." to player
+        if arg-1 contains "consulta":
+            message {@barra} to player
+            message "%{@prefijo}%Artefactos existentes:" to player
+            loop 4 times:
+                message {artefactos::%loop-number%} to player
+                wait 1 tick
+
+on rightclick with diamond axe:
+    name of player's held item is "&6&lArtefacto 1"
+    cancel the event
+    artefactoCambio(player, 1, true)
+    
+on rightclick with string:
+    name of player's held item is "&6&lSin esfuerzo 2"
+    cancel the event
+    artefactoCambio(player, 2, true)
+    
+on rightclick with rabbit stew:
+    name of player's held item is "&6&lAlimentador 3"
+    cancel the event
+    artefactoCambio(player, 3, true)
+    
+on rightclick with shield:
+    name of player's held item is "&6&lVida extra 4"
+    cancel the event
+    artefactoCambio(player, 4, true)
+
+command /palo:
+    trigger:
+        give a netherite sword named "&6Arte" to player

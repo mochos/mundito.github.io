@@ -1,17 +1,48 @@
-on rightclick with stick:
-    if name of player's tool contains "&6&lArtefactos":
-        set {_inv} to a new chest inventory with 2 row named "&eArtefactos"
-        loop 18 times:
-            set slot (loop-number - 1) of {_inv} to {player_inventory::%uuid of player%::slot-%loop-number%}
-        open {_inv} to player
+# on rightclick with stick:
+    # if name of player's tool contains "&6&lArtefactos":
+        # set {_inv} to a new chest inventory with 1 row named "&eArtefactos"
+        # loop 9 times:
+            # set slot (loop-number - 1) of {_inv} to {artefactos::%uuid of player%::slot-%loop-number%}
+        # open {_inv} to player
         #send "Abierto" to player
 
-on inventory close:
-    if name of event-inventory is "&eArtefactos":
-        loop 18 times:
-            set {player_inventory::%uuid of player%::slot-%loop-number%} to slot (loop-number - 1) of event-inventory
-        #send "Cerrado" to player
+# on inventory close:
+    # if name of event-inventory is "&eArtefactos":
+        # loop 9 times:
+            # set {artefactos::%uuid of player%::slot-%loop-number%} to slot (loop-number - 1) of event-inventory
+        # #send "Cerrado" to player
 
+# command /limpiar:
+    # trigger:
+        # loop 9 times:
+            # set {artefactos::%uuid of player%::slot-%loop-number%} to air
+
+# on inventory click:
+    # broadcast "&6%event-item%"
+    # if type of player's current inventory is chest inventory:
+        # if name of player's current inventory is "&eArtefactos":
+            # set {_item} to type of event-item
+            # if event-item type is not air:
+                # if name of event-item is not "&6Arte":
+                    # cancel event
+                    # send "&cSolo puedes mover ítems llamados '&6Arte'" to player
+            # if cursor slot of player is not air:
+                # if name of cursor slot of player is not "&aArte":
+                    # cancel event
+                    # send "&cSolo puedes colocar ítems llamados '&6Arte'" to player
+
+# on inventory drag:
+    # broadcast "&b&l%event-item%"
+    # if name of player's current inventory is "&eArtefactos":
+        # if name of cursor slot of player is not "&6Arte":
+            # cancel event
+            # send "&bSolo puedes colocar ítems llamados '&6Arte'" to player
+            # stop
+
+# command /palo:
+    # trigger:
+        # give a stick named "&6&lArtefactos" to player
+        # give a netherite sword named "&6Arte" to player
 
 
 #Gafas de visión
