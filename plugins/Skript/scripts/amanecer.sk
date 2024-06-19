@@ -19,7 +19,8 @@ on bed enter:
             broadcast "&e¡Ha amanecido!"
 
 on bed leave:
-    if time is night and !{amaneciendo}:
+    #if time is night and !{amaneciendo}:
+    if time is night:
         make player execute command "/no"
 
 #Cosas que me gustarían:
