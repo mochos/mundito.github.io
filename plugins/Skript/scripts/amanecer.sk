@@ -7,7 +7,7 @@ on bed enter:
         loop all players:
             if loop-player is not player:
                 send formatted "&e%player% está durmiendo. ¡Va a amanecer pronto! Escribe &f/no&e o da <tooltip:&fCancelar amanecer><command:/no>&b&lclick aquí<reset>&e para cancelar." to loop-player
-        #message formatted "&e%player% está durmiendo. ¡Va a amanecer pronto! Escribe &f/no&e o da <tooltip:&fCancelar amanecer><command:/no>&b&lclick aquí<reset>&e para cancelar." to all players
+        send "&e¡Al dormir causaras que amanezca para todos! Levántate de la cama antes de 10 segundos para cancelar el amannecer." to player
         set {sleep.cancel} to false
         wait 10 seconds
         if {sleep.cancel} is false:
