@@ -16,8 +16,8 @@ timestamps:
   mute: 0
   jail: 0
   onlinejail: 0
-  logout: 1718609464177
-  login: 1718602115807
+  logout: 1718898424768
+  login: 1718898337840
   kits:
     color: 1718609392249
 money: '750'
@@ -25,11 +25,11 @@ last-account-name: elPantallazoAzul
 logoutlocation:
   world: b339dda7-0e12-48e2-99c8-d31b6a44bf65
   world-name: world
-  x: 1.1953193304398801
-  y: 77.0
-  z: 19.569380393068304
-  yaw: -0.6184511184692383
-  pitch: -7.565826416015625
+  x: -1.1613446132558847
+  y: 76.0
+  z: 27.270401416913398
+  yaw: 8.646392822265625
+  pitch: 6.640128135681152
 lastlocation:
   world: b339dda7-0e12-48e2-99c8-d31b6a44bf65
   world-name: world
