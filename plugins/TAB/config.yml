@@ -9,8 +9,8 @@ header-footer:
   footer:
     - "&aPing: %ping%"
     - ""
-    - "&7Visita nuestra Wiki:"
-    - "&emochos.xyz/mundito/wiki"
+    - "&7¿Necesitas ayuda?"
+    - "&7Usa el comando: &e/ayuda"
     - "<#FFFFFF>&m                                                </#FFFF00>"
   disable-condition: '%world%=disabledworld'
   per-world:
