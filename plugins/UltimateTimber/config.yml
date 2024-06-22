@@ -92,7 +92,7 @@ ignore-required-tools: false
 
 # Automatically replant saplings when a tree is toppled
 # Default: true
-replant-saplings: true
+replant-saplings: false
 
 # Always replant saplings for base tree blocks, regardless of player permissions
 # Default: false
