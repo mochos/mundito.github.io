@@ -142,3 +142,9 @@ on rightclick with shield:
     name of player's held item is "&6&lVida extra 4"
     cancel the event
     artefactoCambio(player, 4, true)
+
+command /trollear:
+    trigger:
+        loop 40 times:
+            wait 3 ticks
+            execute player command "/strike lorspi"

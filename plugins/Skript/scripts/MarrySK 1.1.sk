@@ -6,7 +6,7 @@
 # |_|  |_|\__,_|_|  |_|   \__, |_____/|_|\_\
 #                          __/ |            
 # Author : Max094_Reikeb  |___/ 
-# Created by : Max094_Reikeb
+# Created by : Max094_Reikeb & lorspi & elPantallazoAzul
 
 #  __  ____  ____  __  __   __ _  ____     __   __ _  ____     __  ____  _  _  ____  ____  ____ 
 # /  \(  _ \(_  _)(  )/  \ (  ( \/ ___)   / _\ (  ( \(    \   /  \(_  _)/ )( \(  __)(  _ \/ ___)
@@ -27,205 +27,190 @@ options:
     
     #Permissions :
     #You can just give the permission "marry.*" to give them all at same time.
-    Marry_Help : marry.help
+    #Marry_Help : marry.help
 
-    Marry_Propose_And_Accept : marry.proacc
+    Marry_Propose_And_Accept : marry.padre
 
-    Marry_Chat : marry.chat
+    #Marry_Chat : marry.chat
 
-    Marry_Tp : marry.tp
+    #Marry_Tp : marry.tp
 
-    Marry_Gift : marry.gift
+    #Marry_Gift : marry.gift
+    
+    Gema_Compromiso : "&b&lGema de compromiso"
+
+    Gema_Matrimonio : "&d&lGema de matrimonio"
 
 on first join:
     set {marry::%player%::tpallow} to true
     set {marry::%player%::chat} to false
     delete {marry::%player%::is}
 
-
 on join:
     set {marry::%player%::chat} to false
+    set {marry::%player%::tpallow} to true
+    wait 60 ticks
 
 on chat:
     if {marry::%player%::chat} is true:
         cancel event
-        send "&7<%player%> %message%" to player
-        send "&7<%player%> %message%" to {marry::%player%::who}
+        send "&b&l♥ %player%: &r%message%" to player
+        send "&b&l♥ %player%: &r%message%" to {marry::%player%::who}
+        play sound "entity.experience_orb.pickup" to {marry::%player%::who}
 
 # _  _   __   __  __ _     ___  __   _  _  _  _   __   __ _  ____ 
 #( \/ ) / _\ (  )(  ( \   / __)/  \ ( \/ )( \/ ) / _\ (  ( \(    \
 #/ \/ \/    \ )( /    /  ( (__(  O )/ \/ \/ \/ \/    \/    / ) D (
 #\_)(_/\_/\_/(__)\_)__)   \___)\__/ \_)(_/\_)(_/\_/\_/\_)__)(____/
-command /marry <text> [<player>]:
+command /matrimonio <text> [<player>] [<player>]:
+    aliases: mtr, matri, pareja
+    cooldown: 2 seconds
+    cooldown message: No puedes usar este comando tan seguido.
     trigger:
-        if arg-1 is "help":
-            if player has permission "{@Marry_Help}":
-                message "&a========================"
-                message "&aMarrySK help pannel :"
-                message "&a========================"
-                message "&4/marry help &a: shows the help pannel"
-                message "&4/marry ask <player> &a: propose to a player"
-                message "&4/marry accept <player> &a: accept the proposal of a player"
-                message "&4/divorce &a: divorce from your partner"
-                message "&4/marry chat &a: activate / deactivate the private marriage chat"
-                message "&4/marry tp &a: teleport yourself to your partner"
-                message "&4/marry tp-allow &a: allow your partner to teleport himself/herself to you"
-                message "&4/marry tp-deny &a: disallow your partner to teleport himself/herself to you"
-                message "&4/marry gift &a: give whatever you're holding in your hand to your partner"
-                if {marry::%player%::is} is set:
-                    message "&aYou're actually married to : &4%{marry::%player%::who}%"
-                    stop
-                else:
-                    message "&aYou are not married yet."
-                    stop
+        if arg-1 is "ayuda":
+            #if player has permission "{@Marry_Help}":
+            message "&a========================"
+            message "&aAyuda de matrimonios :"
+            message "&a========================"
+            message "&4/mtr ayuda &a: Muestra la ayuda"
+            message "&4/mtr chat &a: Activas / desactivas el chat privado con tu pareja"
+            message "&4/mtr tp &a: Teleportarte a ti mismo hacia tu pareja"
+            message "&4/mtr tp-si &a: Permite a tu pareja teleportarse hacia ti"
+            message "&4/mtr tp-no &a: Niega a tu pareja teleportarse hacia ti"
+            message "&4/mtr regalo &a: Regalale a tu pareja los objetos que tengas en tu mano"
+            if {marry::%player%::is} is set:
+                message "&aEstas casad@ con : &4%{marry::%player%::who}%"
+                stop
             else:
-                send "{@Prefix} {@Command_Not_Allowed}" to player
+                message "&aNo estás casad@ aun."
+                stop
 
-        else if arg-1 is "ask":
+        else if arg-1 is "unir":
             if player has permission "{@Marry_Propose_And_Accept}":
+                delete {Gema::Compromiso}
+                delete {Gema::Matrimonio}
                 if arg-2 is not set:
-                    send "{@Prefix} &cYou have to set the username of the personne you want to propose to!" to player
+                    send "{@Prefix} &c¡Debes colocar dos nombres para realizar el matrimonio!" to player
                 else:
-                    if {marry::%player%::is} is not set:
-                        if {marry::%arg-2%::is} is not set:
-                            if {marry::%player%::%arg-2%::ask} is not set:
-                                if arg-2 has permission "{@Marry_Propose_And_Accept}":
-                                    set {marry::%player%::%arg-2%::ask} to true
-                                    send "{@Prefix} &aYou have proposed to &4%arg-2%&a. He/she has 60 secondes to accept..." to player
-                                    send "{@Prefix} &4%player% &aproposed to you!" to arg-2
-                                    send "&aYou have 60 secondes left to do &4/marry accept %player% &aand accept his/her proposal!" to arg-2
-                                    wait 1 minute
-                                    delete {marry::%player%::%arg-2%::ask}
-                                    if {marry::%player%::is} is set:
-                                        stop
+                    if arg-3 is not set:
+                        send "{@Prefix} &c¡Debes colocar dos nombres para realizar el matrimonio!" to player
+                    else:
+                        if {marry::%argument 2%::is} is not set:
+                            if {marry::%argument 3%::is} is not set:
+                                if argument 2 contains "%argument 3%":
+                                    message "{@Prefix} &cNo puedes casar a una persona con sí misma."
+                                    stop
+                                if name of argument 2's tool contains {@Gema_Compromiso}:
+                                    if name of argument 3's tool contains {@Gema_Compromiso}:
+                                        remove 1 of (argument 2's tool) from argument 2's inventory
+                                        remove 1 of (argument 3's tool) from argument 3's inventory
+                                        give amethyst shard named {@Gema_Matrimonio} with lore "&f%argument 2% - %argument 3%" to argument 2
+                                        give amethyst shard named {@Gema_Matrimonio} with lore "&f%argument 2% - %argument 3%" to argument 3
+                                        set {marry::%argument 2%::who} to argument 3
+                                        set {marry::%argument 3%::who} to argument 2
+                                        set {marry::%argument 2%::is} to true
+                                        set {marry::%argument 3%::is} to true
+                                        wait 1 tick
+                                        broadcast "  "
+                                        broadcast " &b&l¡Que vivan los novios!"
+                                        broadcast " &a%argument 2% y %argument 3% acaban de casarse"
+                                        broadcast "  "
+                                        play sound "ui.toast.challenge_complete" with volume 1 to all players
+                                        send title "&b&l¡Que vivan los novios!" with subtitle "&a%argument 2% y %argument 3% acaban de casarse" to all players for 10 seconds with fadein 1 second and fade out 1 second
                                     else:
-                                        send "{@Prefix} &cIt has been 60 seconds and &4%arg-2% &chasn't replied! You are free to ask an other person!" to player
-                                        send "{@Prefix} &cIt has been 60 seconds since &4%player% &cproposed to you! This is considered as a deny." to arg-2
-                                        stop
+                                        send "{@Prefix} &c%arg-3% no está portando la gema de compromiso." to player
+                                        send "{@Prefix} &cDebes portar la gema de compromiso para poder casarte." to arg-3
                                 else:
-                                    send "{@Prefix} &cThe person you want to propose to can't receive any proposal." to player
+                                    send "{@Prefix} &c%arg-2% no está portando la gema de compromiso." to player
+                                    send "{@Prefix} &cDebes portar la gema de compromiso para poder casarte." to arg-3
                             else:
-                                send "{@Prefix} &cYou already have proposed to someone. You have to wait until the person accepts or until the 60 seconds countdown is over." to player
+                                send "{@Prefix} &c¡%arg-3% ya se casó!" to player
                         else:
-                            send "{@Prefix} &cThis person is already married!" to player
-                    else:
-                        send "{@Prefix} &cYou are already married! If you want to propose to someone, do &4/divorce&c!" to player
+                            send "{@Prefix} &c¡%arg-2% ya se casó!" to player
             else:
-                send "{@Prefix} {@Command_Not_Allowed}" to player
+                send "{@Prefix} &aSolo puedes casarte ante los ojos de algún padre." to player
 
-        else if arg-1 is "accept":
-            if player has permission "{@Marry_Propose_And_Accept}":
-                if arg-2 is not set:
-                    send "{@Prefix} &cYou have to accept someone's proposal!" to player
-                else:
-                    if {marry::%arg-2%::%player%::ask} is true:
-                        set {marry::%player%::who} to arg-2
-                        set {marry::%arg-2%::who} to player
-                        set {marry::%player%::is} to true
-                        set {marry::%arg-2%::is} to true
-                        send "{@Prefix} &aCongrats! You are now married to &4%{marry::%player%::who}%" to player
-                        send "{@Prefix} &aCongrats! You are now married to &4%{marry::%arg-2%::who}%" to arg-2
-                        broadcast "{@Prefix} &aCongrats to &4%player% &aand &4%arg-2%&a! They are now married!"
-                        stop
-                    else:
-                        send "{@Prefix} &cYou don't have any proposal from that player." to player
-                        stop
-            else:
-                send "{@Prefix} {@Command_Not_Allowed}" to player
-        
         else if arg-1 is "chat":
-            if player has permission "{@Marry_Chat}":
-                if {marry::%player%::is} is set:
-                    if {marry::%player%::chat} is false:
-                        set {marry::%player%::chat} to true
-                        message "{@Prefix} &aYou've just activated the private chat. Do &4/marry chat &aagain to disable it."
-                        stop
-                    else:
-                        set {marry::%player%::chat} to false
-                        message "{@Prefix} &aYou've just disabled the private chat."
-                        stop
+            if {marry::%player%::is} is set:
+                if {marry::%player%::chat} is false:
+                    set {marry::%player%::chat} to true
+                    message "{@Prefix} &aActivaste el chat privado. Usa &4/mtr chat &apara desactivarlo."
+                    stop
                 else:
-                    message "{@Prefix} &cYou must be married to someone to activate the private chat!"
+                    set {marry::%player%::chat} to false
+                    message "{@Prefix} &aAcabas de desactivar el chat privado."
+                    stop
             else:
-                send "{@Prefix} {@Command_Not_Allowed}" to player
+                message "{@Prefix} &cDebes estar casad@ para usar este usar el chat privado!"
         
         else if arg-1 is "tp":
-            if player has permission "{@Marry_Tp}":
-                if {@Marry_Allow_TP} is true:
-                    if {marry::%player%::is} is set:
-                        if {marry::%player%::tpallow} is true:
-                            teleport player to {marry::%player%::who}
-                            stop
-                        else:
-                            message "{@Prefix} &cYour partner disabled the tp. Sorry."
-                            stop
+            if {@Marry_Allow_TP} is true:
+                if {marry::%player%::is} is set:
+                    if {marry::%player%::tpallow} is true:
+                        teleport player to {marry::%player%::who}
+                        wait 1 tick
+                        play sound "entity.enderman.teleport" with volume 1 to player
+                        play sound "entity.enderman.teleport" with volume 1 to {marry::%player%::who}
+                        stop
                     else:
-                        message "{@Prefix} &cYou must be married to use this function!"
+                        message "{@Prefix} &cTu compañero desactivó el teleporte. Lo lamento."
+                        stop
                 else:
-                    message "{@Prefix} &cFunction disabled by the server."
+                    message "{@Prefix} &c¡Debes casarte para usar este función!"
             else:
-                send "{@Prefix} {@Command_Not_Allowed}" to player
+                message "{@Prefix} &cFunción desactivada."
         
-        else if arg-1 is "tp-allow":
-            if player has permission "{@Marry_Tp}":
-                if {@Marry_Allow_TP} is true:
-                    if {marry::%player%::is} is set:
-                        if {marry::%{marry::%player%::who}%::tpallow} is false:
-                            set {marry::%{marry::%player%::who}%::tpallow} to true
-                            message "{@Prefix} &aYou allowed your partner &4%{marry::%player%::who}% &ato teleport to you."
-                            stop
-                        else:
-                            message "{@Prefix} &cYour partner has already the possibility to teleport to you!"
-                            stop
+        else if arg-1 is "tp-si":
+            if {@Marry_Allow_TP} is true:
+                if {marry::%player%::is} is set:
+                    if {marry::%{marry::%player%::who}%::tpallow} is false:
+                        set {marry::%{marry::%player%::who}%::tpallow} to true
+                        message "{@Prefix} &aPermitiste a tu pareja &4%{marry::%player%::who}% &ateleportarse hacia ti."
+                        stop
                     else:
-                        message "{@Prefix} &cYou must be married to use this function!"
+                        message "{@Prefix} &cTu pareja puede teleportarse hacia ti!"
+                        stop
                 else:
-                    message "{@Prefix} &cFunction disabled by the server."
+                    message "{@Prefix} &c¡Debes casarte para usar este función!"
             else:
-                send "{@Prefix} {@Command_Not_Allowed}" to player
+                message "{@Prefix} &cFunción deshabilitada en el servidor."
 
-        else if arg-1 is "tp-deny":
-            if player has permission "{@Marry_Tp}":
-                if {@Marry_Allow_TP} is true:
-                    if {marry::%player%::is} is set:
-                        if {marry::%{marry::%player%::who}%::tpallow} is true:
-                            set {marry::%{marry::%player%::who}%::tpallow} to false
-                            message "{@Prefix} &aYou forbbid your partner &4%{marry::%player%::who}% &ato teleport to you."
-                            stop
-                        else:
-                            message "{@Prefix} &cYour partner already can't teleport to you!"
-                            stop
+        else if arg-1 is "tp-no":
+            if {@Marry_Allow_TP} is true:
+                if {marry::%player%::is} is set:
+                    if {marry::%{marry::%player%::who}%::tpallow} is true:
+                        set {marry::%{marry::%player%::who}%::tpallow} to false
+                        message "{@Prefix} &aProhibiste a tu pareja &4%{marry::%player%::who}% &ateleportarse hacia ti."
+                        stop
                     else:
-                        message "{@Prefix} &cYou must be married to use this function!"
+                        message "{@Prefix} &cTu pareja no puede teleportarse hacia ti!"
+                        stop
                 else:
-                    message "{@Prefix} &cFunction disabled by the server."
+                    message "{@Prefix} &c¡Debes casarte para usar este función!"
             else:
-                send "{@Prefix} {@Command_Not_Allowed}" to player
+                message "{@Prefix} &cFunción deshabilitada en el servidor."
                     
-        else if arg-1 is "gift":
-            if player has permission "{@Marry_Gift}":
-                if {@Marry_Allow_Gift} is true:
-                    if {marry::%player%::is} is set:
-                        if player is holding air:
-                            message "{@Prefix} &cYou must send something to your partner!"
-                            stop
-                        else:
-                            set {_item} to player's tool
-                            remove {_item} from player's inventory
-                            add {_item} to {marry::%player%::who}'s inventory
-                            send "{@Prefix} &aYou just send a gift to &4%{marry::%player%::who}%&c!" to player
-                            send "{@Prefix} &4%player% &ajust send you a gift!" to {marry::%player%::who}
-                            stop
+        else if arg-1 is "regalo":
+            if {@Marry_Allow_Gift} is true:
+                if {marry::%player%::is} is set:
+                    if player is holding air:
+                        message "{@Prefix} &cDebes tener un objeto en tu mano principal para enviarlo!"
+                        stop
                     else:
-                        message "{@Prefix} &cYou must be married to use this function!"
+                        set {_item} to player's tool
+                        remove {_item} from player's inventory
+                        add {_item} to {marry::%player%::who}'s inventory
+                        send "{@Prefix} &aEnviaste un regalo a &4%{marry::%player%::who}%&c!" to player
+                        send "{@Prefix} &4%player% &ate envió un regalo!" to {marry::%player%::who}
+                        stop
                 else:
-                    message "{@Prefix} &cFunction disabled by the server."
+                    message "{@Prefix} &c¡Debes casarte para usar este función!"
             else:
-                send "{@Prefix} {@Command_Not_Allowed}" to player
+                message "{@Prefix} &cFunción deshabilitada en el servidor."
         else:
-            message "{@Prefix} &cUnknown command. Known syntax : &4/marry <help | ask | accept | chat | tp | tp-allow | tp-deny | gift>"
+            message "{@Prefix} &cUnknown command. Known syntax : &4/mtr <ayuda | chat | tp | tp-si | tp-no | regalo>"
 
-command /divorce:
+command /divorcio:
     trigger:
         if {marry::%player%::is} is set:
             set {_nameofMarry} to {marry::%player%::who}
