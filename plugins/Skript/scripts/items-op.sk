@@ -231,7 +231,11 @@ on damage of entity:
             set {_altura} to fall distance of attacker
             damage attacker's tool by 6
             damage victim by {_damage} - damage
-            push attacker up at speed {_altura} / 5
+            # La siguiente línea empuja al jugador proporcionalmente a la altora del ataque
+            # Hubo que nerfearla hasta que el daño por caída sea resuelto
+            #push attacker up at speed {_altura} / 5
+            push attacker up at speed 2
+            heal attacker
             play explosion emitter at location of attacker to all players
             play sound "entity.wither.hurt" with volume 0.3 to attacker
             # Estadisticas
