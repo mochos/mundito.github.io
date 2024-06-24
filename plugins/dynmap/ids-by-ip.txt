@@ -23,7 +23,7 @@
 - lorspi
 - _lorspi
 '127_0_0_1':
+- 10r571
 - lorspi
 - elPantallazoAzul
-- 10r571
 - sirpol
