@@ -123,24 +123,24 @@ on block break:
 #Evita reparar con comando
 on command "/repair":
     if player don't have the permission "skript.admin":
-        if name of player's tool contains "&9&lInstaminador" or "&9&lDerribadora" or "&3&lBrisa Tempestuosa":
+        if name of player's tool contains "&9&lInstaminador" or "&3&lBrisa Tempestuosa":
             cancel event
             message "&cNo puedes reparar esta herramienta."
 
 #Evita reparar o encantar con yunque
 on anvil prepare:
-    if name of event-item contains "&9&lInstaminador" or "&9&lDerribadora" or "&3&lBrisa Tempestuosa":
+    if name of event-item contains "&9&lInstaminador" or "&3&lBrisa Tempestuosa" or "&7&lLanzacohetes":
         set repair cost of event-inventory to 999
 
 #Evita reparar con mending
 on item mend:
-    if name of event-item contains "&9&lInstaminador" or "&9&lDerribadora" or "&3&lBrisa Tempestuosa":
+    if name of event-item contains "&9&lInstaminador" or "&3&lBrisa Tempestuosa" or "&7&lLanzacohetes":
         cancel the event
         send "&cNo puedes reparar esta herramienta." to player
 
 #Evita encantar con mesa de encantamientos
 on enchant:  
-    if name of event-item contains "&9&lInstaminador" or "&9&lDerribadora" or "&3&lBrisa Tempestuosa":
+    if name of event-item contains "&9&lInstaminador" or "&3&lBrisa Tempestuosa" or "&7&lLanzacohetes":
         cancel event
         message "&cNo puedes encantar esta herramienta."
 
@@ -260,5 +260,52 @@ on damage of entity:
                 if loop-entity is not victim:
                     push loop-entity direction from attacker to loop-entity at speed 1
                     push loop-entity up at speed 0.7
+
+# Lanzazohetes ------------------------------------------------------------------------------------------------------
+
+#/itemname &7&lLanzacohetes
+#/itemlore add &fCausa una explosión en el punto de impacto
+#/itemlore add &fEmpuja entidades al explotar
+#/itemlore add &fDurabilidad limitada / Cooldown 10 segundos
+#/itemlore add &cNo se puede reparar
+
+on projectile hit:
+    if name of shooter's tool contains "&7&lLanzacohetes":
+        if {arcosop.%shooter%} is true:
+            send action bar "&cDebes esperar a que se recargue el arco." to shooter
+            stop
+        else:
+            # Estadisticas
+            load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+            #------------
+            set {_usos} to yaml value "itemsop.lanzacohetes.total" from "estadisticas"
+            if {_usos} is not set:
+                set {_usos} to 0
+            add 1 to {_usos}
+            set yaml value "itemsop.lanzacohetes.total" from "estadisticas" to {_usos}
+            #------------
+            set {_player} to shooter
+            set {_usosplayer} to yaml value "itemsop.lanzacohetes.%{_player}%" from "estadisticas"
+            if {_usosplayer} is not set:
+                set {_usosplayer} to 0
+            add 1 to {_usosplayer}
+            set yaml value "itemsop.lanzacohetes.%{_player}%" from "estadisticas" to {_usosplayer}
+            #------------
+            wait 1 tick
+            save yaml "estadisticas"
+            damage shooter's tool by 20
+            create an explosion of force 3 at the projectile
+            #create a fake explosion at the projectile
+            loop all entities in radius 6 around projectile:
+                if loop-entity is not victim:
+                    push loop-entity direction from projectile to loop-entity at speed 1
+                    push loop-entity up at speed 1
+            set {arcosop.%shooter%} to true
+            send action bar "Recargando arco..." to shooter
+            wait 10 seconds
+            set {arcosop.%shooter%} to false
+            send action bar "&aArco recargado" to shooter
+            stop
+
 
 # --------------------------------------------------------------------------------------------------------------------

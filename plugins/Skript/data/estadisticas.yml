@@ -17,3 +17,6 @@ itemsop:
     taladro:
         total: 45
         lorspi: 45
+    lanzacohetes:
+        total: 23
+        lorspi: 23

@@ -1,85 +1,20 @@
 %YAML 1.1
 ---
-tiles:
--   class: org.dynmap.hdmap.HDMapTile
-    data: 37,-219,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 37,-218,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 37,-217,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 37,-216,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 37,-215,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 37,-214,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 37,-213,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 37,-212,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 37,-211,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 37,-210,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 37,-209,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 37,-208,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 38,-222,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 38,-221,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 38,-220,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 38,-219,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 38,-218,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 38,-217,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 38,-216,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 38,-215,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 38,-214,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 38,-213,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 38,-212,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 38,-211,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 38,-210,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 38,-209,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 38,-208,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 39,-221,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 39,-220,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 39,-219,iso_S_90_lowres,0,0
--   class: org.dynmap.hdmap.HDMapTile
-    data: 39,-218,iso_S_90_lowres,0,0
 invalid:
     flat:
-    - 0/fffffffc:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:ff/ff000000:ff/ffc00000:87/ffc00000:7/ffc00000:7/ffc00000:1/c00000:0/c00000:80/c00000:82/80000000:80/24c00000:80/20c00000:80/20c00000:80/c00000:80/80c00000:80/c00000:80/c00000:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0
+    - ffffffff/ffffffff:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:80000000/0:0/0:0/0:0/0:0/0:0/0
 invZoomOut:
     flat:
+    - &id001 [
+        ]
+    - *id001
+    - *id001
     - [
         ]
     - [
         ]
-    - [
-        ]
-    - [
-        ]
-    - [
-        ]
-    -   - 0/fffffffc:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:20/0:20/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0
-    -   - 0/fffffffe:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/60000:0/40000:0/40000:0/48000:0/60000:0/40000:0/40000:0/60000:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0
-    -   - 0/ffffffff:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/100:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0
-    -   - 0/ffffffff:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/8:0/8:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0
-    -   - 0/ffffffff:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/2:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0
+    -   - ffffffff/ffffffff:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:10000000/0:0/0:0/0:0/0:0/0:0/0
+    - *id001
+    - *id001
+    - *id001
+    -   - 0/0:0/1:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0:0/0
