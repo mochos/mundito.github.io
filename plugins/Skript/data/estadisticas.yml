@@ -6,17 +6,17 @@ itemsop:
             lorspi: 16
             elPantallazoAzul: 30
         ataque:
-            total: 115
+            total: 117
             player: 17
             elPantallazoAzul: 57
-            lorspi: 41
+            lorspi: 43
         impulso:
-            total: 178
-            lorspi: 154
+            total: 182
+            lorspi: 158
             elPantallazoAzul: 24
     taladro:
         total: 45
         lorspi: 45
     lanzacohetes:
-        total: 23
-        lorspi: 23
+        total: 39
+        lorspi: 39
