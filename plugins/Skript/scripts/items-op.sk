@@ -305,6 +305,7 @@ on projectile hit:
             wait 10 seconds
             set {arcosop.%shooter%} to false
             send action bar "&aArco recargado" to shooter
+            play sound "block.note_block.chime" with volume 1 to the shooter
             stop
 
 
