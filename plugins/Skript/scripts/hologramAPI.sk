@@ -1,0 +1,309 @@
+import:
+	org.bukkit.entity.ArmorStand
+#
+#
+#  ██╗  ██╗ ██████╗ ██╗      ██████╗  ██████╗ ██████╗  █████╗ ███╗   ███╗ █████╗ ██████╗ ██╗
+#  ██║  ██║██╔═══██╗██║     ██╔═══██╗██╔════╝ ██╔══██╗██╔══██╗████╗ ████║██╔══██╗██╔══██╗██║
+#  ███████║██║   ██║██║     ██║   ██║██║  ███╗██████╔╝███████║██╔████╔██║███████║██████╔╝██║
+#  ██╔══██║██║   ██║██║     ██║   ██║██║   ██║██╔══██╗██╔══██║██║╚██╔╝██║██╔══██║██╔═══╝ ██║
+#  ██║  ██║╚██████╔╝███████╗╚██████╔╝╚██████╔╝██║  ██║██║  ██║██║ ╚═╝ ██║██║  ██║██║     ██║
+#  ╚═╝  ╚═╝ ╚═════╝ ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝
+# 
+#	Author: iannikde
+#	Ver: v1.0
+#
+# ---------------------------------------------------------------------------------------------------------       
+#
+# command /holoall:
+	# trigger:
+		# send (all registered holograms)
+		
+# command /holosetline <text> <int> <text>:
+	# trigger:
+		# if hologram with id arg-1 exists:
+			# set (line arg-2 of hologram with id arg-1) to arg-3
+		# else:
+			# send "Hologram existiert nicht"
+			
+# command /hologetline <text> <int>:
+	# trigger:
+		# if hologram with id arg-1 exists:
+			# set {_line} to (line arg-2 of hologram with id arg-1)
+			# if {_line} is set:
+				# send {_line}
+			# else:
+				# send "Spalte existiert nicht"
+		# else:
+			# send "Hologram existiert nicht"		
+
+# command /holo <text> <text>:
+	# trigger:
+		# if hologram with id arg-1 doesn't exist:
+			# create hologram arg-2 with id arg-1 at location of player
+		# else:
+			# send "Hologram existiert bereits"
+			
+# command /holoappend <text> <text>:
+	# trigger:
+		# if hologram with id arg-1 exists:
+			# append arg-2 to hologram with id arg-1
+		# else:
+			# send "Hologram existiert nicht"
+
+# command /holodelete <text>:
+	# trigger:
+		# if hologram with id arg-1 exists:
+			# delete hologram with id arg-1
+		# else:
+			# send "Hologram existiert nicht"
+			
+# command /tempholo <text>:
+	# trigger:
+		# create temp-holo arg-1 at location of player for 3 seconds
+#
+# ---------------------------------------------------------------------------------------------------------  
+
+options:
+	index: skholo
+	# DONT CHANGE VALUES
+	offset: 0
+	spacing: 4
+	add: 1
+	remove: 2
+	get: 3
+	set: 4
+	
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+#
+#                           -- Syntax --          
+#
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+condition holo[gram] with id %string% exists:
+	check:
+		return true if (existHolo(expr-1) = true)
+		
+condition holo[gram] with id %string% doesn't exist:
+	check:
+		return true if (existHolo(expr-1) != true)
+
+effect create holo[gram] %string% with id %string% at %location%:
+	trigger:
+		set {_text} to expr-1
+		set {_id} to expr-2
+		set {_loc} to expr-3
+		holoBuilder({_id}, {_loc}, {_text})
+		
+effect append %string% to holo[gram] with id %string%:
+	trigger:
+		set {_text} to expr-1
+		set {_id} to expr-2
+		appendLine({_id}, {_text})
+		
+expression line %int% of holo[gram] with id %string%:
+	get:
+		set {_line} to expr-1
+		set {_id} to expr-2	
+		return hololine({@get}, {_id}, {_line}, "")		
+	set:
+		set {_line} to expr-1
+		set {_id} to expr-2	
+		set {_text} to (change value)
+		hololine({@set}, {_id}, {_line}, {_text})
+		
+effect delete holo[gram] with id %string%:
+	trigger:
+		set {_id} to expr-1
+		removeHolo({_id})
+		
+effect create temp-holo[gram] %string% at %location% for %timespan%:
+	trigger:
+		set {_text} to expr-1
+		set {_loc} to expr-2
+		set {_time} to expr-3
+		tempHoloBuilder({_loc}, {_time}, {_text})
+		
+expression all registered holo[gram]s:
+	return type: objects
+	get:
+		return getAllHolos()
+
+expression location of holo[gram] with id %string%:
+	return type: location
+	get:
+		return getHoloLoc(expr-1)
+		
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+#
+#                            -- Code --          
+#
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+on load:
+	purgeTempHolos(1)
+
+every second:
+	purgeTempHolos(2)
+
+local function getAllHolos() :: objects:
+	return {{@index}::allholos::*}
+	
+local function getAllTempHolos() :: objects:
+	return {{@index}::alltempholos::*}
+	
+local function allHolos(act: number, id: string):
+	add {_id} to {{@index}::allholos::*} if ({_act} = {@add})
+	remove {_id} from {{@index}::allholos::*} if ({_act} = {@remove})
+	
+local function allTempHolos(act: number, id: string):
+	add {_id} to {{@index}::alltempholos::*} if ({_act} = {@add})
+	remove {_id} from {{@index}::alltempholos::*} if ({_act} = {@remove})
+
+local function createHolo(id: string, holo: object):
+	set {{@index}::holo::parent::%{_id}%} to {_holo} if (getAllHolos() doesn't contain {_id})
+	add {_holo} to {{@index}::holo::children::%{_id}%::*} if (getAllHolos() contains {_id})
+
+local function getChildren(id: string) :: int:
+	return (amount of {{@index}::holo::children::%{_id}%::*})
+
+local function hololine(act: int, str: string, line: int, text: string) :: string:
+	set {_id} to toID({_str})
+	if {_line} = 1:
+		set {_holo} to {{@index}::holo::parent::%{_id}%} if (getAllHolos() contains {_id})
+	if {_line} > 1:
+		set {_child} to ({_line} -1)
+		if getChildren({_id}) >= {_child}:
+			set {_holo} to {{@index}::holo::children::%{_id}%::%{_child}%} if (getAllHolos() contains {_id})
+	if {_holo} is set:
+		return {_holo}.getCustomName() if {_act} = {@get}
+		{_holo}.setCustomName(formatted {_text}) if {_act} = {@set}
+	
+local function removeHolo(str: string):
+	set {_id} to toID({_str})
+	{{@index}::holo::parent::%{_id}%}.remove()
+	delete {{@index}::holo::parent::%{_id}%}
+	loop {{@index}::holo::children::%{_id}%::*}:
+		set {_holo} to loop-value
+		{_holo}.remove()
+	clear {{@index}::holo::children::%{_id}%::*}
+	allHolos({@remove}, {_id})
+	
+local function createTempHolo(id: string, holo: object, time: timespan):
+	set {{@index}::tempholo::holo::%{_id}%} to {_holo}
+	set {{@index}::tempholo::time::%{_id}%} to {_time}
+	set {{@index}::tempholo::creation::%{_id}%} to now
+	
+local function removeTempHolo(str: string):
+	set {_id} to toID({_str})
+	{{@index}::tempholo::holo::%{_id}%}.remove()
+	delete {{@index}::tempholo::time::%{_id}%}
+	delete {{@index}::tempholo::creation::%{_id}%}
+	allTempHolos({@remove}, {_id})
+
+local function toID(str: string) :: string:
+	return {_str}.toLowerCase().replace(" ","_")
+
+local function holoBuilder(str: string, loc: location, text: string):
+	set {_type} to (armor stand)
+	set {_id} to toID({_str})
+	set {_spawnloc} to {_loc}
+	if (getAllHolos() doesn't contain {_id}):
+		if {_type} = armor stand:
+			{_spawnloc}.setY({_spawnloc}.getY() + 100)	
+			set {_holo} to {_spawnloc}.getWorld().spawn({_spawnloc}, ArmorStand.class)
+			{_holo}.setVisible(false)
+			{_holo}.setMarker(true)
+			{_holo}.setCustomName(formatted {_text})
+			{_holo}.setCustomNameVisible(true)
+			{_holo}.setGravity(false)		
+		
+		# if {_type} = text display:
+			
+		createHolo({_id}, {_holo})
+		allHolos({@add}, {_id})		
+		{_loc}.setY({_loc}.getY() + {@offset})
+		{_holo}.teleport({_loc})		
+		
+local function tempHoloBuilder(loc: location, time: timespan, text: string):
+	set {_type} to (armor stand)
+	set {_str} to tempHoloIdManager().toString()
+	set {_id} to toID({_str})
+	set {_spawnloc} to {_loc}
+	if (getAllTempHolos() doesn't contain {_id}):
+		if {_type} = armor stand:
+			{_spawnloc}.setY({_spawnloc}.getY() + 100)	
+			set {_holo} to {_spawnloc}.getWorld().spawn({_spawnloc}, ArmorStand.class)
+			{_holo}.setVisible(false)
+			{_holo}.setMarker(true)
+			{_holo}.setCustomName(formatted {_text})
+			{_holo}.setCustomNameVisible(true)
+			{_holo}.setGravity(false)
+		
+		# if {_type} = text display:
+		
+		createTempHolo({_id}, {_holo}, {_time})
+		allTempHolos({@add}, {_id})
+		{_loc}.setY({_loc}.getY() + {@offset})
+		{_holo}.teleport({_loc})
+
+local function getHoloLoc(str: string) :: location:
+	set {_id} to toID({_str})
+	return {{@index}::holo::parent::%{_id}%}
+	
+local function getTempHoloLoc(str: string) :: location:
+	set {_id} to toID({_str})
+	return {{@index}::tempholo::loc::%{_id}%}
+	
+local function getTempHoloTime(str: string) :: timespan:
+	set {_id} to toID({_str})
+	return {{@index}::tempholo::time::%{_id}%}
+	
+local function getTempHoloCreation(str: string) :: date:
+	set {_id} to toID({_str})
+	return {{@index}::tempholo::creation::%{_id}%}
+
+local function tempHoloIdManager() :: int:
+	set {_amount} to amount of getAllTempHolos() -1
+	return ({_amount} +1) if {_amount} is set, else 0
+
+local function purgeTempHolos(act: int):
+	if {_act} = 1:
+		set {_holos::*} to getAllTempHolos()
+		loop {_holos::*}:
+			set {_holo} to loop-value
+			removeTempHolo({_holo})	
+			
+	if {_act} = 2:
+		set {_holos::*} to getAllTempHolos()
+		loop {_holos::*}:
+			set {_holo} to loop-value
+			set {_time} to getTempHoloTime({_holo})
+			set {_creation} to getTempHoloCreation({_holo})
+			
+			set {_diff} to difference between {_creation} and now
+			if {_diff} >= {_time}:
+				removeTempHolo({_holo})
+
+local function appendLine(str: string, text: string):
+	set {_id} to toID({_str})
+	if (getAllHolos() contains {_id}):	
+		set {_spawnloc} to getHoloLoc({_str})
+		set {_loc} to getHoloLoc({_str})
+		
+		{_spawnloc}.setY({_spawnloc}.getY() + 100)	
+		set {_holo} to {_spawnloc}.getWorld().spawn({_spawnloc}, ArmorStand.class)
+		{_holo}.setVisible(false)
+		{_holo}.setMarker(true)
+		{_holo}.setCustomName(formatted {_text})
+		{_holo}.setCustomNameVisible(true)
+		{_holo}.setGravity(false)
+		
+		createHolo({_id}, {_holo})
+
+		set {_factor} to getChildren({_id}) / {@spacing}
+		{_loc}.setY({_loc}.getY() - {_factor})
+		{_holo}.teleport({_loc})
+
+local function existHolo(str: string) :: boolean:
+	set {_id} to toID({_str})
+	return true if (getAllHolos() contains {_id})

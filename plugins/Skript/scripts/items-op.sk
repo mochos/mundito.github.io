@@ -158,7 +158,7 @@ on join:
     remove jump boost from player
 
 # Por qué al caer desde muy alto no cancela el daño? Se buggea mucho. A veces si lo cancela. !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-on damage:
+on damage with priority lowest:
     if damage cause is fall:
         if name of victim's tool contains "&3&lBrisa Tempestuosa":
             cancel the event
@@ -199,9 +199,13 @@ on right click with axe:
             push player up at speed 1.2
             set {items.impulso.%player%} to true
             play explosion emitter at location of player to all players
-            play sound "entity.wither.shoot" with volume 1 to player
+            loop all entities in radius 6 around player:
+                play sound "entity.wither.shoot" with volume 1 at location of player to all players
+                push loop-entity direction from player to loop-entity at speed 1
+                push loop-entity up at speed 0.7
             wait 3 seconds
             set {items.impulso.%player%} to false
+            play sound "block.note_block.chime" with volume 1 to the player
             send action bar "&a&l¡Impulso de salto disponible!" to player
             # Estadisticas
             load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
@@ -237,7 +241,6 @@ on damage of entity:
             push attacker up at speed 2
             heal attacker
             play explosion emitter at location of attacker to all players
-            play sound "entity.wither.hurt" with volume 0.3 to attacker
             # Estadisticas
             load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
             #------------
@@ -258,6 +261,7 @@ on damage of entity:
             save yaml "estadisticas"
             loop all entities in radius 6 around victim:
                 if loop-entity is not victim:
+                    play sound "entity.wither.hurt" with volume 1 at location of attacker to all players
                     push loop-entity direction from attacker to loop-entity at speed 1
                     push loop-entity up at speed 0.7
 
@@ -294,7 +298,8 @@ on projectile hit:
             wait 1 tick
             save yaml "estadisticas"
             damage shooter's tool by 20
-            create an explosion of force 3 at the projectile
+            create an explosion of force 1.4 at the projectile
+            delete projectile
             #create a fake explosion at the projectile
             loop all entities in radius 6 around projectile:
                 if loop-entity is not victim:
@@ -304,9 +309,8 @@ on projectile hit:
             send action bar "Recargando arco..." to shooter
             wait 10 seconds
             set {arcosop.%shooter%} to false
-            send action bar "&aArco recargado" to shooter
+            send action bar "&a&lArco recargado" to shooter
             play sound "block.note_block.chime" with volume 1 to the shooter
             stop
-
 
 # --------------------------------------------------------------------------------------------------------------------

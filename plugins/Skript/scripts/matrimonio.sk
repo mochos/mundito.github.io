@@ -22,7 +22,7 @@ options:
     
     Marry_Allow_Gift : true #As same, if you consider this option as "cheated", it can be set to false
 
-    Command_Not_Allowed : &cYou are not allowed to use this command! #This message will appear if a player uses a command
+    Command_Not_Allowed : &c¡No tienes permiso para hacer esto! #This message will appear if a player uses a command
                                                                      #he can't because he hasn't he permissions below
     
     #Permissions :
@@ -44,12 +44,12 @@ options:
 on first join:
     set {marry::%player%::tpallow} to true
     set {marry::%player%::chat} to false
-    delete {marry::%player%::is}
+    #delete {marry::%player%::is}
 
 on join:
     set {marry::%player%::chat} to false
     set {marry::%player%::tpallow} to true
-    wait 60 ticks
+    set {marry::%player%::pvp} to false
 
 on chat:
     if {marry::%player%::chat} is true:
@@ -62,22 +62,23 @@ on chat:
 #( \/ ) / _\ (  )(  ( \   / __)/  \ ( \/ )( \/ ) / _\ (  ( \(    \
 #/ \/ \/    \ )( /    /  ( (__(  O )/ \/ \/ \/ \/    \/    / ) D (
 #\_)(_/\_/\_/(__)\_)__)   \___)\__/ \_)(_/\_)(_/\_/\_/\_)__)(____/
-command /matrimonio <text> [<player>] [<player>]:
+command /matrimonio [<text>] [<player>] [<player>]:
     aliases: mtr, matri, pareja
     cooldown: 2 seconds
     cooldown message: No puedes usar este comando tan seguido.
     trigger:
-        if arg-1 is "ayuda":
+        if arg-1 is not set:
             #if player has permission "{@Marry_Help}":
             message "&a========================"
             message "&aAyuda de matrimonios :"
             message "&a========================"
-            message "&4/mtr ayuda &a: Muestra la ayuda"
-            message "&4/mtr chat &a: Activas / desactivas el chat privado con tu pareja"
-            message "&4/mtr tp &a: Teleportarte a ti mismo hacia tu pareja"
-            message "&4/mtr tp-si &a: Permite a tu pareja teleportarse hacia ti"
-            message "&4/mtr tp-no &a: Niega a tu pareja teleportarse hacia ti"
-            message "&4/mtr regalo &a: Regalale a tu pareja los objetos que tengas en tu mano"
+            message "&4/mtr&a: Muestra la ayuda"
+            message "&4/mtr chat&a: Activas / desactivas el chat privado con tu pareja"
+            message "&4/mtr tp&a: Teleportarte a ti mismo hacia tu pareja"
+            message "&4/mtr tp-si&a: Permite a tu pareja teleportarse hacia ti"
+            message "&4/mtr tp-no&a: Niega a tu pareja teleportarse hacia ti"
+            message "&4/mtr regalo&a: Regalale a tu pareja los objetos que tengas en tu mano"
+            message "&4/mtr pvp &a: Activas / desactivas el pvp con tu pareja"
             if {marry::%player%::is} is set:
                 message "&aEstas casad@ con : &4%{marry::%player%::who}%"
                 stop
@@ -117,6 +118,29 @@ command /matrimonio <text> [<player>] [<player>]:
                                         broadcast "  "
                                         play sound "ui.toast.challenge_complete" with volume 1 to all players
                                         send title "&b&l¡Que vivan los novios!" with subtitle "&a%argument 2% y %argument 3% acaban de casarse" to all players for 10 seconds with fadein 1 second and fade out 1 second
+                                        # Estadisticas
+                                        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+                                        #------------
+                                        set {_usos} to yaml value "matrimonio.unir.total" from "estadisticas"
+                                        if {_usos} is not set:
+                                            set {_usos} to 0
+                                        add 1 to {_usos}
+                                        set yaml value "matrimonio.unir.total" from "estadisticas" to {_usos}
+                                        #------------
+                                        set {_player} to player
+                                        set {_usosplayer} to yaml value "matrimonio.unir.%{_player}%" from "estadisticas"
+                                        if {_usosplayer} is not set:
+                                            set {_usosplayer} to 0
+                                        add 1 to {_usosplayer}
+                                        set yaml value "matrimonio.unir.%{_player}%" from "estadisticas" to {_usosplayer}
+                                        #------------
+                                        wait 1 tick
+                                        save yaml "estadisticas"
+                                        # Efectos
+                                        loop 10 times:
+                                            play 3 heart with offset of 0, 2, 0 and speed 1 at argument-2's location
+                                            play 3 heart with offset of 0, 2, 0 and speed 1 at argument-3's location
+                                            wait 1 second
                                     else:
                                         send "{@Prefix} &c%arg-3% no está portando la gema de compromiso." to player
                                         send "{@Prefix} &cDebes portar la gema de compromiso para poder casarte." to arg-3
@@ -135,6 +159,24 @@ command /matrimonio <text> [<player>] [<player>]:
                 if {marry::%player%::chat} is false:
                     set {marry::%player%::chat} to true
                     message "{@Prefix} &aActivaste el chat privado. Usa &4/mtr chat &apara desactivarlo."
+                    # Estadisticas
+                    load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+                    #------------
+                    set {_usos} to yaml value "matrimonio.chat.total" from "estadisticas"
+                    if {_usos} is not set:
+                        set {_usos} to 0
+                    add 1 to {_usos}
+                    set yaml value "matrimonio.chat.total" from "estadisticas" to {_usos}
+                    #------------
+                    set {_player} to player
+                    set {_usosplayer} to yaml value "matrimonio.chat.%{_player}%" from "estadisticas"
+                    if {_usosplayer} is not set:
+                        set {_usosplayer} to 0
+                    add 1 to {_usosplayer}
+                    set yaml value "matrimonio.chat.%{_player}%" from "estadisticas" to {_usosplayer}
+                    #------------
+                    wait 1 tick
+                    save yaml "estadisticas"
                     stop
                 else:
                     set {marry::%player%::chat} to false
@@ -142,6 +184,44 @@ command /matrimonio <text> [<player>] [<player>]:
                     stop
             else:
                 message "{@Prefix} &cDebes estar casad@ para usar este usar el chat privado!"
+
+            ###-------------------
+        else if arg-1 is "pvp":
+            if {marry::%player%::is} is set:
+                set {_who} to {marry::%player%::who}
+                if {marry::%player%::pvp} is false:
+                    set {marry::%player%::pvp} to true
+                    set {marry::%{_who}%::pvp} to true
+                    message "{@Prefix} &aActivaste el pvp con tu pareja." to player
+                    message "{@Prefix} &aTu pareja activó el pvp. Usa &4/mtr pvp &apara desactivarlo." to {_who}
+                    # Estadisticas
+                    load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+                    #------------
+                    set {_usos} to yaml value "matrimonio.pvp.total" from "estadisticas"
+                    if {_usos} is not set:
+                        set {_usos} to 0
+                    add 1 to {_usos}
+                    set yaml value "matrimonio.pvp.total" from "estadisticas" to {_usos}
+                    #------------
+                    set {_player} to player
+                    set {_usosplayer} to yaml value "matrimonio.pvp.%{_player}%" from "estadisticas"
+                    if {_usosplayer} is not set:
+                        set {_usosplayer} to 0
+                    add 1 to {_usosplayer}
+                    set yaml value "matrimonio.pvp.%{_player}%" from "estadisticas" to {_usosplayer}
+                    #------------
+                    wait 1 tick
+                    save yaml "estadisticas"
+                    stop
+                else:
+                    set {marry::%player%::pvp} to false
+                    set {marry::%{_who}%::pvp} to false
+                    message "{@Prefix} &aAcabas de desactivar el pvp con tu pareja."
+                    message "{@Prefix} &aTu pareja desactivó el pvp. Usa &4/mtr pvp &apara activarlo." to {_who}
+                    stop
+            else:
+                message "{@Prefix} &cDebes estar casad@ para usar este usar alternar el pvp con tu pareja!"
+            ###-------------------
         
         else if arg-1 is "tp":
             if {@Marry_Allow_TP} is true:
@@ -151,6 +231,24 @@ command /matrimonio <text> [<player>] [<player>]:
                         wait 1 tick
                         play sound "entity.enderman.teleport" with volume 1 to player
                         play sound "entity.enderman.teleport" with volume 1 to {marry::%player%::who}
+                        # Estadisticas
+                        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+                        #------------
+                        set {_usos} to yaml value "matrimonio.teleportar.total" from "estadisticas"
+                        if {_usos} is not set:
+                            set {_usos} to 0
+                        add 1 to {_usos}
+                        set yaml value "matrimonio.teleportar.total" from "estadisticas" to {_usos}
+                        #------------
+                        set {_player} to player
+                        set {_usosplayer} to yaml value "matrimonio.teleportar.%{_player}%" from "estadisticas"
+                        if {_usosplayer} is not set:
+                            set {_usosplayer} to 0
+                        add 1 to {_usosplayer}
+                        set yaml value "matrimonio.teleportar.%{_player}%" from "estadisticas" to {_usosplayer}
+                        #------------
+                        wait 1 tick
+                        save yaml "estadisticas"
                         stop
                     else:
                         message "{@Prefix} &cTu compañero desactivó el teleporte. Lo lamento."
@@ -202,13 +300,31 @@ command /matrimonio <text> [<player>] [<player>]:
                         add {_item} to {marry::%player%::who}'s inventory
                         send "{@Prefix} &aEnviaste un regalo a &4%{marry::%player%::who}%&c!" to player
                         send "{@Prefix} &4%player% &ate envió un regalo!" to {marry::%player%::who}
+                        # Estadisticas
+                        load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+                        #------------
+                        set {_usos} to yaml value "matrimonio.regalo.total" from "estadisticas"
+                        if {_usos} is not set:
+                            set {_usos} to 0
+                        add 1 to {_usos}
+                        set yaml value "matrimonio.regalo.total" from "estadisticas" to {_usos}
+                        #------------
+                        set {_player} to player
+                        set {_usosplayer} to yaml value "matrimonio.regalo.%{_player}%" from "estadisticas"
+                        if {_usosplayer} is not set:
+                            set {_usosplayer} to 0
+                        add 1 to {_usosplayer}
+                        set yaml value "matrimonio.regalo.%{_player}%" from "estadisticas" to {_usosplayer}
+                        #------------
+                        wait 1 tick
+                        save yaml "estadisticas"
                         stop
                 else:
                     message "{@Prefix} &c¡Debes casarte para usar este función!"
             else:
                 message "{@Prefix} &cFunción deshabilitada en el servidor."
         else:
-            message "{@Prefix} &cComando desconocido. Sintaxis: &4/mtr <ayuda | chat | tp | tp-si | tp-no | regalo>"
+            message "{@Prefix} &cComando desconocido. Sintaxis: &4/mtr < chat | tp | tp-si | tp-no | regalo>"
 
 command /divorcio:
     trigger:
@@ -225,16 +341,62 @@ command /divorcio:
             send "{@Prefix} &aTe acabas de divorciar de &4%{_nameofMarry}%" to player
             send "{@Prefix} &4%player% &ase ha divorciado de ti." to {_nameofMarry}
             broadcast "{@Prefix} &4%player% &ale pidió el divorcio a &4%{_nameofMarry}%&a. Ahora están divorciados. :("
+            # Estadisticas
+            load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+            #------------
+            set {_usos} to yaml value "matrimonio.divorcio.total" from "estadisticas"
+            if {_usos} is not set:
+                set {_usos} to 0
+            add 1 to {_usos}
+            set yaml value "matrimonio.divorcio.total" from "estadisticas" to {_usos}
+            #------------
+            set {_player} to player
+            set {_usosplayer} to yaml value "matrimonio.divorcio.%{_player}%" from "estadisticas"
+            if {_usosplayer} is not set:
+                set {_usosplayer} to 0
+            add 1 to {_usosplayer}
+            set yaml value "matrimonio.divorcio.%{_player}%" from "estadisticas" to {_usosplayer}
+            #------------
+            wait 1 tick
+            save yaml "estadisticas"
             stop
         else:
             send "{@Prefix} &cDebes estar casad@ para poder divorciarte."
             stop
 
-#  ______           _          __                 _       _   
-# |  ____|         | |        / _|               (_)     | |  
-# | |__   _ __   __| |   ___ | |_   ___  ___ _ __ _ _ __ | |_ 
-# |  __| | '_ \ / _` |  / _ \|  _| / __|/ __| '__| | '_ \| __|
-# | |____| | | | (_| | | (_) | |   \__ | (__| |  | | |_) | |_ 
-# |______|_| |_|\__,_|  \___/|_|   |___/\___|_|  |_| .__/ \__|
-#                                                  | |        
-#                                                  |_|        
+#--------------------------------------------------------------
+every 10 seconds:
+    loop all players:
+        if {marry::%loop-player%::is} is set:
+            set {_partner} to {marry::%loop-player%::who}
+            if {_partner} is online:
+                if distance between loop-player and {_partner} is less than 20:
+                    apply haste 1 to loop-player for 10 seconds
+                    apply regeneration 1 to loop-player for 10 seconds
+                    apply strength 1 to loop-player for 10 seconds
+
+on damage:
+    attacker is a player
+    victim is a player
+    {marry::%attacker%::is} is set
+    {marry::%victim%::is} is set
+    #broadcast "&cSon casados."
+    if {marry::%attacker%::who} contains "%victim%":
+        if {marry::%attacker%::pvp}:
+            #broadcast "&bPvP funcionando."
+            uncancel event
+        else:
+            #broadcast "&dEvento cancela'o."
+            message "{@Prefix} &aEl pvp con tu pareja está desactivado. Usa &4/mtr pvp &apara activarlo." to attacker
+            cancel event
+
+#-------- EJEMPLO FORTUNA AL ESTAR CERCA
+#on break of obsidian:
+#    cancel drops
+#    if player's tool is a diamond pickaxe:
+#            cancel drops
+#            give player (2 * (level of fortune of player's tool)) of nether star
+# 
+#    else:
+#        cancel drops
+#        give player a nether star

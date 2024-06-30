@@ -11,13 +11,13 @@ powertoolsenabled: true
 accepting-pay: true
 baltop-exempt: false
 timestamps:
-  lastteleport: 1718559954668
+  lastteleport: 1719774705832
   lastheal: 0
   mute: 0
   jail: 0
   onlinejail: 0
-  logout: 1719611354413
-  login: 1719611342328
+  logout: 1719780252043
+  login: 1719779473190
   kits:
     color: 1719152955108
 money: '750'
@@ -25,16 +25,16 @@ last-account-name: elPantallazoAzul
 logoutlocation:
   world: b339dda7-0e12-48e2-99c8-d31b6a44bf65
   world-name: world
-  x: 5.031837228298239
-  y: 79.0
-  z: 13.50524271905898
-  yaw: -92.89654541015625
-  pitch: 7.695699691772461
+  x: -4.202035564785136
+  y: 76.5312500178814
+  z: 22.77701049942226
+  yaw: 10.151820182800293
+  pitch: -0.5993431210517883
 lastlocation:
   world: b339dda7-0e12-48e2-99c8-d31b6a44bf65
   world-name: world
-  x: 2.8440901629609447
-  y: 79.0
-  z: 14.434946813743673
-  yaw: 20.90484619140625
-  pitch: 13.582319259643555
+  x: -13.750052720830968
+  y: 76.59417226536671
+  z: 35.134901265348105
+  yaw: -76.55772399902344
+  pitch: 10.653972625732422
