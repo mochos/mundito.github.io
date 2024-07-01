@@ -115,9 +115,15 @@ command /emitirceitil <text> <number>:
 function banco(p: player):
     load yaml "plugins/Skript/data/economia.yml" as "economia"
     set {_total} to yaml value "ceitiles.total" from "economia"
+    set {_lomas1} to yaml value "ceitiles.lorspi" from "economia"
+    set {_lomas2} to yaml value "ceitiles._lorspi" from "economia"
+    set {_lomast} to {_lomas1} + {_lomas2}
+    set {_el0town1} to yaml value "ceitiles.El0tito" from "economia"
+    set {_el0town2} to yaml value "ceitiles.Cr081s: 0" from "economia"
+    set {_el0townt} to {_el0town1} + {_el0town2}
     set {_transacciones} to a new chest inventory with 4 row named "&a&lBanco Central"
     set slot 10 of {_transacciones} to book named "&6&lSaldo en tu cuenta" with lore " &f%balance of {_p}%"
-    set slot 19 of {_transacciones} to book named "&6&lIndicadores económicos" with lore "&f ▶ Esmeralda: $10" and "&f ▶ Fundar ciudad: $100" and "&f ▶ Fundar outpost: $300" and "&f ▶ Valor base del chunk: $100" and "&f ▶ Incremento del valor del chunk: 1.5%%" and "&f ▶ Ceitiles circulando: $%{_total}%"
+    set slot 19 of {_transacciones} to book named "&6&lIndicadores económicos" with lore "&f ▶ Valor esmeralda: $10" and "&f ▶ Fundar ciudad: $100" and "&f ▶ Fundar outpost: $300" and "&f ▶ Valor base del chunk: $100" and "&f ▶ Incremento del valor del chunk: 1.5%%" and "&f ▶ Ceitiles emitidos: $%{_total}%" and "&7    [ Lomas: $%{_lomast}% | El0town: $%{_el0townt}% ]"
     #Retirar
     set slot 12 of {_transacciones} to sunflower named "&6&lRetirar 1 ceitil" with lore "&fPoner 1 ceitil en tu inventario"
     set slot 13 of {_transacciones} to sunflower named "&6&lRetirar 10 ceitiles" with lore "&fPoner 10 ceitiles en tu inventario"

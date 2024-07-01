@@ -89,7 +89,7 @@ on rightclick with echo shard:
 
 #/itemname &9&lInstaminador
 #/itemlore add &fRompe un radio de 3x3 bloques
-#/itemlore add &cNo se puede reparar
+#/itemlore add &cNo reparable - No encantable
 # Poner una versión con eficiencia 5
 
 on block break:
@@ -150,7 +150,7 @@ on enchant:
 #/itemlore add &fInfringe más daño al atacar en caída
 #/itemlore add &fEvita el daño por caída
 #/itemlore add &fÚsala para impulsarte hacia arriba
-#/itemlore add &cNo se puede reparar
+#/itemlore add &cNo reparable - No encantable
 # Poner una versión con eficiencia 5
 
 on join:
@@ -271,7 +271,7 @@ on damage of entity:
 #/itemlore add &fCausa una explosión en el punto de impacto
 #/itemlore add &fEmpuja entidades al explotar
 #/itemlore add &fDurabilidad limitada / Cooldown 10 segundos
-#/itemlore add &cNo se puede reparar
+#/itemlore add &cNo reparable - No encantable
 
 on projectile hit:
     if name of shooter's tool contains "&7&lLanzacohetes":
