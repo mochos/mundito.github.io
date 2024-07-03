@@ -30,9 +30,24 @@ worlds:
         append_to_world: ''
         protected: false
         readonly: false
+    -   class: org.dynmap.hdmap.HDMap
+        name: surface
+        title: Surface
+        prefix: t
+        perspective: iso_SE_30_hires
+        shader: stdtexture
+        lighting: shadows
+        image-format: default
+        mapzoomin: 1
+        mapzoomout: 5
+        boostzoom: 0
+        tilescale: 0
+        append_to_world: ''
+        protected: false
+        readonly: false
 -   name: world_nether
     title: world_nether
-    enabled: disable
+    enabled: true
     extrazoomout: 2
     maps:
     -   class: org.dynmap.hdmap.HDMap
@@ -52,25 +67,4 @@ worlds:
         shader: stdtexture
         lighting: nethershadows
         background: '#300806'
-        mapzoomin: 1
--   name: world_the_end
-    title: world_the_end
-    enabled: true
-    extrazoomout: 2
-    maps:
-    -   class: org.dynmap.hdmap.HDMap
-        name: flat
-        title: Flat
-        prefix: flat
-        perspective: iso_S_90_lowres
-        shader: stdtexture
-        lighting: brightnight
-        mapzoomin: 1
-    -   class: org.dynmap.hdmap.HDMap
-        name: the_end
-        title: Surface
-        prefix: st
-        perspective: iso_SE_30_hires
-        shader: stdtexture
-        lighting: brightnight
         mapzoomin: 1
