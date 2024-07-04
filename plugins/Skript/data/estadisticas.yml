@@ -1,27 +1,27 @@
 itemsop:
     brisa:
         caida:
-            total: 272
+            total: 300
             player: 74
             lorspi: 79
-            elPantallazoAzul: 69
+            elPantallazoAzul: 97
             ShakalChapa: 50
         ataque:
-            total: 156
+            total: 178
             player: 17
-            elPantallazoAzul: 60
-            lorspi: 79
+            elPantallazoAzul: 64
+            lorspi: 97
         impulso:
-            total: 528
-            lorspi: 319
-            elPantallazoAzul: 111
+            total: 610
+            lorspi: 333
+            elPantallazoAzul: 179
             ShakalChapa: 98
     taladro:
         total: 45
         lorspi: 45
     lanzacohetes:
-        total: 196
-        lorspi: 146
+        total: 197
+        lorspi: 147
         elPantallazoAzul: 42
         ShakalChapa: 8
 
@@ -38,8 +38,8 @@ matrimonio:
         total: 1
         lorspi: 1
     divorcio:
-        total: 3
-        lorspi: 2
+        total: 4
+        lorspi: 3
         elPantallazoAzul: 1
     unir:
         total: 6

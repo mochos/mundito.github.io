@@ -6,6 +6,21 @@
 # Permitir al jugador rendirse.
 # Corregir muerte con /kill
 
+# A simple queue script.
+
+on load:
+    delete {downed.armorstands::*}
+
+on unload:
+    delete {downed.armorstands::*}
+
+function parseLoc(loc: location) :: string:
+    set {_x} to x-coordinate of {_loc}
+    set {_y} to y-coordinate of {_loc}
+    set {_z} to z-coordinate of {_loc}
+    set {_message} to "%{_x}%, %{_y}%, %{_z}%"
+    return {_message}
+
 on damage:
     victim is a player
     if attacker is a player:
@@ -15,38 +30,59 @@ on damage:
             send "&aHas revivido a %victim%!" to attacker
             send "&a¡%attacker% te ha revivido!" to victim
             send title "&b&l¡De pié soldado!" with subtitle "&a%attacker% te ha revivido." to victim for 3 seconds with fadein 1 second and fade out 1 second
-            # Colocar aquí efectos y cosméticos de haber sido revivido :)
             delete {downed.%victim%}
             delete {downed.time.%victim%}
-            set {_loc} to the location 1.6 meters above the victim
+            set {_loc} to the location 1.7 meters above the victim
             teleport victim to {_loc}
             remove glowing from victim
+            wait 1 tick
+            delete entity within {downed.armorstands::%victim%}
+            delete {downed.armorstands::%victim%}
+            # Colocar aquí efectos y cosméticos de haber sido revivido :) por favor deja la barra comentada para luego organizar ;D
+            
+            # =====================================
+            stop
     damage was caused by sweep attack, thorns, the void, magma, a lightning, drowning, dragonfire, an attack, drown, an entity attack, melt, freeze, falling block, contact, fire, an entity explosion, lightning, a fall, entity explosion, void, a lightning strike, suffocation, suicide, wither effect, a plugin, lightning strike, entity attack, a potion, a wither, sweeping, melting, a falling block, starvation, lava, fall, hot floor, attack, a block explosion, dryout, burn, hitting wall while flying, potion, world border, flying into a wall, cramming, poison, sonic boom, suffocate, custom, a fire, burning, a projectile, plugin, wither potion effect, block explosion, projectile, wither or dragon's breath
     damage is greater than or equal to victim's health
     cancel event
+    if {downed.%victim%} is true:
+        set victim's health to 0
+        broadcast "&c%victim% ha muerto."
+        delete {downed.%victim%}
+        delete {downed.time.%victim%}
+        delete entity within {downed.armorstands::%victim%}
+        delete {downed.armorstands::%victim%}
+        stop
     set victim's health to 3
-    apply blindness 2 to victim for 3 seconds
-    set {_loc} to the location 1.6 meters below the victim
-    # Colocar aquí efectos y cosméticos al acto de morir :(
-    broadcast "&c%victim% se está desangrando en: %{_loc}% en %world of {_loc}%."
+    apply blindness 2 to victim for 30 seconds
+    set {_loc} to the location 1.7 meters below the victim
+    # Colocar aquí efectos y cosméticos al acto de morir :( por favor deja la barra comentada para luego organizar ;D
+    
+    # =====================================
+    broadcast "&c%victim% se está desangrando en: %parseLoc({_loc})% en %world of {_loc}%."
     spawn an armor stand at {_loc} with nbt from "{Invisible:1b,Invulnerable:1b,NoGravity:1b}"
     make the victim ride the last spawned entity
+    set {downed.armorstands::%victim%} to the last spawned entity
     set {downed.%victim%} to true
-    set {downed.time.%victim%} to 60
-    loop 60 times:
+    set {downed.time.%victim%} to 30
+    loop 30 times:
         wait 1 second
         if {downed.%victim%} is true:
-            # Colocar aquí efectos y cosméticos mientras está agonizando :(
+            # Colocar aquí efectos y cosméticos mientras está agonizando :( por favor deja la barra comentada para luego organizar ;D
+            
+            # =====================================
             send title "&b&l¡Estás derribado!" with subtitle "&aTe quedan %{downed.time.%victim%} - 1% segundos de vida." to victim for 2 seconds with fadein 1 second and fade out 1 second
             remove 1 from {downed.time.%victim%}
             if {downed.time.%victim%} is 0:
                 set victim's health to 0
-                broadcast "&c%victim% ha muerto en las coordenadas %victim's location%"
+                # broadcast "&c%victim% ha muerto en las coordenadas %parseLoc(victim's location)%"
+                broadcast "&c%victim% ha muerto desangrado."
                 delete {downed.%victim%}
                 delete {downed.time.%victim%}
+                delete entity within {downed.armorstands::%victim%}
+                delete {downed.armorstands::%victim%}
         else:
-            stop
-    broadcast "&e%victim% ha caído en las coordenadas %victim's location%"
+            stop loop
 
 # Evitar que el jugador caído interactúe con bloques e ítems
 on command:
