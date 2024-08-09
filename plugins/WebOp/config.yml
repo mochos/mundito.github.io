@@ -1,0 +1,12 @@
+settings:
+  http-port: 1337
+  html-theme: default
+
+whitelist: []
+
+consoleView: []
+
+consoleOp: []
+
+allowed-login-players:
+  lorspi: Tetra50la
