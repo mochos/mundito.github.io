@@ -45,6 +45,30 @@ command /stream [<text>]:
             send "&5&l[&d&lStream&5&l] &rAvísanos a todos cuando estés en directo escribiendo /stream" to player
             send "&5&l[&d&lStream&5&l] &rSi la URL no es correcta, utiliza el comando nuevamente." to player
 
+
+command /corazones:
+    permission: mundito.admin
+    trigger:
+        if {corazones::%player%} is not set:
+            set {corazones::%player%} to true
+            send "&aPartículas de corazón activadas."
+            loop 1000 times:
+                if {corazones::%player%} is true:
+                    #execute console command "/execute at lorspi run particle minecraft:heart ~ ~2 ~ 1 1 1 0 1"
+                    set {_x} to random number between -2 and 2
+                    set {_y} to random number between 0 and 2
+                    set {_z} to random number between -2 and 2
+                    play heart at location of player offset by {_x}, {_y}, {_z}
+                    # play heart at location 6, 85, 51 #habrá que hacerlo con posición absoluta calculando las coords del jugador
+                    send "%{_x}%, %{_y}%, %{_z}%" to player
+                    wait 0.5 second
+                else:
+                    stop loop
+        else:
+            delete {corazones::%player%}
+            send "&cPartículas de corazón desactivadas."
+
+
 #command /stream <text>:
 #    permission: mundito.streamer
 #    trigger:
