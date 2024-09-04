@@ -1,9 +1,9 @@
-location: world:19:74:52
+location: world:3.5:80:44.5
 enabled: true
 display-range: 32
 update-range: 32
 update-interval: 20
-facing: 270.0
+facing: 0.0
 down-origin: false
 pages:
 - lines:

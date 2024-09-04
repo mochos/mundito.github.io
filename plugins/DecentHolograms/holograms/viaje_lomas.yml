@@ -1,0 +1,18 @@
+location: world:8:76:26
+enabled: true
+display-range: 32
+update-range: 32
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: '#HEAD: COMPASS'
+    height: 0.3
+  - content: 'Viajar a'
+    height: 0.3
+  - content: '&b&lLomas Turbas'
+    height: 0.3
+  actions: 
+    LEFT:
+    - CONSOLE:sudo {player} t spawn LomasTurbas
