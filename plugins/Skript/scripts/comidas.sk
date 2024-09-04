@@ -2,7 +2,7 @@
 
 # Pan de masa madre -------------------------------------------------------------------------
 on consume of bread:
-    if name of player's tool contains "&6Pan de masa madre":
+    if name of player's tool contains "&e&lPan de masa madre":
         apply regeneration 2 to player for 10 seconds
         apply absorption 2 to player for 120 seconds
         apply resistance 2 to player for 60 seconds

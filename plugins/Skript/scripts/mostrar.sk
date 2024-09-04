@@ -1,0 +1,3 @@
+command /miuuid:
+  trigger:
+    send "%player's uuid%" to player

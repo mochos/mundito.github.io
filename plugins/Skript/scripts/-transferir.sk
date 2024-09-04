@@ -1,0 +1,38 @@
+# Evento: Jugador hace shift clic derecho en otro jugador
+on right click on player:
+    if player is sneaking:
+        #if "%player's tool%" is not "air":
+        if player's tool is set:
+            set {transfer.request::%clicked player%::from} to player
+            set {transfer.request::%clicked player%::item} to player's tool
+            set {transfer.request::%clicked player%::amount} to amount of tool of the player
+            set {transfer.request::%clicked player%::time} to now
+            remove {transfer.request::%clicked player%::item} from player
+            send "&e%player% quiere entregarte %{transfer.request::%clicked player%::item}%. Presiona shift para aceptarlo." to clicked player
+            send "&eHas enviado una solicitud de transferencia a %clicked player%." to player
+            wait 15 seconds
+            if {transfer.request::%clicked player%::from} is set:
+                give {transfer.request::%clicked player%::item} to {transfer.request::%clicked player%::from}
+                delete {transfer.request::%clicked player%::*}
+                send "&c%clicked player% no aceptó la transferencia de ítems a tiempo." to player
+                send "&cLa solicitud de transferencia de %player% ha expirado." to clicked player
+
+# Evento: Jugador acepta la transferencia (presiona shift)
+on sneak toggle:
+    if {transfer.request::%player%::from} is set:
+        set {_from} to {transfer.request::%player%::from}
+        set {_item} to {transfer.request::%player%::item}
+        set {_amount} to {transfer.request::%player%::amount}
+        give {_item} to player
+        remove {_item} from {_from}
+        delete {transfer.request::%player%::*}
+        send "&aHas recibido %{_item}% de %{_from}%." to player
+        send "&a%player% ha aceptado la transferencia de ítems." to {_from}
+
+# Limpiar las solicitudes de transferencia después de 15 segundos
+every 1 second:
+    loop {transfer.request::*}:
+        set {_target} to loop-index
+        if difference between now and {transfer.request::%{_target}%::time} is greater than 15 seconds:
+            give {transfer.request::%{_target}%::item} to {transfer.request::%{_target}%::from}
+            delete {transfer.request::%{_target}%::*}

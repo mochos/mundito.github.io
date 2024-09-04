@@ -1,0 +1,17 @@
+on load: #masa-madre
+    set {_masamadre} to snowball named "&eMasa madre"
+    register new shapeless recipe for {_masamadre} named "&eMasa madre" using wheat, brown mushroom and sugar with id "masamadre"
+
+
+on load: #pan-crudo
+    set {_pancrudo} to bread named "&ePan de masa madre crudo"
+    set {_masamadre} to snowball named "&eMasa madre"
+    #enchant {_pancrudo} with unbreaking 10
+    register new shaped recipe for {_pancrudo} named "&ePan de masa madre crudo" using air, honey bottle, air, wheat, {_masamadre}, wheat, air, golden apple and air with id "pancrudo"
+
+
+on load:
+    set {_pancrudo} to bread named "&ePan de masa madre crudo"
+    set {_panmadre} to bread named "&e&lPan de masa madre" with lore "&7Hecho en Lomas Turbas"
+    enchant {_panmadre} with unbreaking 10
+    register new furnace recipe for {_panmadre} using {_pancrudo} with id "panmadre"

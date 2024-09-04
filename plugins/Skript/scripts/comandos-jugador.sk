@@ -45,19 +45,6 @@ command /stream [<text>]:
             send "&5&l[&d&lStream&5&l] &rAvísanos a todos cuando estés en directo escribiendo /stream" to player
             send "&5&l[&d&lStream&5&l] &rSi la URL no es correcta, utiliza el comando nuevamente." to player
 
-
-command /parse:
-    permission: mundito.streamer
-    trigger:
-        broadcast "  "
-        broadcast " &b&l¡Que vivan los novios!"
-        broadcast " &aNombre1 y Nombre2 acaban de casarse"
-        broadcast "  "
-        play sound "ui.toast.challenge_complete" with volume 1 to all players
-        send title "&b&l¡Que vivan los novios!" with subtitle "&aNombre1 y Nombre2 acaban de casarse" to all players for 10 seconds with fadein 1 second and fade out 1 second
-
-
-
 #command /stream <text>:
 #    permission: mundito.streamer
 #    trigger:
