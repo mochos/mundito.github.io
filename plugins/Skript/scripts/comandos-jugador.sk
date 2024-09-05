@@ -55,13 +55,19 @@ command /corazones:
             loop 1000 times:
                 if {corazones::%player%} is true:
                     #execute console command "/execute at lorspi run particle minecraft:heart ~ ~2 ~ 1 1 1 0 1"
-                    set {_x} to random number between -2 and 2
-                    set {_y} to random number between 0 and 2
-                    set {_z} to random number between -2 and 2
-                    play heart at location of player offset by {_x}, {_y}, {_z}
-                    # play heart at location 6, 85, 51 #habrá que hacerlo con posición absoluta calculando las coords del jugador
-                    send "%{_x}%, %{_y}%, %{_z}%" to player
-                    wait 0.5 second
+                    set {_x.rand} to random number between -2 and 2
+                    set {_y.rand} to random number between 0 and 2
+                    set {_z.rand} to random number between -2 and 2
+                    set {_x.jug} to player's x-coordinate
+                    set {_y.jug} to player's y-coordinate
+                    set {_z.jug} to player's z-coordinate
+                    set {_x.nue} to {_x.jug} + {_x.rand}
+                    set {_y.nue} to {_y.jug} + {_y.rand}
+                    set {_z.nue} to {_z.jug} + {_z.rand}
+                    #play heart at location of player offset by {_x.nue}, {_y.nue}, {_z.nue}
+                    #send "%{_x.nue}%, %{_y.nue}%, %{_z.nue}%" to player
+                    play heart at location {_x.nue}, {_y.nue}, {_z.nue} #habrá que hacerlo con posición absoluta calculando las coords del jugador
+                    wait 0.1 second
                 else:
                     stop loop
         else:
