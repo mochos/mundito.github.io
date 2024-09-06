@@ -4,12 +4,12 @@
 
 ## Información
 
-* [🆘 Ayuda](informacion/quickstart.md)
-* [🏷️ Marca](informacion/publish-your-docs.md)
-* [😎 Créditos](informacion/images-and-media.md)
+* [🆘 Ayuda](informacion/ayuda.md)
+* [🏷️ Marca](informacion/marca.md)
+* [😎 Créditos](informacion/creditos.md)
 
 ## Juego
 
-* [⚖️ Reglas del servidor](juego/reglas-del-servidor.md)
-* [🫂 Perfiles](juego/editor.md)
-* [📜 Características y comandos](juego/markdown.md)
+* [⚖️ Reglas del servidor](juego/reglas.md)
+* [🫂 Perfiles](juego/perfiles.md)
+* [📜 Características y comandos](juego/comandos.md)
