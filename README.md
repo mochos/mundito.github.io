@@ -1,7 +1,12 @@
 ---
+cover: .gitbook/assets/cover.png
+coverY: 0
 layout:
-  title:
+  cover:
     visible: true
+    size: full
+  title:
+    visible: false
   description:
     visible: false
   tableOfContents:
@@ -14,8 +19,6 @@ layout:
 
 # 🙋 ¡Bienvenido!
 
-![Logo](https://raw.githubusercontent.com/mochos/mundito.github.io/main/marca/Mundito-logo-300.png)\
-\
 [![Estado](https://img.shields.io/endpoint?url=https%3A%2F%2Fminecraft-server-status-badge.vercel.app%2Fapi%2Fserver%2Fmundito.mochos.xyz%3Fport%3D25565\&style=for-the-badge)](https://stats.uptimerobot.com/vpbB3Zq4A4) [![Website](https://img.shields.io/website?url=https%3A%2F%2Fmapa.mochos.xyz%2F\&up\_message=Online\&down\_message=Offline\&style=for-the-badge\&label=Dynmap\&up\_color=97ca00)](https://stats.uptimerobot.com/vpbB3Zq4A4)
 
 Survival vanilla con plugins compatible con Java 1.20.1 y Bedrock.
