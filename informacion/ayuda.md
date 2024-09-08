@@ -25,6 +25,32 @@ El modpack sugerido incluye un mod de macros al que le puedes asignar comandos. 
 | <p>Crashea con este error en consola:<br><code>Minecraft 1.18 Pre Release 2 and above require the use of Java 17</code></p> | Actualiza tu instalación de Java. Descarga el instalador [en este enlace](https://www.oracle.com/java/technologies/downloads/#jdk22-windows). El que dice "**x64 Installer**". Luego configura la ruta de acceso de Java en el launcher con esta nueva versión. |
 | <p>Al tratar de entrar al servidor te bloquea con el mensaje:<br><code>You are not whitelisted on this server!</code></p>   | Si fuiste invitado al servidor y te sale esto, contacta a algún admin o streamer de Mundito o a la persona que te invitó. Si no sabes a quién contactar, es la razón por la que no fuiste invitado. :v                                                          |
 
+### ¿Por qué no puedo ver las skins personalizadas de Mundito?
+
+{% hint style="info" %}
+Las skins personalizadas no funcionan en Minecraft Bedrock
+{% endhint %}
+
+Las skins de del servidor funcionan con el mod [**OfflineSkins**](https://www.curseforge.com/minecraft/mc-mods/offlineskins) para Minecraft Java configurado para cargar las skins desde nuestro servidor propio.
+
+El mod y ya configuración vienen incluidas en la descarga de [mods recomendados](../#mods-recomendados-java).
+
+Si tienes el mod pero no está configurado con nuestro servidor de skins, puedes configurarlo directamente en el archivo `".minecraft\config\offlineskins.json"` y reemplazar todo su contenido por esto:
+
+```json
+{
+  "useMojang": true,
+  "useCrafatar": false,
+  "useCustomServer": false,
+  "hostCustomServer": "http://example.com",
+  "useCustomServer2": true,
+  "hostCustomServer2Skin": "https://raw.githubusercontent.com/mochos/mochos.github.io/main/skins/skins/%name%.png",
+  "hostCustomServer2Cape": "https://raw.githubusercontent.com/mochos/mochos.github.io/main/skins/capes/%name%.png"
+}
+```
+
+
+
 ### ¿Cómo jugar desde consola?
 
 Debes seguir los pasos del video a continuación poniendo en esa app la ip y el puerto de Mundito:
