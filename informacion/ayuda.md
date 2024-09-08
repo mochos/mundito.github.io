@@ -35,7 +35,11 @@ Las skins de del servidor funcionan con el mod [**OfflineSkins**](https://www.cu
 
 El mod y ya configuración vienen incluidas en la descarga de [mods recomendados](../#mods-recomendados-java).
 
-Si tienes el mod pero no está configurado con nuestro servidor de skins, puedes configurarlo directamente en el archivo `".minecraft\config\offlineskins.json"` y reemplazar todo su contenido por esto:
+Si tienes el mod pero no está configurado con nuestro servidor de skins, puedes configurarlo directamente reemplazando en el archivo `".minecraft\config\offlineskins.json"` por este:
+
+{% file src="../.gitbook/assets/offlineskins.json" %}
+
+o cambiando todo su contenido por esto:
 
 ```json
 {
