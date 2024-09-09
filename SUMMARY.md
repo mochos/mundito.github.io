@@ -10,6 +10,6 @@
 
 ## Juego
 
+* [📜 Características y comandos](juego/comandos.md)
 * [⚖️ Reglas del servidor](juego/reglas.md)
 * [🫂 Perfiles](juego/perfiles.md)
-* [📜 Características y comandos](juego/comandos.md)
