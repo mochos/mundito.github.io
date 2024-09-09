@@ -8,4 +8,4 @@
 
 Survival vanilla compatible con Java 1.20.1 y Bedrock
 
-Información detallada en la [Wiki](https://github.com/mochos/mundito.github.io/wiki).
+Información detallada en la [Wiki](https://wiki.mochos.xyz/).
