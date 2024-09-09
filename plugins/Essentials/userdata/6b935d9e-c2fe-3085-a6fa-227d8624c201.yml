@@ -16,20 +16,20 @@ timestamps:
   mute: 0
   jail: 0
   onlinejail: 0
-  logout: 1725541377482
-  login: 1725540902987
+  logout: 1725550666743
+  login: 1725549455850
   kits:
     color: 1719156361041
-money: '5105'
+money: '2985.0'
 last-account-name: lorspi
 logoutlocation:
   world: b339dda7-0e12-48e2-99c8-d31b6a44bf65
   world-name: world
-  x: 11.769908140558714
-  y: 70.0
-  z: 59.31326482247353
-  yaw: -10.949432373046875
-  pitch: 12.438907623291016
+  x: -14.170172518957713
+  y: 71.0
+  z: 57.250490591656664
+  yaw: -31.94049072265625
+  pitch: -4.211315155029297
 lastlocation:
   world: b339dda7-0e12-48e2-99c8-d31b6a44bf65
   world-name: world
