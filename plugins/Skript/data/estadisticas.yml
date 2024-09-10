@@ -51,14 +51,14 @@ matrimonio:
 
 fuentedeseos:
     nocumplido:
-        total: 6
-        lorspi: 6
+        total: 15
+        lorspi: 15
     premio1:
-        total: 7
-        lorspi: 7
+        total: 10
+        lorspi: 10
     premio3:
-        total: 2
-        lorspi: 2
-    dinero:
         total: 4
         lorspi: 4
+    dinero:
+        total: 11
+        lorspi: 11
