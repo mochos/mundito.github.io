@@ -48,3 +48,17 @@ matrimonio:
         total: 11
         lorspi: 8
         elPantallazoAzul: 3
+
+fuentedeseos:
+    nocumplido:
+        total: 6
+        lorspi: 6
+    premio1:
+        total: 7
+        lorspi: 7
+    premio3:
+        total: 2
+        lorspi: 2
+    dinero:
+        total: 4
+        lorspi: 4

@@ -1,6 +1,7 @@
 ceitiles:
-    total: 1220
-    lorspi: 1220
+    total: 451
+    lorspi: 180
+    fuentedeseos: 11
 
 dinero:
     _lorspi: 0

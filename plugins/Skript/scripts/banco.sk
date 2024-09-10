@@ -108,7 +108,7 @@ command /emitirceitil <text> <number>:
         set yaml value "ceitiles.%{_player}%" from "economia" to {_totalplayer}
         wait 1 tick
         save yaml "economia"
-        send "%{@banco}%&aTu interacción ha sido registrada. Total: %{_total}%" to player
+        #send "%{@banco}%&aTu interacción ha sido registrada. Total: %{_total}%" to player
         unload yaml "economia"
 
 #Interfaz del banco
