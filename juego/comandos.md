@@ -166,6 +166,18 @@ Los precios se muestran en los indicadores económicos del banco.
 | `/plot toggle <flag>`            | Alternar flags en el lote                                                                                                                                   | Alcalde, Asistente, Ciudadano |
 | `/plot set embassy`              | Establecer lote como embajada                                                                                                                               | Alcalde, Asistente            |
 
+### Vehículos
+
+{% hint style="info" %}
+Próximamente
+{% endhint %}
+
+### Matrimonio
+
+{% hint style="info" %}
+Próximamente
+{% endhint %}
+
 ### Mobs To Eggs
 
 Puedes capturar criaturas con un capturador de criaturas que consigues en la tienda del spawn. Capturas lanzando con clic derecho o golpeando directamente.
