@@ -115,7 +115,9 @@ Permite la creación de elevadores sólo con poner bloques determinados.
 
 Tiendas para comerciar items entre jugadores. [Tutorial](https://www.youtube.com/watch?v=0Ux-cMpE\_Co). Los huevos se consiguen en la tienda del spawn.
 
-⚠️ **NO PONGAS SHOPKEEPERS DE CRIATURAS HOSTILES DENTRO DE LAS CIUDADES PORQUE SE DESAPARECEN** ⚠️
+{% hint style="danger" %}
+NO PONGAS SHOPKEEPERS DE CRIATURAS HOSTILES DENTRO DE LAS CIUDADES PORQUE SE DESAPARECEN
+{% endhint %}
 
 ### Towny
 
@@ -184,4 +186,6 @@ Puedes capturar criaturas con un capturador de criaturas que consigues en la tie
 
 **Criaturas permitidas:**
 
-`allay, axolotl, bat, bee, blaze, camel, cat, cave_spider, chicken, cow, creeper, dolphin, donkey, drowned, enderman, endermite, fox, frog, ghast, goat, guardian, hoglin, horse, husk, llama, magma_cube, mule, mushroom_cow, ocelot, panda, parrot, pig, pig_zombie, polar_bear, rabbit, sheep, silverfish, skeleton, skeleton_horse, slime, sniffer, spider, stray, strider, tadpole, turtle, villager, wither_skeleton, wolf, zoglin, zombie, zombie_horse, zombie_villager, zombified_piglin`
+{% hint style="success" %}
+allay, axolotl, bat, bee, blaze, camel, cat, cave\_spider, chicken, cow, creeper, dolphin, donkey, drowned, enderman, endermite, fox, frog, ghast, goat, guardian, hoglin, horse, husk, llama, magma\_cube, mule, mushroom\_cow, ocelot, panda, parrot, pig, pig\_zombie, polar\_bear, rabbit, sheep, silverfish, skeleton, skeleton\_horse, slime, sniffer, spider, stray, strider, tadpole, turtle, villager, wither\_skeleton, wolf, zoglin, zombie, zombie\_horse, zombie\_villager, zombified\_piglin
+{% endhint %}
