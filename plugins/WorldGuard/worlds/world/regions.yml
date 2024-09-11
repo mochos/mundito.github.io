@@ -10,11 +10,83 @@
 # REMEMBER TO KEEP PERIODICAL BACKUPS.
 #
 regions:
+    spawn:
+        min: {x: -66, y: -63, z: -31}
+        max: {x: 85, y: 121, z: 125}
+        members: {}
+        flags: {other-explosion: deny, use: allow, interact: allow, vehicle-destroy: allow,
+            enderman-grief: deny, chest-access: allow, pvp: deny, mob-spawning: deny,
+            ride: allow, enderdragon-block-damage: deny, sleep: allow, creeper-explosion: deny,
+            vehicle-place: allow, mob-damage: deny, ravager-grief: deny, tnt: deny,
+            entity-painting-destroy: deny, respawn-anchors: allow, use-anvil: allow,
+            allow-shop: allow}
+        owners: {}
+        type: cuboid
+        priority: 0
     fuente:
-        min: {x: 27, y: 67, z: 90}
-        max: {x: 34, y: 71, z: 101}
+        min: {x: 26, y: -21, z: 30}
+        max: {x: 37, y: -10, z: 42}
         members: {}
         flags: {}
         owners: {}
         type: cuboid
+        priority: 0
+    socavon:
+        min: {x: 3074, y: 5, z: -2916}
+        max: {x: 3225, y: 87, z: -2766}
+        members: {}
+        flags: {build: deny, block-break: deny, block-place: deny}
+        owners: {}
+        type: cuboid
+        priority: 0
+    carcellomas:
+        min: {x: 3262, y: 63, z: -2746}
+        max: {x: 3266, y: 68, z: -2739}
+        members: {}
+        flags:
+            natural-health-regen: allow
+            use: deny
+            block-trampling: deny
+            interact: deny
+            vehicle-destroy: deny
+            chest-access: deny
+            firework-damage: deny
+            ride: deny
+            sleep: deny
+            vehicle-place: deny
+            mob-damage: deny
+            feed-delay: 1
+            heal-amount: 5
+            heal-delay: 5
+            respawn-anchors: deny
+            use-anvil: deny
+            feed-amount: 5
+            lighter: deny
+            use-dripleaf: deny
+            pistons: deny
+            mob-spawning: deny
+            natural-hunger-drain: allow
+            enderpearl: deny
+            item-drop: deny
+            exit: allow
+            creeper-explosion: deny
+            exp-drops: deny
+            fall-damage: deny
+            item-frame-rotation: deny
+            item-pickup: deny
+            potion-splash: deny
+            tnt: deny
+            exit-via-teleport: deny
+            entity-item-frame-destroy: deny
+            allowed-cmds: [/msg]
+            allow-shop: deny
+        owners:
+            unique-ids: [6b935d9e-c2fe-3085-a6fa-227d8624c201, 620cf642-ff72-3009-a68b-f2f42cb64bb5]
+        type: cuboid
+        priority: 0
+    __global__:
+        members: {}
+        flags: {}
+        owners: {}
+        type: global
         priority: 0

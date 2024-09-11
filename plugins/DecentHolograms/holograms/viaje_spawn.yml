@@ -1,0 +1,13 @@
+location: world:6.5:80:52.5
+enabled: false
+display-range: 10
+update-range: 10
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: 'Viajar a'
+    height: 0.3
+  - content: '<#ANIM:wave:<#f3792f>,<#fcd3a5>>&6&lLas Vegas</#ANIM>'
+    height: 0.3

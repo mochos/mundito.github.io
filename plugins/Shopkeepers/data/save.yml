@@ -1,3 +1,2063 @@
 # This file is not intended to be manually modified! If you want to manually edit this file anyways, ensure that the server is not running currently and that you have prepared a backup of this file.
 
 data-version: 3|2|3465
+'3':
+  uniqueId: bafa6563-897a-48fc-8645-a44d98e9e67b
+  world: world
+  x: 25
+  y: 73
+  z: 66
+  yaw: 77.499954
+  type: admin
+  name: ''
+  object:
+    type: trader-llama
+    baby: false
+    carryingChest: false
+    color: CREAMY
+  recipes: {}
+  snapshots: []
+'5':
+  uniqueId: fcd3441c-3170-4073-82f8-4110bcb62bba
+  world: world
+  x: -1999
+  y: 94
+  z: -2166
+  yaw: 93.59504
+  type: sell
+  name: El Cambiador
+  object:
+    type: villager
+    baby: false
+    profession: LIBRARIAN
+    villagerType: TAIGA
+    villagerLevel: 4
+  owner uuid: 6ce91d49-fcec-3d46-8921-8e4da568718c
+  owner: El0tito
+  chestx: -1999
+  chesty: 93
+  chestz: -2166
+  offers:
+    '1':
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: DIAMOND
+      price: 9
+    '2':
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: IRON_INGOT
+        amount: 10
+      price: 10
+    '3':
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: COMPASS
+        meta:
+          ==: ItemMeta
+          meta-type: COMPASS
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Waystone
+            Key"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"Waystone:
+            ["},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":true,"color":"dark_purple","text":"UNKNOWN"},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"]"}],"text":""}'
+          PublicBukkitValues:
+            waystones:is_warp_key: 1i
+          LodestoneTracked: false
+      price: 5
+    '4':
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: LODESTONE
+      price: 5
+    '5':
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SNOWBALL
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Capturador
+            de criaturas"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Capturar
+            criaturas de dos formas:"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Lanzar
+            con clic derecho"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Golpear
+            con clic"}],"text":""}'
+      price: 10
+    '6':
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: VILLAGER_SPAWN_EGG
+        meta:
+          ==: ItemMeta
+          meta-type: SPAWN_EGG
+          PublicBukkitValues:
+            mobstoeggs:mteentitytype: VILLAGER
+            mobstoeggs:hasai: 1i
+            mobstoeggs:health: 20.0d
+            mobstoeggs:ismtespawnegg: 1i
+            mobstoeggs:age: 0i
+            mobstoeggs:hasgravity: 1i
+            mobstoeggs:villagerexperience: 0i
+            mobstoeggs:freezeticks: 0i
+      price: 54
+    '7':
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: TOTEM_OF_UNDYING
+      price: 45
+    '8':
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: ENCHANTING_TABLE
+      price: 19
+    '9':
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: TRIDENT
+      price: 5
+    '10':
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SHULKER_BOX
+        meta:
+          ==: ItemMeta
+          meta-type: TILE_ENTITY
+          internal: H4sIAAAAAAAA/+NiYOBg4HesCM4ozclOLSrWDQ31dGFQSTQ1MDFNNU3STTZITtY1MTBM0k0yMU3TNTO1MDexsLQ0Mkk052Lgc8rJT852zSvJLKkMSUxnZmCsYAACIF0JpatANAcDU2YKg2huZl5qclFiWolVMcSy+KR8oHoAPmhAqoIAAAA=
+          blockMaterial: SHULKER_BOX
+      price: 3
+    '11':
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SHULKER_BOX
+      price: 3
+    '12':
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SHULKER_BOX
+        meta:
+          ==: ItemMeta
+          meta-type: TILE_ENTITY
+          internal: H4sIAAAAAAAA/+NiYOBg4HesCM4ozclOLSrWDQ31dGFQMUgytUy2NE3TtTQyMtI1MUlL1k0yN0nVTUxJMUtOtTRKNTVL4WLgc8rJT852zSvJLKkMSUxnZmCsYAACIF0JpatANAcDU2YKg2huZl5qclFiWolVMcSy+KR8oHoA7Izqf4IAAAA=
+          blockMaterial: SHULKER_BOX
+      price: 3
+    '13':
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: MUSIC_DISC_WARD
+      price: 2
+    '14':
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: MUSIC_DISC_MELLOHI
+      price: 2
+    '15':
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: MUSIC_DISC_CHIRP
+      price: 2
+    '16':
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: MUSIC_DISC_FAR
+      price: 2
+    '17':
+      item:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          stored-enchants:
+            MENDING: 1
+      price: 18
+  snapshots: []
+'11':
+  uniqueId: efacf6ce-bafd-4816-b67f-1c735a236078
+  world: world
+  x: -2005
+  y: 83
+  z: -2159
+  yaw: 352.31946
+  type: trade
+  name: Precios
+  object:
+    type: wandering-trader
+  owner uuid: 6b935d9e-c2fe-3085-a6fa-227d8624c201
+  owner: lorspi
+  chestx: -2004
+  chesty: 81
+  chestz: -2159
+  offers:
+    '1':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: POTION
+        meta:
+          ==: ItemMeta
+          meta-type: POTION
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"Cerveza"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Hecho
+            en El0town"}],"text":""}'
+          ItemFlags:
+          - HIDE_POTION_EFFECTS
+          potion-type: minecraft:mundane
+          custom-color:
+            ==: Color
+            ALPHA: 255
+            RED: 255
+            BLUE: 38
+            GREEN: 255
+          custom-effects:
+          - ==: PotionEffect
+            effect: 9
+            duration: 600
+            amplifier: 0
+            ambient: true
+            has-particles: true
+            has-icon: true
+          - ==: PotionEffect
+            effect: 1
+            duration: 600
+            amplifier: 0
+            ambient: true
+            has-particles: true
+            has-icon: true
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '2':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: POTION
+        meta:
+          ==: ItemMeta
+          meta-type: POTION
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Cubalibre"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Hecho
+            en El0town"}],"text":""}'
+          ItemFlags:
+          - HIDE_POTION_EFFECTS
+          potion-type: minecraft:mundane
+          custom-color:
+            ==: Color
+            ALPHA: 255
+            RED: 255
+            BLUE: 74
+            GREEN: 38
+          custom-effects:
+          - ==: PotionEffect
+            effect: 9
+            duration: 1200
+            amplifier: 0
+            ambient: true
+            has-particles: true
+            has-icon: true
+          - ==: PotionEffect
+            effect: 1
+            duration: 400
+            amplifier: 0
+            ambient: true
+            has-particles: true
+            has-icon: true
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 2
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '3':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: POTION
+        meta:
+          ==: ItemMeta
+          meta-type: POTION
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Aguardiente"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Hecho
+            en El0town"}],"text":""}'
+          ItemFlags:
+          - HIDE_POTION_EFFECTS
+          potion-type: minecraft:mundane
+          custom-color:
+            ==: Color
+            ALPHA: 255
+            RED: 38
+            BLUE: 255
+            GREEN: 255
+          custom-effects:
+          - ==: PotionEffect
+            effect: 15
+            duration: 1200
+            amplifier: 1
+            ambient: true
+            has-particles: true
+            has-icon: true
+          - ==: PotionEffect
+            effect: 9
+            duration: 1200
+            amplifier: 1
+            ambient: true
+            has-particles: true
+            has-icon: true
+          - ==: PotionEffect
+            effect: 2
+            duration: 1200
+            amplifier: 1
+            ambient: true
+            has-particles: true
+            has-icon: true
+          - ==: PotionEffect
+            effect: 18
+            duration: 400
+            amplifier: 0
+            ambient: true
+            has-particles: true
+            has-icon: true
+          - ==: PotionEffect
+            effect: 17
+            duration: 600
+            amplifier: 0
+            ambient: true
+            has-particles: true
+            has-icon: true
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 3
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '4':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: POTION
+        meta:
+          ==: ItemMeta
+          meta-type: POTION
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"green","text":"Absenta
+            ☠"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Hecho
+            en El0town"}],"text":""}'
+          ItemFlags:
+          - HIDE_POTION_EFFECTS
+          potion-type: minecraft:mundane
+          custom-color:
+            ==: Color
+            ALPHA: 255
+            RED: 38
+            BLUE: 38
+            GREEN: 255
+          custom-effects:
+          - ==: PotionEffect
+            effect: 15
+            duration: 2400
+            amplifier: 1
+            ambient: true
+            has-particles: true
+            has-icon: true
+          - ==: PotionEffect
+            effect: 9
+            duration: 2400
+            amplifier: 1
+            ambient: true
+            has-particles: true
+            has-icon: true
+          - ==: PotionEffect
+            effect: 2
+            duration: 2400
+            amplifier: 1
+            ambient: true
+            has-particles: true
+            has-icon: true
+          - ==: PotionEffect
+            effect: 7
+            duration: 200
+            amplifier: 0
+            ambient: true
+            has-particles: true
+            has-icon: true
+          - ==: PotionEffect
+            effect: 17
+            duration: 2400
+            amplifier: 1
+            ambient: true
+            has-particles: true
+            has-icon: true
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 5
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '5':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: COOKED_CHICKEN
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Alita
+            de pollo"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Hecho
+            en El0town"}],"text":""}'
+          enchants:
+            DURABILITY: 1
+          ItemFlags:
+          - HIDE_ENCHANTS
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 2
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '6':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: YELLOW_SHULKER_BOX
+        meta:
+          ==: ItemMeta
+          meta-type: TILE_ENTITY
+          display-name: '{"extra":[{"text":"20 cervezas -> 20 ceitiles"}],"text":""}'
+          internal: H4sIAAAAAAAA/+3bO2/bMBAA4KMfsaQ2ady0u8GhU4bO3lLXRQwURYB0KFAUBS2dbMKUaFBUbCXIj+iWf5tQDmCnU9HlptNCHh/Hw+FblQAkcPLJ2HQ1Lb32zXe16ILYQvjC2LRjDP2Zx6JKwvydgN61sR4i6OgMTgtdYupU7sdr67UtBfQnti69SKDr21TDSV15W1ztdifWWAePjx9iOHu5Ps1zTP3ugU4Xos+1U+1yiH4IGFwUc40hpYDOLIsFxBfF2uhcowMB0fXSbmZpeFnAcTu/Us7r1GAl4B+pxH+lii91hl+MWlShylEER8+lw/DQgqIuM1ViAoNMV2ujmhh6X63DKNwQ8HAnceudkuOfd3JuTSbHuTIVnkvtldHpPgxZ0JmQ9XCi8k6v0C+drRfL/aqd53WVKv/iYNp2WI7lwqlGnksfXgzRJaZLO8JyNDUfvd2U8v7Xfk/eR9D7pgqEP5QFNmiM3RxKnKC7wVv1d2W7vu28CfbG3gi9ddgbeyP01mVv7I3QW4+9sTdCb332xt4IvR2xN/ZG6G3A3tgbobeIvbE3Qm8xe2NvhN4S9sbeCL29Ym/sjdDba/bG3gi9HbM39kbo7YS9sTdCb2/YG3sj9HbK3tgbobche2NvhN7esjf2RujtjL2xNwpvXRC37U8Nz97eH5pdLWuzQvd7brcAT8gTDtEXMQAA
+          blockMaterial: YELLOW_SHULKER_BOX
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 20
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '7':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: RED_SHULKER_BOX
+        meta:
+          ==: ItemMeta
+          meta-type: TILE_ENTITY
+          display-name: '{"extra":[{"text":"20 cubas -> 40 ceitiles"}],"text":""}'
+          internal: H4sIAAAAAAAA/+3bsW7bMBAA0KMlx5LapHHT7gaHThk6e0sdF3FRFAHSrSgKSqIswpRokBRiN8g/ZOxn9A9bygHspFuXm04LyaN0dzi8VRlABicftClW89Yrv/0qlhGwDYQnrNt+TWG48LJxWdi/YRDfaOMhgYEq4bRRrSysqPx0bbwyLYPhzHStZxlEvk81nnXOm+Z6dzsz2lj48+5TCmdP4/OqkoXfFRhEkFx2VvRhgPg3g9FFkysZUjIYLMqUQXrRrLWqlLTAILmpze2iCJUZHPf7a2G9KrR0DJ6lYg//pmL/lSq9UqX8qMXShS4nCRw9tg7jwwiari1FKzMYlcqttdimEH82VibhCwa/7rjceCv49Nsdz40u+bQS2slzrrzQqtgfQxZpdch6eMN5q1bS19Z0y3ofNXnVuUL4Jy8W/YT5lC+t2PJz7kPFcLqSRW0msp3M9Xtvblt+/31/x+8TiL+IRsIDZoM2xPY9zLo8FMitfN7Ybmw7boy4ETc8bgPiRtzwuEXEjbjhcYuJG3HD4zYkbsQNj9sRcSNueNxGxI244XFLiBtxw+OWEjfihsctI27EDY/bC+JG3PC4vSRuxA2P2zFxI2543E6IG3HD4/aKuBE3PG6nxI244XEbEzfihsftNXEjbnjczogbcUPgFgH72f/A8Mjt7WHWru70StofudkA/AVhx3leAzEAAA==
+          blockMaterial: RED_SHULKER_BOX
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 40
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '8':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: LIGHT_BLUE_SHULKER_BOX
+        meta:
+          ==: ItemMeta
+          meta-type: TILE_ENTITY
+          display-name: '{"extra":[{"text":"20 aguardientes -> 60 ceitiles"}],"text":""}'
+          internal: H4sIAAAAAAAA/+3cTW/TMBwG8L+bdk0Ce+kG9yoHTjtw7q10RauE0KRxQEIIuYnTWnXi4jhay7TvgMSFj8E3HE4ntWUXNGRxenLxax5bdn7XxEQxHb1ROl2MSyvt+gOfBcRW5B5Xrpsyos7EiqKKXf0Fo/a10pZCasmMTgpZitTw3A6W2kpdMuqMdF1aFlNgm6jeqK6sLq42oyOttKFX9/cRne33j/NcpHazQCeg8KI2vOkmav9i1B0WUylcJKPWJDtmFA2LpZK5FMZ1hddzfTNJ3cqMDpv6FTdWpkpUjP4SFfmLav1rFPv+OOp0P4qeENX6+Diq96So6FJm4q3is8pdQz+kg4e7od7ujou6zHgpYupmsloqvo6o/U4bEbo3GP28TcTKGp4MPt0mU62yZJBzVYnzRFquZLptuhRhlEvdzaiskQth50bXs/m2V0/zukq53ZuYNp9QMkhmhq+T88S6FV3rUqRz3Rdlf6xeW31TJneft2PJXUjt97wQ9ON/bpB/rflug8NZzU3WXI34c2+bk9uQYiAFUiDlk1QLpEAKpHySCkAKpEDKJ6k2SIEUSPkk1QEpkAIpn6QOQAqkQMonqS5IgRRI+SQVghRIgZRPUhFIgRRI+SQVgxRIgZRPUs9ACqRAyiep5yAFUiDlk9QhSIEUSPkkdQRSIAVSPkkdgxRIgZRPUicgBVIg5ZNUD6RACqR8kjoFKZACKZ+kzkAKpEDKC6mA2LfmhxQPpF7ujrua12ohzJepXhH9BsTtSfrTQgAA
+          blockMaterial: LIGHT_BLUE_SHULKER_BOX
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 60
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '9':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: LIME_SHULKER_BOX
+        meta:
+          ==: ItemMeta
+          meta-type: TILE_ENTITY
+          display-name: '{"extra":[{"text":"20 absentas -> 100 ceitiles"}],"text":""}'
+          internal: H4sIAAAAAAAA/+3cTW/TMBgH8Md9WZPAXsrgXvmw0w6ceyujaJUQmjRuCIGbOK1VJ64cR2uZ9i047MjH4XPwRcDppLZwQYDF6Z9LEtv5P4/i/K5JiBI6eqFNuhiXTrn1WzFrE1uRP/x53Zxj6k6cLKrEXz9l1LnWxlFELZXRSaFKmVqRu+HSOGVKRt0LU5eOJdR2TVT/oq6cKa42sxdGG0tn389iOt0fH+e5TN2mQLdN0cvaimbYl/7IqDcqpkr6SEatSXbMKB4VS61yJa0fiq7n5maS+sqMDpvrK2GdSrWsGP0mKg4X1frbKPr6a1RvP4r+qav+H3UVX6pMvtJiVvm2BhEdPOwN9Xd7XNRlJkqZUC9T1VKLdUyd18bKyD/B6P6Wy5Wzgg/f3fKp0Rkf5kJX8pwrJ7RKt7c+RVrtU3crKmfVQrq5NfVsvh0107yuUuH2FqbNJ8SHfGbFmp9z5yv6u0uZzs1AloOxfu7MTcnv3m/n+F1EnTeikPT5/zYoZbnrcDSt/L6Iwbf7Lz83t3l1G1MMpmAKpoKaasEUTMFUUFNtmIIpmApqqgNTMAVTQU11YQqmYCqoqQOYgimYCmqqB1MwBVNBTUUwBVMwFdRUDFMwBVNBTSUwBVMwFdTUI5iCKZgKauoxTMEUTAU1dQhTMAVTQU0dwRRMwVRQU8cwBVMwFdTUCUzBFEwFNdWHKZiCqaCmnsAUTMFUUFOnMAVTMBXGVJvYp+YnFQ+mnu3edzWv9ULaD1OzIvoBefigXOdCAAA=
+          blockMaterial: LIME_SHULKER_BOX
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 50
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+      item2:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 50
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '10':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: PINK_SHULKER_BOX
+        meta:
+          ==: ItemMeta
+          meta-type: TILE_ENTITY
+          display-name: '{"extra":[{"text":"64 alitas -> 128 ceitiles"}],"text":""}'
+          internal: H4sIAAAAAAAA/72STUvDQBCGJ/3ANognBY9hzz14zskPKhXEi95EymYzTZZMd8pmoq2lf0P8uW4IpPoH3MvszL6888KzMUAMZ7fEppo7sbJ70cUQoi2EE+qurVMYPwiu6zjcowhGz8QCExjYHC7X1qHxeiWpYa4wX5rSmgpdBOM7bpxcxzCU1nK6sDneky7q1iWGk9zWG9K7KYwe2eOkncL3XuFWvFbp615lTLlKV5pqnCkrmqzp28bl6CnsPipq8bZCKT03RdlPOVs1tdHyS2iY2KtUFV7v1ExJ2Bi6BZqSE3TJnK6EP5w6vPVv6jCB0ZNeI3z9a8DWvw9xQ2FFkmOyYSL+Gy8gOp07U2ona3TSkRrAkN4Joo7U+ZFU4zKPurKu6CB/tpA71cVRVZcNVeiXGYfP8AOrgMhKJwIAAA==
+          blockMaterial: PINK_SHULKER_BOX
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 64
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+      item2:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 64
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+  snapshots: []
+'14':
+  uniqueId: 828ed69a-ec58-44e7-a26d-a720c0e091b8
+  world: world
+  x: 25
+  y: 73
+  z: 75
+  yaw: 100.83065
+  type: trade
+  name: ''
+  object:
+    type: wandering-trader
+  owner uuid: 6b935d9e-c2fe-3085-a6fa-227d8624c201
+  owner: lorspi
+  chestx: 14
+  chesty: 65
+  chestz: 80
+  offers:
+    '1':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: COMPASS
+        meta:
+          ==: ItemMeta
+          meta-type: COMPASS
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Volver
+            al spawn"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"Waystone:
+            [world@3:77:52]"}],"text":""}'
+          PublicBukkitValues:
+            waystones:is_warp_key: 1i
+          LodestonePosWorld: minecraft:overworld
+          LodestonePosX: 3
+          LodestonePosY: 77
+          LodestonePosZ: 52
+          LodestoneTracked: true
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: IRON_INGOT
+        amount: 2
+    '2':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: COMPASS
+        meta:
+          ==: ItemMeta
+          meta-type: COMPASS
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Waystone
+            Key"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"Waystone:
+            ["},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":true,"color":"dark_purple","text":"UNKNOWN"},{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"]"}],"text":""}'
+          PublicBukkitValues:
+            waystones:is_warp_key: 1i
+          LodestoneTracked: false
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 20
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '3':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: LODESTONE
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 30
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '4':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SHULKER_BOX
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 15
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '5':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: ELYTRA
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 32
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+      item2:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: PHANTOM_MEMBRANE
+        amount: 16
+    '6':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SNOWBALL
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Capturador
+            de criaturas"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Capturar
+            criaturas de dos formas:"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Lanzar
+            con clic derecho"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Golpear
+            con clic"}],"text":""}'
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 24
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+      item2:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: TURTLE_EGG
+    '7':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: VILLAGER_SPAWN_EGG
+        meta:
+          ==: ItemMeta
+          meta-type: SPAWN_EGG
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"green","text":"Shopkeeper"}],"text":""}'
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '8':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 2
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: DIAMOND
+    '9':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 3
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: WITHER_ROSE
+    '10':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 5
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: PITCHER_PLANT
+    '11':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 5
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: TORCHFLOWER
+  snapshots: []
+'15':
+  uniqueId: 4dfa0eba-732c-402c-931b-8a1c613f07b9
+  world: world
+  x: 20
+  y: 73
+  z: 75
+  yaw: 265.808
+  type: trade
+  name: Baldric
+  object:
+    type: villager
+    baby: false
+    profession: ARMORER
+    villagerType: SNOW
+    villagerLevel: 1
+  owner uuid: 6b935d9e-c2fe-3085-a6fa-227d8624c201
+  owner: lorspi
+  chestx: 14
+  chesty: 66
+  chestz: 81
+  offers:
+    '1':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: ECHO_SHARD
+        amount: 7
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"light_purple","text":"Cofre
+            de ender portátil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"Un
+            solo uso"}],"text":""}'
+          enchants:
+            DURABILITY: 10
+          ItemFlags:
+          - HIDE_ENCHANTS
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 2
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+      item2:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: ENDER_PEARL
+    '2':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: AMETHYST_SHARD
+        amount: 2
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Gema
+            de compromiso"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"Úsala
+            para comprometerte con tu pareja."}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"Prepara
+            tu boda y busca un cura para casarte."}],"text":""}'
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 15
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '3':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: DIAMOND_PICKAXE
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Instaminador"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"Rompe
+            un radio de 3x3 bloques"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"No
+            reparable - No encantable"}],"text":""}'
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 14
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+      item2:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: DIAMOND
+        amount: 3
+    '4':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: DIAMOND_PICKAXE
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"blue","text":"Instaminador"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"Rompe
+            un radio de 3x3 bloques"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"No
+            reparable - No encantable"}],"text":""}'
+          enchants:
+            DIG_SPEED: 5
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 20
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+      item2:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: DIAMOND
+        amount: 6
+    '5':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: DIAMOND_AXE
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_aqua","text":"Brisa
+            Tempestuosa"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"Infringe
+            más daño al atacar en caída"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"Evita
+            el daño por caída desde alturas no letales"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"Úsala
+            para impulsarte hacia arriba"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"No
+            reparable - No encantable"}],"text":""}'
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 16
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+      item2:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: DIAMOND
+    '6':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: BOW
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Lanzacohetes"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"Causa
+            una explosión en el punto de impacto"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"Empuja
+            entidades al explotar"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"white","text":"Durabilidad
+            limitada / Cooldown 10 segundos"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"No
+            reparable - No encantable"}],"text":""}'
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 12
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+      item2:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: BOW
+    '7':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: COMPASS
+        meta:
+          ==: ItemMeta
+          meta-type: COMPASS
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"✦
+            Fuente de los deseos ✦"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"dark_purple","text":"Waystone:
+            [world@24:-26:70]"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Lugar
+            mágico para pedir deseos"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Tira
+            un ceitil en la fuente como ofrenda"}],"text":""}'
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Debes
+            estar sumergid@ en el agua"}],"text":""}'
+          PublicBukkitValues:
+            waystones:is_warp_key: 1i
+          LodestonePosWorld: minecraft:overworld
+          LodestonePosX: 24
+          LodestonePosY: -26
+          LodestonePosZ: 70
+          LodestoneTracked: true
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: BARRIER
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Próximamente..."}],"text":""}'
+  snapshots: []
+'16':
+  uniqueId: 801ad56b-3bfb-418d-a93c-bfd0914b221d
+  world: world
+  x: -1993
+  y: 71
+  z: -2316
+  yaw: 268.46133
+  type: trade
+  name: Pedro
+  object:
+    type: villager
+    baby: false
+    profession: FISHERMAN
+    villagerType: DESERT
+    villagerLevel: 5
+  owner uuid: 972f1cd9-6c1f-3f44-bf05-afd6631a899b
+  owner: Cr081s
+  chestx: -1992
+  chesty: 70
+  chestz: -2314
+  offers:
+    '1':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: POTION
+        meta:
+          ==: ItemMeta
+          meta-type: POTION
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"yellow","text":"Cerveza"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Hecho
+            en El0town"}],"text":""}'
+          ItemFlags:
+          - HIDE_POTION_EFFECTS
+          potion-type: minecraft:mundane
+          custom-color:
+            ==: Color
+            ALPHA: 255
+            RED: 255
+            BLUE: 38
+            GREEN: 255
+          custom-effects:
+          - ==: PotionEffect
+            effect: 9
+            duration: 600
+            amplifier: 0
+            ambient: true
+            has-particles: true
+            has-icon: true
+          - ==: PotionEffect
+            effect: 1
+            duration: 600
+            amplifier: 0
+            ambient: true
+            has-particles: true
+            has-icon: true
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 2
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '2':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: POTION
+        meta:
+          ==: ItemMeta
+          meta-type: POTION
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"red","text":"Cubalibre"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Hecho
+            en El0town"}],"text":""}'
+          ItemFlags:
+          - HIDE_POTION_EFFECTS
+          potion-type: minecraft:mundane
+          custom-color:
+            ==: Color
+            ALPHA: 255
+            RED: 255
+            BLUE: 74
+            GREEN: 38
+          custom-effects:
+          - ==: PotionEffect
+            effect: 9
+            duration: 1200
+            amplifier: 0
+            ambient: true
+            has-particles: true
+            has-icon: true
+          - ==: PotionEffect
+            effect: 1
+            duration: 400
+            amplifier: 0
+            ambient: true
+            has-particles: true
+            has-icon: true
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 4
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '3':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: POTION
+        meta:
+          ==: ItemMeta
+          meta-type: POTION
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Aguardiente"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Hecho
+            en El0town"}],"text":""}'
+          ItemFlags:
+          - HIDE_POTION_EFFECTS
+          potion-type: minecraft:mundane
+          custom-color:
+            ==: Color
+            ALPHA: 255
+            RED: 38
+            BLUE: 255
+            GREEN: 255
+          custom-effects:
+          - ==: PotionEffect
+            effect: 15
+            duration: 1200
+            amplifier: 1
+            ambient: true
+            has-particles: true
+            has-icon: true
+          - ==: PotionEffect
+            effect: 9
+            duration: 1200
+            amplifier: 1
+            ambient: true
+            has-particles: true
+            has-icon: true
+          - ==: PotionEffect
+            effect: 2
+            duration: 1200
+            amplifier: 1
+            ambient: true
+            has-particles: true
+            has-icon: true
+          - ==: PotionEffect
+            effect: 18
+            duration: 400
+            amplifier: 0
+            ambient: true
+            has-particles: true
+            has-icon: true
+          - ==: PotionEffect
+            effect: 17
+            duration: 600
+            amplifier: 0
+            ambient: true
+            has-particles: true
+            has-icon: true
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 6
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+  snapshots: []
+'20':
+  uniqueId: abbc875e-b4ee-40b8-a1fe-c87347cf3e86
+  world: world
+  x: 3265
+  y: 63
+  z: -2719
+  yaw: 179.6645
+  type: trade
+  name: ''
+  object:
+    type: villager
+    baby: false
+    profession: NONE
+    villagerType: JUNGLE
+    villagerLevel: 1
+  owner uuid: 318d91d5-ba26-35a1-a519-51f84283c0e0
+  owner: TheTemplary
+  chestx: 3266
+  chesty: 61
+  chestz: -2717
+  offers:
+    '1':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: TOTEM_OF_UNDYING
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 36
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '2':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: ARROW
+        amount: 64
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 3
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '3':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: TRIDENT
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 4
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '4':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: MUSIC_DISC_11
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '5':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: MUSIC_DISC_STRAD
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+  snapshots: []
+'22':
+  uniqueId: dbd0c98b-a6ac-49d0-adb0-7e3e369f5e67
+  world: world
+  x: -1984
+  y: 63
+  z: -2101
+  yaw: 280.26285
+  type: trade
+  name: ''
+  object:
+    type: villager
+    baby: false
+    profession: LIBRARIAN
+    villagerType: SAVANNA
+    villagerLevel: 5
+  owner uuid: 1cbb0e65-03af-3bd5-b437-6b9ed934f4e9
+  owner: Shor0s
+  chestx: -1984
+  chesty: 63
+  chestz: -2102
+  offers:
+    '1':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          stored-enchants:
+            MENDING: 1
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 40
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '2':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          stored-enchants:
+            SILK_TOUCH: 1
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 20
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '3':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          stored-enchants:
+            DIG_SPEED: 5
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 30
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '4':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          stored-enchants:
+            DAMAGE_ALL: 4
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 40
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '5':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: ENCHANTED_BOOK
+        meta:
+          ==: ItemMeta
+          meta-type: ENCHANTED
+          stored-enchants:
+            LOOT_BONUS_BLOCKS: 3
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 45
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '6':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 2
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: IRON_INGOT
+        amount: 10
+    '7':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: DIAMOND
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: IRON_INGOT
+        amount: 15
+  snapshots: []
+'23':
+  uniqueId: a6969e60-3e08-4865-b64b-fe05619e5012
+  world: world
+  x: -1965
+  y: 82
+  z: -2139
+  yaw: 0.0
+  type: trade
+  name: Eugenia
+  object:
+    type: villager
+    baby: false
+    profession: LIBRARIAN
+    villagerType: SAVANNA
+    villagerLevel: 5
+  owner uuid: 1cbb0e65-03af-3bd5-b437-6b9ed934f4e9
+  owner: Shor0s
+  chestx: -1964
+  chesty: 81
+  chestz: -2139
+  offers: {}
+  snapshots: []
+'24':
+  uniqueId: 2dcff670-5fe4-4320-a121-361f3016a84c
+  world: world
+  x: -1961
+  y: 82
+  z: -2135
+  yaw: 83.4416
+  type: trade
+  name: Piedrita
+  object:
+    type: villager
+    baby: false
+    profession: TOOLSMITH
+    villagerType: SAVANNA
+    villagerLevel: 5
+  owner uuid: 1cbb0e65-03af-3bd5-b437-6b9ed934f4e9
+  owner: Shor0s
+  chestx: -1961
+  chesty: 81
+  chestz: -2135
+  offers:
+    '1':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 2
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: IRON_INGOT
+        amount: 10
+    '2':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 7
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: IRON_INGOT
+        amount: 32
+    '3':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 15
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: IRON_INGOT
+        amount: 64
+    '4':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: EMERALD
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: IRON_INGOT
+        amount: 4
+    '5':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: EMERALD
+        amount: 2
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: IRON_INGOT
+        amount: 7
+    '6':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: EMERALD
+        amount: 3
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: IRON_INGOT
+        amount: 10
+    '7':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: DIAMOND
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 10
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '8':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: DIAMOND
+        amount: 2
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 19
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '9':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: DIAMOND
+        amount: 3
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 28
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+  snapshots: []
+'25':
+  uniqueId: 6aaa5ccf-fd05-48ee-bbc7-040ec97b6b88
+  world: world
+  x: -1961
+  y: 82
+  z: -2136
+  yaw: 0.0
+  type: trade
+  name: Armando
+  object:
+    type: villager
+    baby: false
+    profession: WEAPONSMITH
+    villagerType: SAVANNA
+    villagerLevel: 5
+  owner uuid: 1cbb0e65-03af-3bd5-b437-6b9ed934f4e9
+  owner: Shor0s
+  chestx: -1960
+  chesty: 81
+  chestz: -2136
+  offers:
+    '1':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: STONE_BRICKS
+        amount: 16
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 10
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '2':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: STONE_BRICKS
+        amount: 32
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 19
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '3':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: STONE_BRICKS
+        amount: 64
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 35
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '4':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: STONE
+        amount: 16
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 10
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '5':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: STONE
+        amount: 32
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 19
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '6':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: STONE
+        amount: 64
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 35
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '7':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: OAK_LOG
+        amount: 16
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 8
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '8':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: BIRCH_LOG
+        amount: 16
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 10
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '9':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SPRUCE_LOG
+        amount: 16
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 4
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '10':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: CHERRY_LOG
+        amount: 16
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 9
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '11':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: ACACIA_LOG
+        amount: 16
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 7
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '12':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: DARK_OAK_LOG
+        amount: 16
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 10
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '13':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: CRIMSON_STEM
+        amount: 16
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 12
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '14':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: WARPED_STEM
+        amount: 16
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 12
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+    '15':
+      resultItem:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: JUNGLE_LOG
+        amount: 16
+      item1:
+        ==: org.bukkit.inventory.ItemStack
+        v: 3465
+        type: SUNFLOWER
+        amount: 8
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gold","text":"Ceitil"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"gray","text":"Banco
+            Central"}],"text":""}'
+  snapshots: []
+'26':
+  uniqueId: aa944382-7e6d-435d-9945-84ab26085adb
+  world: world
+  x: -1992
+  y: 53
+  z: -2322
+  yaw: 60.74816
+  type: trade
+  name: Patrick
+  object:
+    type: villager
+    baby: false
+    profession: NONE
+    villagerType: SAVANNA
+    villagerLevel: 5
+  owner uuid: 972f1cd9-6c1f-3f44-bf05-afd6631a899b
+  owner: Cr081s
+  chestx: -1992
+  chesty: 52
+  chestz: -2323
+  offers: {}
+  snapshots: []

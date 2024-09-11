@@ -1,0 +1,15 @@
+location: world:24.5:-23:74.5
+enabled: true
+display-range: 10
+update-range: 10
+update-interval: 20
+facing: 0.0
+down-origin: false
+pages:
+- lines:
+  - content: 'Viajar a'
+    height: 0.3
+  - content: '&6&lSpawn'
+    height: 0.3
+  - content: '&f🠟 🠟'
+    height: 0.3
