@@ -27,3 +27,10 @@ Próximamente
 {% hint style="info" %}
 Próximamente
 {% endhint %}
+
+Te puedes casar con otro jugador para obtener algunos beneficios:
+
+* Mientras estés cerca de tu pareja ambos obtienen constantemente regeneración, prisa minera y fuerza.
+* Tienen acceso a [comandos especiales](comandos.md#matrimonio) para parejas que brindan funcionalidades exclusivas.
+
+Para casarse deben tener cada uno una Gema de compromiso que se consigue en la tienda del spawn. Para la ceremonia necesitan preparar un lugar especial y buscar un cura para que celebre la unión oficialmente.

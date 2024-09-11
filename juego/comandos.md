@@ -180,6 +180,22 @@ Próximamente
 Próximamente
 {% endhint %}
 
+Te puedes casar con otro jugador para obtener [algunos beneficios](mecanicas-exclusivas.md#matrimonio) y acceso a comandos:
+
+`/mtr` Muestra la ayuda.
+
+`/mtr chat` Activas / desactivas el chat privado con tu pareja.
+
+`/mtr tp` Teleportarte a ti mismo hacia tu pareja.
+
+`/mtr tp-si` Activa el permiso a tu pareja de teleportarse hacia ti.
+
+`/mtr tp-no` Niega el permiso a tu pareja de  teleportarse hacia ti.
+
+`/mtr enviar` Envía a tu pareja los objetos que tengas en tu mano.
+
+`/mtr pvp` Activas / desactivas el pvp con tu pareja.
+
 ### Mobs To Eggs
 
 Puedes capturar criaturas con un capturador de criaturas que consigues en la tienda del spawn. Capturas lanzando con clic derecho o golpeando directamente.
