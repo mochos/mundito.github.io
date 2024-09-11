@@ -27,38 +27,43 @@ itemsop:
 
 matrimonio:
     chat:
-        total: 2
-        lorspi: 1
-        elPantallazoAzul: 1
-    teleportar:
-        total: 3
+        total: 4
         lorspi: 2
-        elPantallazoAzul: 1
+        elPantallazoAzul: 2
+    teleportar:
+        total: 5
+        lorspi: 3
+        elPantallazoAzul: 2
     regalo:
-        total: 1
-        lorspi: 1
+        total: 34
+        lorspi: 3
+        elPantallazoAzul: 31
     divorcio:
         total: 4
         lorspi: 3
         elPantallazoAzul: 1
     unir:
-        total: 6
+        total: 7
         lorspi: 6
+        elPantallazoAzul: 1
     pvp:
-        total: 11
+        total: 12
         lorspi: 8
-        elPantallazoAzul: 3
+        elPantallazoAzul: 4
 
 fuentedeseos:
     nocumplido:
-        total: 15
+        total: 16
         lorspi: 15
+        elPantallazoAzul: 1
     premio1:
-        total: 10
+        total: 11
         lorspi: 10
+        elPantallazoAzul: 1
     premio3:
-        total: 4
+        total: 5
         lorspi: 4
+        elPantallazoAzul: 1
     dinero:
         total: 11
         lorspi: 11

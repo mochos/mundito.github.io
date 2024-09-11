@@ -148,3 +148,23 @@ command /resetfuente:
 		delete {fuente_cooldown::%player%}
 		delete {fuente_uso::%player%}
 		message "&aCooldown reiniciado." to player
+
+
+every 2 ticks:
+	set {_x.rand} to random number between -1 and 2
+	set {_y.rand} to random number between 1 and 2
+	set {_z.rand} to random number between -1 and 2
+	set {_x.nue} to 31 + {_x.rand}
+	set {_y.nue} to -19 + {_y.rand}
+	set {_z.nue} to 33 + {_z.rand}
+	play cloud at location {_x.nue}, {_y.nue}, {_z.nue} in world "world"
+
+
+every 1 tick:
+	set {_x.rand} to random number between -20 and 8
+	set {_y.rand} to random number between -20 and 37
+	set {_z.rand} to random number between -7 and 16
+	set {_x.nue} to 31 + {_x.rand}
+	set {_y.nue} to -19 + {_y.rand}
+	set {_z.nue} to 33 + {_z.rand}
+	play scrape at location {_x.nue}, {_y.nue}, {_z.nue} in world "world"

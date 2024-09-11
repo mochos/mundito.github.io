@@ -811,6 +811,24 @@
     },
     "done": true
   },
+  "minecraft:recipes/decorations/lime_carpet": {
+    "criteria": {
+      "has_lime_wool": "2024-07-04 10:44:28 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/lime_banner": {
+    "criteria": {
+      "has_lime_wool": "2024-07-04 10:44:28 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/lime_bed": {
+    "criteria": {
+      "has_lime_wool": "2024-07-04 10:44:28 -0500"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/red_stained_glass": {
     "criteria": {
       "has_glass": "2024-07-04 10:50:54 -0500"
@@ -844,12 +862,6 @@
   "minecraft:recipes/building_blocks/light_gray_stained_glass": {
     "criteria": {
       "has_glass": "2024-07-04 10:50:54 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/lime_carpet": {
-    "criteria": {
-      "has_lime_wool": "2024-07-04 10:44:28 -0500"
     },
     "done": true
   },
@@ -907,18 +919,6 @@
     },
     "done": true
   },
-  "minecraft:recipes/decorations/lime_banner": {
-    "criteria": {
-      "has_lime_wool": "2024-07-04 10:44:28 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/lime_bed": {
-    "criteria": {
-      "has_lime_wool": "2024-07-04 10:44:28 -0500"
-    },
-    "done": true
-  },
   "minecraft:recipes/decorations/glass_pane": {
     "criteria": {
       "has_glass": "2024-07-04 10:50:54 -0500"
@@ -934,6 +934,42 @@
   "minecraft:recipes/building_blocks/white_stained_glass": {
     "criteria": {
       "has_glass": "2024-07-04 10:50:54 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/misc/map": {
+    "criteria": {
+      "has_compass": "2024-09-11 11:44:01 -0500"
+    },
+    "done": true
+  },
+  "waystones:secret_tunnel": {
+    "criteria": {
+      "command": "2024-09-11 11:44:23 -0500"
+    },
+    "done": true
+  },
+  "minecraft:story/shiny_gear": {
+    "criteria": {
+      "diamond_boots": "2024-09-11 11:45:01 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_planks": {
+    "criteria": {
+      "has_logs": "2024-09-11 11:51:19 -0500"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/oak_wood": {
+    "criteria": {
+      "has_log": "2024-09-11 11:51:19 -0500"
+    },
+    "done": true
+  },
+  "waystones:i_dont_feel_so_good": {
+    "criteria": {
+      "command": "2024-09-11 15:05:26 -0500"
     },
     "done": true
   },

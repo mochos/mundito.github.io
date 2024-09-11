@@ -72,13 +72,13 @@ command /matrimonio [<text>] [<player>] [<player>]:
             message "&a========================"
             message "&aAyuda de matrimonios :"
             message "&a========================"
-            message "&4/mtr&a: Muestra la ayuda"
-            message "&4/mtr chat&a: Activas / desactivas el chat privado con tu pareja"
-            message "&4/mtr tp&a: Teleportarte a ti mismo hacia tu pareja"
-            message "&4/mtr tp-si&a: Permite a tu pareja teleportarse hacia ti"
-            message "&4/mtr tp-no&a: Niega a tu pareja teleportarse hacia ti"
-            message "&4/mtr regalo&a: Regalale a tu pareja los objetos que tengas en tu mano"
-            message "&4/mtr pvp &a: Activas / desactivas el pvp con tu pareja"
+            message "&4/mtr&a: Muestra la ayuda."
+            message "&4/mtr chat&a: Activas / desactivas el chat privado con tu pareja."
+            message "&4/mtr tp&a: Teleportarte a ti mismo hacia tu pareja."
+            message "&4/mtr tp-si&a: Activa el permiso a tu pareja de teleportarse hacia ti."
+            message "&4/mtr tp-no&a: Niega el permiso a tu pareja de  teleportarse hacia ti."
+            message "&4/mtr enviar&a: Envíale a tu pareja los objetos que tengas en tu mano."
+            message "&4/mtr pvp &a: Activas / desactivas el pvp con tu pareja."
             if {marry::%player%::is} is set:
                 message "&aEstas casad@ con : &4%{marry::%player%::who}%"
                 stop
@@ -288,18 +288,32 @@ command /matrimonio [<text>] [<player>] [<player>]:
             else:
                 message "{@Prefix} &cFunción deshabilitada en el servidor."
                     
-        else if arg-1 is "regalo":
+        else if arg-1 is "enviar":
             if {@Marry_Allow_Gift} is true:
                 if {marry::%player%::is} is set:
                     if player is holding air:
                         message "{@Prefix} &cDebes tener un objeto en tu mano principal para enviarlo!"
                         stop
                     else:
+                        if {marry::%player%::who} is not online:
+                            send "{@Prefix} &4%{marry::%player%::who}% &ano está en línea&c!" to player
+                            stop
+                        set {_inventarioLleno} to true
+                        loop 36 times:
+                            set {_s} to slot loop-number -1 of {marry::%player%::who}'s inventory
+                            if {_s} is air:
+                                set {_inventarioLleno} to false
+                                broadcast "encontró aire en %{_s}%"
+                                stop loop
+                        if {_inventarioLleno}:
+                            send "{@Prefix} &cTu pareja no tiene espacio para recibir objetos." to player
+                            send "{@Prefix} &4%player% &ate quiere enviar objetos y no tienes espacio para recibirlos!" to {marry::%player%::who}
+                            stop
                         set {_item} to player's tool
                         remove {_item} from player's inventory
                         add {_item} to {marry::%player%::who}'s inventory
-                        send "{@Prefix} &aEnviaste un regalo a &4%{marry::%player%::who}%&c!" to player
-                        send "{@Prefix} &4%player% &ate envió un regalo!" to {marry::%player%::who}
+                        send "{@Prefix} &aEnviaste los objetos en tu mano a &4%{marry::%player%::who}%!" to player
+                        send "{@Prefix} &4%player% &ate ha enviado objetos!" to {marry::%player%::who}
                         # Estadisticas
                         load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
                         #------------
@@ -324,7 +338,7 @@ command /matrimonio [<text>] [<player>] [<player>]:
             else:
                 message "{@Prefix} &cFunción deshabilitada en el servidor."
         else:
-            message "{@Prefix} &cComando desconocido. Sintaxis: &4/mtr < chat | tp | tp-si | tp-no | regalo>"
+            message "{@Prefix} &cComando desconocido. Sintaxis: &4/mtr < chat | tp | tp-si | tp-no | enviar>"
 
 command /divorcio:
     trigger:
@@ -335,7 +349,7 @@ command /divorcio:
             set {marry::%player%::chat} to false
             set {marry::%{_nameofMarry}%::chat} to false
             delete {marry::%player%::is}
-            delete {marry::%{_nameofMarry}%::is}
+            delete {marry::%{_naregalomeofMarry}%::is}
             delete {marry::%player%::who}
             delete {marry::%{_nameofMarry}%::who}
             send "{@Prefix} &aTe acabas de divorciar de &4%{_nameofMarry}%" to player
@@ -400,3 +414,4 @@ on damage:
 #    else:
 #        cancel drops
 #        give player a nether star
+

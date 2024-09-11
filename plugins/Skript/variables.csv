@@ -19,11 +19,15 @@ items.impulso.elpantallazoazul, boolean, 00
 items.impulso.lorspi, boolean, 00
 items.impulso.shakalchapa, boolean, 00
 marry::elpantallazoazul::chat, boolean, 00
-marry::elpantallazoazul::pvp, boolean, 00
+marry::elpantallazoazul::is, boolean, 01
+marry::elpantallazoazul::pvp, boolean, 01
 marry::elpantallazoazul::tpallow, boolean, 01
+marry::elpantallazoazul::who, offlineplayer, 810475756964800455554944820C6C656173745369674269747304A6FA227D8624C2010B6D6F737453696742697473046B935D9EC2FE3085
 marry::lorspi::chat, boolean, 00
-marry::lorspi::pvp, boolean, 00
+marry::lorspi::is, boolean, 01
+marry::lorspi::pvp, boolean, 01
 marry::lorspi::tpallow, boolean, 01
+marry::lorspi::who, offlineplayer, 810475756964800455554944820C6C656173745369674269747304A68BF2F42CB64BB50B6D6F73745369674269747304620CF642FF723009
 marry::shakalchapa::chat, boolean, 00
 marry::shakalchapa::pvp, boolean, 00
 marry::shakalchapa::tpallow, boolean, 01
