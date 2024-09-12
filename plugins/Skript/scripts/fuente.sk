@@ -4,7 +4,6 @@ on drop of sunflower:
 		if name of event-item is "&6&lCeitil":
 			if {fuente_uso::%player%} is not set:
 				set {fuente_uso::%player%} to 0
-
 			if {fuente_uso::%player%} < 3:
 				add 1 to {fuente_uso::%player%}
 				set {fuente.hora.%player%} to now
@@ -17,43 +16,80 @@ on drop of sunflower:
 				#clear dropped item
 				launch ball firework colored yellow at event-location timed 0.1
 				launch star firework colored gold at event-location timed 0.1
-				set {_premio} to random integer between 1 to 6
+				set {_premio} to random integer between 1 to 10
 				if {_premio} is 1:
-					give a diamond helmet to the player
-					give a diamond chestplate to the player
-					give a diamond leggings to the player
-					give a diamond boots to the player
-					message " &a&l¡TU DESEO SE HA CUMPLIDO! &fFelicidades por armadura de diamante." to player
-					broadcast " &a¡A &a&l%player% &ase le ha cumplido un deseo! Ahora podrá andar protegido."
+					give a diamond pickaxe of efficiency 5 named "&9&lInstaminador" with lore "&fRompe un radio de 3x3 bloques" and "&cNo reparable - No encantable" to player
+					message " &a&l¡TU DESEO SE HA CUMPLIDO! &fRecibiste un Instaminador." to player
+					broadcast " &a¡A &a&l%player% &ase le ha cumplido un deseo! Ha recibido un Instaminador."
 					# Estadisticas
 					load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
 					#------------
-					set {_usos} to yaml value "fuentedeseos.premio1.total" from "estadisticas"
+					set {_usos} to yaml value "fuentedeseos.instaminador.total" from "estadisticas"
 					if {_usos} is not set:
 						set {_usos} to 0
 					add 1 to {_usos}
-					set yaml value "fuentedeseos.premio1.total" from "estadisticas" to {_usos}
+					set yaml value "fuentedeseos.instaminador.total" from "estadisticas" to {_usos}
 					#------------
 					set {_player} to player
-					set {_usosplayer} to yaml value "fuentedeseos.premio1.%{_player}%" from "estadisticas"
+					set {_usosplayer} to yaml value "fuentedeseos.instaminador.%{_player}%" from "estadisticas"
 					if {_usosplayer} is not set:
 						set {_usosplayer} to 0
 					add 1 to {_usosplayer}
-					set yaml value "fuentedeseos.premio1.%{_player}%" from "estadisticas" to {_usosplayer}
+					set yaml value "fuentedeseos.instaminador.%{_player}%" from "estadisticas" to {_usosplayer}
 					#------------
 					wait 1 tick
 					save yaml "estadisticas"
 					stop
 				if {_premio} is 2:
-					give 32 cooked beef to the player
-					message " &a&l¡TU DESEO SE HA CUMPLIDO! &fFelicidades por tus 32 filetes." to player
-					broadcast " &a¡A &a&l%player% &ase le ha cumplido un deseo! No morirá de hambre."
-					execute console command "misionterminada fuente filetes %player%"
+					give a diamond axe named "&3&lBrisa Tempestuosa" with lore "&fInfringe más daño al atacar en caída" and "&fEvita el daño por caída desde alturas no letales" and "&fÚsala para impulsarte hacia arriba" and "&cNo reparable - No encantable" to player
+					message " &a&l¡TU DESEO SE HA CUMPLIDO! &fRecibiste una Brisa Tempestuosa." to player
+					broadcast " &a¡A &a&l%player% &ase le ha cumplido un deseo! Ha recibido una Brisa Tempestuosa."
+					# Estadisticas
+					load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+					#------------
+					set {_usos} to yaml value "fuentedeseos.brisa.total" from "estadisticas"
+					if {_usos} is not set:
+						set {_usos} to 0
+					add 1 to {_usos}
+					set yaml value "fuentedeseos.brisa.total" from "estadisticas" to {_usos}
+					#------------
+					set {_player} to player
+					set {_usosplayer} to yaml value "fuentedeseos.brisa.%{_player}%" from "estadisticas"
+					if {_usosplayer} is not set:
+						set {_usosplayer} to 0
+					add 1 to {_usosplayer}
+					set yaml value "fuentedeseos.brisa.%{_player}%" from "estadisticas" to {_usosplayer}
+					#------------
+					wait 1 tick
+					save yaml "estadisticas"
 					stop
 				if {_premio} is 3:
-					execute console command "money give %player% 20"
-					message " &a&l¡TU DESEO SE HA CUMPLIDO! &fFelicidades por tus $20." to player
-					broadcast " &a¡A &a&l%player% &ase le ha cumplido un deseo! Nada le faltará."
+					give a bow named "&7&lLanzacohetes" with lore "&fCausa una explosión en el punto de impacto" and "&fEmpuja entidades al explotar" and "&fDurabilidad limitada / Cooldown 10 segundos" and "&cNo reparable - No encantable" to player
+					message " &a&l¡TU DESEO SE HA CUMPLIDO! &fRecibiste un Lanzacohetes." to player
+					broadcast " &a¡A &a&l%player% &ase le ha cumplido un deseo! Ha recibido un Lanzacohetes."
+					# Estadisticas
+					load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+					#------------
+					set {_usos} to yaml value "fuentedeseos.lanzacohetes.total" from "estadisticas"
+					if {_usos} is not set:
+						set {_usos} to 0
+					add 1 to {_usos}
+					set yaml value "fuentedeseos.lanzacohetes.total" from "estadisticas" to {_usos}
+					#------------
+					set {_player} to player
+					set {_usosplayer} to yaml value "fuentedeseos.lanzacohetes.%{_player}%" from "estadisticas"
+					if {_usosplayer} is not set:
+						set {_usosplayer} to 0
+					add 1 to {_usosplayer}
+					set yaml value "fuentedeseos.lanzacohetes.%{_player}%" from "estadisticas" to {_usosplayer}
+					#------------
+					wait 1 tick
+					save yaml "estadisticas"
+					stop
+				if {_premio} is 4:
+					give 10 of sunflower named "&6&lCeitil" with lore "&7Banco Central" to player's inventory
+					message " &a&l¡TU DESEO SE HA CUMPLIDO! &fRecibiste $10." to player
+					broadcast " &a¡A &a&l%player% &ase le ha cumplido un deseo! Ha recibido $10."
 					# Estadisticas
 					load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
 					#------------
@@ -73,46 +109,103 @@ on drop of sunflower:
 					wait 1 tick
 					save yaml "estadisticas"
 					# Estadísticas de economía
-					execute console command "/emitirceitil fuentedeseos 20"
+					execute console command "/emitirceitil fuentedeseos 10"
 					stop
-				#if {_premio} is 4:
-				#	give 1 373:8193 named "&6&lRango por 1 día" with lore "&fBébela para probar un rango||&faleatorio por 1 día." to player
-				#	message " &a&l¡TU DESEO SE HA CUMPLIDO! &fFelicidades por tu rango por 1 día." to player
-				#	broadcast " &a¡A &a&l%player% &ase le ha cumplido un deseo! Ahora se siente superior a todos."
-				#	execute console command "misionterminada fuente rango-1d %player%"
-				#	stop
 				if {_premio} is 4:
-					give 1 diamond sword of sharpness 3 and unbreaking 3 to player
-					message " &a&l¡TU DESEO SE HA CUMPLIDO! &fFelicidades por tu espada." to player
-					broadcast " &a¡A &a&l%player% &ase le ha cumplido un deseo! Ahora podrá defenderse."
+					give 5 echo shard named "&d&lCofre de ender portátil" with lore "&fUn solo uso" to player #!!!!!!!!!!!!!!!!!!!!!!!! ¿Como le pongo encantamiento oculto?
+					message " &a&l¡TU DESEO SE HA CUMPLIDO! &fRecibiste 5 Cofres de ender portátiles." to player
+					broadcast " &a¡A &a&l%player% &ase le ha cumplido un deseo! Ha recibido 5 Cofres de ender portátiles."
 					# Estadisticas
 					load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
 					#------------
-					set {_usos} to yaml value "fuentedeseos.premio3.total" from "estadisticas"
+					set {_usos} to yaml value "fuentedeseos.enderportatil.total" from "estadisticas"
 					if {_usos} is not set:
 						set {_usos} to 0
 					add 1 to {_usos}
-					set yaml value "fuentedeseos.premio3.total" from "estadisticas" to {_usos}
+					set yaml value "fuentedeseos.enderportatil.total" from "estadisticas" to {_usos}
 					#------------
 					set {_player} to player
-					set {_usosplayer} to yaml value "fuentedeseos.premio3.%{_player}%" from "estadisticas"
+					set {_usosplayer} to yaml value "fuentedeseos.enderportatil.%{_player}%" from "estadisticas"
 					if {_usosplayer} is not set:
 						set {_usosplayer} to 0
 					add 1 to {_usosplayer}
-					set yaml value "fuentedeseos.premio3.%{_player}%" from "estadisticas" to {_usosplayer}
+					set yaml value "fuentedeseos.enderportatil.%{_player}%" from "estadisticas" to {_usosplayer}
 					#------------
 					wait 1 tick
 					save yaml "estadisticas"
 					stop
-				# if {_premio} is 5:
-					# give 1 bow of power 2 and unbreaking 3 to player
-					# message " &a&l¡TU DESEO SE HA CUMPLIDO! &fFelicidades por tu arco." to player
-					# broadcast " &a¡A &a&l%player% &ase le ha cumplido un deseo! Ahora podrá defenderse."
-					# execute console command "misionterminada fuente arco %player%"
-					# stop
-				#------------
-				if {_premio} is 5 or 6:
+				if {_premio} is 5:
+					give 32 cooked beef to the player
+					message " &a&l¡TU DESEO SE HA CUMPLIDO! &fRecibiste 32 filetes." to player
+					broadcast " &a¡A &a&l%player% &ase le ha cumplido un deseo! Ha recibido 32 filetes"
+					# Estadisticas
+					load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+					#------------
+					set {_usos} to yaml value "fuentedeseos.filetes.total" from "estadisticas"
+					if {_usos} is not set:
+						set {_usos} to 0
+					add 1 to {_usos}
+					set yaml value "fuentedeseos.filetes.total" from "estadisticas" to {_usos}
+					#------------
+					set {_player} to player
+					set {_usosplayer} to yaml value "fuentedeseos.filetes.%{_player}%" from "estadisticas"
+					if {_usosplayer} is not set:
+						set {_usosplayer} to 0
+					add 1 to {_usosplayer}
+					set yaml value "fuentedeseos.filetes.%{_player}%" from "estadisticas" to {_usosplayer}
+					#------------
+					wait 1 tick
+					save yaml "estadisticas"
+					stop
+				if {_premio} is 6:
+					give a ancient debris to the player
+					message " &a&l¡TU DESEO SE HA CUMPLIDO! &fRecibiste un escombro ancestral." to player
+					broadcast " &a¡A &a&l%player% &ase le ha cumplido un deseo! Ha recibido un escombro ancestral"
+					# Estadisticas
+					load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+					#------------
+					set {_usos} to yaml value "fuentedeseos.escombro.total" from "estadisticas"
+					if {_usos} is not set:
+						set {_usos} to 0
+					add 1 to {_usos}
+					set yaml value "fuentedeseos.escombro.total" from "estadisticas" to {_usos}
+					#------------
+					set {_player} to player
+					set {_usosplayer} to yaml value "fuentedeseos.escombro.%{_player}%" from "estadisticas"
+					if {_usosplayer} is not set:
+						set {_usosplayer} to 0
+					add 1 to {_usosplayer}
+					set yaml value "fuentedeseos.escombro.%{_player}%" from "estadisticas" to {_usosplayer}
+					#------------
+					wait 1 tick
+					save yaml "estadisticas"
+					stop
+				if {_premio} is 7:
+					give 5 diamond to the player
+					message " &a&l¡TU DESEO SE HA CUMPLIDO! &fRecibiste 5 diamantes." to player
+					broadcast " &a¡A &a&l%player% &ase le ha cumplido un deseo! Ha recibido 5 diamantes"
+					# Estadisticas
+					load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
+					#------------
+					set {_usos} to yaml value "fuentedeseos.diamantes.total" from "estadisticas"
+					if {_usos} is not set:
+						set {_usos} to 0
+					add 1 to {_usos}
+					set yaml value "fuentedeseos.diamantes.total" from "estadisticas" to {_usos}
+					#------------
+					set {_player} to player
+					set {_usosplayer} to yaml value "fuentedeseos.diamantes.%{_player}%" from "estadisticas"
+					if {_usosplayer} is not set:
+						set {_usosplayer} to 0
+					add 1 to {_usosplayer}
+					set yaml value "fuentedeseos.diamantes.%{_player}%" from "estadisticas" to {_usosplayer}
+					#------------
+					wait 1 tick
+					save yaml "estadisticas"
+					stop
+				if {_premio} is 8 or 9 or 10:
 					message " &cTu deseo no se ha cumplido." to player
+					broadcast " &c¡&a&l%player% &cpidió un deseo y no se le cumplió. :("
 					# Estadisticas
 					load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
 					#------------
@@ -142,6 +235,13 @@ on drop of sunflower:
 					delete {fuente_uso::%player%}
 				else:
 					send "&cAún no ha pasado un día entero desde que pediste tus 3 deseos." to player
+
+on entering of region "fuente":
+    send " " to player
+    send " &e&l¡Entraste a la fuente de los deseos!" to player
+    send " &eRecuerda tener suficiente espacio en tu inventario para recibir tus deseos cumplidos." to player
+    send " " to player
+    play sound "ui.toast.in" with volume 3 to the player
 
 command /fuente <text> <text>:
 	permission: mundito.admin

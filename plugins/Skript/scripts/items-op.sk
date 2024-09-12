@@ -148,10 +148,9 @@ on enchant:
 
 #/itemname &3&lBrisa Tempestuosa
 #/itemlore add &fInfringe más daño al atacar en caída
-#/itemlore add &fEvita el daño por caída
+#/itemlore add &fEvita el daño por caída desde alturas no letales
 #/itemlore add &fÚsala para impulsarte hacia arriba
 #/itemlore add &cNo reparable - No encantable
-# Poner una versión con eficiencia 5
 
 on join:
     set {items.impulso.%player%} to false

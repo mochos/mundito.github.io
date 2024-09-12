@@ -12,16 +12,16 @@ itemsop:
             elPantallazoAzul: 64
             lorspi: 97
         impulso:
-            total: 610
-            lorspi: 333
+            total: 612
+            lorspi: 335
             elPantallazoAzul: 179
             ShakalChapa: 98
     taladro:
-        total: 45
-        lorspi: 45
+        total: 46
+        lorspi: 46
     lanzacohetes:
-        total: 197
-        lorspi: 147
+        total: 199
+        lorspi: 149
         elPantallazoAzul: 42
         ShakalChapa: 8
 
@@ -52,18 +52,27 @@ matrimonio:
         elPantallazoAzul: 4
 
 fuentedeseos:
-    nocumplido:
-        total: 19
-        lorspi: 18
-        elPantallazoAzul: 1
-    premio1:
-        total: 14
-        lorspi: 13
-        elPantallazoAzul: 1
-    premio3:
-        total: 7
-        lorspi: 6
-        elPantallazoAzul: 1
     dinero:
-        total: 12
-        lorspi: 12
+        total: 11
+        lorspi: 11
+    diamantes:
+        total: 13
+        lorspi: 13
+    escombro:
+        total: 11
+        lorspi: 11
+    lanzacohetes:
+        total: 9
+        lorspi: 9
+    instaminador:
+        total: 17
+        lorspi: 17
+    nocumplido:
+        total: 18
+        lorspi: 18
+    brisa:
+        total: 7
+        lorspi: 7
+    filetes:
+        total: 8
+        lorspi: 8
