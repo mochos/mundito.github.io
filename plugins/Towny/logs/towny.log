@@ -1,23 +1,23 @@
-2024-09-12 17:13:49,954 [Server thread]: [Towny] Database: [Load] flatfile [Save] flatfile
-2024-09-12 17:13:50,003 [Server thread]: [Towny] Database: Loaded in 49ms.
-2024-09-12 17:13:50,011 [ForkJoinPool.commonPool-worker-8]: [Towny] Cleaning up old backups...
-2024-09-12 17:13:50,031 [ForkJoinPool.commonPool-worker-8]: [Towny] Successfully cleaned backups.
-2024-09-12 17:13:50,032 [ForkJoinPool.commonPool-worker-7]: [Towny] Making backup...
-2024-09-12 17:13:50,176 [Server thread]: [Towny] Searching for third-party plugins...
-2024-09-12 17:13:50,177 [Server thread]: [Towny] Plugins found: 
-2024-09-12 17:13:50,178 [Server thread]: [Towny]   Permissions: TownyPerms, LuckPerms v5.4.102 via Vault
-2024-09-12 17:13:50,178 [Server thread]: [Towny]   Chat: LuckPerms v5.4.102 via Vault
-2024-09-12 17:13:50,181 [Server thread]: [Towny]   Economy: EssentialsX Economy via Vault
-2024-09-12 17:13:50,184 [Server thread]: [Towny]   Add-ons: Dynmap-Towny v1.1.2, PlaceholderAPI v2.11.5
-2024-09-12 17:13:50,185 [Server thread]: [Towny]   Warning: EssentialsX Economy has been known to reset
+2024-09-12 17:39:13,913 [Server thread]: [Towny] Database: [Load] flatfile [Save] flatfile
+2024-09-12 17:39:14,006 [Server thread]: [Towny] Database: Loaded in 93ms.
+2024-09-12 17:39:14,021 [ForkJoinPool.commonPool-worker-8]: [Towny] Cleaning up old backups...
+2024-09-12 17:39:14,043 [ForkJoinPool.commonPool-worker-8]: [Towny] Successfully cleaned backups.
+2024-09-12 17:39:14,045 [ForkJoinPool.commonPool-worker-7]: [Towny] Making backup...
+2024-09-12 17:39:14,449 [Server thread]: [Towny] Searching for third-party plugins...
+2024-09-12 17:39:14,449 [Server thread]: [Towny] Plugins found: 
+2024-09-12 17:39:14,455 [Server thread]: [Towny]   Permissions: TownyPerms, LuckPerms v5.4.102 via Vault
+2024-09-12 17:39:14,455 [Server thread]: [Towny]   Chat: LuckPerms v5.4.102 via Vault
+2024-09-12 17:39:14,463 [Server thread]: [Towny]   Economy: EssentialsX Economy via Vault
+2024-09-12 17:39:14,469 [Server thread]: [Towny]   Add-ons: Dynmap-Towny v1.1.2, PlaceholderAPI v2.11.5
+2024-09-12 17:39:14,470 [Server thread]: [Towny]   Warning: EssentialsX Economy has been known to reset
                            town and nation bank accounts on rare occasions.
-2024-09-12 17:13:50,271 [Server thread]: [Towny] Version: 0.100.2.0 - Plugin Enabled
-2024-09-12 17:13:50,485 [ForkJoinPool.commonPool-worker-7]: [Towny] Towny flatfiles and settings successfully backed up.
-2024-09-12 17:14:00,077 [Craft Scheduler Thread - 6]: [Towny] Buscando actualizaciones...
-2024-09-12 17:14:00,079 [Craft Scheduler Thread - 12]: [Towny] Time until a New Day: 18 horas, 46 minutos
-2024-09-12 17:14:00,877 [Craft Scheduler Thread - 6]: [Towny] Nueva actualización disponible: 0.100.4.1 | Estás ejecutando: 0.100.2.0
-2024-09-12 17:14:00,878 [Craft Scheduler Thread - 6]: [Towny] Descargala aquí: https://github.com/TownyAdvanced/Towny/releases/tag/0.100.4.1
-2024-09-12 17:24:01,583 [Server thread]: [Towny] Disabling Towny v0.100.2.0
-2024-09-12 17:24:01,584 [Server thread]: [Towny] Finishing File IO Tasks...
-2024-09-12 17:24:01,586 [Server thread]: [Towny] Finishing Universe Tasks...
-2024-09-12 17:24:01,587 [Server thread]: [Towny] Version: 0.100.2.0 - Plugin Disabled
+2024-09-12 17:39:14,628 [ForkJoinPool.commonPool-worker-7]: [Towny] Towny flatfiles and settings successfully backed up.
+2024-09-12 17:39:14,652 [Server thread]: [Towny] Version: 0.100.2.0 - Plugin Enabled
+2024-09-12 17:39:25,519 [Craft Scheduler Thread - 1]: [Towny] Buscando actualizaciones...
+2024-09-12 17:39:25,520 [Craft Scheduler Thread - 12]: [Towny] Time until a New Day: 18 horas, 20 minutos, 35 segundos
+2024-09-12 17:39:26,244 [Craft Scheduler Thread - 1]: [Towny] Nueva actualización disponible: 0.100.4.1 | Estás ejecutando: 0.100.2.0
+2024-09-12 17:39:26,244 [Craft Scheduler Thread - 1]: [Towny] Descargala aquí: https://github.com/TownyAdvanced/Towny/releases/tag/0.100.4.1
+2024-09-12 17:41:39,986 [Server thread]: [Towny] Disabling Towny v0.100.2.0
+2024-09-12 17:41:39,987 [Server thread]: [Towny] Finishing File IO Tasks...
+2024-09-12 17:41:39,988 [Server thread]: [Towny] Finishing Universe Tasks...
+2024-09-12 17:41:39,989 [Server thread]: [Towny] Version: 0.100.2.0 - Plugin Disabled
