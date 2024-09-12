@@ -53,17 +53,17 @@ matrimonio:
 
 fuentedeseos:
     nocumplido:
-        total: 16
-        lorspi: 15
+        total: 19
+        lorspi: 18
         elPantallazoAzul: 1
     premio1:
-        total: 11
-        lorspi: 10
+        total: 14
+        lorspi: 13
         elPantallazoAzul: 1
     premio3:
-        total: 5
-        lorspi: 4
+        total: 7
+        lorspi: 6
         elPantallazoAzul: 1
     dinero:
-        total: 11
-        lorspi: 11
+        total: 12
+        lorspi: 12

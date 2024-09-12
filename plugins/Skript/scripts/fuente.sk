@@ -7,6 +7,7 @@ on drop of sunflower:
 
 			if {fuente_uso::%player%} < 3:
 				add 1 to {fuente_uso::%player%}
+				set {fuente.hora.%player%} to now
 				####################################################
 				cancel event
 				execute console command "/emitirceitil fuentedeseos -1"
@@ -142,12 +143,20 @@ on drop of sunflower:
 				else:
 					send "&cAún no ha pasado un día entero desde que pediste tus 3 deseos." to player
 
-command /resetfuente:
+command /fuente <text> <text>:
 	permission: mundito.admin
+	permission message: K ase. Esto es para admins. :v
+	usage: /fuente <borrar/uso> <jugador>
 	trigger:
-		delete {fuente_cooldown::%player%}
-		delete {fuente_uso::%player%}
-		message "&aCooldown reiniciado." to player
+		if arg-1 is "borrar":
+			delete {fuente_cooldown::%arg-2%}
+			delete {fuente_uso::%arg-2%}
+			message "&aCooldown reiniciado para %arg-2%" to player
+		else if arg-1 is "uso":
+			message "&aÚltimo uso de %arg-2%:" to player
+			message "&f%{fuente.hora.%arg-2%}%" to player
+		else:
+			message "&cAprenda a escribir pana." to player
 
 
 every 2 ticks:
