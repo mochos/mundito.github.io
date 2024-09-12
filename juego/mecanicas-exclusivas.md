@@ -22,6 +22,22 @@ Estas se pueden comprar en la tienda del spawn.
 Próximamente
 {% endhint %}
 
+<figure><img src="../.gitbook/assets/fuente-foto.png" alt=""><figcaption></figcaption></figure>
+
+Este es un lugar mágico en el que los jugadores pueden lanzar $1 para recibir un premio a cambio. Para llegar a este lugar debes comprar la brújula de viaje en la tienda del spawn.
+
+Estos son los premios y sus probabilidades
+
+* **Instaminador** (8.33%)
+* **Brisa Tempestuosa** (8.33%)
+* **Lanzacohetes** (8.33%)
+* **10 ceitiles** (8.33%)
+* **5 Cofres de ender portátiles** (8.33%)
+* **32 filetes** (8.33%)
+* **Escombro ancestral** (8.33%)
+* **5 diamantes** (8.33%)
+* **Deseo no cumplido** (33.33%)
+
 ### Matrimonio
 
 {% hint style="info" %}
