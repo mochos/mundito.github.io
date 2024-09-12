@@ -1,0 +1,38 @@
+{
+  "type": "com.loohp.imageframe.objectholders.URLStaticImageMap",
+  "index": 6,
+  "name": "maki",
+  "url": "https://i.imgur.com/11GKCst.png",
+  "width": 5,
+  "height": 1,
+  "creator": "6b935d9e-c2fe-3085-a6fa-227d8624c201",
+  "hasAccess": {},
+  "creationTime": 1717821617340,
+  "mapdata": [
+    {
+      "mapid": 87,
+      "image": "0.png",
+      "markers": []
+    },
+    {
+      "mapid": 88,
+      "image": "1.png",
+      "markers": []
+    },
+    {
+      "mapid": 89,
+      "image": "2.png",
+      "markers": []
+    },
+    {
+      "mapid": 90,
+      "image": "3.png",
+      "markers": []
+    },
+    {
+      "mapid": 91,
+      "image": "4.png",
+      "markers": []
+    }
+  ]
+}

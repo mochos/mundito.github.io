@@ -1,0 +1,18 @@
+{
+  "type": "com.loohp.imageframe.objectholders.URLStaticImageMap",
+  "index": 10,
+  "name": "diorvi1",
+  "url": "https://i.imgur.com/wenhCzt.png",
+  "width": 1,
+  "height": 1,
+  "creator": "6b935d9e-c2fe-3085-a6fa-227d8624c201",
+  "hasAccess": {},
+  "creationTime": 1719090858730,
+  "mapdata": [
+    {
+      "mapid": 171,
+      "image": "0.png",
+      "markers": []
+    }
+  ]
+}

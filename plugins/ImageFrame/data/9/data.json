@@ -1,0 +1,23 @@
+{
+  "type": "com.loohp.imageframe.objectholders.URLStaticImageMap",
+  "index": 9,
+  "name": "cumple3",
+  "url": "https://m.media-amazon.com/images/I/61+p-KdyaUL._AC_UF894,1000_QL80_.jpg",
+  "width": 2,
+  "height": 1,
+  "creator": "6b935d9e-c2fe-3085-a6fa-227d8624c201",
+  "hasAccess": {},
+  "creationTime": 1718852199982,
+  "mapdata": [
+    {
+      "mapid": 164,
+      "image": "0.png",
+      "markers": []
+    },
+    {
+      "mapid": 165,
+      "image": "1.png",
+      "markers": []
+    }
+  ]
+}

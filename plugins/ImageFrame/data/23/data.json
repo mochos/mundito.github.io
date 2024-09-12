@@ -1,0 +1,18 @@
+{
+  "type": "com.loohp.imageframe.objectholders.URLStaticImageMap",
+  "index": 23,
+  "name": "migluten",
+  "url": "https://raw.githubusercontent.com/mochos/mochos.github.io/archivo/tula-opf/mall/avisos/migluten2.png",
+  "width": 1,
+  "height": 1,
+  "creator": "6b935d9e-c2fe-3085-a6fa-227d8624c201",
+  "hasAccess": {},
+  "creationTime": 1725458804849,
+  "mapdata": [
+    {
+      "mapid": 314,
+      "image": "0.png",
+      "markers": []
+    }
+  ]
+}

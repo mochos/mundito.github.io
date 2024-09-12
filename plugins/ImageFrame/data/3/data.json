@@ -1,17 +1,27 @@
 {
-  "type": "com.loohp.imageframe.objectholders.URLStaticImageMap",
+  "type": "com.loohp.imageframe.objectholders.URLAnimatedImageMap",
   "index": 3,
-  "name": "EloInvi",
-  "url": "https://i.imgur.com/ewGdJve.png",
+  "name": "Cumple",
+  "url": "https://i.imgur.com/87pnfCR.gif",
   "width": 1,
   "height": 1,
   "creator": "6b935d9e-c2fe-3085-a6fa-227d8624c201",
+  "pausedAt": -1,
+  "tickOffset": 0,
   "hasAccess": {},
-  "creationTime": 1717709798112,
+  "creationTime": 1717173471422,
   "mapdata": [
     {
-      "mapid": 55,
-      "image": "0.png",
+      "mapid": 57,
+      "images": [
+        "0.png",
+        "1.png",
+        "2.png",
+        "3.png",
+        "4.png",
+        "5.png",
+        "6.png"
+      ],
       "markers": []
     }
   ]

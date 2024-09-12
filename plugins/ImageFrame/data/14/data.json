@@ -1,0 +1,53 @@
+{
+  "type": "com.loohp.imageframe.objectholders.URLStaticImageMap",
+  "index": 14,
+  "name": "crobis",
+  "url": "https://i.imgur.com/Qs1azTO.png",
+  "width": 2,
+  "height": 4,
+  "creator": "6b935d9e-c2fe-3085-a6fa-227d8624c201",
+  "hasAccess": {},
+  "creationTime": 1719267947337,
+  "mapdata": [
+    {
+      "mapid": 177,
+      "image": "0.png",
+      "markers": []
+    },
+    {
+      "mapid": 178,
+      "image": "1.png",
+      "markers": []
+    },
+    {
+      "mapid": 179,
+      "image": "2.png",
+      "markers": []
+    },
+    {
+      "mapid": 180,
+      "image": "3.png",
+      "markers": []
+    },
+    {
+      "mapid": 181,
+      "image": "4.png",
+      "markers": []
+    },
+    {
+      "mapid": 182,
+      "image": "5.png",
+      "markers": []
+    },
+    {
+      "mapid": 183,
+      "image": "6.png",
+      "markers": []
+    },
+    {
+      "mapid": 184,
+      "image": "7.png",
+      "markers": []
+    }
+  ]
+}

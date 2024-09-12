@@ -1,0 +1,88 @@
+{
+  "type": "com.loohp.imageframe.objectholders.URLStaticImageMap",
+  "index": 8,
+  "name": "Lomas5x3",
+  "url": "https://i.imgur.com/VZxXyvs.png",
+  "width": 5,
+  "height": 3,
+  "creator": "6b935d9e-c2fe-3085-a6fa-227d8624c201",
+  "hasAccess": {},
+  "creationTime": 1718720444903,
+  "mapdata": [
+    {
+      "mapid": 147,
+      "image": "0.png",
+      "markers": []
+    },
+    {
+      "mapid": 148,
+      "image": "1.png",
+      "markers": []
+    },
+    {
+      "mapid": 149,
+      "image": "2.png",
+      "markers": []
+    },
+    {
+      "mapid": 150,
+      "image": "3.png",
+      "markers": []
+    },
+    {
+      "mapid": 151,
+      "image": "4.png",
+      "markers": []
+    },
+    {
+      "mapid": 152,
+      "image": "5.png",
+      "markers": []
+    },
+    {
+      "mapid": 153,
+      "image": "6.png",
+      "markers": []
+    },
+    {
+      "mapid": 154,
+      "image": "7.png",
+      "markers": []
+    },
+    {
+      "mapid": 155,
+      "image": "8.png",
+      "markers": []
+    },
+    {
+      "mapid": 156,
+      "image": "9.png",
+      "markers": []
+    },
+    {
+      "mapid": 157,
+      "image": "10.png",
+      "markers": []
+    },
+    {
+      "mapid": 158,
+      "image": "11.png",
+      "markers": []
+    },
+    {
+      "mapid": 159,
+      "image": "12.png",
+      "markers": []
+    },
+    {
+      "mapid": 160,
+      "image": "13.png",
+      "markers": []
+    },
+    {
+      "mapid": 161,
+      "image": "14.png",
+      "markers": []
+    }
+  ]
+}

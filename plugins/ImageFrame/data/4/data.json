@@ -1,0 +1,28 @@
+{
+  "type": "com.loohp.imageframe.objectholders.URLAnimatedImageMap",
+  "index": 4,
+  "name": "Cumple2",
+  "url": "https://media.tenor.com/WkC_sCTt2qIAAAAi/feliz-cumplea%C3%B1os.gif",
+  "width": 1,
+  "height": 1,
+  "creator": "6b935d9e-c2fe-3085-a6fa-227d8624c201",
+  "pausedAt": -1,
+  "tickOffset": 0,
+  "hasAccess": {},
+  "creationTime": 1717173516975,
+  "mapdata": [
+    {
+      "mapid": 58,
+      "images": [
+        "0.png",
+        "1.png",
+        "2.png",
+        "3.png",
+        "4.png",
+        "5.png",
+        "6.png"
+      ],
+      "markers": []
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "type": "com.loohp.imageframe.objectholders.URLAnimatedImageMap",
+  "index": 20,
+  "name": "pruebagif",
+  "url": "https://wallpapercave.com/wp/wp2760964.gif",
+  "width": 3,
+  "height": 2,
+  "creator": "6b935d9e-c2fe-3085-a6fa-227d8624c201",
+  "pausedAt": -1,
+  "tickOffset": 0,
+  "hasAccess": {},
+  "creationTime": 1719331139626,
+  "mapdata": [
+    {
+      "mapid": 199,
+      "images": [
+        "0.png",
+        "1.png",
+        "2.png",
+        "3.png"
+      ],
+      "markers": []
+    },
+    {
+      "mapid": 200,
+      "images": [
+        "4.png",
+        "5.png",
+        "6.png",
+        "7.png"
+      ],
+      "markers": []
+    },
+    {
+      "mapid": 201,
+      "images": [
+        "8.png",
+        "9.png",
+        "10.png",
+        "11.png"
+      ],
+      "markers": []
+    },
+    {
+      "mapid": 202,
+      "images": [
+        "12.png",
+        "13.png",
+        "14.png",
+        "15.png"
+      ],
+      "markers": []
+    },
+    {
+      "mapid": 203,
+      "images": [
+        "16.png",
+        "17.png",
+        "18.png",
+        "19.png"
+      ],
+      "markers": []
+    },
+    {
+      "mapid": 204,
+      "images": [
+        "20.png",
+        "21.png",
+        "22.png",
+        "23.png"
+      ],
+      "markers": []
+    }
+  ]
+}
