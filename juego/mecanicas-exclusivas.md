@@ -28,15 +28,15 @@ Este es un lugar mágico en el que los jugadores pueden lanzar $1 para recibir u
 
 Estos son los premios y sus probabilidades
 
-* **Instaminador** (8.33%)
-* **Brisa Tempestuosa** (8.33%)
-* **Lanzacohetes** (8.33%)
-* **10 ceitiles** (8.33%)
-* **5 Cofres de ender portátiles** (8.33%)
-* **32 filetes** (8.33%)
-* **Escombro ancestral** (8.33%)
-* **5 diamantes** (8.33%)
-* **Deseo no cumplido** (33.33%)
+* **Instaminador** (3.33%)
+* **Brisa Tempestuosa** (3.33%)
+* **Lanzacohetes** (3.33%)
+* **10 ceitiles** (3.33%)
+* **5 Cofres de ender portátiles** (10%)
+* **32 filetes** (20%)
+* **Escombro ancestral** (13.33%)
+* **5 diamantes** (20%)
+* **Deseo no cumplido** (23.33%)
 
 ### Matrimonio
 
