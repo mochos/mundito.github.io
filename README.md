@@ -42,3 +42,7 @@ Puedes entrar con tu Minecraft Vanilla pero si eres usuario de Java te dejamos e
 | ------------------------------------------------ | -------------------------------------------------- |
 | Para jugadores premium (Juego original).         | Launcher para jugadores no premium (Juego pirata). |
 | [Descarga oficial](https://skmedix.pl/downloads) | [Descarga oficial](https://multimc.org/#Download)  |
+
+
+
+Descargas de [launchers no oficiales](https://mega.nz/folder/o8JGnTZQ#LMzqd\_IUbsfSsSrbkjO1WQ)
