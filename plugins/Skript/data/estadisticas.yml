@@ -12,9 +12,9 @@ itemsop:
             elPantallazoAzul: 64
             lorspi: 97
         impulso:
-            total: 612
-            lorspi: 335
-            elPantallazoAzul: 179
+            total: 614
+            lorspi: 336
+            elPantallazoAzul: 180
             ShakalChapa: 98
     taladro:
         total: 46
@@ -25,8 +25,9 @@ itemsop:
         elPantallazoAzul: 42
         ShakalChapa: 8
     cofreender:
-        total: 6
-        lorspi: 6
+        total: 10
+        lorspi: 9
+        elPantallazoAzul: 1
 
 matrimonio:
     chat:

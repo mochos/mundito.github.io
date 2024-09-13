@@ -313,3 +313,41 @@ on projectile hit:
             stop
 
 # --------------------------------------------------------------------------------------------------------------------
+
+# Comando para guardar itemOP en variable
+
+command /guardaritemop <string> [<string>]:
+    permission: skript.admin
+    executable by: players
+    usage: "Guarda en variable global el Item OP con /guardaritemop <brisa, lanzacohetes, instaminador, cofreender, capturador>"
+    description: "Guarda en variable un Item OP para su posterior uso mediante Skript."
+    trigger:
+        if arg-2 is not set:
+            if player's held item is not air:
+                if arg-1 contains "brisa" or "lanzacohetes" or "instaminador" or "cofreender" or "capturador":
+                    if {itemsop::%arg-1%} is set:
+                        send "&b[ItemsOP] &fLa variable de &7%arg-1% &fya existe, utiliza &a/guardaritemop %arg-1% borrar&7." to player
+                        stop
+                    set {itemsop::%arg-1%} to player's tool
+                    send "&b[ItemsOP] &fHas guardado: &7%{itemsop::%arg-1%}% &fen variable global."
+                    stop
+                else:
+                    send "&b[ItemsOP] &fOpciones: brisa, lanzacohetes, instaminador, cofreender, capturador." to player
+            else:
+                send "&b[ItemsOP] &cNo tienes nada en la mano." to player
+        else if arg-2 contains "borrar":
+            clear {itemsop::%arg-1%}
+            send "&b[ItemsOP] &fVariable de &7%arg-1% &feliminada satisfactoriamente." to player
+
+# Comando para recibir itemOP desde variable
+
+command /daritemop <string>:
+    permission: skript.admin
+    trigger:
+        if {itemsop::%arg-1%} is not set:
+            send "&b[ItemsOP] &fEse item OP no está guardado." to player
+            stop
+        give {itemsop::%arg-1%} to player
+        send "&b[ItemsOP] &aHas recibido %{itemsop::%arg-1%}%" to player
+
+# --------------------------------------------------------------------------------------------------------------------
