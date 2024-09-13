@@ -112,7 +112,8 @@ on drop of sunflower:
 					execute console command "/emitirceitil fuentedeseos 10"
 					stop
 				if {_premio} is between 5 and 7:
-					give 5 echo shard of unbreaking 10 named "&d&lCofre de ender portátil" with lore "&fUn solo uso" to player #!!!!!!!!!!!!!!!!!!!!!!!! ¿Como le pongo encantamiento oculto?
+					#give 5 echo shard of unbreaking 10 named "&d&lCofre de ender portátil" with lore "&fUn solo uso" to player 
+					give 5 of {itemsop::cofreender} to player
 					message " &a&l¡TU DESEO SE HA CUMPLIDO! &fRecibiste 5 Cofres de ender portátiles." to player
 					broadcast " &a¡A &a&l%player% &ase le ha cumplido un deseo! Ha recibido 5 Cofres de ender portátiles."
 					# Estadisticas

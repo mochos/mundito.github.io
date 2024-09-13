@@ -25,8 +25,8 @@ itemsop:
         elPantallazoAzul: 42
         ShakalChapa: 8
     cofreender:
-        total: 10
-        lorspi: 9
+        total: 15
+        lorspi: 14
         elPantallazoAzul: 1
 
 matrimonio:
@@ -57,14 +57,14 @@ matrimonio:
 
 fuentedeseos:
     dinero:
-        total: 23
-        lorspi: 23
+        total: 24
+        lorspi: 24
     diamantes:
-        total: 52
-        lorspi: 52
+        total: 54
+        lorspi: 54
     escombro:
-        total: 45
-        lorspi: 45
+        total: 46
+        lorspi: 46
     lanzacohetes:
         total: 16
         lorspi: 16
@@ -72,14 +72,14 @@ fuentedeseos:
         total: 26
         lorspi: 26
     nocumplido:
-        total: 82
-        lorspi: 82
+        total: 85
+        lorspi: 85
     brisa:
         total: 20
         lorspi: 20
     filetes:
-        total: 33
-        lorspi: 33
+        total: 39
+        lorspi: 39
     enderportatil:
-        total: 17
-        lorspi: 17
+        total: 19
+        lorspi: 19
