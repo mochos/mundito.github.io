@@ -16,7 +16,7 @@ on drop of sunflower:
 				#clear dropped item
 				launch ball firework colored yellow at event-location timed 0.1
 				launch star firework colored gold at event-location timed 0.1
-				set {_premio} to random integer between 1 to 12
+				set {_premio} to random integer between 1 to 30
 				if {_premio} is 1:
 					give a diamond pickaxe of efficiency 5 named "&9&lInstaminador" with lore "&fRompe un radio de 3x3 bloques" and "&cNo reparable - No encantable" to player
 					message " &a&l¡TU DESEO SE HA CUMPLIDO! &fRecibiste un Instaminador." to player
@@ -111,8 +111,8 @@ on drop of sunflower:
 					# Estadísticas de economía
 					execute console command "/emitirceitil fuentedeseos 10"
 					stop
-				if {_premio} is 5:
-					give 5 echo shard named "&d&lCofre de ender portátil" with lore "&fUn solo uso" to player #!!!!!!!!!!!!!!!!!!!!!!!! ¿Como le pongo encantamiento oculto?
+				if {_premio} is between 5 and 7:
+					give 5 echo shard of unbreaking 10 named "&d&lCofre de ender portátil" with lore "&fUn solo uso" to player #!!!!!!!!!!!!!!!!!!!!!!!! ¿Como le pongo encantamiento oculto?
 					message " &a&l¡TU DESEO SE HA CUMPLIDO! &fRecibiste 5 Cofres de ender portátiles." to player
 					broadcast " &a¡A &a&l%player% &ase le ha cumplido un deseo! Ha recibido 5 Cofres de ender portátiles."
 					# Estadisticas
@@ -134,10 +134,10 @@ on drop of sunflower:
 					wait 1 tick
 					save yaml "estadisticas"
 					stop
-				if {_premio} is 6:
-					give 32 cooked beef to the player
-					message " &a&l¡TU DESEO SE HA CUMPLIDO! &fRecibiste 32 filetes." to player
-					broadcast " &a¡A &a&l%player% &ase le ha cumplido un deseo! Ha recibido 32 filetes"
+				if {_premio} is between 8 and 13:
+					give 8 cooked beef to the player
+					message " &a&l¡TU DESEO SE HA CUMPLIDO! &fRecibiste 8 filetes." to player
+					broadcast " &a¡A &a&l%player% &ase le ha cumplido un deseo! Ha recibido 8 filetes"
 					# Estadisticas
 					load yaml "plugins/Skript/data/estadisticas.yml" as "estadisticas"
 					#------------
@@ -157,7 +157,7 @@ on drop of sunflower:
 					wait 1 tick
 					save yaml "estadisticas"
 					stop
-				if {_premio} is 7:
+				if {_premio} is between 14 and 17:
 					give a ancient debris to the player
 					message " &a&l¡TU DESEO SE HA CUMPLIDO! &fRecibiste un escombro ancestral." to player
 					broadcast " &a¡A &a&l%player% &ase le ha cumplido un deseo! Ha recibido un escombro ancestral"
@@ -180,7 +180,7 @@ on drop of sunflower:
 					wait 1 tick
 					save yaml "estadisticas"
 					stop
-				if {_premio} is 8:
+				if {_premio} is between 18 and 23:
 					give 5 diamond to the player
 					message " &a&l¡TU DESEO SE HA CUMPLIDO! &fRecibiste 5 diamantes." to player
 					broadcast " &a¡A &a&l%player% &ase le ha cumplido un deseo! Ha recibido 5 diamantes"
@@ -203,7 +203,8 @@ on drop of sunflower:
 					wait 1 tick
 					save yaml "estadisticas"
 					stop
-				if {_premio} is 9 or 10 or 11 or 12:
+				if {_premio} is between 24 and 30:
+					give a coal to the player
 					message " &cTu deseo no se ha cumplido." to player
 					broadcast " &c¡&a&l%player% &cpidió un deseo y no se le cumplió. :("
 					# Estadisticas
@@ -243,7 +244,7 @@ on entering of region "fuente":
     send " " to player
     play sound "ui.toast.in" with volume 3 to the player
 
-command /fuente <text> <text>:
+command /fuente <text> <player>:
 	permission: mundito.admin
 	permission message: K ase. Esto es para admins. :v
 	usage: /fuente <borrar/uso> <jugador>
