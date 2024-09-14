@@ -324,7 +324,7 @@ command /guardaritemop <string> [<string>]:
     trigger:
         if arg-2 is not set:
             if player's held item is not air:
-                if arg-1 contains "brisa" or "lanzacohetes" or "instaminador" or "cofreender" or "capturador":
+                if arg-1 contains "brisa" or "lanzacohetes" or "instaminador" or "cofreender" or "capturador" or "masamadre" or "pancrudo" or "panmadre":
                     if {itemsop::%arg-1%} is set:
                         send "&b[ItemsOP] &fLa variable de &7%arg-1% &fya existe, utiliza &a/guardaritemop %arg-1% borrar&7." to player
                         stop

@@ -28,6 +28,9 @@ itemsop:
         total: 15
         lorspi: 14
         elPantallazoAzul: 1
+    panmadre:
+        total: 2
+        elPantallazoAzul: 2
 
 matrimonio:
     chat:
