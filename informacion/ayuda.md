@@ -18,6 +18,12 @@
 
 <figure><img src="../.gitbook/assets/instalar-java.gif" alt=""><figcaption></figcaption></figure>
 
+### Cómo instalar los mods y configurar Java en cualquier otro launcher?
+
+No se parce. Mira que te conseguí los launchers premium y no premium más sencillos de configurar y encima te hice tutoriales bien detallados con videíto y todo para facilitarte la vida.
+
+Si vas de rebelde y te querés complicar usando cualquier otro launcher, te toca resolver por tu cuenta. 😅 En YouTube hay un montón de tutoriales.
+
 ### ¿Cómo ocultar contraseña en stream?
 
 El modpack sugerido incluye un mod de macros al que le puedes asignar comandos. Para evitar que tu `/login` se vea en stream configura un macro para ejecutar el comando de la siguiente forma:
