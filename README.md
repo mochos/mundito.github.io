@@ -50,3 +50,5 @@ Puedes entrar con tu Minecraft Vanilla pero si eres usuario de Java te dejamos e
 Esta es la versión de Java con la que funciona Mundito para que no des muchas vueltas. Extraes la carpeta en cualquier lugar donde la vayas a dejar y en el launcher configuras la ruta del ejecutable `jdk-17.0.12+7-jre\bin\javaw.exe`
 
 {% file src=".gitbook/assets/OpenJDK17U-jre_x64_windows_hotspot_17.0.12_7.zip" %}
+
+Fuente: [adoptium.net](https://adoptium.net/temurin/releases/?os=windows\&package=jre\&version=17)
