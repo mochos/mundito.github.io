@@ -1,5 +1,23 @@
 # 🆘 Ayuda
 
+### ¿Cómo instalar la instancia de mundito en MultiMC o PolyMC?
+
+1. Descarga el [zip de la instancia](../#mods-recomendados-java).
+2. Abre el launcher.
+3. Arrastra el zip descargado a la ventana del launcher.
+4. En la ventana que se abre dale al botón \[OK].
+
+<figure><img src="../.gitbook/assets/instalar-instancia.gif" alt=""><figcaption></figcaption></figure>
+
+### ¿Cómo configuro Java en MultiMC o PolyMC?
+
+1. Descargas el [zip de Java](../#descarga-de-java-portable).
+2. Extraes su contenido en cualquier carpeta. Debes tener en cuenta que la ubicación donde lo extraigas debe ser la definitiva.
+3. Vas a la configuración del launcher, buscas el apartado Java. En la ruta de acceso Java le das en \[...]
+4. En la ventana que aparece buscas el ejecutable `javaw.exe` que está dentro de la carpeta `bin` en la carpeta que extrajiste. Una vez seleccionado le das abrir y una vez configurado puedes cerrar esa ventana de configuración.
+
+<figure><img src="../.gitbook/assets/instalar-java.gif" alt=""><figcaption></figcaption></figure>
+
 ### ¿Cómo ocultar contraseña en stream?
 
 El modpack sugerido incluye un mod de macros al que le puedes asignar comandos. Para evitar que tu `/login` se vea en stream configura un macro para ejecutar el comando de la siguiente forma:
