@@ -57,7 +57,7 @@ Si algo no funciona bien, consulta la [sección de ayuda](informacion/ayuda.md).
 
 ### 🚀 Launchers recomendados (Java)
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><h4>MultiMC</h4></td><td>Para jugadores premium (Juego original).<br><a href="https://skmedix.pl/downloads">Descarga oficial</a></td><td></td><td><a href=".gitbook/assets/multimc.png">multimc.png</a></td></tr><tr><td><h4>PolyMC</h4></td><td>Launcher para jugadores no premium (Juego pirata).<br><a href="https://polymc.org/download/">Descarga oficial</a></td><td></td><td><a href=".gitbook/assets/polymc.png">polymc.png</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><h4>MultiMC</h4></td><td><p>Para jugadores premium (Juego original).</p><p><br><a href="https://multimc.org/#Download">⬇️ Descarga oficial</a></p></td><td></td><td><a href=".gitbook/assets/multimc.png">multimc.png</a></td></tr><tr><td><h4>PolyMC</h4></td><td><p>Launcher para jugadores no premium (Juego pirata).</p><p><br><a href="https://polymc.org/download/">⬇️ Descarga oficial</a></p></td><td></td><td><a href=".gitbook/assets/polymc.png">polymc.png</a></td></tr></tbody></table>
 
 ### ☕ Descarga de Java portable
 
