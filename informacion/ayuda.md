@@ -18,7 +18,7 @@
 
 <figure><img src="../.gitbook/assets/instalar-java.gif" alt=""><figcaption></figcaption></figure>
 
-### Cómo instalar los mods y configurar Java en cualquier otro launcher?
+### ¿Cómo instalar los mods y configurar Java en cualquier otro launcher?
 
 No se parce. Mira que te conseguí los launchers premium y no premium más sencillos de configurar y encima te hice tutoriales bien detallados con videíto y todo para facilitarte la vida.
 
