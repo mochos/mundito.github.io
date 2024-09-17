@@ -31,19 +31,33 @@ Para entrar en mundito debes haber sido invitado por uno de los pioneros. Solici
 
 Puedes entrar con tu Minecraft Vanilla pero si eres usuario de Java te dejamos estos mods recomendados que agregan mejoras a tu experiencia como shaders, paquetes de recursos, animaciones, mapa, etc.
 
-| Instancia MultiMC y PolyMC                                                                                                                                                                       | Archivos para otros launchers                                                                                                                                                                                                                                                                                                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p>Si usas el launcher MultiMC o PolyMC, puedes descargar la instancia lista para importar<br><br>Si algo no funciona bien, consulta la <a href="informacion/ayuda.md">sección de ayuda</a>.</p> | <p>Si usas cualquier otro launcher, descarga los archivos para extraer en la carpeta <em>".minecraft"</em> en tu instalación de <a href="https://fabricmc.net/use/installer/">Fabric</a> (0.15.11+).</p><p></p><p>⚠️⚠️⚠️⚠️⚠️⚠️<br><strong>IMPORTANTE</strong> tener instalado Fabric. No funciona en Forge ni Vanilla<br>⚠️⚠️⚠️⚠️⚠️⚠️<br><br>Si algo no funciona bien, consulta la <a href="informacion/ayuda.md">sección de ayuda</a>.</p> |
-| [Descargar](https://github.com/mochos/mundito.github.io/raw/main/cliente/Fabric/Mundito.zip)                                                                                                     | [Descargar](https://github.com/mochos/mundito.github.io/raw/main/cliente/Fabric/Mundito-OtrosLaunchers.zip)                                                                                                                                                                                                                                                                                                                                 |
+{% tabs %}
+{% tab title="Instancia MultiMC y PolyMC" %}
+Si usas el launcher MultiMC o PolyMC, puedes descargar la instancia lista para importar\
+\
+Si algo no funciona bien, consulta la [sección de ayuda](informacion/ayuda.md).
+
+{% file src=".gitbook/assets/Mundito.zip" %}
+{% endtab %}
+
+{% tab title="Archivos para otros launchers" %}
+Si usas cualquier otro launcher, descarga los archivos para extraer en la carpeta _".minecraft"_ en tu instalación de [Fabric](https://fabricmc.net/use/installer/) (0.15.11+).
+
+
+
+⚠️⚠️⚠️⚠️⚠️⚠️\
+**IMPORTANTE** tener instalado Fabric. No funciona en Forge ni Vanilla\
+⚠️⚠️⚠️⚠️⚠️⚠️\
+\
+Si algo no funciona bien, consulta la [sección de ayuda](informacion/ayuda.md).
+
+{% file src=".gitbook/assets/Mundito-OtrosLaunchers.zip" %}
+{% endtab %}
+{% endtabs %}
 
 ### 🚀 Launchers recomendados (Java)
 
-| MultiMC                                          | PolyMC                                             |
-| ------------------------------------------------ | -------------------------------------------------- |
-| Para jugadores premium (Juego original).         | Launcher para jugadores no premium (Juego pirata). |
-| [Descarga oficial](https://skmedix.pl/downloads) | [Descarga oficial](https://polymc.org/download/)   |
-
-
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><h4>MultiMC</h4></td><td>Para jugadores premium (Juego original).<br><a href="https://skmedix.pl/downloads">Descarga oficial</a></td><td></td><td><a href=".gitbook/assets/multimc.png">multimc.png</a></td></tr><tr><td><h4>PolyMC</h4></td><td>Launcher para jugadores no premium (Juego pirata).<br><a href="https://polymc.org/download/">Descarga oficial</a></td><td></td><td><a href=".gitbook/assets/polymc.png">polymc.png</a></td></tr></tbody></table>
 
 ### ☕ Descarga de Java portable
 
