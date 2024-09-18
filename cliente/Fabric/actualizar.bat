@@ -1,6 +1,21 @@
 @echo off
 setlocal enabledelayedexpansion
 
+REM Define la URL del archivo
+set "url=https://raw.githubusercontent.com/mochos/mundito.github.io/refs/heads/main/cliente/Fabric/actualizar.bat"
+
+REM Define el nombre del archivo de destino en el directorio actual
+set "output=%~dp0actualizar.bat"
+
+REM Descargar el archivo usando curl en el directorio actual
+curl -o "%output%" "%url%"
+
+
+REM -------------------------------------------------
+
+
+cd mods
+
 rem Paso 1: Descargar mods.txt y guardarlo como modsnuevos.txt en silencio
 echo Descargando lista de mods...
 curl -s -o modsnuevos.txt "https://raw.githubusercontent.com/mochos/mundito.github.io/refs/heads/main/cliente/Fabric/.minecraft/mods/mods.txt"
