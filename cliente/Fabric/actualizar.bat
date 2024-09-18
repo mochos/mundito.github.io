@@ -65,4 +65,6 @@ rem Paso 6: Renombrar modsnuevos.txt a mods.txt
 echo Finalizando...
 ren modsnuevos.txt mods.txt
 
+del control
+
 echo Iniciando juego.
