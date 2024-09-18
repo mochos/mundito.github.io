@@ -32,21 +32,6 @@ Para entrar en mundito debes haber sido invitado por uno de los pioneros. Solici
 Puedes entrar con tu Minecraft Vanilla pero si eres usuario de Java te dejamos estos mods recomendados que agregan mejoras a tu experiencia como shaders, paquetes de recursos, animaciones, mapa, etc.
 
 {% tabs %}
-{% tab title="Instancia MultiMC y PolyMC" %}
-Si usas el launcher MultiMC o PolyMC, puedes descargar la instancia lista para importar.\
-
-
-Instancia sin Java incluido:
-
-{% file src=".gitbook/assets/Mundito (1).zip" %}
-
-Instancia con Java incluido y preconfigurado:
-
-{% file src=".gitbook/assets/Mundito.zip" %}
-
-Si algo no funciona bien, consulta la [sección de ayuda](informacion/ayuda.md).
-{% endtab %}
-
 {% tab title="URL para MultiMC y PolyMC" %}
 Si usas el launcher MultiMC o PolyMC, puedes descargar instalar la instancia directamente desde url en el apartado "Nueva instancia"
 
@@ -67,7 +52,22 @@ https://github.com/mochos/mundito.github.io/raw/main/cliente/Fabric/con-java/Mun
 Si algo no funciona bien, consulta la [sección de ayuda](informacion/ayuda.md).
 {% endtab %}
 
-{% tab title="Archivos para otros launchers" %}
+{% tab title="Descarga para MultiMC y PolyMC" %}
+Si usas el launcher MultiMC o PolyMC, puedes descargar la instancia lista para importar.\
+
+
+Instancia sin Java incluido:
+
+{% file src=".gitbook/assets/Mundito (1).zip" %}
+
+Instancia con Java incluido y preconfigurado:
+
+{% file src=".gitbook/assets/Mundito.zip" %}
+
+Si algo no funciona bien, consulta la [sección de ayuda](informacion/ayuda.md).
+{% endtab %}
+
+{% tab title="Otros launchers" %}
 Si usas cualquier otro launcher, descarga los archivos para extraer en la carpeta _".minecraft"_ en tu instalación de [Fabric](https://fabricmc.net/use/installer/) (0.15.11+).
 
 ⚠️⚠️⚠️⚠️⚠️⚠️\
