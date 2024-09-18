@@ -9,14 +9,32 @@ rem Paso 2: Comparar modsnuevos.txt con mods.txt
 echo Buscando actualizaciones...
 findstr /v /x /g:modsnuevos.txt mods.txt > modsparaeliminar.txt
 
+
 rem Paso 3: Borrar los archivos que están en mods.txt y no en modsnuevos.txt
 echo Borrando mods antiguos...
-for /f "tokens=*" %%A in (modsparaeliminar.txt) do (
-    if exist "%%A" (
-        del "%%A"
-        echo Archivo %%A eliminado
+
+rem Crea o vacía el archivo modsparaeliminar.txt
+> modsparaeliminar.txt (
+    for /f "delims=" %%A in (mods.txt) do (
+        set "encontrado=0"
+        for /f "delims=" %%B in (modsnuevos.txt) do (
+            if "%%A"=="%%B" (
+                set "encontrado=1"
+            )
+        )
+        if !encontrado! equ 0 (
+            echo %%A
+            rem Elimina el archivo si existe
+            if exist "%%A" (
+                del "%%A"
+                echo Archivo %%A eliminado.
+            ) else (
+                echo Archivo %%A no encontrado para eliminar.
+            )
+        )
     )
 )
+
 
 rem Paso 4: Descargar los archivos que están en modsnuevos.txt y no en mods.txt en silencio
 rem Archivos de entrada y salida
@@ -45,6 +63,7 @@ for /f "delims=" %%a in (%modsnuevos%) do (
     )
 )
 
+
 rem Descargar los archivos listados en modsnuevosparaagregar.txt
 for /f "delims=" %%B in (%output%) do (
     rem Eliminar posibles caracteres extraños
@@ -54,6 +73,7 @@ for /f "delims=" %%B in (%output%) do (
     echo Descargando archivo: !filename!
     curl -s -o "!filename!" "https://raw.githubusercontent.com/mochos/mundito.github.io/refs/heads/main/cliente/Fabric/.minecraft/mods/!filename!"
 )
+
 
 rem Paso 5: Eliminar modsparaeliminar.txt, mods.txt y modsnuevosparaagregar.txt
 echo Limpiando carpeta...
@@ -69,3 +89,5 @@ cd ..
 if exist control del control
 
 echo Iniciando juego.
+
+exit
