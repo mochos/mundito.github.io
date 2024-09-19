@@ -33,7 +33,7 @@ Puedes entrar con tu Minecraft Vanilla pero si eres usuario de Java te dejamos e
 
 {% tabs %}
 {% tab title="Instalar en MultiMC y PolyMC (Java)" %}
-Si usas el launcher MultiMC o PolyMC, puedes instalar la instancia directamente desde url o descargando el archivo zip.
+Si usas el launcher [MultiMC o PolyMC](./#launchers-recomendados-java), puedes instalar la instancia directamente desde url o descargando el archivo zip.
 
 {% hint style="success" %}
 Esta instalación incluye la versión de Java necesaria instalada y configurada.
