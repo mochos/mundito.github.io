@@ -27,9 +27,7 @@ Survival vanilla con plugins compatible con Java 1.20.1 y Bedrock.
 
 Para entrar en Mundito debes haber sido invitado por uno de los pioneros. Solicita a la persona que te invitó que te de acceso.
 
-### 📦 Mods recomendados (Java)
-
-Puedes entrar con tu Minecraft Vanilla pero si eres usuario de Java te dejamos estos mods recomendados que agregan mejoras a tu experiencia como shaders, paquetes de recursos, animaciones, mapa, etc.
+Puedes entrar con tu Minecraft Bedrock (PC, celular o consolas) o Minecraft Vanilla en PC pero si eres usuario de Java te dejamos algunos mods recomendados que agregan mejoras a tu experiencia como shaders, paquetes de recursos, animaciones, mapa, etc.
 
 {% tabs %}
 {% tab title="Instalar en MultiMC y PolyMC (Java)" %}
