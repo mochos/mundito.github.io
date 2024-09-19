@@ -2,7 +2,7 @@
 
 ### ¿Cómo instalar la instancia de mundito en MultiMC o PolyMC?
 
-1. Descarga el [zip de la instancia](../#mods-recomendados-java).
+1. Descarga el [zip de la instancia](../#instalar-en-multimc-y-polymc-java).
 2. Abre el launcher.
 3. Arrastra el zip descargado a la ventana del launcher.
 4. En la ventana que se abre dale al botón \[OK].
