@@ -9,9 +9,16 @@
 
 <figure><img src="../.gitbook/assets/instalar-instancia.gif" alt=""><figcaption></figcaption></figure>
 
-### ¿Cómo configuro Java en MultiMC o PolyMC?
+### ¿Cómo configuro Java en PolyMC y MultiMC?
 
-1. Descargas el [zip de Java](../#descarga-de-java-portable).
+Para **PolyMC y MultiMC** ya viene configurado directamente en la instancia. Pero si algo sale mal, sigue las instrucciones a continuación:
+
+1. Descargas el siguiente zip de Java:
+
+{% file src="../.gitbook/assets/OpenJDK17U-jre_x64_windows_hotspot_17.0.12_7.zip" %}
+Fuente: [adoptium.net](https://adoptium.net/temurin/releases/?os=windows\&package=jre\&version=17)
+{% endfile %}
+
 2. Extraes su contenido en cualquier carpeta. Debes tener en cuenta que la ubicación donde lo extraigas debe ser la definitiva.
 3. Vas a la configuración del launcher, buscas el apartado Java. En la ruta de acceso Java le das en \[...]
 4. En la ventana que aparece buscas el ejecutable `javaw.exe` que está dentro de la carpeta `bin` en la carpeta que extrajiste. Una vez seleccionado le das abrir y una vez configurado puedes cerrar esa ventana de configuración.
@@ -20,7 +27,7 @@
 
 ### ¿Cómo instalar los mods y configurar Java en cualquier otro launcher?
 
-No se parce. Mira que te conseguí los launchers premium y no premium más sencillos de configurar y encima te hice tutoriales bien detallados con videíto y todo para facilitarte la vida.
+No se parce. Te sirven los puntos 1 y 2 pero de ahí en adelante puede variar la configuración para cada launcher. Mira que te conseguí los launchers premium y no premium más sencillos de configurar y encima te hice tutoriales bien detallados con videíto y todo para facilitarte la vida.
 
 Si vas de rebelde y te querés complicar usando cualquier otro launcher, te toca resolver por tu cuenta. 😅 En YouTube hay un montón de tutoriales.
 

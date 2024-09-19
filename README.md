@@ -25,69 +25,73 @@ Survival vanilla con plugins compatible con Java 1.20.1 y Bedrock.
 
 ### 🎮 ¿Cómo jugar?
 
-Para entrar en mundito debes haber sido invitado por uno de los pioneros. Solicita a la persona que te invitó que te de acceso.
+Para entrar en Mundito debes haber sido invitado por uno de los pioneros. Solicita a la persona que te invitó que te de acceso.
 
 ### 📦 Mods recomendados (Java)
 
 Puedes entrar con tu Minecraft Vanilla pero si eres usuario de Java te dejamos estos mods recomendados que agregan mejoras a tu experiencia como shaders, paquetes de recursos, animaciones, mapa, etc.
 
 {% tabs %}
-{% tab title="URL para MultiMC y PolyMC" %}
-Si usas el launcher MultiMC o PolyMC, puedes descargar instalar la instancia directamente desde url en el apartado "Nueva instancia"
+{% tab title="Instalar en MultiMC y PolyMC (Java)" %}
+Si usas el launcher MultiMC o PolyMC, puedes instalar la instancia directamente desde url o descargando el archivo zip.
+
+{% hint style="success" %}
+Esta instalación incluye la versión de Java necesaria instalada y configurada.
+{% endhint %}
+
+{% hint style="warning" %}
+En ambos métodos de instalación es importante que dejes el nombre predeterminado de la instancia: _"Mundito"_
+{% endhint %}
+
+* **Instalar por enlace de descarga directa (Método recomendado):**
+
+Ve al launcher, dale _\[Nueva instancia]_, _\[Importar desde zip]_ y pega el siguiente texto en el campo _"Archivo local o enlace de descarga directa"._
+
+```
+https://github.com/mochos/mundito.github.io/raw/refs/heads/main/cliente/Fabric/Mundito.zip
+```
 
 <figure><img src=".gitbook/assets/importar-url.png" alt=""><figcaption></figcaption></figure>
 
-Instancia sin Java incluido:
+* **Instalar por archivo local:**
 
-```
-https://github.com/mochos/mundito.github.io/raw/main/cliente/Fabric/Mundito.zip
-```
-
-Instancia con Java incluido y preconfigurado:
-
-```
-https://github.com/mochos/mundito.github.io/raw/main/cliente/Fabric/con-java/Mundito.zip
-```
-
-Si algo no funciona bien, consulta la [sección de ayuda](informacion/ayuda.md).
-{% endtab %}
-
-{% tab title="Descarga para MultiMC y PolyMC" %}
-Si usas el launcher MultiMC o PolyMC, puedes descargar la instancia lista para importar.\
-
-
-Instancia sin Java incluido:
-
-{% file src=".gitbook/assets/Mundito (1).zip" %}
-
-Instancia con Java incluido y preconfigurado:
+Descarga el siguiente archivo y arrástralo a la ventana principal del launcher. Si necesitas ayuda mira las [instrucciones detalladas](informacion/ayuda.md#como-instalar-la-instancia-de-mundito-en-multimc-o-polymc).
 
 {% file src=".gitbook/assets/Mundito.zip" %}
-
-Si algo no funciona bien, consulta la [sección de ayuda](informacion/ayuda.md).
 {% endtab %}
 
-{% tab title="Otros launchers" %}
+{% tab title="Jugar desde Bedrock" %}
+Para jugar desde Bedrock de Windows, iOS o Android dale clic a [este enlace](minecraft://?addExternalServer=Mundito|mundito.mochos.xyz:19132) para conectarte al Mundito o configura la ip manualmente:&#x20;
+
+IP y puerto para Bedrock
+
+```
+mundito.mochos.xyz
+```
+
+```
+19132
+```
+
+Para jugar desde Bedrock de consolas mira [este tutorial](informacion/ayuda.md#como-jugar-desde-consola).
+{% endtab %}
+
+{% tab title="Otros launchers (Java)" %}
 Si usas cualquier otro launcher, descarga los archivos para extraer en la carpeta _".minecraft"_ en tu instalación de [Fabric](https://fabricmc.net/use/installer/) (0.15.11+).
 
-⚠️⚠️⚠️⚠️⚠️⚠️\
-**IMPORTANTE** tener instalado Fabric. No funciona en Forge ni Vanilla\
-⚠️⚠️⚠️⚠️⚠️⚠️
+{% hint style="warning" %}
+**¡IMPORTANTE!**
+
+* Tener instalado Fabric. No funciona en Forge ni Vanilla.
+* Es necesario que tengas la [versión 17 de Java](./#descarga-de-java-portable).
+{% endhint %}
 
 {% file src=".gitbook/assets/Mundito-OtrosLaunchers.zip" %}
-
-Si algo no funciona bien, consulta la [sección de ayuda](informacion/ayuda.md).
 {% endtab %}
 {% endtabs %}
 
+Si algo no funciona bien o sale algún error inesperado, consulta la [sección de ayuda](informacion/ayuda.md).
+
 ### 🚀 Launchers recomendados (Java)
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><h4>MultiMC</h4></td><td><p>Para jugadores premium (Juego original).</p><p><br><a href="https://multimc.org/#Download">⬇️ Descarga oficial</a></p></td><td></td><td><a href=".gitbook/assets/multimc.png">multimc.png</a></td></tr><tr><td><h4>PolyMC</h4></td><td><p>Launcher para jugadores no premium (Juego pirata).</p><p><br><a href="https://polymc.org/download/">⬇️ Descarga oficial</a></p></td><td></td><td><a href=".gitbook/assets/polymc.png">polymc.png</a></td></tr></tbody></table>
-
-### ☕ Descarga de Java portable
-
-Esta es la versión de Java con la que funciona Mundito para que no des muchas vueltas. Extraes la carpeta en cualquier lugar donde la vayas a dejar y en el launcher configuras la ruta del ejecutable `jdk-17.0.12+7-jre\bin\javaw.exe`
-
-{% file src=".gitbook/assets/OpenJDK17U-jre_x64_windows_hotspot_17.0.12_7.zip" %}
-
-Fuente: [adoptium.net](https://adoptium.net/temurin/releases/?os=windows\&package=jre\&version=17)
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><h4>MultiMC</h4></td><td><p>Para jugadores premium (Tienen el juego comprado).</p><p><br><a href="https://multimc.org/#Download">⬇️ Descarga oficial</a></p></td><td></td><td><a href=".gitbook/assets/multimc.png">multimc.png</a></td></tr><tr><td><h4>PolyMC</h4></td><td><p>Launcher para jugadores no premium (No tienen el juego comprado).</p><p><br><a href="https://polymc.org/download/">⬇️ Descarga oficial</a></p></td><td></td><td><a href=".gitbook/assets/polymc.png">polymc.png</a></td></tr></tbody></table>
