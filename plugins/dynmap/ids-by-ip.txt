@@ -252,8 +252,8 @@
 '152_202_171_21':
 - _Stellavargas1
 '127_0_0_1':
-- elPantallazoAzul
 - lorspi
+- elPantallazoAzul
 '201_108_2_151':
 - kiigaraa
 '188_78_200_50':

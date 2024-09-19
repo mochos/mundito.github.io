@@ -351,3 +351,34 @@ command /daritemop <string>:
         send "&b[ItemsOP] &aHas recibido %{itemsop::%arg-1%}%" to player
 
 # --------------------------------------------------------------------------------------------------------------------
+
+#/itemname &e&lDesproteger el Mundito
+#/itemlore add &fAbre el Mundito a cualquier persona
+#/itemlore add &fDespués de 5 minutos se vuelve a proteger
+
+on consume of potion:
+    if name of player's tool is "&e&lDesproteger el Mundito":
+        send "&cHas desactivado la prodección del Mundito por 5 minutos" to player
+        play sound "ui.toast.in" with volume 3 to the player
+        execute console command "whitelist off"
+        wait 5 minutes
+        execute console command "whitelist on"
+        send "&aSe ha vuelto a activar la protección del Mundito." to player
+        play sound "ui.toast.out" with volume 3 to the player
+
+
+#/itemname &e&lPoción de bienvenida
+#/itemlore add &fBébela si entraste por primera vez al Mundito
+#/itemlore add &cSi no la bebes, no podrás entrar nuevamente
+
+on consume of potion:
+    if name of player's tool is "&e&lPoción de bienvenida":
+        send "&a¡Bienvenid@ al Mundito!" to player
+        play sound "ui.toast.challenge_complete" with volume 3 to the player
+        execute console command "whitelist add %player%"
+        wait 5 seconds
+        execute console command "whitelist on"
+
+
+# --------------------------------------------------------------------------------------------------------------------
+

@@ -7,15 +7,15 @@ command /ayuda:
     trigger:
         message formatted " " to player
         message formatted "&a&lENLACES DE INTERÉS" to player
-        message formatted " &f&lWiki de Mundito: &r&b<tooltip:&fClic para abrir><link:https://mochos.xyz/mundito/wiki>mochos.xyz/mundito/wiki<reset>" to player
-        message formatted " &f&lMapa dinámico: &r&b<tooltip:&fClic para abrir><link:https://mochos.xyz/mundito/mapa/>mochos.xyz/mundito/mapa<reset>" to player
+        message formatted " &f&lWiki de Mundito: &r&b<tooltip:&fClic para abrir><link:https://wiki.mochos.xyz>wiki.mochos.xyz<reset>" to player
+        message formatted " &f&lMapa dinámico: &r&b<tooltip:&fClic para abrir><link:https://mapa.mochos.xyz>mapa.mochos.xyz<reset>" to player
         message formatted " &f&lDiscord de Team Mochos: &r&b<tooltip:&fClic para abrir><link:https://discord.mochos.xyz/>discord.mochos.xyz<reset>" to player
         message formatted " " to player
         message formatted "&a&lTEMAS DE AYUDA" to player
-        message formatted " &b<tooltip:&fClic para abrir><link:https://bit.ly/3XRJrer>Características y comandos<reset>" to player
-        message formatted " &b<tooltip:&fClic para abrir><link:https://bit.ly/3KU6wFr>Reglas del servidor<reset>" to player
-        message formatted " &b<tooltip:&fClic para abrir><link:https://bit.ly/3XzPK5T>Mods recomendados (Java)<reset>" to player
-        message formatted " &b<tooltip:&fClic para abrir><link:https://bit.ly/3XA1IN0>¿Cómo ocultar contraseña en stream?<reset>" to player
+        message formatted " &b<tooltip:&fClic para abrir><link:https://wiki.mochos.xyz/juego/comandos>Características y comandos<reset>" to player
+        message formatted " &b<tooltip:&fClic para abrir><link:https://wiki.mochos.xyz/juego/reglas>Reglas del servidor<reset>" to player
+        message formatted " &b<tooltip:&fClic para abrir><link:https://wiki.mochos.xyz/>Mods recomendados (Java)<reset>" to player
+        message formatted " &b<tooltip:&fClic para abrir><link:https://wiki.mochos.xyz/informacion/ayuda>¿Cómo ocultar contraseña en stream?<reset>" to player
         message formatted " " to player
 
 #Comando para anunciar nuevo stream.
