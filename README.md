@@ -83,7 +83,7 @@ Si usas cualquier otro launcher, descarga los archivos para extraer en la carpet
 **¡IMPORTANTE!**
 
 * Tener instalado Fabric. No funciona en Forge ni Vanilla.
-* Es necesario que tengas la [versión 17 de Java](./#descarga-de-java-portable).
+* Es necesario que tengas la [versión 17 de Java](informacion/ayuda.md#como-configuro-java-en-polymc-y-multimc).
 {% endhint %}
 
 {% file src=".gitbook/assets/Mundito-OtrosLaunchers.zip" %}
