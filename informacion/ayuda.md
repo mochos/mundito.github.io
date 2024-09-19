@@ -27,7 +27,9 @@ Fuente: [adoptium.net](https://adoptium.net/temurin/releases/?os=windows\&packag
 
 ### ¿Cómo instalar los mods y configurar Java en cualquier otro launcher?
 
-No se parce. Te sirven los puntos 1 y 2 pero de ahí en adelante puede variar la configuración para cada launcher. Mira que te conseguí los launchers premium y no premium más sencillos de configurar y encima te hice tutoriales bien detallados con videíto y todo para facilitarte la vida.
+No se parce. Para instalar el Java te sirven los puntos 1 y 2 pero de ahí en adelante puede variar la configuración para cada launcher. Para instalar mods también depende de cada launcher.
+
+Mira que te conseguí los launchers premium y no premium más sencillos de configurar y encima te hice tutoriales bien detallados con videíto y todo para facilitarte la vida.
 
 Si vas de rebelde y te querés complicar usando cualquier otro launcher, te toca resolver por tu cuenta. 😅 En YouTube hay un montón de tutoriales.
 
