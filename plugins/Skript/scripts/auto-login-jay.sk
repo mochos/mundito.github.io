@@ -1,0 +1,12 @@
+on join:
+    if player's name is "JayCorts":
+        execute console command "sudo JayCorts login 123456"
+        wait 3 seconds
+        play sound "ui.toast.in" with volume 3 to the player
+        message " " to player
+        message " &4&k!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" to player
+        message " &4&lFuiste auto logueado" to player
+        message " &cAvisale a lorspi cuando tengas teclado" to player
+        message " &4&k!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" to player
+        message " " to player
+        message " " to player

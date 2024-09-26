@@ -1,10 +1,10 @@
 messages:
   # telegram messages
-  general-message-to-mc: "&3[Telegram]&r %s: %s"
+  general-message-to-mc: "&3☁ &l%s: &r%s"
   join-message: "`%s se ha conectado.`"
   quit-message: "`%s se ha desconectado.`"
   death-message: "`%s`"
-  advancement-message: "`%s ha obtenido un logro %s! GG!`"
+  advancement-message: "`%s ha obtenido un logro %s!`"
   need-to-link: "Sorry, please link your account with */linktelegram ingame* to use the chat!"
   can-see-but-not-chat: "You can see the chat but you can't chat at the moment. Type */linktelegram ingame* to chat!"
   success-linked: "Success! Linked %s"
