@@ -62,6 +62,10 @@ Comandos de interacción esenciales.
 
 Vehículos terrestres, aéreos y acuáticos para recorrer el Mundito. El concesionario para comprarlos y venta de combustible están a pocos bloques al sur oeste del spawn.
 
+{% hint style="warning" %}
+Los modelos de los vehículos no cargan bien en Bedrock. :crying\_cat\_face:
+{% endhint %}
+
 <figure><img src="../.gitbook/assets/2024-09-30_15.27.59.png" alt=""><figcaption></figcaption></figure>
 
 ### Lootin
