@@ -11,6 +11,6 @@
 ## Juego
 
 * [📜 Características y comandos](juego/comandos.md)
-* [👾 Mecánicas exclusivas](juego/mecanicas-exclusivas.md)
+* [👾 Mecánicas propias](juego/mecanicas-propias.md)
 * [⚖️ Reglas del servidor](juego/reglas.md)
 * [🫂 Perfiles](juego/perfiles.md)

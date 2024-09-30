@@ -1,6 +1,6 @@
 # 📜 Características y comandos
 
-### Comandos básicos
+Comandos básicos
 
 `/ayuda` Muestra enlaces de interés de Mundito
 
@@ -57,6 +57,12 @@ Comandos de interacción esenciales.
 `/trash` Tira a la basura los objetos innecesarios de tu inventario.
 
 `/pay <nombre> <cantidad>` Envía dinero a otro jugador.
+
+### Vehículos
+
+Vehículos terrestres, aéreos y acuáticos para recorrer el Mundito. El concesionario para comprarlos y venta de combustible están a pocos bloques al sur oeste del spawn.
+
+<figure><img src="../.gitbook/assets/2024-09-30_15.27.59.png" alt=""><figcaption></figcaption></figure>
 
 ### Lootin
 
@@ -180,7 +186,7 @@ Próximamente
 Próximamente
 {% endhint %}
 
-Te puedes casar con otro jugador para obtener [algunos beneficios](mecanicas-exclusivas.md#matrimonio) y acceso a comandos:
+Te puedes casar con otro jugador para obtener [algunos beneficios](mecanicas-propias.md#matrimonio) y acceso a comandos:
 
 `/mtr` Muestra la ayuda.
 
