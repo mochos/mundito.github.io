@@ -1,4 +1,4 @@
-# 👾 Mecánicas exclusivas
+# 👾 Mecánicas propias
 
 Esta es una lista de objetos y funcionalidades creadas exclusivamente para Mundito
 
@@ -18,11 +18,7 @@ Estas se pueden comprar en la tienda del spawn.
 
 ### Fuente de los deseos
 
-{% hint style="info" %}
-Próximamente
-{% endhint %}
-
-<figure><img src="../.gitbook/assets/fuente-foto.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/fuente-foto2.png" alt=""><figcaption></figcaption></figure>
 
 Este es un lugar mágico en el que los jugadores pueden lanzar $1 para recibir un premio a cambio. Para llegar a este lugar debes comprar la brújula de viaje en la tienda del spawn.
 
