@@ -1,0 +1,50 @@
+# Citizens NPC Storage
+
+last-created-npc-id: 5
+npc:
+  '5':
+    metadata:
+      cached-skin-uuid: 967b0ce8-bc78-4391-afba-dbbd24ddefaa
+      cached-skin-uuid-name: aurora
+      nameplate-visible: 'false'
+    name: Aurora
+    uuid: 01aa5492-e837-4790-96d1-202ac92873a6
+    traits:
+      type: PLAYER
+      spawned: true
+      location:
+        bodyYaw: -132.8794
+        world: world
+        x: '28.5'
+        y: '73.0'
+        z: '53.5'
+        yaw: '-152.8794'
+        pitch: '0.0'
+      lookclose:
+        range: '5.0'
+        disablewhilenavigating: true
+        enabled: true
+        enableRandomLook: true
+        headonly: false
+        linkedbody: false
+        perplayer: false
+        randomLookDelay: 60
+        randomSwitchTargets: true
+        realisticlooking: true
+        targetnpcs: false
+        randomPitchRange:
+          '0': 0.0
+          '1': 0.0
+        randomYawRange:
+          '0': 0.0
+          '1': 360.0
+      skintrait:
+        fetchDefaultSkin: true
+        signature: OPAZw0fRWjGYFvqCF/eNcLtZ3XM1kMKr+8M9Vx51Qu1TplyM8sqZZ/wp0PIJI2cDoKWbtuIVOuvycp2Dtr5Gn6Y9QUaAtjygA5raK+emzctvg0ta4Kc7eJaiJeCQyMrBLGinZccK6IvDFWonNsrD382xNCfSgFaxoR55Kebo8BYVSG3Ht/gzlMsblqzD3u6AXdwa56DL3UG1ZUJtZy9Xj3NRE8jGXVcoXcw/iOd1jorn4/bnBJzikbR4TOyHsNSIUgqRKCUKXb/+Y4JmVPK38B/tIBkrsQoLMaDNPtA7BFEE8T3fNcgEX2QTChqUDEhj14lq9OETD5s/7xfn92T9IR5tMFyr2nA1me6J5rrY82CDCax3kAvrGd7Xq7uzFp7pZiwDSq5jFEl93HST2h9Sva3Q1r9snm/efLZq5YZOzBk02tA6sFNm8Y/l48fctYmTOApx8qwQYqP2de57Dpcl8CEv68jW29Wrn3MBrte5nLAMEYGKOJ3L5buNHm+uAhahhgpUOS0ZCV9NcpOT0/toSubN6qbDCfXtZATOXF4j4RX955tlCtw4Vs9M917yfN6riMGxt+KZvpWlqrJgZdarJ4by8lQy9xvcxz8kdZzyxy9ifv7tzkXGZpslY0H8M1H0qib3uXayY1cxxDP/A553LUrsK1/zfpen85H2f4aaylU=
+        textureRaw: ewogICJ0aW1lc3RhbXAiIDogMTcyNzg4MjUzMTI4OSwKICAicHJvZmlsZUlkIiA6ICI5NjdiMGNlOGJjNzg0MzkxYWZiYWRiYmQyNGRkZWZhYSIsCiAgInByb2ZpbGVOYW1lIiA6ICJBdXJvcmEiLAogICJzaWduYXR1cmVSZXF1aXJlZCIgOiB0cnVlLAogICJ0ZXh0dXJlcyIgOiB7CiAgICAiU0tJTiIgOiB7CiAgICAgICJ1cmwiIDogImh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzc0MmVkOTg4YWI0YTY4MWVlOTVkYmM2NDE1OWFmMzA4NTljZjJkM2JlMGYzNjA3ODVjY2I2OWMzM2YwOWQ5YiIsCiAgICAgICJtZXRhZGF0YSIgOiB7CiAgICAgICAgIm1vZGVsIiA6ICJzbGltIgogICAgICB9CiAgICB9CiAgfQp9
+        updateSkins: false
+    traitnames: scoreboardtrait,rotationtrait,type,spawned,location,mounttrait,inventory,lookclose,skintrait
+    navigator:
+      speedmodifier: '1.0'
+      avoidwater: false
+      usedefaultstuckaction: false

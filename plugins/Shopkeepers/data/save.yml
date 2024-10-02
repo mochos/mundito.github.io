@@ -2061,3 +2061,22 @@ data-version: 3|2|3465
   chestz: -2323
   offers: {}
   snapshots: []
+'27':
+  uniqueId: 75f03ce8-067a-4610-95bb-c1a18d732a60
+  world: world
+  x: 28
+  y: 73
+  z: 53
+  yaw: 101.675354
+  type: trade
+  name: ''
+  object:
+    type: citizen
+    npcId: 01aa5492-e837-4790-96d1-202ac92873a6
+  owner uuid: 6b935d9e-c2fe-3085-a6fa-227d8624c201
+  owner: lorspi
+  chestx: 28
+  chesty: 73
+  chestz: 52
+  offers: {}
+  snapshots: []
