@@ -13,8 +13,8 @@ cupboard-fabric-1.20.1-2.6.jar
 eating-animation-1.20+1.9.61.jar
 emotecraft-for-MC1.20.1-2.2.7-b.build.50-fabric.jar
 enhancedblockentities-0.9+1.20.jar
-entity_model_features_fabric_1.20.1-2.0.2.jar
-entity_texture_features_fabric_1.20.1-6.0.1.jar
+entity_model_features_fabric_1.20.1-2.2.6.jar
+entity_texture_features_fabric_1.20.1-6.2.5.jar
 explosive-enhancement-1.2.2-1.20.x.jar
 fabric-api-0.92.1+1.20.1.jar
 fabric-language-kotlin-1.11.0+kotlin.2.0.0.jar
