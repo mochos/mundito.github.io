@@ -55,10 +55,12 @@ https://github.com/mochos/mundito.github.io/raw/refs/heads/main/cliente/Fabric/M
 
 Descarga el siguiente archivo y arrástralo a la ventana principal del launcher. Si necesitas ayuda mira las [instrucciones detalladas](informacion/ayuda.md#como-instalar-la-instancia-de-mundito-en-multimc-o-polymc).
 
-{% file src=".gitbook/assets/Mundito.zip" %}
+{% file src=".gitbook/assets/Mundito (2).zip" %}
 {% endtab %}
 
 {% tab title="Jugar desde Bedrock" %}
+#### 📱 Windows, Android o iOS
+
 Para jugar desde Bedrock de Windows, iOS o Android dale clic a [este enlace](minecraft://?addExternalServer=Mundito|mundito.mochos.xyz:19132) para conectarte al Mundito o configura la ip manualmente:&#x20;
 
 IP y puerto para Bedrock
@@ -70,6 +72,8 @@ mundito.mochos.xyz
 ```
 19132
 ```
+
+#### 🎮 Consolas
 
 Para jugar desde Bedrock de consolas mira [este tutorial](informacion/ayuda.md#como-jugar-desde-consola).
 {% endtab %}
@@ -84,7 +88,7 @@ Si usas cualquier otro launcher, descarga los archivos para extraer en la carpet
 * Es necesario que tengas la [versión 17 de Java](informacion/ayuda.md#como-configuro-java-en-polymc-y-multimc).
 {% endhint %}
 
-{% file src=".gitbook/assets/Mundito-OtrosLaunchers.zip" %}
+{% file src=".gitbook/assets/Mundito-OtrosLaunchers (2).zip" %}
 {% endtab %}
 {% endtabs %}
 
