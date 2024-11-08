@@ -1,0 +1,13 @@
+name=
+price=-1.0
+taxed=true
+town=El0town
+resident=ElJamYT
+type=Default
+outpost=false
+changed=false
+claimedAt=1717562070789
+metadata=
+groupID=
+trustedResidents=
+customPermissionData={"47945284-0f34-36c1-9a50-c09d3613ef19":"ElJamYT,1718524753782,UNSET,UNSET,UNSET,UNSET","e8b1c790-25c3-3eb8-bdc2-336dfed29785":"ElJamYT,1718508302734,SET,SET,SET,SET"}

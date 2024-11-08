@@ -1,0 +1,13 @@
+name=
+price=-1.0
+taxed=true
+town=El0town
+resident=Shor0s
+type=Default
+outpost=false
+changed=false
+claimedAt=1717378909244
+metadata=
+groupID=
+trustedResidents=
+customPermissionData={"00000000-0000-0000-0009-01f439c1156c":"Shor0s,1717554088195,SET,SET,SET,SET"}

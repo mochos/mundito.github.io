@@ -1,12 +1,12 @@
 uuid=620cf642-ff72-3009-a68b-f2f42cb64bb5
-lastOnline=1726280202446
+lastOnline=1731035845094
 registered=1716502392884
-joinedTownAt=1716502810735
+joinedTownAt=1717548588013
 isNPC=false
 title=
 surname=
-town=Perryland
-town-ranks=
+town=LomasTurbas
+town-ranks=asistente
 nation-ranks=
 friends=
 

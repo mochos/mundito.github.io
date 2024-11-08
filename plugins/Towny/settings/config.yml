@@ -900,7 +900,7 @@ claiming:
   # The maximum townblocks available to a town is (numResidents * ratio).
   # Setting this value to 0 will instead use the level based jump values determined in the town level config.
   # Setting this to -1 will result in every town having unlimited claims.
-  town_block_ratio: '8'
+  town_block_ratio: '-1'
   
   # An amount of additional townblocks that a town will receive when it is first created, in addition to any amount given via the town_block_ratio or town_levels.
   # As an example: This can be used to add 10 townblocks to a town when it is made so the borders can be grown a bit more before the mayor has to seek out residents.
@@ -1943,10 +1943,10 @@ economy:
     price_outpost: '300'
   
     # The price for a town to expand one townblock.
-    price_claim_townblock: '100'
+    price_claim_townblock: '300'
   
     # How much every additionally claimed townblock increases in cost. Set to 1 to deactivate this. 1.3 means +30% to every bonus claim block cost.
-    price_claim_townblock_increase: '1.015'
+    price_claim_townblock_increase: '1'
   
     # The maximum price for an additional townblock. No matter how many blocks a town has the price will not be above this. Set to -1 to deactivate this.
     max_price_claim_townblock: '-1.0'
@@ -1955,7 +1955,7 @@ economy:
     # Warning: do not set this higher than the cost to claim a townblock.
     # It is advised that you do not set this to the same price as claiming either, otherwise towns will get around using outposts to claim far away.
     # Optionally, set this to a negative amount if you want towns to pay money to unclaim their land.
-    price_claim_townblock_refund: '200'
+    price_claim_townblock_refund: '300'
   
     # How much it costs a player to buy extra blocks.
     price_purchased_bonus_townblock: '25.0'

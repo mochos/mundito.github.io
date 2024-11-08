@@ -1,0 +1,14 @@
+uuid=3ee48940-a5c7-33f2-9ead-d1f0d6807bdb
+lastOnline=1726953049929
+registered=1718484745853
+joinedTownAt=1724802403385
+isNPC=false
+title=
+surname=
+town=Karmaland_V
+town-ranks=
+nation-ranks=
+friends=
+
+protectionStatus=residentBuild,residentDestroy,residentSwitch,residentItemUse
+metadata=

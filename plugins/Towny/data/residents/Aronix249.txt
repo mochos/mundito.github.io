@@ -1,0 +1,14 @@
+uuid=baa60b64-9d67-3e3a-a3fa-5699cea9f875
+lastOnline=1719465980459
+registered=1719462638203
+joinedTownAt=1719464640886
+isNPC=false
+title=
+surname=
+town=El0town
+town-ranks=
+nation-ranks=
+friends=
+
+protectionStatus=residentBuild,residentDestroy,residentSwitch,residentItemUse
+metadata=

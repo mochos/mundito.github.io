@@ -1,0 +1,14 @@
+uuid=cc857287-0c37-3658-97c2-7897e73f24c4
+lastOnline=1730687322560
+registered=1730684310700
+joinedTownAt=1730685942641
+isNPC=false
+title=
+surname=
+town=LomasTurbas
+town-ranks=
+nation-ranks=
+friends=
+
+protectionStatus=residentBuild,residentDestroy,residentSwitch,residentItemUse
+metadata=

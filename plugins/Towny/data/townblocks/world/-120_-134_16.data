@@ -1,0 +1,13 @@
+name=
+price=-1.0
+taxed=true
+town=El0town
+resident=_Stellavargas1
+type=Default
+outpost=false
+changed=false
+claimedAt=1717379761654
+metadata=
+groupID=
+trustedResidents=
+customPermissionData={"1cbb0e65-03af-3bd5-b437-6b9ed934f4e9":"_Stellavargas1,1717554417283,SET,SET,SET,SET"}

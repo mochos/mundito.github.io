@@ -1,0 +1,13 @@
+name=
+price=-1.0
+taxed=true
+town=El0town
+type=Default
+outpost=false
+permissions=residentBuild,residentDestroy,residentSwitch,residentItemUse
+changed=true
+claimedAt=1717379557391
+metadata=
+groupID=
+trustedResidents=
+customPermissionData={}

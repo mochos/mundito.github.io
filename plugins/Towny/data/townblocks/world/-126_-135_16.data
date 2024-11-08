@@ -1,0 +1,14 @@
+name=
+price=-1.0
+taxed=true
+town=El0town
+resident=El0tito
+type=Default
+outpost=false
+permissions=denyAll
+changed=true
+claimedAt=1717270180949
+metadata=
+groupID=
+trustedResidents=
+customPermissionData={"5564eeab-5e57-37f5-8486-2723afd8267e":"El0tito,1717551515129,UNSET,UNSET,UNSET,UNSET","1cbb0e65-03af-3bd5-b437-6b9ed934f4e9":"El0tito,1717695879799,SET,SET,SET,SET","972f1cd9-6c1f-3f44-bf05-afd6631a899b":"El0tito,1717656620672,SET,SET,SET,SET"}

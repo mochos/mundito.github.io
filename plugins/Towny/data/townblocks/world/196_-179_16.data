@@ -1,0 +1,14 @@
+name=
+price=-1.0
+taxed=true
+town=LomasTurbas
+resident=lorspi
+type=Default
+outpost=false
+permissions=residentBuild,residentDestroy,residentSwitch,residentItemUse
+changed=true
+claimedAt=1725737506233
+metadata=
+groupID=
+trustedResidents=
+customPermissionData={"53720eae-ad02-3a27-90de-15f8e47cd671":"Sebitasxx,1725772283948,SET,SET,SET,SET"}

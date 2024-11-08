@@ -1,0 +1,13 @@
+name=
+price=-1.0
+taxed=true
+town=El0town
+resident=TGCOC0
+type=Default
+outpost=false
+changed=false
+claimedAt=1717457835713
+metadata=
+groupID=
+trustedResidents=
+customPermissionData={"00000000-0000-0000-0009-01ff5284de52":"TGCOC0,1717615516970,UNSET,UNSET,UNSET,UNSET"}

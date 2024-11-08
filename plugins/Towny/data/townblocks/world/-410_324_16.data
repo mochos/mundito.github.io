@@ -1,0 +1,14 @@
+name=
+price=-1.0
+taxed=true
+town=LomasTurbas
+resident=_ErandiYolo
+type=Default
+outpost=true
+permissions=residentBuild,residentDestroy,residentSwitch,residentItemUse
+changed=true
+claimedAt=1725140829732
+metadata=
+groupID=
+trustedResidents=
+customPermissionData={}

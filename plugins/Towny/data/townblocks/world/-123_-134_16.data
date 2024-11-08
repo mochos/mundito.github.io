@@ -1,0 +1,14 @@
+name=
+price=-1.0
+taxed=true
+town=El0town
+resident=Shor0s
+type=Default
+outpost=false
+permissions=residentBuild,residentDestroy,residentSwitch,residentItemUse
+changed=true
+claimedAt=1717381856595
+metadata=
+groupID=
+trustedResidents=
+customPermissionData={"00000000-0000-0000-0009-01f439c1156c":"Shor0s,1717554076396,SET,SET,SET,SET","972f1cd9-6c1f-3f44-bf05-afd6631a899b":"Shor0s,1718407896567,SET,SET,NEGATED,NEGATED"}

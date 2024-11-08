@@ -1,0 +1,14 @@
+name=
+price=-1.0
+taxed=true
+town=LomasTurbas
+resident=chinelaplay
+type=Default
+outpost=false
+permissions=residentBuild,residentDestroy,residentSwitch,residentItemUse
+changed=true
+claimedAt=1717388152954
+metadata=
+groupID=
+trustedResidents=
+customPermissionData={"920970df-e7c9-3045-8330-250422362f36":"chinelaplay,1717451145678,SET,SET,SET,SET","00000000-0000-0000-0009-0000071db3c1":"chinelaplay,1717450864294,UNSET,UNSET,UNSET,UNSET","88e0c35c-eefa-35be-9e09-82f2d1103384":"chinelaplay,1717451184443,SET,SET,SET,SET"}

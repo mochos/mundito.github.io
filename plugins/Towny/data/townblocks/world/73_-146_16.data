@@ -1,0 +1,13 @@
+name=
+price=-1.0
+taxed=true
+town=El0town
+resident=arepadequeso02
+type=Default
+outpost=false
+changed=false
+claimedAt=1718694578531
+metadata=
+groupID=
+trustedResidents=
+customPermissionData={"cc6955b7-4dd3-3a16-a7e5-157ad3665a56":"arepadequeso02,1718695328947,SET,SET,SET,SET"}
