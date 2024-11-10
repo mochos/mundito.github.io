@@ -1,5 +1,5 @@
 name=Perryland
-mayor=lorspi
+mayor=elPantallazoAzul
 
 
 townBoard=Ola bb
@@ -35,8 +35,9 @@ joinedNationAt=0
 movedHomeBlockAt=0
 forSale=false
 forSalePrice=0.0
+homeBlock=world,-1,-2
 spawn=world,-3.047636714167293,72.0,-31.41258954210651,-3.5512934,-2.1718445
-outpostspawns=
+outpostspawns=world,107.35688320519381,87.0,86.87703479768957,1.3129346,-42.538025;world,-134.80108581937586,84.0,32.7254862576495,83.29949,24.640137;
 outlaws=
 metadata=
 manualTownLevel=-1
