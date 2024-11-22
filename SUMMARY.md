@@ -1,6 +1,6 @@
 # Table of contents
 
-* [🙋 ¡Bienvenido!](README.md)
+* [🙋 ¡Bienvenid@ a Mundito!](README.md)
 
 ## Información
 
