@@ -17,11 +17,17 @@ layout:
     visible: true
 ---
 
-# 🙋 ¡Bienvenido!
+# 🙋 ¡Bienvenid@ a Mundito!
 
-[![Estado](https://img.shields.io/endpoint?url=https%3A%2F%2Fminecraft-server-status-badge.vercel.app%2Fapi%2Fserver%2Fmundito.mochos.xyz%3Fport%3D25565\&style=for-the-badge)](https://stats.uptimerobot.com/vpbB3Zq4A4) [![Website](https://img.shields.io/website?url=https%3A%2F%2Fmapa.mochos.xyz%2F\&up\_message=Online\&down\_message=Offline\&style=for-the-badge\&label=Dynmap\&up\_color=97ca00)](https://stats.uptimerobot.com/vpbB3Zq4A4)
+{% hint style="info" %}
+El proyecto Mundito ha sido apagado de forma indefinida.
+{% endhint %}
+
+[![Estado](https://img.shields.io/endpoint?url=https%3A%2F%2Fminecraft-server-status-badge.vercel.app%2Fapi%2Fserver%2Fmundito.mochos.xyz%3Fport%3D25565\&style=for-the-badge)](https://stats.uptimerobot.com/vpbB3Zq4A4) [![Website](https://img.shields.io/website?url=https%3A%2F%2Fmapa.mochos.xyz%2F\&up_message=Online\&down_message=Offline\&style=for-the-badge\&label=Dynmap\&up_color=97ca00)](https://stats.uptimerobot.com/vpbB3Zq4A4)
 
 Survival vanilla con plugins compatible con Java 1.20.1 y Bedrock.
+
+
 
 ### 🎮 ¿Cómo jugar?
 
